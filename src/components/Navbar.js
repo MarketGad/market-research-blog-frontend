@@ -27,7 +27,8 @@ const Navbar = () => {
         console.log(response);
         axios({
             method: "POST",
-            url: "http://localhost:5000/api/googlelogin",
+            url: "https://serieux-saucisson-31787.herokuapp.com/api/googlelogin",
+            // url: "http://localhost:5000/api/googlelogin",
             data: { tokenId: response.tokenId }
         }).then((response) => {
             console.log("Google login success ", response);

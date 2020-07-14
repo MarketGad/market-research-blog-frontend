@@ -71,7 +71,8 @@ export default function SignUp() {
         event.preventDefault();
         axios({
             method: "PUT",
-            url: "http://localhost:5000/api/ideasubmit",
+            url: "https://serieux-saucisson-31787.herokuapp.com/api/ideasubmit",
+            // url: "http://localhost:5000/api/ideasubmit",
             data: { sector, topic, briefIdea, phone, f1email, f2email, email }
         }).then((response) => {
             console.log(response);

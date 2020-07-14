@@ -9,7 +9,8 @@ const Subscribe = () => {
         event.preventDefault();
         axios({
             method: "POST",
-            url: "http://localhost:5000/api/subscribe",
+            url: "https://serieux-saucisson-31787.herokuapp.com/api/subscribe",
+            // url: "http://localhost:5000/api/subscribe",
             data: { email }
         }).then((response) => {
             console.log(response);
