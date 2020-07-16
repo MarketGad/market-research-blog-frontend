@@ -22,7 +22,7 @@ const i1001 = () => {
                     {/* use accordingly */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" />
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915540/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--001_ho5eh4.jpg" alt="i101" />
                     <p className="article-img-desc">Figure 1: Logistics Performance Index (LPI), India, 2018 (Source: www.worldbank.org)</p>
                 </div>
                 <p className="article-content">
@@ -36,7 +36,7 @@ const i1001 = () => {
                     {/* use accordingly */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" />
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915664/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--003_xet3b8.jpg" alt="i101" />
                     <p className="article-img-desc">Figure 2: Initiatives by GOI to boost the logistics sector </p>
                 </div>
                 <p className="article-subhead">2.1 Infrastructure status </p>
@@ -161,9 +161,9 @@ const i1001 = () => {
                 </p>
                 <div className="center img-container">
                     {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" />
+                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" /> */}
+                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" /> */}
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" />
                     <p className="article-img-desc">Source: Ministry of Commerce</p>
                 </div>
                 <p className="article-subhead">

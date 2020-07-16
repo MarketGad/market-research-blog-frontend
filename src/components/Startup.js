@@ -16,19 +16,18 @@ const Startup = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594923614/Articles%20Photos/Startup/Blockchain-in-Healthcare-GetReferd_vlenfv.png"
                                         alt="1st"
                                     />
                                 </div>
                                 <div className="col s12 l4">
                                     <h3 className="center">
-                                        hello!
+                                        BlockChain Application
                                     </h3>
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
+                                    Blockchain over recent years has been extolled as a revolution in business technology. In the nine years since its launch, companies, regulators, and financial technologists have spent countless hours exploring its potential. The resulting innovations have started to reshape business processes, particularly in accounting and transactions.                                    </p>
                                     <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="https://drive.google.com/file/d/14cfrN_CsFL60N4Dz_GW5hFcyadquOygH/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -41,19 +40,21 @@ const Startup = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594924529/Articles%20Photos/Startup/industry-4.0_xsubx1.jpg"
                                         alt="1st"
                                     />
                                 </div>
                                 <div className="col s12 l4">
                                     <h3 className="center">
-                                        hello!
+                                        Market Revolution 4.0
                                     </h3>
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
+                                        The standout feature of industrial revolution 4.0 is the fusion of
+                                        technologies which saves time , increases overall efficiency, and
+                                        reduces errors. In general, there are nine key components of
+                                        technology that constitute the Industry 4.0...                                    </p>
                                     <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="https://drive.google.com/file/d/1vEgD7XOd4CGAGO6DDmTXczTw3Oy-suAN/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -66,44 +67,20 @@ const Startup = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594925311/Articles%20Photos/Startup/AI_ddhthi.jpg"
                                         alt="1st"
                                     />
                                 </div>
                                 <div className="col s12 l4">
                                     <h3 className="center">
-                                        hello!
+                                        Future of AI in post Covid era
                                     </h3>
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
+                                        AI based startups till 2021, could see an increase of 13%. In the year 2022,
+                                        there would be an increase of 16%, in the year 2023, it would go up to 20%, in the year 2024, we
+                                        could see a rise of 23%, and in the year 2025, the increase percent would be 28%...                                </p>
                                     <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-content">
-                            <div className="row">
-                                <div className="col l8 s12">
-                                    <img
-                                        pos
-                                        className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                                        alt="1st"
-                                    />
-                                </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
-                                        hello!
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
-                                    <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="https://drive.google.com/file/d/1LiDmwyoVKBG06oTcRsTNsvaJ35g1kTQp/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>

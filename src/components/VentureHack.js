@@ -16,17 +16,16 @@ const VentureHack = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594928729/Articles%20Photos/VentureHack/SME-social_fshval.jpg"
                                         alt="1st"
                                     />
                                 </div>
                                 <div className="col s12 l4">
                                     <h3 className="center">
-                                        hello!
+                                    Tradohub: bootstrapped to build the largest SME ecosystem
                                     </h3>
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
+                                    The company has targeted to increase its turnover over 20 fold to $1 billion from existing Rs 330 crore in the next five years by 2025...                                    </p>
                                     <div className="center">
                                         <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
@@ -41,75 +40,26 @@ const VentureHack = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594928817/Articles%20Photos/VentureHack/startuptop_kzuhdz.jpg"
                                         alt="1st"
                                     />
                                 </div>
                                 <div className="col s12 l4">
                                     <h3 className="center">
-                                        hello!
+                                        12 Steps to Start a Successful Business/Startup
                                     </h3>
                                     <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
+                                    Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your
+                                    startup is how many companies failed or invested resources they didn’t need to move forward.
+                                    Identify in which step you are and continue down the path without overlooking any of the steps.
                                     </p>
                                     <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="https://drive.google.com/file/d/1pDL87M1Kju0AofvYfZGGx7nJLrdhpTWD/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="card">
-                        <div className="card-content">
-                            <div className="row">
-                                <div className="col l8 s12">
-                                    <img
-                                        pos
-                                        className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                                        alt="1st"
-                                    />
-                                </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
-                                        hello!
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
-                                    <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <div className="card-content">
-                            <div className="row">
-                                <div className="col l8 s12">
-                                    <img
-                                        pos
-                                        className="post-image"
-                                        src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                                        alt="1st"
-                                    />
-                                </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
-                                        hello!
-                                    </h3>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fuga nemo ducimus ad! Iure suscipit voluptatem dolorum earum. Ratione, cum?
-                                    </p>
-                                    <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <Footer />

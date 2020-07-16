@@ -6,9 +6,6 @@ const i1002 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">REVERSE LOGISTICS: THE FUTURE OF SUPPLY CHAIN</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
-                    Market Research by <b>Alok Ranjan</b> (IIM Indore)<br />
-                </div>
                 <p className="article-subhead">Introduction </p>
                 <p className="article-content">
                     Logistics are a big part of any company’s working paradigm. There has been a great
@@ -91,15 +88,16 @@ this involves the rerouting of the product to the manufacturer.
                     {/* use accordingly */}
                     {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594656202/2_ri3bnu.jpg" alt="i101" /> */}
                     {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594656202/2_ri3bnu.jpg" alt="i101" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594656202/2_ri3bnu.jpg" alt="i101" alt="i101" alt="i101" />
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594917488/Articles%20Photos/Industry/Reverse%20Logistic/2_k8fndm.jpg" alt="i101" alt="i101" alt="i101" />
                 </div>
                 <p className="article-content">
                     If reverse logistics is implemented at a full scale, the industry will be able to reap
-profits. If executed in a planned and effective manner, reverse logistics can increase                </p>
-                <p className="article-content">
-                    productivity by 10%, decrease the return processing costs by approximately 25%,
+                    profits. If executed in a planned and effective manner, reverse logistics can increase productivity by 10%, decrease the return processing costs by approximately 25%,
                     increase net profits by 3- 5% and will go a long way in building customer
-satisfaction.                </p>
+                    satisfaction.
+                </p>
+                <p className="article-content">
+                                    </p>
                 <p className="article-subhead">Reverse Logistics to Happy returns: The Green Dust Case </p>
                 <p className="article-content">
                     Having engaged with reverse logistics process for more than 5 years, the
@@ -117,169 +115,65 @@ later sell them as factory seconds under their brand name, Green Dust.          
                     others. The key takeaways from the operations of Green dust which would help a lot
 of startups to efficiently manage their logistics are –                </p>
                 <p className="article-content">
-                    <ul>
-                        <li>
-                            <p className="article-content">
-                                If we talk about the return rate in India, it is 5 percent. This goes on to say
-                                that around $12-$15 billion of products are returned every year and we
-                                spend approximately $4-$6 billion in bringing it back. What a huge waste!!
-                            </p>
-                        </li>
-                        <li>
-                            <p className="article-content">
-                                Worked on reducing the supply chain cost by a quarter, 25 percent (includes
-                                people, warehouse and others)
-                            </p>
-                        </li>
-                        <li>
-                            <p className="article-content">
-                                Increasing the cash flow from a systematic asset recovery methodology.
-                        </p>
-                        </li>
-                        <li>
-                            <p className="article-content">
-                                Improving asset recovery by almost half (50 percent)                        </p>
-                        </li>
+                    <b>1.</b> If we talk about the return rate in India, it is 5 percent. This goes on to say
+                    that around $12-$15 billion of products are returned every year and we
+                    spend approximately $4-$6 billion in bringing it back. What a huge waste!!
+                </p>
+                <p className="article-content">
+                    <b>2.</b> Worked on reducing the supply chain cost by a quarter, 25 percent (includes
+                            people, warehouse and others)
+                </p>
+                <p className="article-content">
+                    <b>3.</b> Increasing the cash flow from a systematic asset recovery methodology.
+                </p>
+                <p className="article-content">
+                    <b>4.</b> Improving asset recovery by almost half (50 percent)
+                </p>
+                <p className="article-content">
+                    <b>5.</b> Not hampering the new product launch and sales channel by the effects
+                    of returned items and increasing the productivity by 10 percent
+                </p>
+                <p className="article-content">
+                    <b>6.</b> The company gives the option to the manufacturer to comply with the “4R”-
+                    Reduce, Reuse, Repair, Recycle and earns them the tag of “Green” company
+                    which is incentivized by the governments.
+                </p>
 
-
-                    </ul>
-                </p>
-                <p className="article-subhead">2.3 E-Way Bill</p>
+                <p className="article-subhead">Concluding Remarks</p>
                 <p className="article-content">
-                    With the E-Way Bill introduction, a single bill is sufficient for the movement of goods through all the states. Also, E-Way Bills are necessary for consignments exceeding the value of Rs 50,000. Thus, it plugs the gap of tax avoidance, as shippers need to have essential documents for transporting within the nation.
-                </p>
-                <p className="article-subhead">2.4 Logistics division under the Ministry of Commerce (MoC) </p>
-                <p className="article-content">
-                    On 7th July 2017, the MoC created the Logistics Division with the task of "Integrated development of Logistics sector". The primary aim of the division to reduce the logistics cost from 14% to 10% of GDP<sup>[1]</sup>.
-                </p>
-                <p className="article-subhead">2.5 Dedicated Freight Corridors (DFCs) and logistics parks  </p>
-                <p className="article-content">
-                    With the infrastructure status of the logistics sector, the government has announced that 35 multi-modal logistics parks (MMLPs) will be developed to reduce transport costs[5]. The GOI has approved the development of following five industrial corridor projects namely Amritsar- Kolkata Industrial Corridor (AKIC), Bengaluru-Mumbai Economic Corridor (BMEC), Chennai-Bengaluru Industrial Corridor (CBIC), Delhi-Mumbai Industrial Corridor (DMIC), and Visakhapatnam-Chennai Industrial Corridor (VCIC) to be implemented<sup>[6]</sup>.
-                </p>
-                <p className="article-subhead">2.6 IT implementation </p>
-                <p className="article-content">
-                    National Highways Information System, which is based on Geographical Information Systems (GIS), is developed to overcome transportation problems on the road[7]. One Nation One FASTag scheme launched by GOI uses RFID technology that enables contactless and digital payment of toll taxes without having to stop at toll gates[8]. Freight Operations Information System (FOIS), which consists of two modules namely Terminal Management System (TMS) and Rake Management System (RMS), is a single IT Platform for complete freight information on Indian Railways<sup>[9]</sup>.
-                </p>
-                <p className="article-subhead">3. Proposed National Logistics Policy, 2020 </p>
-                <p className="article-content">The proposed National Logistics Policy aims to reduce logistics costs to 10% of GDP by 2022. It is expected to streamline trade and investment processes, thereby resulting in an improvement in India's export competitiveness. Also, it will eliminate inefficiencies and reduce costs by removing bottlenecks in the value chain of logistics. </p>
-
-                <p className="article-subhead">Key Features </p>
-                <p className="article-subhead">
-                    3.1 Connectivity
+                    The proposed mechanism of reverse logistics can turn out to be fruitful only when
+                    the cost of implementing the mechanism is justified and also one important factor
+                    that the research strongly advocates is the provisioning reverse logistics in the
+                    forward logistics processes, the idea is that the two process cannot exist separately
+                    but have to co-exist.
                 </p>
                 <p className="article-content">
-                    The current multi-modal mix (i.e. roadways-60%, railways-31% and waterways-9%) has to
-                    be changed as per the international benchmarking(i.e.25-30% of roadways, 50-55% of
-                    railways, 20-25% of waterways). The Logistics Wing created by the MOC works as the nodal agency to identify the key projects to move the first mile and last-mile connectivity. Faster
-                    clearances to be facilitated for infrastructure projects. For example – the Ministry of
-                    Environment and Forest (MOEF) will provide single window environmental clearance
-                    through "PARIVESH" platform.
-                </p>
-                <p className="article-subhead">
-                    3.2 Logistics infrastructure
+                    The takeaway is that the planning for reverse logistics be done at the same time when
+                    the supply chain strategies are made. The reverse logistics enables the companies to
+                    delve deeper and understand the reasons of returns and make a detailed model of the
+                    acceptability of the product to the consumers.
                 </p>
                 <p className="article-content">
-                    The government will set up a Multi-Modal Logistics Park Authority (MMLPA) through the
-                    collaboration of various central ministries (Road, Rail, Civil Aviation, Shipping, Customs, etc.)
-                    and different state governments. The objectives of MMLPA will be identifying the appropriate
-                    locations for setting up of Multi-Modal Logistics Parks (MMLPs), facilitating a single window
-                    for all regulatory approvals and monitoring the performance and progress of MMLPs.
+                    The reverse logistics are a by-product of the sales made digitally and shall be
+                    relevant till the time businesses operate online. Thus, it becomes imperative for
+                    companies of all scale to include reverse logistics model in their supply chain.
+                    Startups can get the dual advantage of cutting on cost and getting government’s
+                    incentive if they adapt this process. It also makes them available to the broader
+                    market base. It is said that strength of the process is how it performs during
+                    adversities, and reverse logistics bear tremendous potential to help companies get
+                    new customers or lose the old ones.
                 </p>
-                <p className="article-subhead">
-                    3.3 IT backbone of logistics
-                </p>
-                <p className="article-content">
-                    The creation of the national logistics information portal will act as a single point of reference
-                    for all trade facilitation and logistics matters in the country. This portal will also function as a
-                    knowledge bank and information sharing platform.
-                </p>
-                <p className="article-subhead">
-                    3.4 Approvals and regulatory compliance
-                </p>
-                <p className="article-content">
-                    A single-window logistics marketplace which will be a transactional platform, is created by
-                    the Logistics Wing. This portal will bring various logistics service providers such as freight
-                    forwarders, transporters, 3rd party service providers, shipping lines, customs brokers,
-                    warehousing providers, etc. and various government agencies including Customs and Partner
-                    Government Agencies (PGAs) etc. engaged in certification, regulatory and compliance
-                    services together in one platform.
-                </p>
-                <p className="article-subhead">
-                    3.5 Simplifying document processing
-                </p>
-                <p className="article-content">
-                    The single-window logistics marketplace portal will involve simplifying document processing
-                    for all imports/exports through digitization such blockchain and Internet of things (IoT).
-                </p>
-                <p className="article-subhead">
-                    3.6 Performance review and monitoring
-                </p>
-                <p className="article-content">
-                    The creation of logistics data and analytics centre will act as a single source of data for pertinent
-                    performance metrics across the value chain of logistics. It will aid data-driven decision-making
-                    for prospective infrastructure projects.
-                </p>
-                <p className="article-subhead">
-                    3.7 Trade facilitation measures
-                </p>
-                <p className="article-content">
-                    The creation of a Centre of Trade facilitation and Logistics excellence (CTFL) will bring
-                    various vital stakeholders (related central ministries – Rail, Roads, Civil Aviation, Shipping,
-                    and Customs, PGAs and concerned state governments), private players, industry associations and academic institutions together to a common platform. This centre's primary objective is
-                    identifying mediation areas critical for streamlining country's logistics and driving innovation
-                    in the logistics sector.
-                </p>
-                <p className="article-subhead">
-                    3.8 Strengthening warehousing sector
-                </p>
-                <p className="article-content">
-                    The Logistics Wing will coordinate with the related Central Ministries (Ministry of Food &
-                    Public Distribution, Ministry of Food Processing Industries and Consumer Affairs) and State
-                    Department of Horticulture. The primary objective is identifying and funding initiatives to
-                    scale up the use of technology such as Warehouse Management System (WMS) and automation
-                    in warehouses. It will also fill the gaps in the quality of the country's specialized storage
-                    infrastructure.
-                </p>
-                <p className="article-subhead">
-                    3.9 Promoting start-ups
-                </p>
-                <p className="article-content">
-                    The government will set up a start-up acceleration fund that will help to incubate start-ups in
-                    the logistics sector. Currently, many start-ups are working in working in various areas of the
-                    supply chain such as freight forwarding, market aggregation, cold chain, last-mile delivery,
-                    telematics and warehouse management. Along with fund, the government will run
-                    rewards/award programs for promoting start-ups.
-                </p>
-                <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" />
-                    <p className="article-img-desc">Source: Ministry of Commerce</p>
+                <div className="center article-content" style={{ textAlign: "right" }}>
+                    Market Research by <b>Alok Ranjan</b><br />
                 </div>
-                <p className="article-subhead">
-                    4. Prospects
-                </p>
                 <p className="article-content">
-                    India aims to achieve the rank below 30 in the Logistics Performance Index (LPI) in the next
-                    3-4 years, that calls for tremendous efforts from both government and private players. The
-                    technology adoption in the logistics sector in India is rather slow; hence it can be boosted by
-                    new start-ups through new technologies that will help reducing turnaround times and logistic
-                    costs.
-                </p>
-                <p className="article-subhead">
-                    References
-                </p>
-                <p className="article-content">
-                    1. <a href="https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364">https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364</a>
-                    <br />2. <a href="https://lpi.worldbank.org/">https://lpi.worldbank.org/</a>
-                    <br />3. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674">https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674</a>
-                    <br />4. <a href="https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Road%20Transportation_Cargo%20Connect.pdf">https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Transportation_Cargo%20Connect.pdf</a>
-                    <br />5. <a href="https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html#:~:text=In%20a%20bid%20to%20enhance%20the%20logistical%20efficiency%20on%20India's,network%20of%205.6%20million%20km.">https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html.</a>
-                    <br />6. <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382">https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382</a>
-                    <br />7. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356">https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356</a>
-                    <br />8. <a href="https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/">https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/</a>
-                    <br />9. <a href="http://cris.org.in/crisweb/design1/proFOIS.jsp">http://cris.org.in/crisweb/design1/proFOIS.jsp</a>
+                    1. <a href="https://www.industrystar.com/blog/2020/05/5-ways-improve-reverse-logistics-operations/">www.industrystar.com</a>
+                    <br />2. <a href="https://www.investindia.gov.in/team-india-blogs/reverse-logistics-gaining-traction-india">www.investindia.gov.in</a>
+                    <br />3. <a href="https://economictimes.indiatimes.com/north/how-gurgaon-startupgreendust-turns-companies-reverse-logistics-into-happy-returns/articleshow/17321115.cms">economictimes.indiatimes.com</a>
+                    <br />4. <a href="https://www.quora.com/How-matured-is-indian-reverse-logistics-space">quora.com</a>
+                    <br />5. <a href="https://www.thomasnet.com/insights/this-reverse-logistics-startup-wants-to-make-returns-less-stressful-q-a-interview/">thomastnet.com</a>
+                    <br />6. <a href="http://www.ijarcsms.com/docs/paper/volume6/issue2/V6I2-0006.pdf">ijarcsms.com</a>
+                    <br />7. <a href="https://www.theseus.fi/bitstream/handle/10024/46993/Reverse%20Logistics%20and%20green%20logistics.pdf?sequence=1">theseus.fi</a>
                 </p>
             </div>
             <Footer />

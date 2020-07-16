@@ -13,6 +13,11 @@ import Whatwedo from './components/Whatwedo';
 import Privacy from './components/Privacy';
 import I1001 from './components/articles/industry/1001';
 import I1002 from './components/articles/industry/1002';
+import I1003 from './components/articles/industry/1003';
+import I1004 from './components/articles/industry/1004';
+import I1005 from './components/articles/industry/1005';
+import S2001 from './components/articles/startups/s2001';
+import v3001 from './components/articles/venturehacks/v3001';
 
 class App extends Component {
   render() {
@@ -33,6 +38,11 @@ class App extends Component {
             <Route exact path='/venturehack' component={Venturehack} />
             <Route exact path='/i1001' component={I1001} />
             <Route exact path='/i1002' component={I1002} />
+            <Route exact path='/i1003' component={I1003} />
+            <Route exact path='/i1004' component={I1004} />
+            <Route exact path='/i1005' component={I1005} />
+            <Route exact path='/s2001' component={S2001} />
+            <Route exact path='/v3001' component={v3001} />
             {/* <Route exact path='/i1003' component={I1003} />
             <Route exact path='/i1004' component={I1004} />
             <Route exact path='/i1005' component={I1005} /> */}
