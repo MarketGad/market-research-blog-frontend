@@ -44,8 +44,8 @@ const Navbar = () => {
             <div className="navbar-fixed">
                 <nav className="nav-center" role="navigation">
                     <div className="nav-wrapper">
-                        <a href="/" className="brand-logo logo sidenav-trigger"><img height="55px" width="60px" style={{ position: "relative" }} src={logo} alt="logo-mob" /></a>
                         <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                        <a href="/" className="brand-logo logo sidenav-trigger"><img height="55px" width="60px" style={{ position: "relative" }} src={logo} alt="logo-mob" /></a>
                         <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a>
                         <ul id="nav-mobile" id="comp-menu" style={{ backgroundColor: "black" }} className="hide-on-med-and-down">
                             <li><a className="logo" href="/"><img style={{ position: "relative" }} src={logo} alt="logo" /></a></li>
@@ -54,7 +54,7 @@ const Navbar = () => {
                             <li><a href="/venturehack">Venture Hacks</a></li>
                             <li className="break"><a href="/about">About us</a></li>
                             <li ><a onClick={handleClickOpen}>Login</a></li>
-                            <li style={{ marginRight: "15px" }}><a href="/dashboard" ><i className="material-icons">account_circle</i></a></li>
+                            <li><a href="/dashboard">Dashboard</a></li>
                         </ul>
                         {/* <ul>
                             <a href="#a" className="search" id="search-icon"><i className="material-icons">search</i></a>

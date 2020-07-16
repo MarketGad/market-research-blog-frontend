@@ -255,7 +255,12 @@ nav {
 
 .post-image {
   height: 350px;
-  width: 100%;
+  width: 80%;
+  text-align: center;
+}
+
+.post-container {
+  margin: 0 10%;
 }
 
 .post-content {
@@ -427,8 +432,9 @@ nav {
     justify-content: left;
     align-items: left;
   }
-  .logo {
+  .brand-logo {
     top: 0;
+    margin-left: 0!important;
   }
   .login-mob {
     display: block;
@@ -506,5 +512,12 @@ nav {
   .dash {
     height: auto;
     margin: 4%;
+  }
+  .post-container {
+    margin: auto;
+  }
+  .post-image {
+    height: 200px;
+    width: 100%;
   }
 }
