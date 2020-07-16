@@ -6,9 +6,11 @@ const i1001 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">LOGISTICS SECTOR IN INDIA</h3>
+
                 <div className="center article-content" style={{ textAlign: "right" }}>
                     Market Research by <b>Bisleshana B Prakash</b> (IIM Indore)<br />
                 </div>
+                <br />
                 <p className="article-subhead">1. Introduction </p>
                 <p className="article-content">
                     An efficient and effective logistics ecosystem is a critical contributor to any country's robust economic growth. It also promotes domestic and foreign trade, improves global competitiveness and reduces economic disparities across regions through higher income. Despite knowing that the logistics sector plays such a significant role in the national economic development, India's logistics cost is too high and estimated to be 13-14 % of GDP. In contrast, in developed economies like Germany, Sweden, Belgium, Austria, Japan and the USA, the cost varies between 9-10%. Also, the logistics sector in India is highly unorganized, and most of the transportation (i.e. 60% of freight) is through road. This skewed modal transportation mix adds to the cost<sup>[1]</sup>.
@@ -177,15 +179,15 @@ const i1001 = () => {
                 <p className="article-subhead">
                     References
                 </p>
-                <p className="article-content">
+                <p style={{ width: "80%" }} className="article-content">
                     1. <a href="https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364">https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364</a>
                     <br />2. <a href="https://lpi.worldbank.org/">https://lpi.worldbank.org/</a>
                     <br />3. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674">https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674</a>
-                    <br />4. <a href="https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Road%20Transportation_Cargo%20Connect.pdf">https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Transportation_Cargo%20Connect.pdf</a>
+                    <br />4. <a href="https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Road%20Transportation_Cargo%20Connect.pdf">https://www.tciexpress.in</a>
                     <br />5. <a href="https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html">https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html</a>
                     <br />6. <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382">https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382</a>
                     <br />7. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356">https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356</a>
-                    <br />8. <a href="https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/">https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/</a>
+                    <br />8. <a href="https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/">https://indianexpress.com/article/explained/</a>
                     <br />9. <a href="http://cris.org.in/crisweb/design1/proFOIS.jsp">http://cris.org.in/crisweb/design1/proFOIS.jsp</a>
                 </p>
             </div>
