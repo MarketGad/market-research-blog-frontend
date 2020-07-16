@@ -12,7 +12,7 @@ const Industry = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -20,7 +20,7 @@ const Industry = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
+                                <div className="col s12 l3">
                                     <h3 className="center">
                                         hello!
                                     </h3>
@@ -37,7 +37,7 @@ const Industry = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -45,7 +45,7 @@ const Industry = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
+                                <div className="col s12 l3">
                                     <h3 className="center">
                                         hello!
                                     </h3>
@@ -62,7 +62,7 @@ const Industry = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -70,7 +70,7 @@ const Industry = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
+                                <div className="col s12 l3">
                                     <h3 className="center">
                                         hello!
                                     </h3>
@@ -87,7 +87,7 @@ const Industry = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -95,7 +95,7 @@ const Industry = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
+                                <div className="col s12 l3">
                                     <h3 className="center">
                                         hello!
                                     </h3>
