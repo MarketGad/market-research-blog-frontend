@@ -24,7 +24,7 @@ const VentureHack = () => {
                                     <h3 className="center landing-post-head">
                                         Tradohub: bootstrapped to build the largest SME ecosystem
                                     </h3>
-                                    <p>
+                                    <p className="post-brief">
                                         The company has targeted to increase its turnover over 20 fold to $1 billion from existing Rs 330 crore in the next five years by 2025...                                    </p>
                                     <div className="center">
                                         <a href="/v3001" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
@@ -48,7 +48,7 @@ const VentureHack = () => {
                                     <h3 className="center landing-post-head">
                                         12 Steps to Start a Successful Business/Startup
                                     </h3>
-                                    <p>
+                                    <p className="post-brief">
                                         Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your
                                         startup is how many companies failed or invested resources they didn’t need to move forward.
                                         Identify in which step you are and continue down the path without overlooking any of the steps.

@@ -254,8 +254,8 @@ nav {
 }
 
 .post-image {
-  height: 350px;
-  width: 80%;
+  height: 380px;
+  width: 85%;
   text-align: center;
 }
 
@@ -265,6 +265,10 @@ nav {
 
 .post-content {
   margin: auto;
+}
+
+.post-brief {
+  font-size: 1.05em;
 }
 
 .tabContainer {
@@ -521,8 +525,14 @@ nav {
     margin: auto;
   }
   .post-image {
-    height: 400px;
+    height: 220px;
     width: 100%;
+  }
+  .landing-post-head {
+    font-size: 1.6em;
+  }
+  .post-brief {
+    font-size: 1.1em;
   }
   /* ---articles */
   .article-head {

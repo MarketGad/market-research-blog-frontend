@@ -44,12 +44,10 @@ class Dashboard extends Component {
                         <div style={{ borderRadius: "10px 10px 0 0", padding: "5px" }} className="center black white-text"><b>4</b> <br />
                         </div>
                         <div className="dash-content">
-                            “Motivational quote gute dei de”
-
                             Customers falling in love with your product? Growth is a synonym for ‘startup’. Let’s raise funding and scale up.
 
                             <div className="dash-button center">
-                                <a href="/form" style={{ background: "#bdaca8", marginTop: "6em", pointerEvents: "none"}} className="btn waves-effect wave-light">Let's Pitch </a>
+                                <a href="/form" style={{ background: "#bdaca8", marginTop: "6em", pointerEvents: "none" }} className="btn waves-effect wave-light">Let's Pitch </a>
                             </div>
                         </div>
 
