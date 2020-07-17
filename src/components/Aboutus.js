@@ -10,6 +10,8 @@ const Aboutus = () => {
                 <br />
                 As per our primary research, 59% of startups  fail due to lack of market analysis. We are a group of people at MarketGad ,from various technology and business backgrounds, taking an initiative to transform the startup ecosystem of india by eradicating the market risk involved.On our mission, we are building a platform where the aspiring entrepreneurs can meet enthusiastic researchers,who can help them understand and prepare strategies for the venture plan accordingly.
             </div>
+            <a href="/whatwedo" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Join us</a>
+
         </div >
     );
 };

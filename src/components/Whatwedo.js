@@ -49,6 +49,8 @@ const Whatwedo = () => {
                     Measure effectiveness of marketing programs and strategies
                 </li>
             </ol>
+            <h4 className="privacy-head">Please Login and Become a part of this dynamic ecosystem ang get your free subscription</h4>
+
         </div >
     )
 }

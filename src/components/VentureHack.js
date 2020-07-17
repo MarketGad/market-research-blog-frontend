@@ -27,7 +27,7 @@ const VentureHack = () => {
                                     <p>
                                     The company has targeted to increase its turnover over 20 fold to $1 billion from existing Rs 330 crore in the next five years by 2025...                                    </p>
                                     <div className="center">
-                                        <a href="/i101" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="/v3001" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>
