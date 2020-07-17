@@ -29,7 +29,7 @@ function Copyright() {
 const sectors = [
     {
         value: 'individualIdeator',
-        label: 'Individual ideator',
+        label: 'Individual Ideator',
     },
     {
         value: 'registeredStartup',
@@ -102,7 +102,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Use your logged in email"
+                                label="Use your email"
                                 name="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -169,7 +169,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <FormControlLabel
                                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                                label="Non disclosure agreement"
+                                label="Hereby you agree that the data sharing between you and MarketGad us will be strictly confidential and private"
                             />
                         </Grid>
                         <Typography component="h1" variant="h5">
