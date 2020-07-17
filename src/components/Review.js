@@ -26,9 +26,7 @@ const Review = () => {
                                 <div className="card-panel">
                                     <span className="white-text"><img className="circle responsive-img" src="https://materializecss.com/images/yuna.jpg" style={{ width: "30px" }} alt="k" /></span>
                                     <p className="white-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Beatae tenetur, facere eaque commodi esse odio vel quo
-                                        earum enim.
+                                        "It was tough to resign while leading a million dollar business with a steady pay check But at the end of the day,you got to do what you got to do.”
                                     </p>
                                 </div>
                             </div>
@@ -40,9 +38,7 @@ const Review = () => {
                                 <div className="card-panel ">
                                     <span className="white-text"><img className="circle responsive-img" src="https://materializecss.com/images/yuna.jpg" style={{ width: "30px" }} alt="k" /></span>
                                     <p className="white-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Beatae tenetur, facere eaque commodi esse odio vel quo
-                                        earum enim.
+                                        "It was tough to resign while leading a million dollar business with a steady pay check But at the end of the day,you got to do what you got to do.”
                                     </p>
                                 </div>
                             </div>
@@ -54,9 +50,7 @@ const Review = () => {
                                 <div className="card-panel ">
                                     <span className="white-text"><img className="circle responsive-img" src="https://materializecss.com/images/yuna.jpg" style={{ width: "30px" }} alt="k" /></span>
                                     <p className="white-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Beatae tenetur, facere eaque commodi esse odio vel quo
-                                        earum enim.
+                                        "It was tough to resign while leading a million dollar business with a steady pay check But at the end of the day,you got to do what you got to do.”
                                      </p>
                                 </div>
                             </div>
@@ -68,9 +62,7 @@ const Review = () => {
                                 <div className="card-panel ">
                                     <span className="white-text"><img className="circle responsive-img" src="https://materializecss.com/images/yuna.jpg" style={{ width: "30px" }} alt="k" /></span>
                                     <p className="white-text">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Beatae tenetur, facere eaque commodi esse odio vel quo
-                                        earum enim.
+                                        "It was tough to resign while leading a million dollar business with a steady pay check But at the end of the day,you got to do what you got to do.”
                                     </p>
                                 </div>
                             </div>

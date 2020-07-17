@@ -5,14 +5,14 @@ const Startup = () => {
     return (
         <div>
             <div className="startup-head">
-                <h4 className="center">start-ups</h4>
+                <h3 className="center">start-ups</h3>
             </div>
             <div className="row post-container">
                 <div className="col s12">
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -20,12 +20,12 @@ const Startup = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
+                                <div className="col s12 l3">
+                                    <h3 className="center landing-post-head">
                                         BlockChain Application
                                     </h3>
                                     <p>
-                                    Blockchain over recent years has been extolled as a revolution in business technology. In the nine years since its launch, companies, regulators, and financial technologists have spent countless hours exploring its potential. The resulting innovations have started to reshape business processes, particularly in accounting and transactions.                                    </p>
+                                        Blockchain over recent years has been extolled as a revolution in business technology. In the nine years since its launch, companies, regulators, and financial technologists have spent countless hours exploring its potential. The resulting innovations have started to reshape business processes, particularly in accounting and transactions.                                    </p>
                                     <div className="center">
                                         <a href="https://drive.google.com/file/d/14cfrN_CsFL60N4Dz_GW5hFcyadquOygH/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
@@ -36,7 +36,7 @@ const Startup = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -44,8 +44,8 @@ const Startup = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
+                                <div className="col s12 l3">
+                                    <h3 className="center landing-post-head">
                                         Market Revolution 4.0
                                     </h3>
                                     <p>
@@ -63,7 +63,7 @@ const Startup = () => {
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
-                                <div className="col l8 s12">
+                                <div className="col l9 s12">
                                     <img
                                         pos
                                         className="post-image"
@@ -71,8 +71,8 @@ const Startup = () => {
                                         alt="1st"
                                     />
                                 </div>
-                                <div className="col s12 l4">
-                                    <h3 className="center">
+                                <div className="col s12 l3">
+                                    <h3 className="center landing-post-head">
                                         Future of AI in post Covid era
                                     </h3>
                                     <p>

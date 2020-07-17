@@ -275,6 +275,10 @@ nav {
   box-shadow: 2px 2px 5px 1px #888;
 }
 
+.landing-post-head {
+  font-size: 2.1em;
+}
+
 .sidebar-button {
   width: 50%;
   float: left;
@@ -517,7 +521,7 @@ nav {
     margin: auto;
   }
   .post-image {
-    height: 200px;
+    height: 400px;
     width: 100%;
   }
   /* ---articles */
