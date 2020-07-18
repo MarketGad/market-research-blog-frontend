@@ -56,7 +56,7 @@ class Home extends Component {
                     <h4 className="seo-tag2">The difference is: Will you do something about it?</h4>
                 </div>
                 <Newpost />
-                <Review />
+                {/* <Review /> */}
                 <Offerings />
                 {/* <div className="container">
                     {postList}
