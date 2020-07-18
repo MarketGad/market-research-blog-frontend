@@ -76,15 +76,10 @@ export default function SignUp() {
             data: { sector, topic, briefIdea, phone, f1email, f2email, email }
         }).then((response) => {
             console.log(response);
-
+            alert("Your information has been successfully submitted.")
         }).catch((response) => {
-            console.log(response);
-        })
-
-        // make all the field null
-
-        console.log({
-            sector, topic, briefIdea, phone, f1email, f2email, email
+            console.log("error");
+            alert("error while submitting the form")
         })
     };
 
