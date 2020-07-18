@@ -168,9 +168,6 @@ export default function SignUp() {
                                 label="Hereby you agree that the data sharing between you and MarketGad us will be strictly confidential and private"
                             />
                         </Grid>
-                        <Typography component="h1" variant="h5">
-                            Refer Your Friends
-                        </Typography>
                         <Grid container justify="flex-begin">
                             <Grid item>
                                 <Link href="/privacy" variant="body2">
@@ -178,6 +175,10 @@ export default function SignUp() {
                                 </Link>
                             </Grid>
                         </Grid>
+                        <Typography component="h1" variant="h5">
+                            Refer Your Friends
+                        </Typography>
+
                         <div className="center" style={{ margin: "auto" }}>
                             <Grid item xs={12}>
                                 <TextField
