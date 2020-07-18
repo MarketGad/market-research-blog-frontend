@@ -170,7 +170,7 @@ export default function SignUp() {
                         </Grid>
                         <Grid container justify="flex-begin">
                             <Grid item>
-                                <Link href="/privacy" variant="body2">
+                                <Link href="/privacy" variant="body2" target="_blank">
                                     Click Here to view our privacy policy
                                 </Link>
                             </Grid>
