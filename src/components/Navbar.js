@@ -23,6 +23,12 @@ const Navbar = () => {
         setOpen(false);
     };
 
+    const printres = (response) => {
+        console.log(response.data.user.name);
+    };
+
+    let isLoggedIn = null;
+
     const responseSuccessGoogle = (response) => {
         console.log(response);
         axios({
@@ -32,6 +38,9 @@ const Navbar = () => {
             data: { tokenId: response.tokenId }
         }).then((response) => {
             console.log("Google login success ", response);
+            isLoggedIn = response;
+            printres(response);
+
         });
     }
 
@@ -53,7 +62,9 @@ const Navbar = () => {
                             <li><a href="/startup">Start-ups</a></li>
                             <li><a href="/venturehack">Venture Hacks</a></li>
                             <li className="break"><a href="/about">About us</a></li>
-                            <li ><a onClick={handleClickOpen}>Login</a></li>
+                            {
+                                !(isLoggedIn) ? <li ><a onClick={handleClickOpen}>Login</a></li> : <li>{isLoggedIn.data.user.name}</li>
+                            }
                             <li><a href="/dashboard">Dashboard</a></li>
                         </ul>
                         {/* <ul>

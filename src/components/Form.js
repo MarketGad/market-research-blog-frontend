@@ -76,6 +76,7 @@ export default function SignUp() {
             data: { sector, topic, briefIdea, phone, f1email, f2email, email }
         }).then((response) => {
             console.log(response);
+
         }).catch((response) => {
             console.log(response);
         })
