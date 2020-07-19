@@ -137,24 +137,49 @@ const i1005 = () => {
                     <p className="article-img-desc">Source: McKinsey & Company</p>
                 </div>
                 <p className="article-subhead">Reference’s</p>
-                <p className="article-content">1.
-                    <a href="https://government.economictimes.indiatimes.com/news/education/covid-19-pandemic-impact-and-strategies-for-education-sector-in-india/75173099">https://government.economictimes.indiatimes.com/news/education/covid-19-pandemic-impact-and-strategies-for-education-sector-in-india/75173099</a><br />
-                    2.<a href="https://www.brookings.edu/blog/education-plus-development/2020/04/10/top-10-risks-and-opportunities-for-education-in-the-face-of-covid-19/
-                    ">https://www.brookings.edu/blog/education-plus-development/2020/04/10/top-10-risks-and-opportunities-for-education-in-the-face-of-covid-19/
-                    </a><br />
-                    3.<a href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps://www.insidehighered.com/advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537">https://brandequity.economictimes.indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps://www.insidehighered.com/advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537</a><br />
-                    4.<a href="https://www.highereducationdigest.com/impact-of-covid-19-on-higher-education/
-                    ">https://www.highereducationdigest.com/impact-of-covid-19-on-higher-education/
-                    </a><br />
-                    5.<a href="https://eab.com/insights/expert-insight/academic-affairs/reduce-risk-of-covid-19-transmission-on-campus/
-                    ">https://eab.com/insights/expert-insight/academic-affairs/reduce-risk-of-covid-19-transmission-on-campus/
-                    </a><br />
-                    6.<a href="https://www.thehindu.com/sci-tech/technology/why-elearning-is-not-a-sustainable-solution-to-the-covid19-education-crisis-in-india/article31560007.ece
-                    ">https://www.thehindu.com/sci-tech/technology/why-elearning-is-not-a-sustainable-solution-to-the-covid19-education-crisis-in-india/article31560007.ece
-                    </a><br />
-                    7.<a href="https://www.shiksha.com/boards/articles/covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375">https://www.shiksha.com/boards/articles/covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375</a><br />
-                    8.<a href="https://www.collegedekho.com/articles/covid-19-impact-higher-education-india/">https://www.collegedekho.com/articles/covid-19-impact-higher-education-india/</a><br />
-                </p>
+                <ol className="article-content">
+                    <li>
+                        <a href="https://government.economictimes.indiatimes.com/news/education/covid-19-pandemic-impact-and-strategies-for-education-sector-in-india/75173099">
+                            https://government.economictimes.
+                            indiatimes.com/news/education/
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.brookings.edu/blog/education-plus-development/2020/04/10/top-10-risks-and-opportunities-for-education-in-the-face-of-covid-19/
+                    ">https://www.brookings.edu/blog/
+                            education-plus-development
+                    </a>
+                    </li>
+                    <li>
+                        <a href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps://www.insidehighered.com/advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537">
+                            https://brandequity.economictimes.
+                            indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps:</a>
+                    </li>
+                    <li>
+                        <a href="https://www.highereducationdigest.com/impact-of-covid-19-on-higher-education/
+                    ">https://www.highereducationdigest.com/
+                            impact-of-covid-19-on-higher-education/
+                    </a>
+                    </li>
+                    <li> <a href="https://eab.com/insights/expert-insight/academic-affairs/reduce-risk-of-covid-19-transmission-on-campus/
+                    ">https://eab.com/insights/expert-insight/academic-affairs/
+                        reduce-risk-of-covid-19-transmission-on-campus/
+                    </a></li>
+                    <li>
+                        <a href="https://www.thehindu.com/sci-tech/technology/why-elearning-is-not-a-sustainable-solution-to-the-covid19-education-crisis-in-india/article31560007.ece
+                    ">https://www.thehindu.com/sci-tech/technology/
+                    </a>
+                    </li>
+                    <li>
+                        <a href="https://www.shiksha.com/boards/articles/covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375">
+                            https://www.shiksha.com/boards/articles/
+                            covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375</a>
+                    </li>
+                    <li> <a href="https://www.collegedekho.com/articles/covid-19-impact-higher-education-india/">https://www.collegedekho.com/articles/
+                    covid-19-impact-higher-education-india/</a>
+                    </li>
+                </ol>
+
             </div>
             <Footer />
         </div >
