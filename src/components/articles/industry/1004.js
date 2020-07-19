@@ -7,9 +7,8 @@ const i1004 = () => {
             <div className="container">
                 <h3 className="article-head center">Scenario of Fintech Apps in India – A Comparative Study of Major Players</h3>
                 <div className="center article-content" style={{ textAlign: "right" }}>
-                    Author
-                    <b></b> <br />
-                    <b></b> <br />
+                    Author <br />
+                    <b>Sonam</b>
                 </div>
                 <p className="article-subhead">Introduction</p>
                 <p className="article-content">In India over the last few decades, banking institutions, business practices, and financial markets have improved
@@ -64,8 +63,6 @@ million high-income households to fuel demand and growth in Indian FinTech space
                     <img className="article-img" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594919055/Articles%20Photos/Industry/FinTech/1-min_oaef2i.jpg" alt="i101" />
                     <p className="article-img-desc">SCENARIO OF FinTech INDUSTRY</p>
                 </div>
-
-
                 <p className="article-content">In India, the Fintech industry is categorized in 4 main categories, WealthTech, Payments, Lending, and
 InsureTech.</p>
                 <p className="article-content">WealthTech Industry in India is witnessing the rise of startups with innovative business models and innovations.
@@ -130,9 +127,6 @@ December 2019.</li>
                 </ul>
 
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     <img className="article-img" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594919323/Articles%20Photos/Industry/FinTech/3_1_-min_zj45fj.jpg" alt="i101" />
                     <p className="article-img-desc">Credit: Suisse</p>
                 </div>

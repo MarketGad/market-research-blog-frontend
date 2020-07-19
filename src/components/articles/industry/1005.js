@@ -16,10 +16,7 @@ const i1005 = () => {
                 <p className="article-content">Instead of shutting schools in at least 188 countries, over 91 per cent of children around the world are now out of school. The education sector faces unparalleled challenges and needs to change to keep children engaged and, on their way, to learning and find solutions.
                 </p>
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594921119/Articles%20Photos/Industry/Covid19%20on%20Education%20Industry/1_1_-min_vtzvor.jpg" alt="i101" />
+                    <img className="article-img" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594921119/Articles%20Photos/Industry/Covid19%20on%20Education%20Industry/1_1_-min_vtzvor.jpg" alt="i101" />
                     <p className="article-img-desc">Source: UNESCO</p>
                 </div>
                 <p className="article-subhead">Challenges and Chances</p>
@@ -146,18 +143,19 @@ const i1005 = () => {
                     </li>
                     <li>
                         <a href="https://www.brookings.edu/blog/education-plus-development/2020/04/10/top-10-risks-and-opportunities-for-education-in-the-face-of-covid-19/
-                    ">https://www.brookings.edu/blog/
-                            education-plus-development
+                    ">https://www.brookings.edu/
+                            blog/education-plus-development
                     </a>
                     </li>
                     <li>
-                        <a href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps://www.insidehighered.com/advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537">
-                            https://brandequity.economictimes.
-                            indiatimes.com/news/business-of-brands/future-shock-25-education-trehttps:</a>
+                        <a href="https://www.insidehighered.com/advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537">
+                            https://www.insidehighered.com/
+                            advice/2020/03/24/challenges-facing-grad-students-due-coronavirus-opinionnds-post-covid-19/75729537</a>
                     </li>
                     <li>
                         <a href="https://www.highereducationdigest.com/impact-of-covid-19-on-higher-education/
-                    ">https://www.highereducationdigest.com/
+                    ">https://www.highereducationdigest
+                            .com/
                             impact-of-covid-19-on-higher-education/
                     </a>
                     </li>
@@ -172,11 +170,12 @@ const i1005 = () => {
                     </li>
                     <li>
                         <a href="https://www.shiksha.com/boards/articles/covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375">
-                            https://www.shiksha.com/boards/articles/
-                            covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375</a>
+                            https://www.shiksha.com/boards/
+                            articles/covid-19-effect-schools-shut-colleges-conducting-online-classes-get-latest-updates-here-blogId-32375</a>
                     </li>
-                    <li> <a href="https://www.collegedekho.com/articles/covid-19-impact-higher-education-india/">https://www.collegedekho.com/articles/
-                    covid-19-impact-higher-education-india/</a>
+                    <li> <a href="https://www.collegedekho.com/articles/covid-19-impact-higher-education-india/">
+                        https://www.collegedekho.com/
+                    articles/covid-19-impact-higher-education-india/</a>
                     </li>
                 </ol>
 
