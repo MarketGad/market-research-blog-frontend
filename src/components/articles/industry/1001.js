@@ -36,7 +36,7 @@ const i1001 = () => {
                     {/* use accordingly */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915664/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--003_xet3b8.jpg" alt="i101" />
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594916046/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/1-min_ft40ju.jpg" alt="i101" />
                     <p className="article-img-desc">Figure 2: Initiatives by GOI to boost the logistics sector </p>
                 </div>
                 <p className="article-subhead">2.1 Infrastructure status </p>
