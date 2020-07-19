@@ -30,7 +30,7 @@ const Navbar = () => {
     let isLoggedIn = null;
 
     const responseSuccessGoogle = (response) => {
-        console.log(response);
+        // console.log(response);
         axios({
             method: "POST",
             url: "https://serieux-saucisson-31787.herokuapp.com/api/googlelogin",
@@ -39,7 +39,7 @@ const Navbar = () => {
         }).then((response) => {
             console.log("Google login success ", response);
             isLoggedIn = response;
-            printres(response);
+            // printres(response);
             alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
         });
     }
@@ -95,8 +95,9 @@ const Navbar = () => {
                         </form>
                     </div>
                 </nav>
-                <li><a href="/startup">Start-ups</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/industry">Industry</a></li>
+                <li><a href="/startup">Start-ups</a></li>
                 <li><a href="/venturehack" >Venture Hacks</a></li>
                 <li><a href="/dashboard" >Dashboard</a></li>
                 <li><a href="/about" >About Us</a></li>
