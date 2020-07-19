@@ -40,7 +40,7 @@ const Navbar = () => {
             console.log("Google login success ", response);
             isLoggedIn = response;
             printres(response);
-
+            alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
         });
     }
 

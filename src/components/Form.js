@@ -76,10 +76,22 @@ export default function SignUp() {
             data: { sector, topic, briefIdea, phone, f1email, f2email, email }
         }).then((response) => {
             console.log(response);
-            alert("Your information has been successfully submitted.")
+            alert("Your information has been successfully submitted.");
+            setSector('');
+            setEmail('');
+            setTopic('');
+            setBriefIdea('');
+            setPhone('');
+            setF1email('');
+            setF2email('');
         }).catch((response) => {
-            console.log("error");
-            alert("error while submitting the form")
+            const statuscode = "404";
+            const index = response.toString().indexOf(statuscode);
+            console.log(index);
+            if (index > -1) {
+                alert("Please login to submit this form");
+            }
+            console.log(`Error-Response: ${response}`);
         })
     };
 
