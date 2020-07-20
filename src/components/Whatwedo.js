@@ -52,7 +52,7 @@ const Whatwedo = () => {
                     </li>
                 </ol>
                 <div className="center">
-                    <a href="/whatwedo" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Get Started!</a>
+                    <a href="/dashboard" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Get Started!</a>
                 </div>
                 <br />
             </div >
