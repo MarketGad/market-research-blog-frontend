@@ -12,6 +12,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import MenuItem from '@material-ui/core/MenuItem';
 import axios from 'axios';
+import Dialog from '@material-ui/core/Dialog';
+import Slide from '@material-ui/core/Slide';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import GoogleLogin from 'react-google-login';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
 
 
 function Copyright() {
@@ -58,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
+    const [open, setOpen] = React.useState(false);
     const classes = useStyles();
     const [sector, setSector] = React.useState(null);
     const [email, setEmail] = React.useState('');
@@ -66,6 +76,10 @@ export default function SignUp() {
     const [phone, setPhone] = React.useState('');
     const [f1email, setF1email] = React.useState('');
     const [f2email, setF2email] = React.useState('');
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -89,11 +103,31 @@ export default function SignUp() {
             const index = response.toString().indexOf(statuscode);
             console.log(index);
             if (index > -1) {
-                alert("Please login to submit this form");
+                setOpen(true);
             }
             console.log(`Error-Response: ${response}`);
         })
     };
+
+    let isLoggedIn = null;
+    const responseSuccessGoogle = (response) => {
+        // console.log(response);
+        axios({
+            method: "POST",
+            url: "https://serieux-saucisson-31787.herokuapp.com/api/googlelogin",
+            // url: "http://localhost:5000/api/googlelogin",
+            data: { tokenId: response.tokenId }
+        }).then((response) => {
+            console.log("Google login success ", response);
+            isLoggedIn = response;
+            // printres(response);
+            alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
+        });
+    }
+
+    const responseErrorGoogle = (response) => {
+        console.log(response);
+    }
 
     return (
         <Container component="main" maxWidth="sm">
@@ -231,6 +265,36 @@ export default function SignUp() {
             <Box m={3}>
                 <Copyright />
             </Box>
+            <div>
+                <Dialog
+                    open={open}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <div className="center" style={{ padding: "10px", fontSize: "20px" }}>
+                        <DialogTitle id="alert-dialog-slide-title">Welcome! Please sign in before submitting the form</DialogTitle>
+                    </div>
+                    <div className="center" style={{ padding: "10px" }}>
+                        <DialogActions>
+                            {/* <Button onClick={handleClose} variant="contained" color="primary" href="/dashboard">
+                                LinkedIn Login
+                                            </Button> */}
+                            <Button onClick={handleClose} href="/">
+                                <GoogleLogin
+                                    clientId="798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com"
+                                    onSuccess={responseSuccessGoogle}
+                                    onFailure={responseErrorGoogle}
+                                    cookiePolicy={'single_host_origin'}
+                                    redirectUri={'/dashboard'}
+                                />
+                            </Button>
+                        </DialogActions>
+                    </div>
+                </Dialog>
+            </div>
         </Container>
     );
 }
