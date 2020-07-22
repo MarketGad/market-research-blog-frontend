@@ -214,11 +214,15 @@ nav {
 /*--------------------- Featured------------ */
 
 .card-h {
-  height: 400px;
+  height: 410px;
 }
 
 .card-img {
-  height: 310px;
+  height: 300px;
+}
+
+.card .card-img img {
+  height: 300px;
 }
 
 /* ----------Footer------------- */
@@ -551,5 +555,14 @@ nav {
   }
   .article-img-desc {
     font-size: 1.0em;
+  }
+  .card-h {
+    height: 350px;
+  }
+  .card .card-img img {
+    height: 250px;
+  }
+  .card-img {
+    height: 250px;
   }
 }

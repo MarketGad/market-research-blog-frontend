@@ -109,7 +109,6 @@ export default function SignUp() {
         })
     };
 
-    let isLoggedIn = null;
     const responseSuccessGoogle = (response) => {
         // console.log(response);
         axios({
@@ -119,7 +118,6 @@ export default function SignUp() {
             data: { tokenId: response.tokenId }
         }).then((response) => {
             console.log("Google login success ", response);
-            isLoggedIn = response;
             // printres(response);
             alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
         });
@@ -221,7 +219,7 @@ export default function SignUp() {
                                 </Link>
                             </Grid>
                         </Grid>
-                        <Typography component="h1" variant="h5">
+                        <Typography style={{ alignSelf: 'center' }} component="h1" variant="h5">
                             Refer Your Friends
                         </Typography>
 

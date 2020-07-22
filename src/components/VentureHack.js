@@ -54,7 +54,7 @@ const VentureHack = () => {
                                         Identify in which step you are and continue down the path without overlooking any of the steps.
                                     </p>
                                     <div className="center">
-                                        <a href="https://drive.google.com/file/d/1pDL87M1Kju0AofvYfZGGx7nJLrdhpTWD/view?usp=sharing" target="_blank" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                        <a href="https://drive.google.com/file/d/1pDL87M1Kju0AofvYfZGGx7nJLrdhpTWD/view?usp=sharing" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
                                     </div>
                                 </div>
                             </div>

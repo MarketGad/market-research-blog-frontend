@@ -14,6 +14,8 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
+    const [name, setName] = React.useState("");
+    // const [picture, setPicture] = React.useState("");
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -23,29 +25,34 @@ const Navbar = () => {
         setOpen(false);
     };
 
-    const printres = (response) => {
-        console.log(response.data.user.name);
-    };
-
-    let isLoggedIn = null;
-
     const responseSuccessGoogle = (response) => {
-        // console.log(response);
+        console.log(response);
+        setName("Signed in as " + response.profileObj.givenName);
+        // setPicture(response.profileObj.imageUrl);
         axios({
             method: "POST",
             url: "https://serieux-saucisson-31787.herokuapp.com/api/googlelogin",
-            // url: "http://localhost:5000/api/googlelogin",
             data: { tokenId: response.tokenId }
         }).then((response) => {
-            console.log("Google login success ", response);
-            isLoggedIn = response;
-            // printres(response);
             alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
+            console.log("Google login success ", response);
         });
     }
 
     const responseErrorGoogle = (response) => {
         console.log(response);
+    }
+
+    const show = () => {
+        if (name === "") {
+            return (<li><a href="#l" onClick={handleClickOpen}>Login</a></li>)
+        }
+        else {
+            return (
+                <React.Fragment>
+                    <li><a href="#l">{name}</a></li>
+                </React.Fragment>)
+        }
     }
 
     return (
@@ -55,17 +62,15 @@ const Navbar = () => {
                     <div className="nav-wrapper">
                         <a href="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                         <a href="/" className="brand-logo logo sidenav-trigger"><img height="55px" width="60px" style={{ position: "relative" }} src={logo} alt="logo-mob" /></a>
-                        <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a>
-                        <ul id="nav-mobile" id="comp-menu" style={{ backgroundColor: "black" }} className="hide-on-med-and-down">
+                        {/* <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a> */}
+                        <ul id="nav-mobilecomp-menu " style={{ backgroundColor: "black" }} className="hide-on-med-and-down">
                             <li><a className="logo" href="/"><img style={{ position: "relative" }} src={logo} alt="logo" /></a></li>
                             <li><a href="/industry">Industry</a></li>
                             <li><a href="/startup">Start-ups</a></li>
                             <li><a href="/venturehack">Venture Hacks</a></li>
                             <li className="break"><a href="/about">About us</a></li>
-                            {
-                                !(isLoggedIn) ? <li ><a onClick={handleClickOpen}>Login</a></li> : <li>{isLoggedIn.data.user.name}</li>
-                            }
-                            <li><a href="/dashboard">Dashboard</a></li>
+                            {show()}
+                            <li><a href="/dashboard" >Dashboard</a></li>
                         </ul>
                         {/* <ul>
                             <a href="#a" className="search" id="search-icon"><i className="material-icons">search</i></a>
@@ -74,7 +79,7 @@ const Navbar = () => {
                             <form>
                                 <div className="input-field" style={{ display: "none" }} id="search-div">
                                     <input id="search-txt" type="search" />
-                                    <label className="label-icon" for="search-txt"><i className="material-icons">search</i></label>
+                                    <label className="label-icon" htmlFor="search-txt"><i className="material-icons">search</i></label>
                                     <i className="material-icons" id="close-icon">close</i>
                                 </div>
                             </form>
@@ -85,11 +90,11 @@ const Navbar = () => {
             </div>
             <ul className="sidenav" id="mobile-demo">
                 <nav>
-                    <div class="nav-wrapper">
+                    <div className="nav-wrapper">
                         <form>
                             <div className="input-field">
                                 <input id="search" type="search" placeholder="Search here..." />
-                                <label className="label-icon" for="search"><i className="material-icons">search</i></label>
+                                <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
                                 <i className="material-icons">close</i>
                             </div>
                         </form>
@@ -99,6 +104,7 @@ const Navbar = () => {
                 <li><a href="/industry">Industry</a></li>
                 <li><a href="/startup">Start-ups</a></li>
                 <li><a href="/venturehack" >Venture Hacks</a></li>
+                {show()}
                 <li><a href="/dashboard" >Dashboard</a></li>
                 <li><a href="/about" >About Us</a></li>
             </ul>
@@ -125,7 +131,6 @@ const Navbar = () => {
                                     onSuccess={responseSuccessGoogle}
                                     onFailure={responseErrorGoogle}
                                     cookiePolicy={'single_host_origin'}
-                                    redirectUri={'/dashboard'}
                                 />
                             </Button>
                         </DialogActions>

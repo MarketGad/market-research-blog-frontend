@@ -85,10 +85,7 @@ this involves the rerouting of the product to the manufacturer.
                     Here is a look at how the returns stack for the top 3 e-commerce platforms.
                 </p>
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594656202/2_ri3bnu.jpg" alt="i101" /> */}
-                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594656202/2_ri3bnu.jpg" alt="i101" alt="i101" /> */}
-                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594917488/Articles%20Photos/Industry/Reverse%20Logistic/2_k8fndm.jpg" alt="i101" alt="i101" alt="i101" />
+                    <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594917488/Articles%20Photos/Industry/Reverse%20Logistic/2_k8fndm.jpg" alt="i1002" />
                 </div>
                 <p className="article-content">
                     If reverse logistics is implemented at a full scale, the industry will be able to reap
@@ -97,7 +94,7 @@ this involves the rerouting of the product to the manufacturer.
                     satisfaction.
                 </p>
                 <p className="article-content">
-                                    </p>
+                </p>
                 <p className="article-subhead">Reverse Logistics to Happy returns: The Green Dust Case </p>
                 <p className="article-content">
                     Having engaged with reverse logistics process for more than 5 years, the
