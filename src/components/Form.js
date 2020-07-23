@@ -110,7 +110,6 @@ export default function SignUp() {
     };
 
     const responseSuccessGoogle = (response) => {
-        // console.log(response);
         axios({
             method: "POST",
             url: "https://serieux-saucisson-31787.herokuapp.com/api/googlelogin",
@@ -139,7 +138,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required
+                                required={true}
                                 fullWidth
                                 id="email"
                                 label="Use your email"
@@ -153,7 +152,7 @@ export default function SignUp() {
                                 id="outlined-select-sector"
                                 fullWidth
                                 select
-                                required
+                                required={true}
                                 label="Idea Stage"
                                 value={sector}
                                 helperText="Choose the stage of your idea"
@@ -170,7 +169,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required
+                                required={true}
                                 fullWidth
                                 id="topic"
                                 label="Give your idea in one line"
@@ -183,7 +182,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required
+                                required={true}
                                 fullWidth
                                 id="standard-basic"
                                 label="Brief us about your idea"
@@ -195,7 +194,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required
+                                required={true}
                                 fullWidth
                                 id="phone"
                                 label="Phone No."
@@ -226,7 +225,7 @@ export default function SignUp() {
                         <div className="center" style={{ margin: "auto" }}>
                             <Grid item xs={12}>
                                 <TextField
-                                    required
+                                    required={true}
                                     id="email"
                                     type="email"
                                     label="Email Address 1"

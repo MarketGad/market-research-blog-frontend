@@ -27,7 +27,6 @@ const Navbar = () => {
 
     const responseSuccessGoogle = (response) => {
         console.log(response);
-        setName("Signed in as " + response.profileObj.givenName);
         // setPicture(response.profileObj.imageUrl);
         axios({
             method: "POST",
@@ -36,6 +35,7 @@ const Navbar = () => {
         }).then((response) => {
             alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
             console.log("Google login success ", response);
+            setName("Signed in as " + response.data.user.name);
         });
     }
 
@@ -44,15 +44,15 @@ const Navbar = () => {
     }
 
     const show = () => {
-        if (name === "") {
-            return (<li><a href="#l" onClick={handleClickOpen}>Login</a></li>)
-        }
-        else {
-            return (
-                <React.Fragment>
-                    <li><a href="#l">{name}</a></li>
-                </React.Fragment>)
-        }
+        // if (name === "") {
+            return (<li><a onClick={handleClickOpen}>Login</a></li>)
+        // }
+        // else {
+        //     return (
+        //         <React.Fragment>
+        //             <li><a>{name}</a></li>
+        //         </React.Fragment>)
+        // }
     }
 
     return (
