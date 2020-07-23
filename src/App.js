@@ -17,6 +17,9 @@ import I1003 from './components/articles/industry/1003';
 import I1004 from './components/articles/industry/1004';
 import I1005 from './components/articles/industry/1005';
 import S2001 from './components/articles/startups/s2001';
+import S2002 from './components/articles/startups/s2002';
+import S2003 from './components/articles/startups/s2003';
+import S2004 from './components/articles/startups/s2004';
 import v3001 from './components/articles/venturehacks/v3001';
 
 class App extends Component {
@@ -42,6 +45,9 @@ class App extends Component {
             <Route exact path='/i1004' component={I1004} />
             <Route exact path='/i1005' component={I1005} />
             <Route exact path='/s2001' component={S2001} />
+            <Route exact path='/s2002' component={S2002} />
+            <Route exact path='/s2003' component={S2003} />
+            <Route exact path='/s2004' component={S2004} />
             <Route exact path='/v3001' component={v3001} />
             {/* <Route exact path='/i1003' component={I1003} />
             <Route exact path='/i1004' component={I1004} />
