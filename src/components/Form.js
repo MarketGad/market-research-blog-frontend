@@ -133,12 +133,13 @@ export default function SignUp() {
                 <Typography component="h1" variant="h5">
                     Submit your idea
         </Typography>
-                <form className={classes.form} noValidate onSubmit={submitHandler}>
+                <form className={classes.form} onSubmit={submitHandler}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid spacing={2} item xs={12}>
                             <TextField
+                                type="email"
                                 variant="outlined"
-                                required={true}
+                                required
                                 fullWidth
                                 id="email"
                                 label="Use your email"
@@ -152,7 +153,7 @@ export default function SignUp() {
                                 id="outlined-select-sector"
                                 fullWidth
                                 select
-                                required={true}
+                                required
                                 label="Idea Stage"
                                 value={sector}
                                 helperText="Choose the stage of your idea"
@@ -169,7 +170,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required={true}
+                                required
                                 fullWidth
                                 id="topic"
                                 label="Give your idea in one line"
@@ -182,7 +183,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required={true}
+                                required
                                 fullWidth
                                 id="standard-basic"
                                 label="Brief us about your idea"
@@ -194,7 +195,7 @@ export default function SignUp() {
                         <Grid item xs={12}>
                             <TextField
                                 variant="outlined"
-                                required={true}
+                                required
                                 fullWidth
                                 id="phone"
                                 label="Phone No."

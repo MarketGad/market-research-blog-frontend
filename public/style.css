@@ -12,6 +12,10 @@ input[type="text"] {
   padding: 14px !important;
 }
 
+input[type="email"] {
+  padding-left: 10px!important;
+}
+
 label+.MuiInput-formControl {
   margin-top: 0 !important;
 }

@@ -14,7 +14,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const Navbar = () => {
     const [open, setOpen] = React.useState(false);
-    const [name, setName] = React.useState("");
+    // const [name, setName] = React.useState("");
     // const [picture, setPicture] = React.useState("");
 
     const handleClickOpen = () => {
@@ -35,7 +35,7 @@ const Navbar = () => {
         }).then((response) => {
             alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
             console.log("Google login success ", response);
-            setName("Signed in as " + response.data.user.name);
+            // setName("Signed in as " + response.data.user.name);
         });
     }
 
@@ -45,7 +45,7 @@ const Navbar = () => {
 
     const show = () => {
         // if (name === "") {
-            return (<li><a onClick={handleClickOpen}>Login</a></li>)
+        return (<li><a onClick={handleClickOpen}>Login</a></li>)
         // }
         // else {
         //     return (
