@@ -7,7 +7,7 @@ const i1004 = () => {
             <div className="container">
                 <h3 className="article-head center">Scenario of Fintech Apps in India – A Comparative Study of Major Players</h3>
                 <div className="center article-content" style={{ textAlign: "right" }}>
-                    Author: <b>Sonam</b>
+                    Market Research by <b>Sonam</b>
                 </div>
                 <p className="article-subhead">Introduction</p>
                 <p className="article-content">In India over the last few decades, banking institutions, business practices, and financial markets have improved
