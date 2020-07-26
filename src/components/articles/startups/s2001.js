@@ -7,7 +7,7 @@ const s1001 = () => {
             <div className="container">
                 <h3 className="article-head center">5G: Connecting everything</h3>
                 <div className="center article-content" style={{ textAlign: "right" }}>
-                    Author:Nitin <br />
+                    Market Research by <b>Nitin</b> <br />
                 </div>
                 <p className="article-subhead">Introduction</p>
                     <p className="article-content">We all know that 5G is coming in networking & everything will be change. But
