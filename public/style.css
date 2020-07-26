@@ -26,13 +26,13 @@ label+.MuiInput-formControl {
   position: relative;
   width: 50px;
   height: 55px;
-  margin-right: 45px;
+  margin-right: 50px;
   top: 5px;
 }
 
 nav ul a {
   font-size: 1.3rem;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .nav-wrapper ul li:nth-child(n + 2):hover {

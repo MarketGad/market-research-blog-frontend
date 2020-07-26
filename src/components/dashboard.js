@@ -12,7 +12,7 @@ class Dashboard extends Component {
                     <div className="col s12 l7 dash">
                         <div style={{ borderRadius: "10px 10px 0 0", padding: "5px" }} className="center black white-text"><b>1</b> <br />
                         </div>
-                        <div className="dash-content" style={{fontFamily: 'Nunito Sans'}}>
+                        <div className="dash-content">
                             <b> The secret of getting ahead is getting started. </b>
                             <br />
                             <br />
@@ -28,7 +28,7 @@ class Dashboard extends Component {
                     <div className="col s12 l4 dash">
                         <div style={{ borderRadius: "10px 10px 0 0", padding: "5px" }} className="center black white-text"><b>2</b> <br />
                         </div>
-                        <div className="dash-content" style={{fontFamily: 'Nunito Sans'}}>
+                        <div className="dash-content">
                             <b>Dreaming is the first step of Achieveing!</b>
                             <br />
                             <br />
@@ -41,7 +41,7 @@ class Dashboard extends Component {
                     <div className="col s12 l4 dash">
                         <div style={{ borderRadius: "10px 10px 0 0", padding: "5px" }} className="center black white-text"><b>4</b> <br />
                         </div>
-                        <div className="dash-content" style={{fontFamily: 'Nunito Sans'}}>
+                        <div className="dash-content">
                             Customers falling in love with your product? Growth is a synonym for ‘startup’. Let’s raise funding and scale up.
 
                             <div className="dash-button center">
@@ -53,7 +53,7 @@ class Dashboard extends Component {
                     <div className="col s12 l7 dash">
                         <div style={{ borderRadius: "10px 10px 0 0", padding: "5px" }} className="center black white-text"><b>3</b> <br />
                         </div>
-                        <div className="dash-content dash-left" style={{fontFamily: 'Nunito Sans'}}>
+                        <div className="dash-content dash-left">
                             Our team will not only help you in data-driven decision making and market analysis but also execute your idea and help in developing
                             a product that your customers actually need.
                             About 59% startup failed due to lack of martket research. We implement an experimentally proven way to achieve Product Market Fit and
