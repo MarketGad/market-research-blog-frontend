@@ -453,7 +453,7 @@ to steer though when the times are tough.
                 </p>
                 <p className="article-subhead">References</p>
                 <p className="article-content">
-                    1. <a href="https://automonkey.co/components-of-good-marketing-strategy">https://automonkey.co/</a>
+                     1. <a href="https://automonkey.co/components-of-good-marketing-strategy">https://automonkey.co/</a>
                     <br /><br />2. <a href="https://blog.hubspot.com/sales/how-to-start-a-business">https://blog.hubspot.com/</a>
                     <br /><br />3. <a href="https://corporatefinanceinstitute.com/resources/knowledge/deals/business-exit- strategy/">https://corporatefinanceinstitute.com/</a>
                     <br /><br />4. <a href="https://coschedule.com/blog/marketing- process/#:~:text=What%20is%20a%20Marketing%20Process,to%20reach%20th e%20desired%20audience.%E2%80%9D">https://coschedule.com/</a>
@@ -464,9 +464,9 @@ to steer though when the times are tough.
                     <br /><br />9. <a href="https://www.businessmapping.com/blog/9-ways-to-measure-a-business-process/">https://www.businessmapping.com/</a>
                     <br /><br />10. <a href="https://www.businessnewsdaily.com/4686-how-to-start-a-business.html ">https://www.businessnewsdaily.com/</a>
                     <br /><br />11. <a href="https://www.entrepreneur.com/article/297899 ">https://www.entrepreneur.com/</a>
-                    <br /><br />12. <a href="https://www.entrepreneur.com/article/38822">https://www.entrepreneur.com/article/38822</a>
+                    <br /><br />12. <a href="https://www.entrepreneur.com/article/38822">https://www.entrepreneur.com/article/</a>
                     <br /><br />13. <a href="https://www.forbes.com/sites/abdoriani/2019/11/12/the-5-biggest-stages-of-a- startup-from-idea-to-scale/">https://www.forbes.com/</a>
-                    <br /><br />14. <a href="https://www.forbes.com/sites/allbusiness/2018/07/15/35-step-guide- entrepreneurs-starting-a-business/">https://www.forbes.com/sites/allbusiness/</a>
+                    <br /><br />14. <a href="https://www.forbes.com/sites/allbusiness/2018/07/15/35-step-guide- entrepreneurs-starting-a-business/">https://www.forbes.com/sites/</a>
                     <br /><br />15. <a href="https://www.fundera.com/blog/how-to-start-a-business">https://www.fundera.com/</a>
                     <br /><br />16. <a href="https://www.investopedia.com/financial-edge/0412/5-essential-steps-to- evaluating-your-business-idea.aspx">https://www.investopedia.com/</a>
                     <br /><br />17. <a href="https://www.localenterprise.ie/Fingal/Start-or-Grow-your-Business/Start-a- Business/Taking-the-Initial-Steps/ ">https://www.localenterprise.ie/</a>
