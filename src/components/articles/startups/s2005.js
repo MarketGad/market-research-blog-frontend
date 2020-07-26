@@ -7,7 +7,7 @@ const s2005 = () => {
             <div className="container">
                 <h3 className="article-head center">BlockChain Application</h3>
                 <div className="center article-content" style={{ textAlign: "right" }}>
-                    Author:Harshal Verma <br />
+                    Market Research by <b>Harshal Verma</b> <br />
                 </div>
                 <p className="article-subhead">Introduction</p>
                     <p className="article-content">Simply stated, Blockchain is a chain of blocks that contains information.
