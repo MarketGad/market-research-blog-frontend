@@ -138,6 +138,31 @@ const Industry = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="card">
+                        <div className="card-content">
+                            <div className="row">
+                                <div className="col l9 s12">
+                                    <img
+                                        pos
+                                        className="post-image"
+                                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1595774051/Articles%20Photos/Industry/12%20Steps%20to%20Start%20a%20Successful%20Business%20Startup/1_cubx34.jpg"
+                                        alt="1st"
+                                    />
+                                </div>
+                                <div className="col s12 l3">
+                                    <h3 className="center landing-post-head">
+                                    12 Steps to Start a Successful Business/Startup
+                                    </h3>
+                                    <p className="post-brief">
+                                    Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your startup is how many companies failed or invested resources they didn’t need to move forward. Identify in which step you are and continue down the path without overlooking any of the steps.
+                                    </p>
+                                    <div className="center">
+                                        <a href="/i1006" style={{ background: "#2b2321c9", marginTop: "2em" }} className="btn waves-effect waves-light ">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
