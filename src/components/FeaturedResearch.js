@@ -63,24 +63,30 @@ const FeaturedResearch = () => {
                 <div className="col s12 m12 l4" style={{ padding: "20px 5px" }}>
                     <div className="card card-h">
                         <div className="card-image card-img waves-effect waves-block waves-light">
-                            <img className="activator" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594928729/Articles%20Photos/VentureHack/SME-social_fshval.jpg" alt="f3" />
+                            <img className="activator" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594916046/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/1-min_ft40ju.jpg" alt="f3" />
                         </div>
                         <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4"
-                            >Tradohub:World's largest ecosystem of SME<i className="material-icons right"
+                            >Logistics Sectors in India<i className="material-icons right"
                             >more_vert</i
                                 ></span
                             >
                         </div>
                         <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4"
-                            >Tradohub:World's largest ecosystem of SME <i className="material-icons right">close</i></span
+                            >Logistics Sectors in India <i className="material-icons right">close</i></span
                             >
                             <p>
-                                Tradohub aggregates the demands of SMEs for industrial raw materials and procures these materials from large global manufacturers at rock-bottom prices. It then supplies them to SMEs at competitive prices on a user-friendly online platform. They believed that if they’re able to offer even slightly better pricing — by aggregating raw materials and putting in place an efficient supply chain — say even 2% lower, it would enable SMEs to bring down their costs by up to 24%. By this thinking, they realized as the price advantage would help them attract a large number of customers...
+                            <div style={{ textAlign: "right" }}>
+                    By <b>Bisleshana B Prakash</b> (IIM Indore)
+                </div>
+                            India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
+                                        in developed economies like Germany, Sweden, Belgium, Austria, Japan and the USA, the cost
+                                        varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...
+                                       
                              </p>
                             <div style={{ paddingTop: "20px" }} className="center">
-                                <a href="/v3001" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                                <a href="/i1001" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,12 @@ const Aboutus = () => {
         <div>
             <div>
                 <div className="container">
-                <h3 className="article-head center">About Us</h3>
+                
+                <h3 className="article-head center">About US</h3>
+                <div className="center">
+                    <a href="/whatwedo" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Join us</a>
+                </div>
+                <br /><br />
                 <p className="article-content">
                     Google wasn’t the first search engine in the world. It was the 9th to come. Imagine if Larry Page had given up on his dreams considering this fact, we could have never got something that made our lives so convenient.
                 </p>
@@ -18,10 +23,7 @@ const Aboutus = () => {
                     At MarketGad, our goal is to get you through the first phase. This usually means: get you to the point where you’ve built something impressive enough to raise money on a larger scale. Then we can introduce you to early-stage investors for angel funding.
                     Some companies may need no more than just a bit of consulting to carry forward their ideas. Others will go through several rounds. There is no right answer; how much effort you need to put depends on the kind of company you want to start.
                 </p>
-                <div className="center">
-                    <a href="/whatwedo" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Join us</a>
-                </div>
-                <br /><br />
+               
                 <p className="article-subhead">
                     59% of start-ups fail because they create something that isn’t required at the first place. We validate your ideas and products with market research
                 </p>

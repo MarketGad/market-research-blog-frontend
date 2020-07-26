@@ -6,7 +6,9 @@ const i1003 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Data Website</h3>
-
+                <div className="center article-content" style={{ textAlign: "right" }}>
+                    Data Website by <b>Shankhadeep</b>
+                </div>
                 
                 <p className="article-subhead">Introduction</p>
                 <p className="article-content">The beginning of 2020 saw a huge explosion of data throughout the globe which amounts to 44
@@ -104,9 +106,7 @@ be prepared for that day. The solution is always an in-house analytical framewor
 many organizations which believe in outsourcing the analytical solution are most profitable. Ronal
 Coase once said, “If you torture data long enough, it will confess”, and this is the future of Business
 and Data Driven Decision Making.</p>
-<div className="center article-content" style={{ textAlign: "right" }}>
-                    Data Website by <b>Shankhadeep</b>
-                </div>
+
 
                 
             </div>
