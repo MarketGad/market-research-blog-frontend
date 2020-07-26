@@ -194,7 +194,7 @@ const Startup = () => {
                                         pos
                                         className="post-image"
                                         src=""
-                                        alt="1st"
+                                        alt=""
                                     />
                                 </div>
                                 <div className="col s12 l3">
