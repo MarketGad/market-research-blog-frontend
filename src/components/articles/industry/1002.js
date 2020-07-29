@@ -6,7 +6,7 @@ const i1002 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">REVERSE LOGISTICS: THE FUTURE OF SUPPLY CHAIN</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Alok Ranjan</b><br />
                 </div>
                 <p className="article-subhead">Introduction </p>

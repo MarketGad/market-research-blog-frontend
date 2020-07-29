@@ -6,7 +6,7 @@ const i1004 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Scenario of Fintech Apps in India – A Comparative Study of Major Players</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Sonam</b>
                 </div>
                 <p className="article-subhead">Introduction</p>

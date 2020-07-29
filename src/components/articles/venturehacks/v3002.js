@@ -7,7 +7,7 @@ const i3002 = () => {
             <div className="container">
                 <h3 className="article-head center">First Indian Handcrafted Beer- Bira91</h3>
 
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Rishika</b><br />
                 </div>
                 <br />

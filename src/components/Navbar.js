@@ -81,7 +81,7 @@ const Navbar = () => {
                                 <li><a href="/industry">Industry</a></li>
                                 <li><a href="/startup">Start-ups</a></li>
                                 <li><a href="/venturehack">Venture Hacks</a></li>
-                                <li><a href="/about">About us</a></li>
+                                <li><a href="/about">About Us</a></li>
                                 {/* {show()} */}
                                 <li><a onClick={handleClickOpen}>Dashboard</a></li>
                             </ul>

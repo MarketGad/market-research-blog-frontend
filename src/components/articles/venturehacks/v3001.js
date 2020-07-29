@@ -6,7 +6,10 @@ const v1001 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Tradohub: bootstrapped to build the largest SME ecosystem</h3>
+                <div className="center article-content" style={{ textAlign: "center" }}>
+                    Market Research by <b>Rahul</b>
 
+                </div>
                 <p className="article-subhead">Introduction</p>
                     <p className="article-content">Tradohub is an online distributor of sorts which is making procurement of raw materials easy, efficient, and economical for Indian SMEs. It does this by aggregating demand, removing middleman, partnering with global suppliers, and integrating technology to make procurement a hassle-free, single-click experience.
                     </p>
@@ -69,10 +72,7 @@ So they think to bring a platform where better pricing by aggregating raw materi
                 <p className="article-content">Tradohub competes against players including Power2SME, Udaan, etc.
 Founded in 2012, Power2SME aggregates raw materials and product demands from small and medium businesses and places bulk orders with suppliers and manufacturers, also offering competitive prices.
 Launched in 2016, Udaan runs a web platform connecting SMEs, manufacturers, wholesalers, traders, and retailers. It currently functions in two categories: mobile accessories and fashion products.</p>
-<div className="center article-content" style={{ textAlign: "right" }}>
-                    Market Research by <b>Rahul</b><br />
 
-                </div>
                
             </div>
             <Footer />

@@ -6,7 +6,7 @@ const s2006 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Market Revolution 4.0</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Harshal Verma</b> <br />
                 </div>
                 <p className="article-subhead">Introduction</p>

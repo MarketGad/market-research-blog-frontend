@@ -7,8 +7,8 @@ const i1001 = () => {
             <div className="container">
                 <h3 className="article-head center">LOGISTICS SECTOR IN INDIA</h3>
 
-                <div className="center article-content" style={{ textAlign: "right" }}>
-                    Market Research by <b>Bisleshana B Prakash</b> (IIM Indore)<br />
+                <div className="center article-content" style={{ textAlign: "center" }}>
+                    Market Research by <b>Bisleshana B Prakash</b>
                 </div>
                 <br />
                 <p className="article-subhead">1. Introduction </p>

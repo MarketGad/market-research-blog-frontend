@@ -235,6 +235,7 @@ nav {
   background: #080808;
   padding: 5px 30px;
   font-size: medium;
+  text-align: center;
 }
 
 .copyright {
@@ -247,10 +248,10 @@ nav {
 
 .social {
   position: relative;
-  margin: auto 5px;
-  top: 4px;
-  width: 20px;
-  height: 20px;
+  margin: auto 10px;
+  top: 15px;
+  width: 35px;
+  height: 35px;
 }
 
 /* ------------startup page---------------------------- */
@@ -505,9 +506,9 @@ nav {
     font-size: 0.6em;
   }
   .social {
-    width: 15px;
+    width: 20px;
     height: 20px;
-    margin: auto 3px;
+    margin: auto 4px;
   }
   .copyright {
     top: 1px;

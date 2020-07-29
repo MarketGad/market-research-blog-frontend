@@ -6,7 +6,7 @@ const s2002 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Adani Group’s Solar Project</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Sarang Sanil</b> <br />
                 </div>
                 <p className="article-subhead">About the company</p>

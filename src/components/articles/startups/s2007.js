@@ -6,7 +6,7 @@ const s2007 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Future of AI in post Covid Era</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Sanchez Innocencia</b> <br />
                 </div>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;A time to visualize where humans will be like dogs to robots and enhancing the whole

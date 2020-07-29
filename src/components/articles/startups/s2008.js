@@ -6,7 +6,7 @@ const s2008 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">FUTURE OF AVIATION, TRAVEL AND TOURISM</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Sanchez Innocencia</b> <br />
                 </div>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;Miles apart, Oceans drowning makes me feel the essence of water far across in the air...!!!</strong></em></h2>

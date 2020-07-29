@@ -6,7 +6,7 @@ const i1005 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Problems and Challenges Faced by Education Industry During the Period of Covid-19.</h3>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Vishal Prakash Lal</b>
                 </div>
                 <p className="article-subhead">Immediate Effect of COVID-19

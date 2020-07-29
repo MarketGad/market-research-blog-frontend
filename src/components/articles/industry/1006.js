@@ -7,7 +7,7 @@ const i1006 = () => {
             <div className="container">
                 <h3 className="article-head center">12 Steps to Start a Successful Business/Startup</h3>
                 <p className="article-content">(Startup business template)</p>
-                <div className="center article-content" style={{ textAlign: "right" }}>
+                <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Tony</b><br />
                 </div>
                 <p className="article-content">

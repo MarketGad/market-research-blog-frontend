@@ -23,6 +23,9 @@ const FeaturedResearch = () => {
                             <span className="card-title grey-text text-darken-4"
                             >Approaching the age of data driven business decisions<i className="material-icons right">close</i></span
                             >
+                            <div style={{ textAlign: "right" }}>
+                    By <b>Shankhadeep Banerjee</b>
+                </div>
                             <p>
                                 Companies are nowadays focusing on providing tailored products and services in order to remain competitive in the market. The problems
                                 faced by them is mostly because of uncertainty of product and service failures in the market. Therefore, the need for data-based solutions are to be
@@ -50,6 +53,9 @@ const FeaturedResearch = () => {
                             <span className="card-title grey-text text-darken-4"
                             >Indian Healthcare Industry <i className="material-icons right">close</i></span
                             >
+                            <div style={{ textAlign: "right" }}>
+                    By <b>Shankhadeep Banerjee</b>
+                </div>
                             <p>
                                 The Indian Healthcare sector stands as the world’s fourth-largest employer. The country employs over 3,20,000 people all
                                 around the country, which is also estimated to cross a valuation of 40 million by the end of 2020. Gloablly it is one of the firstest growing...
