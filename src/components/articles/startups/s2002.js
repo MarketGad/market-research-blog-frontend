@@ -7,7 +7,7 @@ const s2002 = () => {
             <div className="container">
                 <h3 className="article-head center">Adani Group’s Solar Project</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Sarang Sanil</b> <br />
+                    Market Research by <b><a href="http://linkedin.com/in/sarang-sanil-b501211b0">Sarang Sanil</a></b> <br />
                 </div>
                 <p className="article-subhead">About the company</p>
                 <p className="article-content">In the year 1988, Gautam Shantilal Adani started to build an empire. But little did this emperor

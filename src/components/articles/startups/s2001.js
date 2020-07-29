@@ -5,7 +5,7 @@ const s1001 = () => {
     return (
         <div>
             <div className="container">
-                <h3 className="article-head center">5G: Connecting everything</h3>
+                <h3 className="article-head center">5G: Connecting Everything</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b>Nitin</b> <br />
                 </div>

@@ -5,9 +5,9 @@ const s2007 = () => {
     return (
         <div>
             <div className="container">
-                <h3 className="article-head center">Future of AI in post Covid Era</h3>
+                <h3 className="article-head center">Future of AI In Post Covid Era</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Sanchez Innocencia</b> <br />
+                Market Research by <b><a href="https://www.linkedin.com/in/sanchez-innocencia-152618177/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACnqf84BFw6O49vsnx62RWEbBck2TKRE5GE">Sanchez Innocencia D</a></b> <br />
                 </div>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;A time to visualize where humans will be like dogs to robots and enhancing the whole
 world through machines...</strong></em></h2>

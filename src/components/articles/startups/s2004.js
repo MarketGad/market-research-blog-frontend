@@ -7,7 +7,7 @@ const s2004 = () => {
             <div className="container">
                 <h3 className="article-head center">WeWork</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Sarang Sanil</b> <br />
+                Market Research by <b><a href="http://linkedin.com/in/sarang-sanil-b501211b0">Sarang Sanil</a></b> <br />
                 </div>
                 <p className="article-subhead">About the company</p>
                 <p className="article-content">Established in the year 2010, WeWork is a private real estate company that provides co-working spaces to individuals and enterprises. The company was founded by Adam Neumann, Miguel McKelvey and Rebekah Neumann. Before establishing WeWork, Neumann and Mckelvey had started “Greendesk” another co-working space, in 2008 which was more eco-friendly. Having the costs shoot up due to the eco-friendly factor, the founders realised the members were more interested in the space provided to them rather than other features like recycled furniture, green office supplies etc. and hence sold the company in 2010. WeWork’s first office was 3000 square-feet space in Soho, New York which eventually became its headquarters.  This flagship location reportedly made a profit one month after its launch. The company went on to open in 4 more locations in the next two years and in 2014 the company established its first international office in London. WeWork provides various amenities to their members like super-fast internet, free refreshments, private phone booths etc. at every location.</p>

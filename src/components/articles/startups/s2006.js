@@ -7,7 +7,7 @@ const s2006 = () => {
             <div className="container">
                 <h3 className="article-head center">Market Revolution 4.0</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Harshal Verma</b> <br />
+                Market Research by <b><a href="https://www.linkedin.com/in/harshal-verma">Harshal Verma</a></b> <br />
                 </div>
                 <p className="article-subhead">Introduction</p>
                     <p className="article-content">SThe industrial revolution marked the beginning of a development period

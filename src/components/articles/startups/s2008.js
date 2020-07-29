@@ -5,9 +5,9 @@ const s2008 = () => {
     return (
         <div>
             <div className="container">
-                <h3 className="article-head center">FUTURE OF AVIATION, TRAVEL AND TOURISM</h3>
+                <h3 className="article-head center">Future Of Aviation, Travel And Tourism</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Sanchez Innocencia</b> <br />
+                Market Research by <b><a href="https://www.linkedin.com/in/sanchez-innocencia-152618177/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACnqf84BFw6O49vsnx62RWEbBck2TKRE5GE">Sanchez Innocencia D</a></b> <br />
                 </div>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;Miles apart, Oceans drowning makes me feel the essence of water far across in the air...!!!</strong></em></h2>
                 <p className="article-subhead">Introduction</p>
