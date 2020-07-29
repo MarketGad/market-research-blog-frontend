@@ -131,7 +131,7 @@ const Navbar = () => {
                         aria-describedby="alert-dialog-slide-description"
                     >
                         <div className="center" style={{ padding: "10px", fontSize: "20px" }}>
-                            <DialogTitle id="alert-dialog-slide-title">Login to Get 10 Days of Free Subscription and use Dashboard Feature</DialogTitle>
+                            <DialogTitle id="alert-dialog-slide-title">Login to Get 10 Days of Free Subscription and use the exclusive Dashboard Feature</DialogTitle>
                         </div>
                         <div className="center" style={{ padding: "10px" }}>
                             <DialogActions>
