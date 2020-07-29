@@ -9,7 +9,7 @@ const Startup = () => {
             </div>
             <div className="row post-container">
                 <div className="col s12">
-                <div className="card">
+        {/*<div className="card">
                         <div className="card-content">
                             <div className="row">
                                 <div className="col l9 s12">
@@ -34,7 +34,7 @@ const Startup = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                     <div className="card">
                         <div className="card-content">
                             <div className="row">
