@@ -6,10 +6,10 @@ const v3004 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">12 Steps to Start a Successful Business/Startup</h3>
-                <p className="article-content">(Startup business template)</p>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Tony</b><br />
+                    Market Research by <b><a href="https://www.linkedin.com/in/tony-sachin-r/">Tony Sachin R.</a></b><br />
                 </div>
+                <p className="article-content">(Startup business template)</p>
                 <p className="article-content">
                 Creating a start-up or a business, especially in initial phases, may feel like a roller coaster that
                 takes the founders through endless loops without tangible results, except for the execution point,

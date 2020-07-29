@@ -5,10 +5,10 @@ const i3003 = () => {
     return (
         <div>
             <div className="container">
-                <h3 className="article-head center">Unacademy, India’s largest EdTech company</h3>
+                <h3 className="article-head center">Unacademy, India’s largest EdTech Company</h3>
 
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Rishika</b><br />
+                Market Research by <b><a href="https://www.linkedin.com/in/rishika-k-8403721a5/">Rishika Korade</a></b> <br />
                 </div>
                 <br />
                 <p className="article-subhead">Idea </p>
