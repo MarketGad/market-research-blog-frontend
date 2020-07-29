@@ -22,7 +22,7 @@ const Industry = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                        LOGISTICS SECTOR IN INDIA
+                                        Logistics Sector In India
                                     </h3>
                                     <p className="post-brief">
                                         India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
@@ -49,7 +49,7 @@ const Industry = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                        REVERSE LOGISTICS
+                                        Reverse Logistics
                                     </h3>
                                     <p className="post-brief">
                                         The idea of recapturing value is the soul of this concept of reverse logistics. The value

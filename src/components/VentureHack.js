@@ -22,7 +22,7 @@ const VentureHack = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                        Tradohub: bootstrapped to build the largest SME ecosystem
+                                        Tradohub: Bootstrapped To Build The Largest SME Ecosystem
                                     </h3>
                                     <p className="post-brief">
                                         The company has targeted to increase its turnover over 20 fold to $1 billion from existing Rs 330 crore in the next five years by 2025...                                    </p>
@@ -70,7 +70,7 @@ const VentureHack = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                    Unacademy, India’s largest EdTech company
+                                    Unacademy, India’s largest EdTech Company
                                     </h3>
                                     <p className="post-brief">
                                     Unacademy was founded by Gaurav Munjal in 2010, who was later on accompanied by

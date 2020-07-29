@@ -22,7 +22,7 @@ const Startup = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                    5G: Connecting everything
+                                    5G: Connecting Everything
                                     </h3>
                                     <p className="post-brief">
                                     We all know that 5G is coming in networking & everything will be change. But
@@ -173,7 +173,7 @@ const Startup = () => {
                                 </div>
                                 <div className="col s12 l3">
                                     <h3 className="center landing-post-head">
-                                        Future of AI in post Covid Era
+                                        Future Of AI In Post Covid Era
                                     </h3>
                                     <p className="post-brief">
                                         AI based startups till 2021, could see an increase of 13%. In the year 2022,
