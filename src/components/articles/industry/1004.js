@@ -7,7 +7,7 @@ const i1004 = () => {
             <div className="container">
                 <h3 className="article-head center">Scenario of Fintech Apps in India – A Comparative Study of Major Players</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Sonam</b>
+                    Market Research by <b><a href="http://linkedin.com/in/sonam-singh-78826375">Sonam Brijesh Singh</a></b>
                 </div>
                 <p className="article-subhead">Introduction</p>
                 <p className="article-content">In India over the last few decades, banking institutions, business practices, and financial markets have improved
@@ -39,7 +39,7 @@ such as Digital application, Telecom, Smartphone etc.</p>
                 payment applications.
 </p>
 
-                <p className="article-subhead">CONCEPT OF FinTech IN INDIA</p>
+                <p className="article-subhead">Concept Of FinTech In India</p>
                 <p className="article-content">India ranks amongst the world&#39;s fastest growing FinTech markets. India rated FinTech&#39;s adoption rate, with
                 China, at the top in the world. A 20 per cent CAGR is expected to increase the volume of digital payments by
 $65 billion by 2023 in 2019.</p>
@@ -93,7 +93,7 @@ on August 28, 2018, Google rebranded Tez to Google Pay.</p>
                 still starting to consider alternative ways and soon &quot;Paytm Karo&quot; became the latest buzz word alternative for
                 many people around the world. Vegetable sellers, shopkeepers, gas stations etc. Paytm &#39;s traffic rose 435%,
 device downloads rose 200%, and overall purchases and transaction volume increased 250%.</p>
-                <p className="article-subhead">OBSERVATIONS</p>
+                <p className="article-subhead">Observations</p>
                 <p className="article-content">Post demonetization, non-cash payments in India have been promoted by a wide range of different platforms and
                 technologies supported by India&#39;s banking sector and the Reserve Bank. E-wallets have recently become common to
                 the detriment of the financial system due to the need for a faster, quicker way of making payments. E-wallets
@@ -156,7 +156,7 @@ In April, it launched the buy now, pay later option for its users.</li>
                 Having said that, it&#39;s obvious that fraudsters have found various ways to cheat you out of your hard-earned
 money as well.</p>
 
-                <p className="article-subhead">New Rules by the RBI and E-Payments apps to avoid these frauds</p>
+                <p className="article-subhead">New Rules By The RBI and E-Payments To Avoid These Frauds</p>
                 <p className="article-content">There is a set of policy guidelines to prevent these mishaps in the future:</p>
                 <ul className="article-content">
                     <li>
@@ -200,13 +200,13 @@ money as well.</p>
                         resolved within 90 days, the entire amount of fraud reported will be refunded to the client.
                     </li>
                 </ul>
-                <p className="article-subhead">To stop Frauds what Google pay did:</p>
+                <p className="article-subhead">To Stop Frauds What Google Pay Did:</p>
                 <p className="article-content">
                     Google Pay began sending SMS messages along with device updates to notify users after the scam back in May.
                     Users also receive an SMS message and an App update every time they receive an order for selection. It is
                     intended to emphasize that accepting the payment would subtract funds from their bank accounts.
             </p>
-                <p className="article-subhead">CONCLUSION</p>
+                <p className="article-subhead">Conclusion</p>
                 <p className="article-content">
                     Post-demonetization the digital payment had provided relief and power to know digital transaction. People were
                     slowly adopting technology but didn&#39;t want to pay extra for digital transactions. Indian men, however, face
@@ -242,7 +242,7 @@ money as well.</p>
                     mobile network operators (MNOs) and various internet giants like Alibaba and Amazon are on the left side of
                     the ladder and are thinking of stepping up to the right.
                 </p>
-                <p className="article-subhead">REFERENCES</p>
+                <p className="article-subhead">References</p>
                 <ol className="article-content">
                     <li><a href="https://www.businessinsider.in/business/news/google-pay-has-a-solid-lead-
                     over-phonepe-paytm-and-amazon-pay-in-india-but-its-biggest-challenge-is-yet-to-

@@ -5,9 +5,9 @@ const i1002 = () => {
     return (
         <div>
             <div className="container">
-                <h3 className="article-head center">REVERSE LOGISTICS: THE FUTURE OF SUPPLY CHAIN</h3>
+                <h3 className="article-head center">Reverse Logistics: The Future Of Supply Chain</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Alok Ranjan</b><br />
+                    Market Research by <b><a href="https://www.linkedin.com/in/alok-ranjan-464a82160">Alok Ranjan</a></b><br />
                 </div>
                 <p className="article-subhead">Introduction </p>
                 <p className="article-content">

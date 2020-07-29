@@ -7,7 +7,7 @@ const i1003 = () => {
             <div className="container">
                 <h3 className="article-head center">Data Website</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Data Website by <b>Shankhadeep</b>
+                    Market Research by <b><a href="https://www.linkedin.com/in/shankh0407">Shankhadeep Banerjee</a></b><br/>
                 </div>
                 
                 <p className="article-subhead">Introduction</p>

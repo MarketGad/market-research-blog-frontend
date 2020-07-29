@@ -7,7 +7,7 @@ const i1005 = () => {
             <div className="container">
                 <h3 className="article-head center">Problems and Challenges Faced by Education Industry During the Period of Covid-19.</h3>
                 <div className="center article-content" style={{ textAlign: "center" }}>
-                    Market Research by <b>Vishal Prakash Lal</b>
+                    Market Research by <b><a href="https://www.linkedin.com/in/vishu030796lko">Vishal Prakash Lal</a></b>
                 </div>
                 <p className="article-subhead">Immediate Effect of COVID-19
                 </p>
