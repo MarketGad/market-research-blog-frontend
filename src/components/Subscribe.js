@@ -27,7 +27,7 @@ const Subscribe = () => {
                     <div className="col s12 l6 container">
                         <h5 style={{ padding: "10px", fontWeight: "500", color: "white" }} className="center">Contact Us </h5>
                         <div className="center">
-                            <p className="grey-text">team@marketgad.com</p>
+                            <p className="grey-text">marketgad20@gmail.com</p>
                             <p className="grey-text">+91 7652064835</p>
                         </div>
                     </div>
