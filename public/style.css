@@ -465,6 +465,14 @@ nav {
   #search-icon {
     display: none;
   }
+  .mobile{
+    display: block;
+  }
+  .mobile1{
+    display: none;
+  }
+}
+ 
   /* ----------------------------------slider------------------------ */
   .slider .slides li .caption {
     margin: 0;
@@ -570,4 +578,3 @@ nav {
   .card-img {
     height: 250px;
   }
-}
