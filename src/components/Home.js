@@ -27,8 +27,8 @@ class Home extends Component {
                 <Slider />
               
                 <div className="tagline center">
-                <h3 className="seo-tag1">59% of startups fail due to lack of Market Research</h3>
-                    <h3 className="seo-tag1">The difference is: Will you do something about it?</h3>
+                <h2 className="seo-tag1">59% of startups fail due to lack of Market Research</h2>
+                    <h2 className="seo-tag1">The difference is: Will you do something about it?</h2>
                 </div>
                 <Newpost />
                 {/* <Review /> */}
