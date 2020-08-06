@@ -23,10 +23,11 @@ class Home extends Component {
     render() {
         return (
             <div>
+                
                 <Slider />
+              
                 <div className="tagline center">
                 <h4 className="seo-tag1">59% of startups fail due to lack of Market Research</h4>
-                    <h4 className="seo-tag2">Each one of us will have a billion-dollar idea at some point</h4>
                     <h4 className="seo-tag1">The difference is: Will you do something about it?</h4>
                 </div>
                 <Newpost />
