@@ -131,7 +131,7 @@ nav {
 
 .seo-tag2 {
   font-weight: 500;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   padding: 5px;
 }
 
@@ -465,14 +465,14 @@ nav {
   #search-icon {
     display: none;
   }
+
   .mobile{
     display: block;
   }
   .mobile1{
     display: none;
   }
-}
- 
+
   /* ----------------------------------slider------------------------ */
   .slider .slides li .caption {
     margin: 0;
@@ -485,10 +485,10 @@ nav {
     padding: 0 6px;
   }
   .seo-tag1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .seo-tag2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   /* ----new post */
   .newPost {
@@ -578,3 +578,4 @@ nav {
   .card-img {
     height: 250px;
   }
+} 
