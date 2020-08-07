@@ -59,7 +59,7 @@ const Subscribe = () => {
                     </div>
                     <div className="center">
                                     <a href="https://www.linkedin.com/company/marketgad"><img className="social" alt="li" src="https://img.icons8.com/color/100/000000/linkedin.png" /></a>
-                                    <a href="#t"> <img className="social" alt="tw" src="https://img.icons8.com/fluent/100/000000/twitter.png" /></a>
+                                    <a href="https://www.instagram.com/marketgad"> <img className="social" alt="tw" src="https://img.icons8.com/color/48/000000/instagram-new.png" /></a>
                                     <a href="https://www.facebook.com/MarketGad-104038534696800/"> <img className="social" alt="lo" src="https://img.icons8.com/fluent/48/000000/facebook-new.png" /></a>
                                 </div>  
                 </div>

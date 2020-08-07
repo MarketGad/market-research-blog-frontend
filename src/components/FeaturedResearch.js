@@ -21,7 +21,7 @@ const FeaturedResearch = () => {
                         </div>
                         <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4"
-                            >Approaching the age of data driven business decisions<i className="material-icons right">close</i></span
+                            >Data driven Business Decisions<i className="material-icons right">close</i></span
                             >
                             <div style={{ textAlign: "right" }}>
                     By <b>Shankhadeep Banerjee</b>
@@ -29,7 +29,7 @@ const FeaturedResearch = () => {
                             <p>
                                 Companies are nowadays focusing on providing tailored products and services in order to remain competitive in the market. The problems
                                 faced by them is mostly because of uncertainty of product and service failures in the market. Therefore, the need for data-based solutions are to be
-                                incorporated to cater to the needs of such uncertainties...
+                                incorporated...
                             </p>
                             <div style={{ paddingTop: "20px" }} className="center">
                                 <a href="https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
@@ -82,14 +82,14 @@ const FeaturedResearch = () => {
                             <span className="card-title grey-text text-darken-4"
                             >Logistics Sectors in India <i className="material-icons right">close</i></span
                             >
-                            <p>
+                            
                             <div style={{ textAlign: "right" }}>
-                    By <b>Bisleshana B Prakash</b> (IIM Indore)
+                    By <b>Bisleshana B Prakash</b>
                 </div>
+                <p>
                             India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
                                         in developed economies like Germany, Sweden, Belgium, Austria, Japan and the USA, the cost
-                                        varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...
-                                       
+                                        varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...       
                              </p>
                             <div style={{ paddingTop: "20px" }} className="center">
                                 <a href="/i1001" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
