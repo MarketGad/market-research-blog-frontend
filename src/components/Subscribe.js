@@ -31,8 +31,8 @@ const Subscribe = () => {
                             <p className="grey-text">+91 7652064835</p>
                         </div>
                     </div>
-                    <div className="col s12 l6 container" style={{ paddingLeft: "100px" }}>
-                        <h5 style={{ padding: "10px", fontWeight: "500", color: "white" }} className="center">Subscribe for latest stuff from MG</h5>
+                    <div className="col s12 l6 container">
+                        <h5 style={{ padding: "10px", fontWeight: "450", color: "white", fontSize: "1.5em" }} className="center">Subscribe for latest stuff from MG</h5>
                         <div className="row subscribe-area">
                             <div className="col l9 s12">
                                 <Grid item xs={12}>
