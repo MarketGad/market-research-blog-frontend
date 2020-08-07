@@ -168,41 +168,49 @@ export default function SignUp() {
                             </TextField>
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="topic"
-                                label="Give your idea in one line"
-                                name="topic"
-                                value={topic}
-                                onChange={(e) => setTopic(e.target.value)}
+                            <div className="containerinput">
+                                <TextField
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="topic"
+                                    label="Give your idea in one line"
+                                    name="topic"
+                                    value={topic}
+                                    onChange={(e) => setTopic(e.target.value)}
 
-                            />
+                                />
+                            </div>
+
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="standard-basic"
-                                label="Brief us about your idea"
-                                name="briefIdea"
-                                value={briefIdea}
-                                onChange={(e) => setBriefIdea(e.target.value)}
-                            />
+                            <div className="containerinput">
+                                <TextField
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="standard-basic"
+                                    label="Brief us about your idea"
+                                    name="briefIdea"
+                                    value={briefIdea}
+                                    onChange={(e) => setBriefIdea(e.target.value)}
+                                />
+                            </div>
+
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="phone"
-                                label="Phone No."
-                                name="phone"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            />
+                            <div className="containerinput">
+                                <TextField
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="phone"
+                                    label="Phone No."
+                                    name="phone"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
+                            </div>
                         </Grid>
 
 
