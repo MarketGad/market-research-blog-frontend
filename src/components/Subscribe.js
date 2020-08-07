@@ -23,15 +23,15 @@ const Subscribe = () => {
     return (
         <section className="subscribe">
             <form className="signup-form" onSubmit={submitHandler}>
-                <div className="row">
-                    <div className="col s12 l6 container">
+                <div className="row" style={{ margin: 0 }}>
+                    <div className="col s12 l5 container">
                         <h5 style={{ padding: "10px", fontWeight: "500", color: "white" }} className="center">Contact Us </h5>
                         <div className="center">
                             <p className="grey-text">marketgad20@gmail.com</p>
                             <p className="grey-text">+91 7652064835</p>
                         </div>
                     </div>
-                    <div className="col s12 l6 container">
+                    <div className="col s12 l6 container" style={{ paddingLeft: "100px" }}>
                         <h5 style={{ padding: "10px", fontWeight: "500", color: "white" }} className="center">Subscribe for latest stuff from MG</h5>
                         <div className="row subscribe-area">
                             <div className="col l9 s12">
@@ -47,21 +47,19 @@ const Subscribe = () => {
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </Grid>
-                                
                             </div>
-                            
                             <div className="col l3 s12">
                                 <div style={{ marginLeft: "2%" }}>
                                     <button className="signup-button btn waves-effect">Subscribe</button>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                     </div>
-                    <div className="center">
-                                    <a href="https://www.linkedin.com/company/marketgad"><img className="social" alt="li" src="https://img.icons8.com/color/100/000000/linkedin.png" /></a>
-                                    <a href="https://www.instagram.com/marketgad"> <img className="social" alt="tw" src="https://img.icons8.com/color/48/000000/instagram-new.png" /></a>
-                                    <a href="https://www.facebook.com/MarketGad-104038534696800/"> <img className="social" alt="lo" src="https://img.icons8.com/fluent/48/000000/facebook-new.png" /></a>
-                                </div>  
+                </div>
+                <div className="center" style={{ paddingBottom: "15px" }}>
+                    <a href="https://www.linkedin.com/company/marketgad"><img className="social" alt="li" src="https://img.icons8.com/color/100/000000/linkedin.png" /></a>
+                    <a href="https://www.instagram.com/marketgad"> <img className="social" alt="tw" src="https://img.icons8.com/color/48/000000/instagram-new.png" /></a>
+                    <a href="https://www.facebook.com/MarketGad-104038534696800/"> <img className="social" alt="lo" src="https://img.icons8.com/fluent/48/000000/facebook-new.png" /></a>
                 </div>
             </form>
         </section>

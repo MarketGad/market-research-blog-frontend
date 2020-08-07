@@ -94,6 +94,19 @@ nav {
   color: rgb(240, 243, 246);
 }
 
+.join-btn {
+  margin-top: 68vh;
+  font-size: 1.2em;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+.join-btn:hover {
+  background-color: #080808;
+}
+
 .caption1 {
   margin: 0;
   font-size: 3.6em;
@@ -174,6 +187,7 @@ nav {
   text-align: center;
   font-size: 3rem;
   padding: 15px;
+  font-weight: 500;
 }
 
 .card-panel {
@@ -465,20 +479,23 @@ nav {
   #search-icon {
     display: none;
   }
-
-  .mobile{
+  .mobile {
     display: block;
   }
-  .mobile1{
+  .mobile1 {
     display: none;
   }
-
   /* ----------------------------------slider------------------------ */
   .slider .slides li .caption {
     margin: 0;
     left: 5%;
     width: 90%;
     top: 3rem;
+  }
+  /* ---- */
+  .join-btn {
+    margin-top: 64vh;
+    font-size: 1.1em;
   }
   /* -------seo----- */
   .tagline {
@@ -578,4 +595,4 @@ nav {
   .card-img {
     height: 250px;
   }
-} 
+}

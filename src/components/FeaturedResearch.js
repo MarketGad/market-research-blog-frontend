@@ -13,26 +13,26 @@ const FeaturedResearch = () => {
                             <img className="activator" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594964400/Articles%20Photos/Industry/data_n0hktc.jpg" alt="feature1" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4"
+                            <span className="card-title activator grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Data driven Business Decisions<i className="material-icons right"
                             >more_vert</i
                                 ></span
                             >
                         </div>
                         <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4"
+                            <span className="card-title grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Data driven Business Decisions<i className="material-icons right">close</i></span
                             >
-                            <div style={{ textAlign: "right" }}>
-                    By <b>Shankhadeep Banerjee</b>
-                </div>
+                            <div style={{ textAlign: "right", padding: "15px" }}>
+                                By <b>Shankhadeep Banerjee</b>
+                            </div>
                             <p>
                                 Companies are nowadays focusing on providing tailored products and services in order to remain competitive in the market. The problems
-                                faced by them is mostly because of uncertainty of product and service failures in the market. Therefore, the need for data-based solutions are to be
+                                faced by them is mostly because of uncertainty of product and service failures in the market. So, the need for data-based solutions are to be
                                 incorporated...
                             </p>
-                            <div style={{ paddingTop: "20px" }} className="center">
-                                <a href="https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                            <div style={{ paddingTop: "4rem" }} className="center">
+                                <a href="https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -43,25 +43,25 @@ const FeaturedResearch = () => {
                             <img className="activator" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594964994/Articles%20Photos/Industry/heathcare_h3vt4z.jpg" alt="f2" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4"
+                            <span className="card-title activator grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Indian Healthcare Industry<i className="material-icons right"
                             >more_vert</i
                                 ></span
                             >
                         </div>
                         <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4"
+                            <span className="card-title grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Indian Healthcare Industry <i className="material-icons right">close</i></span
                             >
-                            <div style={{ textAlign: "right" }}>
-                    By <b>Shankhadeep Banerjee</b>
-                </div>
+                            <div style={{ textAlign: "right", padding: "15px" }}>
+                                By <b>Shankhadeep Banerjee</b>
+                            </div>
                             <p>
                                 The Indian Healthcare sector stands as the world’s fourth-largest employer. The country employs over 3,20,000 people all
                                 around the country, which is also estimated to cross a valuation of 40 million by the end of 2020. Gloablly it is one of the firstest growing...
                 </p>
-                            <div style={{ paddingTop: "20px" }} className="center">
-                                <a href="https://drive.google.com/file/d/1jGBTzrtWh8Bv6sVXHG_yMk0RJtn9Pzry/view?usp=sharing" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                            <div style={{ paddingTop: "4rem" }} className="center">
+                                <a href="https://drive.google.com/file/d/1jGBTzrtWh8Bv6sVXHG_yMk0RJtn9Pzry/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -72,26 +72,26 @@ const FeaturedResearch = () => {
                             <img className="activator" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594916046/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/1-min_ft40ju.jpg" alt="f3" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4"
+                            <span className="card-title activator grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Logistics Sectors in India<i className="material-icons right"
                             >more_vert</i
                                 ></span
                             >
                         </div>
                         <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4"
+                            <span className="card-title grey-text text-darken-4" style={{ fontWeight: "450", fontSize: "1.8em" }}
                             >Logistics Sectors in India <i className="material-icons right">close</i></span
                             >
-                            
-                            <div style={{ textAlign: "right" }}>
-                    By <b>Bisleshana B Prakash</b>
-                </div>
-                <p>
-                            India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
-                                        in developed economies like Germany, Sweden, Belgium, Austria, Japan and the USA, the cost
-                                        varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...       
+
+                            <div style={{ textAlign: "right", padding: "15px" }}>
+                                By <b>Bisleshana B Prakash</b>
+                            </div>
+                            <p>
+                                India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
+                                in developed economies like Germany, Sweden, Belgium, Austria, Japan and the USA, the cost
+                                varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...
                              </p>
-                            <div style={{ paddingTop: "20px" }} className="center">
+                            <div style={{ paddingTop: "4rem" }} className="center">
                                 <a href="/i1001" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>

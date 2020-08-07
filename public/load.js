@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.slider').slider({ full_width: true });
+    $('.slider').slider({ full_width: true, indicators: true, height: 725 });
     $('.sidenav').sidenav();
     $(".join-btn").hover(function () {
         $(this).toggleClass("pulse");
