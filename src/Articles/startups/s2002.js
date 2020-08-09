@@ -29,21 +29,25 @@ const s2002 = () => {
                 <p className="article-subhead">Future of renewable energy</p>
                 <p className="article-content">Even with an infinite supply of renewable energy, the world has not exploited this potential source as much as it did concerning non-renewable energy. The prime reasons for this are the high cost of installation, slow technological advancements etc. In 2020 only 26% of the world’s electricity is delivered by renewable energy sources. By 2024, it is predicted that renewable electricity will grow by 1200GW. Solar power will become cheaper to produce, which will, in turn, make the coal-based power unprofitable. This shift will not only help in generating more affordable electricity but also reduces the carbon emission, thus improving the environmental conditions.</p>
                 <p className="article-content">With 1.3 billion people, India is the world’s fourth-largest carbon emitter. Majorly contributing to this is the power sector which uses fossil fuels to meet 82% of its demand. It is high time to change the energy mix in India and bring in more innovative and less expensive techniques to harvest the non-fossil sources. India aims to attain 175GW of renewable energy by 2020, which will include 100GW from solar energy, 60GW from wind power, 10GW from bio-power and the rest 5GW from hydropower plants. India has already committed to producing 40% of its requirement using renewable energy sources by 2030. With renewable sources showing such incredible prospects for growth, the Adani group can take advantage of this potentiality and help India build a more environmentally friendly economy. </p>
-                <p className="article-subhead">ALL REFERENCES:</p>
-                <p className="article-content">
-                    1.<a href="https://www.adani.com/About-us">https://www.adani.com/About-us</a>
-                    <br />2.<a href="https://en.wikipedia.org/wiki/Adani_Group">https://en.wikipedia.org/wiki/Adani_Group</a>
-                    <br />3.<a href="https://indianexpress.com/article/business/companies/adani-green-energy-rs-45000-crore-solar-project-seci-6450209/">https://indianexpress.com/article/business/companies/adani-green-energy-rs-45000-crore-solar-project-seci-6450209/</a>
-                    <br />4.<a href="https://www.storypick.com/gautam-adani-story/">https://www.storypick.com/gautam-adani-story/</a>
-                    <br />5.<a href="https://www.adaniwilmar.com/about-us">https://www.adaniwilmar.com/about-us</a>
-                    <br />6.<a href="https://www.adanienterprises.com/businesses/integrated-coal-management">https://www.adanienterprises.com/businesses/integrated-coal-management</a>
-                    <br />7.<a href="https://www.business-standard.com/company/adani-transmissi-66273/information/company-history">https://www.business-standard.com/company/adani-transmissi-66273/information/company-history</a>
-                    <br />8.<a href="https://www.bloombergquint.com/markets/why-adani-transmission-is-the-best-performer-in-power-index">https://www.bloombergquint.com/markets/why-adani-transmission-is-the-best-performer-in-power-index</a>
-                    <br />9.<a href="https://www.business-standard.com/company/adani-gas-39108/information/company-history">https://www.business-standard.com/company/adani-gas-39108/information/company-history</a>
-                    <br />10.<a href="https://www.thehindu.com/business/Industry/adani-green-energy-ltd-bags-worlds-largest-solar-contract-worth-6-billion/article31784926.ece">https://www.thehindu.com/business/Industry/adani-green-energy-ltd-bags-worlds-largest-solar-contract-worth-6-billion/article31784926.ece</a>
-                    <br />11.<a href="https://earth.org/the-growth-of-renewable-energy-what-does-the-future-hold/#:~:text=Renewable%20energy%20sources%20make%20up,to%20reach%2030%25%20by%202024.&text=Overall%2C%20renewable%20electricity%20is%20predicted,electricity%20capacity%20of%20the%20US. ">https://earth.org/the-growth-of-renewable-energy-what-does-the-future-hold/#:~:text=Renewable%20energy%20sources%20make%20up,to%20reach%2030%25%20by%202024.&text=Overall%2C%20renewable%20electricity%20is%20predicted,electricity%20capacity%20of%20the%20US. </a>
-                    <br />12.<a href="https://energy.economictimes.indiatimes.com/energy-speak/the-future-of-renewable-energy-in-india/3016">https://energy.economictimes.indiatimes.com/energy-speak/the-future-of-renewable-energy-in-india/3016</a>
-                </p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                        <li><a href="https://www.adani.com/About-us">https://www.adani.com/About-us</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Adani_Group">https://en.wikipedia.org/wiki/Adani_Group</a></li>
+                        <li><a href="https://indianexpress.com/article/business/companies/adani-green-energy-rs-45000-crore-solar-project-seci-6450209/">https://indianexpress.com/article/business/companies/adani-green-energy-rs-45000-crore-solar-project-seci-6450209/</a></li>
+                        <li><a href="https://www.storypick.com/gautam-adani-story/">https://www.storypick.com/gautam-adani-story/</a></li>
+                        <li><a href="https://www.adaniwilmar.com/about-us">https://www.adaniwilmar.com/about-us</a></li>
+                        <li><a href="https://www.adanienterprises.com/businesses/integrated-coal-management">https://www.adanienterprises.com/businesses/integrated-coal-management</a></li>
+                        <li><a href="https://www.business-standard.com/company/adani-transmissi-66273/information/company-history">https://www.business-standard.com/company/adani-transmissi-66273/information/company-history</a></li>
+                        <li><a href="https://www.bloombergquint.com/markets/why-adani-transmission-is-the-best-performer-in-power-index">https://www.bloombergquint.com/markets/why-adani-transmission-is-the-best-performer-in-power-index</a></li>
+                        <li><a href="https://www.business-standard.com/company/adani-gas-39108/information/company-history">https://www.business-standard.com/company/adani-gas-39108/information/company-history</a></li>
+                        <li><a href="https://www.thehindu.com/business/Industry/adani-green-energy-ltd-bags-worlds-largest-solar-contract-worth-6-billion/article31784926.ece">https://www.thehindu.com/business/Industry/adani-green-energy-ltd-bags-worlds-largest-solar-contract-worth-6-billion/article31784926.ece</a></li>
+                        <li><a href="https://earth.org/the-growth-of-renewable-energy-what-does-the-future-hold/#:~:text=Renewable%20energy%20sources%20make%20up,to%20reach%2030%25%20by%202024.&text=Overall%2C%20renewable%20electricity%20is%20predicted,electricity%20capacity%20of%20the%20US. ">https://earth.org/the-growth-of-renewable-energy-what-does-the-future-hold/#:~:text=Renewable%20energy%20sources%20make%20up,to%20reach%2030%25%20by%202024.&text=Overall%2C%20renewable%20electricity%20is%20predicted,electricity%20capacity%20of%20the%20US. </a></li>
+                        <li><a href="https://energy.economictimes.indiatimes.com/energy-speak/the-future-of-renewable-energy-in-india/3016">https://energy.economictimes.indiatimes.com/energy-speak/the-future-of-renewable-energy-in-india/3016</a></li>
+                    </ol>
+                </div>
 
             </div>
             <Footer />

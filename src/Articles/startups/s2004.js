@@ -28,15 +28,19 @@ const s2004 = () => {
                     <li>Sep 2019- files for IPO, IPO fails and CEO stepped down.</li>
                     <li>Feb 2020- Sandeep Mathrani new CEO</li>
                 </ul>
-                <p className="article-subhead">ALL REFERENCES:</p>
-                <p className="article-content">
-                    <br />1.<a href="https://therealdeal.com/issues_articles/the-story-of-weworks-mysterious-first-investor/">https://therealdeal.com/issues_articles/the-story-of-weworks-mysterious-first-investor/</a>
-                    <br />2.<a href="https://craft.co/wework">https://craft.co/wework</a>
-                    <br />3.<a href="https://www.forbes.com/sites/sergeiklebnikov/2019/10/01/softbank-needs-a-24-billion-wework-valuation-to-break-even-on-its-investment/#37f0c75c7fe7">https://www.forbes.com/sites/sergeiklebnikov/2019/10/01/softbank-needs-a-24-billion-wework-valuation-to-break-even-on-its-investment/#37f0c75c7fe7</a>
-                    <br />4.<a href="https://www.drift.com/blog/wework-billion-dollar-growth/">https://www.drift.com/blog/wework-billion-dollar-growth/</a>
-                    <br />5.<a href="https://www.coworkingresources.org/blog/the-wework-business-model">https://www.coworkingresources.org/blog/the-wework-business-model</a>
-                    <br />6.<a href="https://www.marketwatch.com/story/heres-a-look-at-how-weworks-50-billion-pile-of-office-leases-could-unravel-2019-10-10#:~:text=WeWork%20has%20become%20the%20biggest,real%2Destate%20brokerage%20firm%20CBRE.">https://www.marketwatch.com/story/heres-a-look-at-how-weworks-50-billion-pile-of-office-leases-could-unravel-2019-10-10#:~:text=WeWork%20has%20become%20the%20biggest,real%2Destate%20brokerage%20firm%20CBRE.</a>
-                </p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                    <li><a href="https://therealdeal.com/issues_articles/the-story-of-weworks-mysterious-first-investor/">https://therealdeal.com/issues_articles/the-story-of-weworks-mysterious-first-investor/</a></li>
+                    <li><a href="https://craft.co/wework">https://craft.co/wework</a></li>
+                    <li><a href="https://www.forbes.com/sites/sergeiklebnikov/2019/10/01/softbank-needs-a-24-billion-wework-valuation-to-break-even-on-its-investment/#37f0c75c7fe7">https://www.forbes.com/sites/sergeiklebnikov/2019/10/01/softbank-needs-a-24-billion-wework-valuation-to-break-even-on-its-investment/#37f0c75c7fe7</a></li>
+                    <li><a href="https://www.drift.com/blog/wework-billion-dollar-growth/">https://www.drift.com/blog/wework-billion-dollar-growth/</a></li>
+                    <li><a href="https://www.coworkingresources.org/blog/the-wework-business-model">https://www.coworkingresources.org/blog/the-wework-business-model</a></li>
+                    <li><a href="https://www.marketwatch.com/story/heres-a-look-at-how-weworks-50-billion-pile-of-office-leases-could-unravel-2019-10-10#:~:text=WeWork%20has%20become%20the%20biggest,real%2Destate%20brokerage%20firm%20CBRE.">https://www.marketwatch.com/story/heres-a-look-at-how-weworks-50-billion-pile-of-office-leases-could-unravel-2019-10-10#:~:text=WeWork%20has%20become%20the%20biggest,real%2Destate%20brokerage%20firm%20CBRE.</a></li>
+                </ol>
+                </div>
 
             </div>
             <Footer />
