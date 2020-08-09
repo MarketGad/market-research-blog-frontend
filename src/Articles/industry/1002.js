@@ -163,16 +163,21 @@ of startups to efficiently manage their logistics are –                </p>
                     adversities, and reverse logistics bear tremendous potential to help companies get
                     new customers or lose the old ones.
                 </p>
-
-                <p className="article-content">
-                    1. <a href="https://www.industrystar.com/blog/2020/05/5-ways-improve-reverse-logistics-operations/">https://www.industrystar.com/blog/2020/05/5-ways-improve-reverse-logistics-operations/</a>
-                    <br />2. <a href="https://www.investindia.gov.in/team-india-blogs/reverse-logistics-gaining-traction-india">https://www.investindia.gov.in/team-india-blogs/reverse-logistics-gaining-traction-india</a>
-                    <br />3. <a href="https://economictimes.indiatimes.com/north/how-gurgaon-startupgreendust-turns-companies-reverse-logistics-into-happy-returns/articleshow/17321115.cms">https://economictimes.indiatimes.com/north/how-gurgaon-startupgreendust-turns-companies-reverse-logistics-into-happy-returns/articleshow/17321115.cms</a>
-                    <br />4. <a href="https://www.quora.com/How-matured-is-indian-reverse-logistics-space">https://www.quora.com/How-matured-is-indian-reverse-logistics-space</a>
-                    <br />5. <a href="https://www.thomasnet.com/insights/this-reverse-logistics-startup-wants-to-make-returns-less-stressful-q-a-interview/">https://www.thomasnet.com/insights/this-reverse-logistics-startup-wants-to-make-returns-less-stressful-q-a-interview/</a>
-                    <br />6. <a href="http://www.ijarcsms.com/docs/paper/volume6/issue2/V6I2-0006.pdf">http://www.ijarcsms.com/docs/paper/volume6/issue2/V6I2-0006.pdf</a>
-                    <br />7. <a href="https://www.theseus.fi/bitstream/handle/10024/46993/Reverse%20Logistics%20and%20green%20logistics.pdf?sequence=1">https://www.theseus.fi/bitstream/handle/10024/46993/Reverse%20Logistics%20and%20green%20logistics.pdf?sequence=1</a>
-                </p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                     <ol className="article-content">
+                        <li><a href="https://www.industrystar.com/blog/2020/05/5-ways-improve-reverse-logistics-operations/">https://www.industrystar.com/blog/2020/05/5-ways-improve-reverse-logistics-operations/</a></li>
+                        <li><a href="https://www.investindia.gov.in/team-india-blogs/reverse-logistics-gaining-traction-india">https://www.investindia.gov.in/team-india-blogs/reverse-logistics-gaining-traction-india</a></li>
+                        <li><a href="https://economictimes.indiatimes.com/north/how-gurgaon-startupgreendust-turns-companies-reverse-logistics-into-happy-returns/articleshow/17321115.cms">https://economictimes.indiatimes.com/north/how-gurgaon-startupgreendust-turns-companies-reverse-logistics-into-happy-returns/articleshow/17321115.cms</a></li>
+                        <li><a href="https://www.quora.com/How-matured-is-indian-reverse-logistics-space">https://www.quora.com/How-matured-is-indian-reverse-logistics-space</a></li>
+                        <li><a href="https://www.thomasnet.com/insights/this-reverse-logistics-startup-wants-to-make-returns-less-stressful-q-a-interview/">https://www.thomasnet.com/insights/this-reverse-logistics-startup-wants-to-make-returns-less-stressful-q-a-interview/</a></li>
+                        <li><a href="http://www.ijarcsms.com/docs/paper/volume6/issue2/V6I2-0006.pdf">http://www.ijarcsms.com/docs/paper/volume6/issue2/V6I2-0006.pdf</a></li>
+                        <li><a href="https://www.theseus.fi/bitstream/handle/10024/46993/Reverse%20Logistics%20and%20green%20logistics.pdf?sequence=1">https://www.theseus.fi/bitstream/handle/10024/46993/Reverse%20Logistics%20and%20green%20logistics.pdf?sequence=1</a></li>
+                    </ol>
+                </div>
+                
             </div>
             <Footer />
         </div>

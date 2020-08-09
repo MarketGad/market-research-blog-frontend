@@ -242,8 +242,11 @@ money as well.</p>
                     mobile network operators (MNOs) and various internet giants like Alibaba and Amazon are on the left side of
                     the ladder and are thinking of stepping up to the right.
                 </p>
-                <p className="article-subhead">References</p>
-                <ol className="article-content">
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
                     <li><a href="https://www.businessinsider.in/business/news/google-pay-has-a-solid-lead-
                     over-phonepe-paytm-and-amazon-pay-in-india-but-its-biggest-challenge-is-yet-to-
                     come/articleshow/76542701.cms" >https://www.businessinsider.in/
@@ -287,6 +290,7 @@ money as well.</p>
                     </a>
                     </li>
                 </ol>
+                </div>
             </div>
             <Footer />
         </div>

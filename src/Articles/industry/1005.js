@@ -132,8 +132,11 @@ const i1005 = () => {
                     <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594921120/Articles%20Photos/Industry/Covid19%20on%20Education%20Industry/2_3_-min_squcan.jpg" alt="i101" />
                     <p className="article-img-desc">Source: McKinsey & Company</p>
                 </div>
-                <p className="article-subhead">Reference’s</p>
-                <ol className="article-content">
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
                     <li>
                         <a href="https://government.economictimes.indiatimes.com/news/education/covid-19-pandemic-impact-and-strategies-for-education-sector-in-india/75173099">
                             https://government.economictimes.
@@ -177,7 +180,7 @@ const i1005 = () => {
                     articles/covid-19-impact-higher-education-india/</a>
                     </li>
                 </ol>
-
+                </div>
             </div>
             <Footer />
         </div >
