@@ -193,8 +193,8 @@ const Startup = () => {
                                     <img
                                         pos
                                         className="post-image"
-                                        src=""
-                                        alt=""
+                                        src="https://images.unsplash.com/photo-1521727857535-28d2047314ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                                        alt="aviation"
                                     />
                                 </div>
                                 <div className="col s12 l3">

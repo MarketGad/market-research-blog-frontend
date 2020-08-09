@@ -9,12 +9,12 @@ input:focus {
 
 input[type="text"] {
   width: 100%;
-  height: .5em !important;
+  height: 0.5em !important;
   padding: 14px !important;
 }
 
 input[type="email"] {
-  padding-left: 10px!important;
+  padding-left: 10px !important;
 }
 
 .containerinput label {
@@ -27,7 +27,7 @@ input[type="email"] {
   top: 0;
 } */
 
-label+.MuiInput-formControl {
+label + .MuiInput-formControl {
   margin-top: 0 !important;
 }
 
@@ -76,7 +76,7 @@ nav {
   background-color: black;
 }
 
-.sidenav li>a {
+.sidenav li > a {
   color: white;
 }
 
@@ -377,7 +377,7 @@ nav {
 }
 
 .dash {
-  padding: 0!important;
+  padding: 0 !important;
   border-radius: 10px;
   -moz-box-shadow: 2px 2px 5px 1px #888;
   -webkit-box-shadow: 2px 2px 5px 1px #888;
@@ -416,6 +416,14 @@ nav {
 .article-img-desc {
   font-size: 1.1em;
   font-weight: 450;
+}
+
+.references ol a {
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* privacy */
@@ -477,7 +485,7 @@ nav {
   }
   .brand-logo {
     top: 0;
-    margin-left: 0!important;
+    margin-left: 0 !important;
   }
   .login-mob {
     display: block;
@@ -553,7 +561,7 @@ nav {
   }
   .subscribe-area {
     height: 20px;
-    margin: 0!important;
+    margin: 0 !important;
   }
   .signup-button {
     display: flex;
@@ -597,7 +605,7 @@ nav {
     height: 250px;
   }
   .article-img-desc {
-    font-size: 1.0em;
+    font-size: 1em;
   }
   .card-h {
     height: 350px;

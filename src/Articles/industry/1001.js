@@ -6,7 +6,6 @@ const i1001 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Logistics Sector In India</h3>
-
                 <div className="center article-content" style={{ textAlign: "center" }}>
                     Market Research by <b><a href="https://www.linkedin.com/in/bisleshana-brahma-prakash/">Bisleshana Brahma Prakash</a></b><br />
                 </div>
@@ -19,9 +18,6 @@ const i1001 = () => {
                     The Logistics Performance Index (LPI)-2018, published by World Bank, indicates that India ranks 44 among 160 countries [2]. Though India's ranking had dropped from 38 in 2016, yet it is one of the top performers among the developing economies. The significant drop in rankings is reported to be due to the decline in categories of timeliness and logistics competence. Figure 1 explains the logistics performance of India in 2018.
                 </p>
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915540/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--001_ho5eh4.jpg" alt="i101" />
                     <p className="article-img-desc">Figure 1: Logistics Performance Index (LPI), India, 2018 (Source: www.worldbank.org)</p>
                 </div>
@@ -33,9 +29,6 @@ const i1001 = () => {
                     The GOI's initiatives and policy measures are reflected through a diagrammatic representation <b>(Figure 2)</b> supported with a brief analysis.
                 </p>
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
-                    {/* <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="i101" /> */}
                     <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594916046/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/1-min_ft40ju.jpg" alt="i101" />
                     <p className="article-img-desc">Figure 2: Initiatives by GOI to boost the logistics sector </p>
                 </div>
@@ -160,9 +153,6 @@ const i1001 = () => {
                     rewards/award programs for promoting start-ups.
                 </p>
                 <div className="center img-container">
-                    {/* use accordingly */}
-                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" /> */}
-                    {/* <img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" /> */}
                     <img className="article-img" height="500px" src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594915740/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/image--007_wsshvy.jpg" alt="i101" />
                     <p className="article-img-desc">Source: Ministry of Commerce</p>
                 </div>
@@ -176,23 +166,24 @@ const i1001 = () => {
                     new start-ups through new technologies that will help reducing turnaround times and logistic
                     costs.
                 </p>
-                <p className="article-subhead">
-                    References
-                </p>
-                <p style={{ width: "80%" }} className="article-content">
-                    1. <a href="https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364">https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364</a>
-                    <br />2. <a href="https://lpi.worldbank.org/">https://lpi.worldbank.org/</a>
-                    <br />3. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674">https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674</a>
-                    <br />4. <a href="https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Road%20Transportation_Cargo%20Connect.pdf">https://www.tciexpress.in</a>
-                    <br />5. <a href="https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html">https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html</a>
-                    <br />6. <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382">https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382</a>
-                    <br />7. <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356">https://pib.gov.in/newsite/PrintRelease.aspx?relid=171356</a>
-                    <br />8. <a href="https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/">https://indianexpress.com/article/explained/</a>
-                    <br />9. <a href="http://cris.org.in/crisweb/design1/proFOIS.jsp">http://cris.org.in/crisweb/design1/proFOIS.jsp</a>
-                </p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                        <li> <a href="https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364">https://commerce.gov.in/InnerContent.aspx?Type=leftmenu&Id=364</a></li>
+                        <li> <a href="https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674">https://pib.gov.in/newsite/PrintRelease.aspx?relid=173674</a></li>
+                        <li> <a href="https://lpi.worldbank.org/">https://lpi.worldbank.org/</a></li>
+                        <li> <a href="https://www.tciexpress.in/pdf/Impact%20of%20GST%20on%20Indias%20Road%20Transportation_Cargo%20Connect.pdf">https://www.tciexpress.in</a></li>
+                        <li> <a href="https://www.hindustantimes.com/india-news/centre-planning-a-network-of-35-multi-modal-logistics-parks/story-mb1cuecU4jZW7U9FjnpLdI.html">https://www.hindustantimes.com/india-news/</a></li>
+                        <li> <a href="https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382">https://pib.gov.in/Pressreleaseshare.aspx?PRID=1592382</a></li>
+                        <li> <a href="https://indianexpress.com/article/explained/one-nation-one-fastag-govts-rfid-solution-for-digital-payment-of-highway-toll-6070125/">https://indianexpress.com/article/explained/</a></li>
+                        <li> <a href="http://cris.org.in/crisweb/design1/proFOIS.jsp">http://cris.org.in/crisweb/design1/proFOIS.jsp</a></li>
+                    </ol>
+                </div>
             </div>
             <Footer />
-        </div>
+        </div >
     )
 }
 

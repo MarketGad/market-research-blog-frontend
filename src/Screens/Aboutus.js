@@ -6,17 +6,16 @@ const Aboutus = () => {
         <div>
             <div>
                 <div className="container">
-                    <h3 className="article-head center">About US</h3>
-                    <div className="center">
-                        <a href="/whatwedo" style={{ background: "#2b2321c9", marginTop: "1.5em" }} className="btn waves-effect waves-light join-btn">Join us</a>
-                    </div>
-                    <br /><br />
+                    <h3 className="article-head center">About US</h3><br />
                     <p className="article-content">
                         Google wasn’t the first search engine in the world. It was the 9th to come. Imagine if Larry Page had given up on his dreams considering this fact, we could have never got something that made our lives so convenient.
                 </p>
                     <p className="article-subhead">
                         MarketGad believes in executing billion-dollar ideas. Tinkering is the earliest stage for a grassroot level start-up. It channelizes the way forward while the entrepreneurs are getting started
                 </p>
+                    <div className="center">
+                        <a href="/whatwedo" style={{ background: "#080808d9", margin: "1em", fontSize: "1.3em", fontWeight: "500" }} className="btn waves-effect waves-light">Join us</a>
+                    </div>
                     <p className="article-content">
                         We help in data-driven decision making for the people who are ambitious enough to dream big. You just need an idea to pitch us. We’ll pave the path for you to take your idea and form a company and go beyond your imaginations.
                         At MarketGad, our goal is to get you through the first phase. This usually means: get you to the point where you’ve built something impressive enough to raise money on a larger scale. Then we can introduce you to early-stage investors for angel funding.
@@ -47,7 +46,10 @@ const Aboutus = () => {
                     <p className="article-content">
                         Again, it is never about the idea. It is all about the execution, validation, iteration, persistence and not to mention belief, that transform something worth a few thousand rupees to a billion-dollar business. Forget the money, it adds values to a million lives.            </p>
                 </div>
-            </div >
+                <div className="center">
+                    <a href="/whatwedo" style={{ background: "#080808d9", margin: "1.5em", fontSize: "1.4em", fontWeight: "500" }} className="btn waves-effect waves-light">Join us</a>
+                </div>
+            </div>
             <Footer />
         </div>
     );

@@ -130,7 +130,7 @@ export default function SignUp() {
         <Container component="main" maxWidth="sm">
             <CssBaseline />
             <div className={classes.paper}>
-                <Typography component="h1" variant="h5">
+                <Typography component="h2" variant="h4">
                     Submit your idea
         </Typography>
                 <form className={classes.form} onSubmit={submitHandler}>

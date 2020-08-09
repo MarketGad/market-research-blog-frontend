@@ -32,7 +32,7 @@ const FeaturedResearch = () => {
                                 incorporated...
                             </p>
                             <div style={{ paddingTop: "4rem" }} className="center">
-                                <a href="https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                                <a href="https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#080808d9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ const FeaturedResearch = () => {
                                 around the country, which is also estimated to cross a valuation of 40 million by the end of 2020. Gloablly it is one of the firstest growing...
                 </p>
                             <div style={{ paddingTop: "4rem" }} className="center">
-                                <a href="https://drive.google.com/file/d/1jGBTzrtWh8Bv6sVXHG_yMk0RJtn9Pzry/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                                <a href="https://drive.google.com/file/d/1jGBTzrtWh8Bv6sVXHG_yMk0RJtn9Pzry/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ background: "#080808d9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ const FeaturedResearch = () => {
                                 varies between 9-10%. This article by Bisleshana(IIMI) give you a thorough study of India's Logistic Sector...
                              </p>
                             <div style={{ paddingTop: "4rem" }} className="center">
-                                <a href="/i1001" style={{ background: "#2b2321c9" }} className="btn waves-effect wave-light">Read More</a>
+                                <a href="/i1001" style={{ background: "#080808d9" }} className="btn waves-effect wave-light">Read More</a>
                             </div>
                         </div>
                     </div>
