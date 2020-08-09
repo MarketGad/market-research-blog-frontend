@@ -24,7 +24,7 @@ const FeaturedResearch = () => {
                             >Data driven Business Decisions<i className="material-icons right">close</i></span
                             >
                             <div style={{ textAlign: "right", padding: "15px" }}>
-                                By <b>Shankhadeep Banerjee</b>
+                                By <b><a href="https://www.linkedin.com/in/shankh0407">Shankhadeep Banerjee</a></b>
                             </div>
                             <p>
                                 Companies are nowadays focusing on providing tailored products and services in order to remain competitive in the market. The problems
@@ -54,7 +54,7 @@ const FeaturedResearch = () => {
                             >Indian Healthcare Industry <i className="material-icons right">close</i></span
                             >
                             <div style={{ textAlign: "right", padding: "15px" }}>
-                                By <b>Shankhadeep Banerjee</b>
+                                By <b><a href="https://www.linkedin.com/in/shankh0407">Shankhadeep Banerjee</a></b>
                             </div>
                             <p>
                                 The Indian Healthcare sector stands as the world’s fourth-largest employer. The country employs over 3,20,000 people all
@@ -84,7 +84,7 @@ const FeaturedResearch = () => {
                             >
 
                             <div style={{ textAlign: "right", padding: "15px" }}>
-                                By <b>Bisleshana B Prakash</b>
+                                By <b><a href="https://www.linkedin.com/in/bisleshana-brahma-prakash/">Bisleshana B Prakash</a></b>
                             </div>
                             <p>
                                 India's logistics cost is estimated to be 13-14 % of GDP. In contrast,
