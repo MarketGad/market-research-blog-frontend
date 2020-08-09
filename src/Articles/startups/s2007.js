@@ -122,9 +122,14 @@ their companies for a productive output.</p>
                 conducting a smooth social distancing meet. So I conclude that the Artificial Intelligence would
 rule the future world and machines will rule humans. Humans soon to become machines.</p>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;Humans to work as employees of machines...</strong></em></h2>
-                <p className="article-subhead">References</p>
-                <p className="article-content">The dataset used for the research is the dataset <a href="https://www.kaggle.com/blackbee2016/adult-census-income-with-ai">Aritificial Intelligence </a>used in various companies
-across the world.</p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                        <li> <a href="https://www.kaggle.com/blackbee2016/adult-census-income-with-ai">https://www.kaggle.com/blackbee2016/adult-census-income-with-ai</a></li>
+                    </ol>
+                </div>
             </div>
             <Footer />
         </div>

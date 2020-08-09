@@ -124,8 +124,15 @@ going to boom the Economy in many of the countries across the globe.</p>
 encourage Tourism.</p>
                 <h2 className="article-img-desc center"><em><strong>&nbsp;A mile of highway will take you a mile. A mile of runway will take you anywhere out in the
 world...!!!</strong></em></h2>
-                <p className="article-subhead">References</p>
-                <p className="article-content">The link for the dataset of the Passengers <a href="https://data.worldbank.org/indicator/ST.INT.ARVL">Arrival</a> and <a href="https://data.worldbank.org/indicator/IS.AIR.PSGR">Departure</a> all over the world is given.</p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                        <li> <a href="https://data.worldbank.org/indicator/ST.INT.ARVL">https://data.worldbank.org/indicator/ST.INT.ARVL</a></li>
+                        <li> <a href="https://data.worldbank.org/indicator/IS.AIR.PSGR">https://data.worldbank.org/indicator/IS.AIR.PSGR</a></li>
+                    </ol>
+                </div>
             </div>
             <Footer />
         </div>
