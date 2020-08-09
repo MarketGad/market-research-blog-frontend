@@ -445,32 +445,36 @@ required tools and taking the right steps at the right time.
 through the entire volume. These steps not only give you a sense of direction but also helps you
 to steer though when the times are tough.
                 </p>
-                <p className="article-subhead">References</p>
-                <p className="article-content">
-                     1. <a href="https://automonkey.co/components-of-good-marketing-strategy">https://automonkey.co/</a>
-                    <br />2. <a href="https://blog.hubspot.com/sales/how-to-start-a-business">https://blog.hubspot.com/</a>
-                    <br />3. <a href="https://corporatefinanceinstitute.com/resources/knowledge/deals/business-exit- strategy/">https://corporatefinanceinstitute.com/</a>
-                    <br />4. <a href="https://coschedule.com/blog/marketing- process/#:~:text=What%20is%20a%20Marketing%20Process,to%20reach%20th e%20desired%20audience.%E2%80%9D">https://coschedule.com/</a>
-                    <br />5. <a href="https://medium.com/the-startup-growth/what-are-the-7ps-of-marketing- ad2572f7eb16">https://medium.com/</a>
-                    <br />6. <a href="https://strategylab.ca/5-ideas-and-6-books-on-the-future-of-business- strategy/#:~:text=The%20future%20of%20business%20strategy%20is%20the%2 0humanization%20of%20business,off%20our%20world%20will%20be.">https://strategylab.ca/</a>
-                    <br />7. <a href="https://wealthmanagement.bnpparibas/en/expert-voices/planning-your-exit-strategy.html">https://wealthmanagement.bnpparibas/</a>
-                    <br />8. <a href="https://www.alexandercowan.com/business-model-canvas-templates/">https://www.alexandercowan.com/</a>
-                    <br />9. <a href="https://www.businessmapping.com/blog/9-ways-to-measure-a-business-process/">https://www.businessmapping.com/</a>
-                    <br />10. <a href="https://www.businessnewsdaily.com/4686-how-to-start-a-business.html ">https://www.businessnewsdaily.com/</a>
-                    <br />11. <a href="https://www.entrepreneur.com/article/297899 ">https://www.entrepreneur.com/</a>
-                    <br />12. <a href="https://www.entrepreneur.com/article/38822">https://www.entrepreneur.com/article/</a>
-                    <br />13. <a href="https://www.forbes.com/sites/abdoriani/2019/11/12/the-5-biggest-stages-of-a- startup-from-idea-to-scale/">https://www.forbes.com/</a>
-                    <br />14. <a href="https://www.forbes.com/sites/allbusiness/2018/07/15/35-step-guide- entrepreneurs-starting-a-business/">https://www.forbes.com/sites/</a>
-                    <br />15. <a href="https://www.fundera.com/blog/how-to-start-a-business">https://www.fundera.com/</a>
-                    <br />16. <a href="https://www.investopedia.com/financial-edge/0412/5-essential-steps-to- evaluating-your-business-idea.aspx">https://www.investopedia.com/</a>
-                    <br />17. <a href="https://www.localenterprise.ie/Fingal/Start-or-Grow-your-Business/Start-a- Business/Taking-the-Initial-Steps/ ">https://www.localenterprise.ie/</a>
-                    <br />18. <a href="https://www.sba.gov/business-guide/plan-your-business/market-research- competitive-analysis">https://www.sba.gov/business-guide/</a>
-                    <br />19. <a href="https://www.shopify.com/blog/15334373-small-business-accounting-101-ten- steps-to-get-your-startup-on-track">https://www.shopify.com/</a>
-                    <br />20. <a href="https://www.shopify.in/blog/how-to-start-a-business">https://www.shopify.in/blog/</a>
-                    <br />21. <a href="https://www.startupindia.gov.in/content/sih/en/looking_for_funding.html">https://www.startupindia.gov.in/</a>
-                    <br />22. <a href="https://www.thebalancesmb.com/starting-a-small-business-4161641">https://www.thebalancesmb.com/</a>
-                    <br />23. <a href="https://yourstory.com/smbstory/start-small-business-ideas-low-investment- manufacturing-profitable">https://yourstory.com/smbstory/</a>
-                </p>
+                <div className="references">
+                    <p className="article-subhead">
+                        References
+                     </p>
+                    <ol className="article-content">
+                    <li><a href="https://automonkey.co/components-of-good-marketing-strategy">https://automonkey.co/components-of-good-marketing-strategy</a></li>
+                    <li><a href="https://blog.hubspot.com/sales/how-to-start-a-business">https://blog.hubspot.com/sales/how-to-start-a-business</a></li>
+                    <li><a href="https://corporatefinanceinstitute.com/resources/knowledge/deals/business-exit- strategy/">https://corporatefinanceinstitute.com/resources/knowledge/deals/business-exit- strategy/</a></li>
+                    <li><a href="https://coschedule.com/blog/marketing- process/#:~:text=What%20is%20a%20Marketing%20Process,to%20reach%20th e%20desired%20audience.%E2%80%9D">https://coschedule.com/blog/marketing- process/#:~:text=What%20is%20a%20Marketing%20Process,to%20reach%20th e%20desired%20audience.%E2%80%9D</a></li>
+                    <li><a href="https://medium.com/the-startup-growth/what-are-the-7ps-of-marketing- ad2572f7eb16">https://medium.com/the-startup-growth/what-are-the-7ps-of-marketing- ad2572f7eb16</a></li>
+                    <li><a href="https://strategylab.ca/5-ideas-and-6-books-on-the-future-of-business- strategy/#:~:text=The%20future%20of%20business%20strategy%20is%20the%2 0humanization%20of%20business,off%20our%20world%20will%20be.">https://strategylab.ca/5-ideas-and-6-books-on-the-future-of-business- strategy/#:~:text=The%20future%20of%20business%20strategy%20is%20the%2 0humanization%20of%20business,off%20our%20world%20will%20be.</a></li>
+                    <li><a href="https://wealthmanagement.bnpparibas/en/expert-voices/planning-your-exit-strategy.html">https://wealthmanagement.bnpparibas/en/expert-voices/planning-your-exit-strategy.html</a></li>
+                    <li><a href="https://www.alexandercowan.com/business-model-canvas-templates/">https://www.alexandercowan.com/business-model-canvas-templates/</a></li>
+                    <li><a href="https://www.businessmapping.com/blog/9-ways-to-measure-a-business-process/">https://www.businessmapping.com/blog/9-ways-to-measure-a-business-process/</a></li>
+                    <li><a href="https://www.businessnewsdaily.com/4686-how-to-start-a-business.html ">https://www.businessnewsdaily.com/4686-how-to-start-a-business.html </a></li>
+                    <li><a href="https://www.entrepreneur.com/article/297899 ">https://www.entrepreneur.com/article/297899 </a></li>
+                    <li><a href="https://www.entrepreneur.com/article/38822">https://www.entrepreneur.com/article/38822</a></li>
+                    <li><a href="https://www.forbes.com/sites/abdoriani/2019/11/12/the-5-biggest-stages-of-a- startup-from-idea-to-scale/">https://www.forbes.com/sites/abdoriani/2019/11/12/the-5-biggest-stages-of-a- startup-from-idea-to-scale/</a></li>
+                    <li><a href="https://www.forbes.com/sites/allbusiness/2018/07/15/35-step-guide- entrepreneurs-starting-a-business/">https://www.forbes.com/sites/allbusiness/2018/07/15/35-step-guide- entrepreneurs-starting-a-business/</a></li>
+                    <li><a href="https://www.fundera.com/blog/how-to-start-a-business">https://www.fundera.com/blog/how-to-start-a-business</a></li>
+                    <li><a href="https://www.investopedia.com/financial-edge/0412/5-essential-steps-to- evaluating-your-business-idea.aspx">https://www.investopedia.com/financial-edge/0412/5-essential-steps-to- evaluating-your-business-idea.aspx</a></li>
+                    <li><a href="https://www.localenterprise.ie/Fingal/Start-or-Grow-your-Business/Start-a- Business/Taking-the-Initial-Steps/ ">https://www.localenterprise.ie/Fingal/Start-or-Grow-your-Business/Start-a- Business/Taking-the-Initial-Steps/</a></li>
+                    <li><a href="https://www.sba.gov/business-guide/plan-your-business/market-research- competitive-analysis">https://www.sba.gov/business-guide/plan-your-business/market-research- competitive-analysis</a></li>
+                    <li><a href="https://www.shopify.com/blog/15334373-small-business-accounting-101-ten- steps-to-get-your-startup-on-track">https://www.shopify.com/blog/15334373-small-business-accounting-101-ten- steps-to-get-your-startup-on-track</a></li>
+                    <li><a href="https://www.shopify.in/blog/how-to-start-a-business">https://www.shopify.in/blog/how-to-start-a-business</a></li>
+                    <li><a href="https://www.startupindia.gov.in/content/sih/en/looking_for_funding.html">https://www.startupindia.gov.in/content/sih/en/looking_for_funding.html</a></li>
+                    <li><a href="https://www.thebalancesmb.com/starting-a-small-business-4161641">https://www.thebalancesmb.com/starting-a-small-business-4161641</a></li>
+                    <li><a href="https://yourstory.com/smbstory/start-small-business-ideas-low-investment- manufacturing-profitable">https://yourstory.com/smbstory/start-small-business-ideas-low-investment- manufacturing-profitable</a></li>
+                </ol>
+                </div>
             </div>
             <Footer />
         </div>
