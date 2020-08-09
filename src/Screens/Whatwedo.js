@@ -102,7 +102,7 @@ const Whatwedo = () => {
                     </li>
                     </ol>
                     <div className="center">
-                        <a onClick={handleClickOpen} style={{ background: "#080808d9", margin: "1.5em", fontSize: "1.3em", fontWeight: "450" }} className="btn waves-effect waves-light">Get Started!</a>
+                        <button onClick={handleClickOpen} style={{ background: "#080808d9", margin: "1.5em", fontSize: "1.3em", fontWeight: "450" }} className="btn waves-effect waves-light">Get Started!</button>
                     </div>
                     <div>
                         <Dialog
