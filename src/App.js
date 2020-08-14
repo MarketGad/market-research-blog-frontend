@@ -31,44 +31,44 @@ import v3003 from './Articles/venturehacks/v3003';
 import v3004 from './Articles/venturehacks/v3004';
 
 class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Navbar />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/form' component={Form} />
-            <Route exact path='/whatwedo' component={Whatwedo} />
-            <Route exact path='/industry' component={Industry} />
-            <Route exact path='/submitidea' component={submitidea} />
-            <Route exact path='/dashboard' component={Dashboard} />
-            <Route exact path="/about" component={AboutUs} />
-            <Route exact path="/privacy" component={Privacy} />
-            <Route exact path='/startup' component={Startup} />
-            <Route exact path='/venturehack' component={Venturehack} />
-            <Route exact path='/i1001' component={I1001} />
-            <Route exact path='/i1002' component={I1002} />
-            <Route exact path='/i1003' component={I1003} />
-            <Route exact path='/i1004' component={I1004} />
-            <Route exact path='/i1005' component={I1005} />
-            <Route exact path='/i1006' component={I1006} />
-            <Route exact path='/s2001' component={S2001} />
-            <Route exact path='/s2002' component={S2002} />
-            <Route exact path='/s2003' component={S2003} />
-            <Route exact path='/s2004' component={S2004} />
-            <Route exact path='/s2005' component={S2005} />
-            <Route exact path='/s2006' component={S2006} />
-            <Route exact path='/s2007' component={S2007} />
-            <Route exact path='/s2008' component={S2008} />
-            <Route exact path='/v3001' component={v3001} />
-            <Route exact path='/v3002' component={v3002} />
-            <Route exact path='/v3003' component={v3003} />
-            <Route exact path='/v3004' component={v3004} />
-          </Switch>
-        </div>
-      </BrowserRouter>
-    );
-  }
+	render () {
+		return (
+			<BrowserRouter>
+				<div className='App'>
+					<Navbar />
+					<Switch>
+						<Route exact path='/' component={Home} />
+						<Route exact path='/form' component={Form} />
+						<Route exact path='/whatwedo' component={Whatwedo} />
+						<Route exact path='/industry' component={Industry} />
+						<Route exact path='/submitidea' component={submitidea} />
+						<Route exact path='/dashboard' component={Dashboard} />
+						<Route exact path='/about' component={AboutUs} />
+						<Route exact path='/privacy' component={Privacy} />
+						<Route exact path='/startup' component={Startup} />
+						<Route exact path='/venturehack' component={Venturehack} />
+						<Route exact path='/i1001' component={I1001} />
+						<Route exact path='/i1002' component={I1002} />
+						<Route exact path='/i1003' component={I1003} />
+						<Route exact path='/i1004' component={I1004} />
+						<Route exact path='/i1005' component={I1005} />
+						<Route exact path='/i1006' component={I1006} />
+						<Route exact path='/s2001' component={S2001} />
+						<Route exact path='/s2002' component={S2002} />
+						<Route exact path='/s2003' component={S2003} />
+						<Route exact path='/s2004' component={S2004} />
+						<Route exact path='/s2005' component={S2005} />
+						<Route exact path='/s2006' component={S2006} />
+						<Route exact path='/s2007' component={S2007} />
+						<Route exact path='/s2008' component={S2008} />
+						<Route exact path='/v3001' component={v3001} />
+						<Route exact path='/v3002' component={v3002} />
+						<Route exact path='/v3003' component={v3003} />
+						<Route exact path='/v3004' component={v3004} />
+					</Switch>
+				</div>
+			</BrowserRouter>
+		);
+	}
 }
 export default App;
