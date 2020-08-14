@@ -657,34 +657,31 @@ nav {
 	}
 	/* -----featured------- */
 	.card-h {
-		height: 250px;
+		height: fit-content;
+		margin: 2%;
+		margin-bottom: 13%;
 	}
 	.featuredimg {
 		width: 100%;
-		height: 200px;
+		height: 210px;
 		padding-right: 0;
 	}
 	.featured-container {
 		margin: 0;
 	}
 	.featuredName {
-		text-transform: uppercase;
 		padding: 5px;
-		color: #0153a5;
 		font-size: 1.4em;
 		line-height: 1em;
-		font-family: 'GlacialIndifferenceBold';
 	}
 	.featuredDetails {
 		margin-top: 0;
 		font-size: 1.2em;
-		font-family: 'GlacialIndifferenceBold';
-		color: #080808d9;
 	}
 	.featured-right {
 		margin-top: 0;
 		padding-left: 0;
-		height: '200px';
+		height: fit-content;
 	}
 	/* -------------------\ */
 	.desktop-brief-details {
