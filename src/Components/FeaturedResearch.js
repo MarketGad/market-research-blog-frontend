@@ -39,31 +39,62 @@ const FeaturedResearch = () => {
 
 	const showArticles = articles.length ? (
 		articles.map((article) => {
-			return (
-				<div className='row card-h'>
-					<div className='col l6 s12'>
-						<img className='featuredimg' src={article.postImage} alt='1st' />
-					</div>
-					<div className='col l6 s12 featured-right'>
-						<div className='featuredName'>{article.postName}</div>
-						<p className='post-brief'>{article.postBrief}</p>
-						<div className='featuredDetails'>
-							<a style={{ color: '#080808d9' }} href={article.postLink}>
-								Details
-								<i
-									style={{
-										top: '4px',
-										position: 'relative'
-									}}
-									class='material-icons'
-								>
-									keyboard_arrow_right
-								</i>
-							</a>
+			if (article.key !== '2') {
+				return (
+					<div className='row card-h'>
+						<div className='col l5 s12'>
+							<img className='featuredimg' src={article.postImage} alt='1st' />
+						</div>
+						<div className='col l7 s12 featured-right'>
+							<div className='featuredName'>{article.postName}</div>
+							<p className='post-brief'>{article.postBrief}</p>
+							<div className='featuredDetails'>
+								<a style={{ color: '#080808d9' }} href={article.postLink}>
+									Details
+									<i
+										style={{
+											top: '4px',
+											position: 'relative'
+										}}
+										class='material-icons'
+									>
+										keyboard_arrow_right
+									</i>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			);
+				);
+			} else {
+				return (
+					<div className='row card-h'>
+						<div className='col l5 s12 featured-mobile'>
+							<img className='featuredimg' src={article.postImage} alt='1st' />
+						</div>
+						<div className='col l7 s12 featured-right'>
+							<div className='featuredName'>{article.postName}</div>
+							<p className='post-brief'>{article.postBrief}</p>
+							<div className='featuredDetails'>
+								<a style={{ color: '#080808d9' }} href={article.postLink}>
+									Details
+									<i
+										style={{
+											top: '4px',
+											position: 'relative'
+										}}
+										class='material-icons'
+									>
+										keyboard_arrow_right
+									</i>
+								</a>
+							</div>
+						</div>
+						<div className='col l5 s12 featured-desktop'>
+							<img className='featuredimg' src={article.postImage} alt='1st' />
+						</div>
+					</div>
+				);
+			}
 		})
 	) : (
 		<div className='center'>No articles to show :(</div>

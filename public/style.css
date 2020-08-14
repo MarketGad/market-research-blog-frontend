@@ -253,12 +253,12 @@ nav {
 /*--------------------- Featured------------ */
 
 .card-h {
-	height: 430px;
+	height: 380px;
 	margin: .5% 6%;
 }
 .featuredimg {
 	width: 100%;
-	height: 400px;
+	height: 320px;
 	padding-right: 20px;
 }
 .featured-container {
@@ -281,7 +281,10 @@ nav {
 .featured-right {
 	margin-top: 2em;
 	padding-left: '25px';
-	height: '400px';
+	height: 350px;
+}
+.featured-mobile {
+	display: none;
 }
 
 /* ----------Footer------------- */
@@ -682,6 +685,13 @@ nav {
 		margin-top: 0;
 		padding-left: 0;
 		height: fit-content;
+	}
+
+	.featured-mobile {
+		display: block;
+	}
+	.featured-desktop {
+		display: none;
 	}
 	/* -------------------\ */
 	.desktop-brief-details {

@@ -15,7 +15,7 @@ const Taglines = () => {
 					<div className='tagline2'>Each one of us will have a billion-dollar idea at some point</div>
 				</div>
 			</div>
-			<button
+			<a
 				className='btn-large waves-effect waves-light'
 				style={{
 					fontFamily: 'GlacialIndifferenceBold',
@@ -28,9 +28,10 @@ const Taglines = () => {
 					webkitBoxShadow: '0 0 10px 5px',
 					boxShadow: '0 0 10px 5px '
 				}}
+				href='/whatwedo'
 			>
 				Join Now
-			</button>
+			</a>
 		</div>
 	);
 };
