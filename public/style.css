@@ -320,7 +320,7 @@ nav {
 .post-image {
 	border-radius: 5px;
 	height: 47vh;
-	width: 90%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -459,7 +459,7 @@ nav {
 
 .brief-image {
 	height: 50vh;
-	width: 80%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }

@@ -5,7 +5,7 @@ const BriefDetails = () => {
 		<div>
 			<div className='desktop-brief-details'>
 				<div className='row' style={{ margin: '0' }}>
-					<div className='col s12 l6' style={{ padding: '3%' }}>
+					<div className='col s12 l6' style={{ paddingTop: '3%', paddingRight: '5%' }}>
 						<h3
 							className='center'
 							style={{
@@ -22,7 +22,7 @@ const BriefDetails = () => {
 							className='post-brief'
 							style={{
 								fontFamily: 'GlacialIndifferenceMedium',
-								marginLeft: '30%',
+								marginLeft: '20%',
 								textAlign: 'right',
 								fontSize: '1.8rem'
 							}}
@@ -47,7 +47,7 @@ const BriefDetails = () => {
 							alt='1st'
 						/>
 					</div>
-					<div className='col s12 l6' style={{ padding: '1%' }}>
+					<div className='col s12 l6' style={{ paddingTop: '1.5%', paddingLeft: '5%' }}>
 						<h3
 							className='center'
 							style={{
@@ -63,7 +63,7 @@ const BriefDetails = () => {
 							className='post-brief'
 							style={{
 								fontFamily: 'GlacialIndifferenceMedium',
-								marginRight: '30%',
+								marginRight: '20%',
 								textAlign: 'left',
 								fontSize: '1.8rem'
 							}}
