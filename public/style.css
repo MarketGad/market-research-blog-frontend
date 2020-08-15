@@ -249,6 +249,10 @@ nav {
 	margin: auto 5.25rem !important;
 	padding: 20px;
 }
+.desktop-hide{
+	display: None;
+}
+
 
 /*--------------------- Featured------------ */
 
@@ -259,7 +263,7 @@ nav {
 .featuredimg {
 	width: 100%;
 	height: 320px;
-	padding-right: 20px;
+	border-radius: 1.7%;
 }
 .featured-container {
 	margin: 1% 10%;
@@ -286,7 +290,9 @@ nav {
 .featured-mobile {
 	display: none;
 }
-
+.detail-hover:hover{
+	border-bottom: #080808d9 2px solid;
+}
 /* ----------Footer------------- */
 
 .footer-two {
@@ -699,6 +705,13 @@ nav {
 	}
 
 	.mobile-brief-details {
+		display: block;
+	}
+
+	.mobile-hide{
+		display: none;
+	}
+	.desktop-hide{
 		display: block;
 	}
 }
