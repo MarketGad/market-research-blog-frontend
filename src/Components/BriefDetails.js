@@ -24,11 +24,13 @@ const BriefDetails = () => {
 								fontFamily: 'GlacialIndifferenceMedium',
 								marginLeft: '20%',
 								textAlign: 'right',
-								fontSize: '1.8rem'
+								fontSize: '1.8rem',
+								height: '35vh'
 							}}
 						>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt illo, consectetur,
-							exercitationem dignissimos alias est neque dolorum amet.
+							MarketGad believes in executing billion-dollar ideas. Tinkering is the earliest stage for a
+							grassroot level start-up. It channelizes the way forward while the entrepreneurs are getting
+							started
 						</p>
 					</div>
 					<div className='col l6 s12'>
@@ -65,11 +67,13 @@ const BriefDetails = () => {
 								fontFamily: 'GlacialIndifferenceMedium',
 								marginRight: '20%',
 								textAlign: 'left',
-								fontSize: '1.8rem'
+								fontSize: '1.8rem',
+								height: '35vh'
 							}}
 						>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur illo tempore incidunt
-							error dolore maiores praesentium inventore dolorem perspiciatis unde!
+							If you have an idea which you think can become the next Indian unicorn, why don’t you test
+							its feasibility with us? We provide end-to-end market research, idea validation strategy
+							design and assistance in investments.
 						</p>
 					</div>
 				</div>
