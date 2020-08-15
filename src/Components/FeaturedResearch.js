@@ -49,7 +49,7 @@ const FeaturedResearch = () => {
 							<div className='featuredName'>{article.postName}</div>
 							<p className='post-brief'>{article.postBrief}</p>
 							<div className='featuredDetails'>
-								<a style={{ color: '#080808d9' }} href={article.postLink}>
+								<a style={{ color: '#080808d9' }} href={article.postLink} className="detail-hover">
 									Details
 									<i
 										style={{
@@ -75,7 +75,7 @@ const FeaturedResearch = () => {
 							<div className='featuredName'>{article.postName}</div>
 							<p className='post-brief'>{article.postBrief}</p>
 							<div className='featuredDetails'>
-								<a style={{ color: '#080808d9' }} href={article.postLink}>
+								<a style={{ color: '#080808d9' }} href={article.postLink} className="detail-hover">
 									Details
 									<i
 										style={{
