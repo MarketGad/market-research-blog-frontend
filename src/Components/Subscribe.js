@@ -26,11 +26,20 @@ const Subscribe = () => {
 		<section className='subscribe'>
 			<form className='signup-form' onSubmit={submitHandler}>
 				<div className='row' style={{ margin: 0 }}>
-					<div className='col s12 l4 container'>
-						<h5 style={{ paddingTop: '10px', fontWeight: '500', color: 'white' }} className='center'>
+					<div className='col s12 l4 container ml-3 mobile-hide' style={{paddingLeft: '6.5%'}}>
+						<h5 style={{ paddingTop: '10px', fontWeight: '500', color: 'white' }} >
 							Contact Us{' '}
 						</h5>
-						<div className='center'>
+						<div >
+							<p className='grey-text'>marketgad20@gmail.com</p>
+							<p className='grey-text'>+91 7652064835</p>
+						</div>
+					</div>
+					<div className='col s12 l4 container ml-3 center desktop-hide'>
+						<h5 style={{ paddingTop: '10px', fontWeight: '500', color: 'white' }} >
+							Contact Us{' '}
+						</h5>
+						<div >
 							<p className='grey-text'>marketgad20@gmail.com</p>
 							<p className='grey-text'>+91 7652064835</p>
 						</div>
