@@ -105,8 +105,9 @@ const BriefDetails = () => {
 								fontSize: '1.5em'
 							}}
 						>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt illo, consectetur,
-							exercitationem dignissimos alias est neque dolorum amet.
+							MarketGad believes in executing billion-dollar ideas. Tinkering is the earliest stage for a
+							grassroot level start-up. It channelizes the way forward while the entrepreneurs are getting
+							started
 						</p>
 					</div>
 				</div>
@@ -135,8 +136,9 @@ const BriefDetails = () => {
 								fontSize: '1.5em'
 							}}
 						>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur illo tempore incidunt
-							error dolore maiores praesentium inventore dolorem perspiciatis unde!
+							If you have an idea which you think can become the next Indian unicorn, why don’t you test
+							its feasibility with us? We provide end-to-end market research, idea validation strategy
+							design and assistance in investments.
 						</p>
 					</div>
 					<div className='col s12' />
