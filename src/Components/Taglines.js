@@ -16,21 +16,10 @@ const Taglines = () => {
 				</div>
 			</div>
 			<a
-				className='btn-large waves-effect waves-light'
-				style={{
-					fontFamily: 'GlacialIndifferenceBold',
-					backgroundColor: 'white',
-					color: '#0153a5',
-					borderRadius: '10px',
-					fontSize: '1.3em',
-					marginBottom: '20px',
-					mozBoxShadow: '0 0 10px 5px ',
-					webkitBoxShadow: '0 0 10px 5px',
-					boxShadow: '0 0 10px 5px '
-				}}
+					
 				href='/whatwedo'
 			>
-				Join Now
+				<img src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597527567/Icon_lsc5dl.png" style={{height: '14rem', width: '14rem' , marginBottom:'-3rem', marginTop:'-3rem'}}></img>
 			</a>
 		</div>
 	);
