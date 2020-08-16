@@ -5,10 +5,11 @@ const BriefDetails = () => {
 		<div>
 			<div className='desktop-brief-details'>
 				<div className='row' style={{ margin: '0' }}>
-					<div className='col s12 l6' style={{ paddingTop: '3%', paddingRight: '5%' }}>
+					<div className='col s12 l6' style={{ paddingTop: '7vh', paddingRight: '5%' }}>
 						<h3
 							className='center'
 							style={{
+								fontSize: '2.6em',
 								color: '#0153a5',
 								textAlign: 'right',
 								fontFamily: 'GlacialIndifferenceBold',
@@ -49,10 +50,11 @@ const BriefDetails = () => {
 							alt='1st'
 						/>
 					</div>
-					<div className='col s12 l6' style={{ paddingTop: '1.5%', paddingLeft: '5%' }}>
+					<div className='col s12 l6' style={{ paddingTop: '7vh', paddingLeft: '5%' }}>
 						<h3
 							className='center'
 							style={{
+								fontSize: '2.6em',
 								color: '#0153a5',
 								textAlign: 'left',
 								fontFamily: 'GlacialIndifferenceBold',

@@ -47,10 +47,15 @@ const FeaturedResearch = () => {
 						</div>
 						<div className='col l7 s12 featured-right'>
 							<div className='featuredName'>{article.postName}</div>
-							<p className='post-brief'>{article.postBrief}</p>
+							<div className='featured-brief'>{article.postBrief}</div>
 							<div className='featuredDetails'>
-								<a style={{ color: '#080808d9' }} href={article.postLink} className="detail-hover">
-									Details
+								<a
+									style={{ color: '#080808d9' }}
+									href={article.postLink}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<span className='detail-hover'>Details</span>
 									<i
 										style={{
 											top: '4px',
@@ -73,10 +78,15 @@ const FeaturedResearch = () => {
 						</div>
 						<div className='col l7 s12 featured-right'>
 							<div className='featuredName'>{article.postName}</div>
-							<p className='post-brief'>{article.postBrief}</p>
+							<div className='featured-brief'>{article.postBrief}</div>
 							<div className='featuredDetails'>
-								<a style={{ color: '#080808d9' }} href={article.postLink} className="detail-hover">
-									Details
+								<a
+									style={{ color: '#080808d9' }}
+									href={article.postLink}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<span className='detail-hover'>Details</span>
 									<i
 										style={{
 											top: '4px',
