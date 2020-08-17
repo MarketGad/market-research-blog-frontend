@@ -107,7 +107,8 @@ nav {
 
 .join-btn {
 	margin-top: 68vh;
-	font-size: 1.2em;
+	font-size: 1.4em;
+	font-family: 'GlacialIndifferenceBold';
 	border-radius: 4px;
 	border: 1.5px solid #fff;
 	font-weight: 500;
@@ -144,7 +145,7 @@ nav {
 
 /* ----------seo---------- */
 
-.tagline {
+/* .tagline {
 	padding: 20px;
 }
 
@@ -158,23 +159,23 @@ nav {
 	font-weight: 500;
 	font-size: 2.7rem;
 	padding: 5px;
-}
+} */
 
-/*------------------------- New Post------------- */
+/*------------------------- tagline------------- */
 
-.newPost {
+.tagline {
+	background-color: #0153a5;
 	color: white;
 	width: 100%;
 	text-align: center;
 	padding: 5px 15px;
 	margin: 30px 0;
-	background-color: black;
 }
 
 .tagline1 {
 	font-family: 'GlacialIndifferenceBold';
 	font-size: 3.4em;
-	line-height: 1.6em;
+	line-height: 1.7em;
 	letter-spacing: 0.05rem;
 	font-weight: 550;
 }
@@ -185,6 +186,12 @@ nav {
 	line-height: 1.6em;
 	letter-spacing: 0.05rem;
 	font-weight: 450;
+}
+.join-now-seo-btn {
+	height: 16rem;
+	width: 16rem;
+	margin-bottom: -2.1rem;
+	margin-top: -4rem;
 }
 /*-------------------------------------------------------------------------------- */
 
@@ -249,6 +256,7 @@ nav {
 	margin: auto 5.25rem !important;
 	padding: 20px;
 }
+
 .desktop-hide {
 	display: None;
 }
@@ -259,14 +267,17 @@ nav {
 	height: 380px;
 	margin: .5% 6%;
 }
+
 .featuredimg {
 	width: 100%;
 	height: 320px;
 	border-radius: 5px;
 }
+
 .featured-container {
 	margin: 1% 10%;
 }
+
 .featuredName {
 	text-transform: uppercase;
 	padding: 5px;
@@ -275,6 +286,7 @@ nav {
 	line-height: 1.2em;
 	font-family: 'GlacialIndifferenceBold';
 }
+
 .featuredDetails {
 	margin-top: 1.5em;
 	font-size: 1.5em;
@@ -282,22 +294,27 @@ nav {
 	font-family: 'GlacialIndifferenceBold';
 	color: #080808d9;
 }
+
 .featured-right {
 	margin-top: 1em;
 	padding-left: '25px';
 	height: 350px;
 }
+
 .featured-mobile {
 	display: none;
 }
+
 .featured-brief {
 	padding: 5px;
 	font-family: 'GlacialIndifferenceMedium';
 	font-size: 1.5em;
 }
+
 .detail-hover:hover {
 	border-bottom: #080808d9 2px solid;
 }
+
 /* ----------Footer------------- */
 
 .footer-two {
@@ -347,7 +364,13 @@ nav {
 }
 
 .post-brief {
-	font-size: 2vh;
+	font-size: 2.1vh;
+	font-family: 'GlacialIndifferenceMedium';
+}
+.read-more {
+	background-color: #080808d9;
+	margin-top: 2em;
+	font-family: 'GlacialIndifferenceBold';
 }
 
 .tabContainer {
@@ -357,9 +380,15 @@ nav {
 	-webkit-box-shadow: 2px 2px 5px 1px #888;
 	box-shadow: 2px 2px 5px 1px #888;
 }
+.landing-head {
+	font-family: 'GlacialIndifferenceBold';
+	font-size: 3em;
+	text-transform: uppercase;
+}
 
 .landing-post-head {
-	font-size: 2.1em;
+	font-size: 2.3em;
+	font-family: 'GlacialIndifferenceBold';
 }
 
 .sidebar-button {
@@ -469,6 +498,7 @@ nav {
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
+
 /* ------brief details */
 
 .brief-image {
@@ -477,9 +507,11 @@ nav {
 	margin: 0;
 	padding: 0;
 }
+
 .mobile-brief-details {
 	display: none;
 }
+
 /* privacy */
 
 .privacy-top {
@@ -589,12 +621,17 @@ nav {
 	.tagline1 {
 		font-size: 2em;
 		letter-spacing: 0.015rem;
-		padding: 7px 5px;
+		padding: 10px 5px;
 	}
 	.tagline2 {
 		font-size: 1.65em;
 		letter-spacing: 0.01em;
 		padding: 7px 5px;
+	}
+
+	.join-now-seo-btn {
+		margin-bottom: -2.1rem;
+		margin-top: -6.5rem;
 	}
 	/* ---review---- */
 	.reviewhead {
@@ -647,6 +684,9 @@ nav {
 	}
 	.landing-post-head {
 		font-size: 1.6em;
+	}
+	.landing-head {
+		font-size: 2em;
 	}
 	.post-brief {
 		font-size: 1.05em;
@@ -701,7 +741,6 @@ nav {
 		font-size: 1.3em;
 		line-height: 1.4em;
 	}
-
 	.featured-mobile {
 		display: block;
 	}
@@ -712,11 +751,9 @@ nav {
 	.desktop-brief-details {
 		display: none;
 	}
-
 	.mobile-brief-details {
 		display: block;
 	}
-
 	.mobile-hide {
 		display: none;
 	}

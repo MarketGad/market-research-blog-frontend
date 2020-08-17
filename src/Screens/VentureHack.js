@@ -50,14 +50,10 @@ const VentureHack = () => {
 								<img pos className='post-image' src={article.postImage} alt='1st' />
 							</div>
 							<div className='col s12 l3'>
-								<h3 className='center landing-post-head'>{article.postName}</h3>
+								<h3 className='landing-post-head'>{article.postName}</h3>
 								<p className='post-brief'>{article.postBrief}</p>
 								<div className='center'>
-									<a
-										href={article.postLink}
-										style={{ background: '#080808d9', marginTop: '2em' }}
-										className='btn waves-effect waves-light '
-									>
+									<a href={article.postLink} className='btn waves-effect waves-light read-more'>
 										Read More
 									</a>
 								</div>
@@ -74,7 +70,7 @@ const VentureHack = () => {
 	return (
 		<div>
 			<div className='container'>
-				<h4 className='center'>Venture Hack</h4>
+				<h4 className='center landing-head'>Venture Hack</h4>
 			</div>
 			<div className='row post-container'>
 				<div className='col s12'>{showArticles}</div>

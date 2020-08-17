@@ -68,14 +68,10 @@ const Industry = () => {
 								<img pos className='post-image' src={article.postImage} alt='1st' />
 							</div>
 							<div className='col s12 l3'>
-								<h3 className='center landing-post-head'>{article.postName}</h3>
-								<p className='post-brief'>{article.postBrief}</p>
+								<h5 className='landing-post-head'> {article.postName} </h5> {' '}
+								<p className='post-brief'> {article.postBrief} </p> {' '}
 								<div className='center'>
-									<a
-										href={article.postLink}
-										style={{ background: '#080808d9', marginTop: '2em' }}
-										className='btn waves-effect waves-light '
-									>
+									<a href={article.postLink} className='btn waves-effect waves-light read-more'>
 										Read More
 									</a>
 								</div>
@@ -86,16 +82,16 @@ const Industry = () => {
 			);
 		})
 	) : (
-		<div className='center'>No articles to show :(</div>
+		<div className='center'> No articles to show: ( </div>
 	);
 
 	return (
 		<div>
 			<div className='container'>
-				<h4 className='center'>Industry</h4>
+				<h4 className='center landing-head'> Industry </h4>
 			</div>
 			<div className='row post-container'>
-				<div className='col s12'>{showArticles}</div>
+				<div className='col s12'> {showArticles} </div>
 			</div>
 			<Footer />
 		</div>
