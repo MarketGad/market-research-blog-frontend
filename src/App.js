@@ -17,6 +17,7 @@ import I1003 from './Articles/industry/1003';
 import I1004 from './Articles/industry/1004';
 import I1005 from './Articles/industry/1005';
 import I1006 from './Articles/industry/1006';
+import I1007 from './Articles/industry/1007';
 import S2001 from './Articles/startups/s2001';
 import S2002 from './Articles/startups/s2002';
 import S2003 from './Articles/startups/s2003';
@@ -53,6 +54,7 @@ class App extends Component {
 						<Route exact path='/i1004' component={I1004} />
 						<Route exact path='/i1005' component={I1005} />
 						<Route exact path='/i1006' component={I1006} />
+						<Route exact path='/i1007' component={I1007} />
 						<Route exact path='/s2001' component={S2001} />
 						<Route exact path='/s2002' component={S2002} />
 						<Route exact path='/s2003' component={S2003} />
