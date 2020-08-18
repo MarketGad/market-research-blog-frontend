@@ -56,6 +56,15 @@ const Industry = () => {
 			postBrief:
 				'Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your startup is how many companies failed or invested resources they didn’t need to move forward.',
 			postLink: '/i1006'
+		},
+		{
+			postName: 'Part II: Impact Of Covid-19 On Logistics Sector In India',
+			postImage:
+				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597767828/Articles%20Photos/Industry/Logistics%20Sector%20Of%20India%20Part%20II/1_1_nybaqx.jpg',
+			key: '7',
+			postBrief:
+				'Since   the   3rd   quarter   of   2019,   the   Indian   economy   is   facing   turbulences   due   to   fallingmanufacturing/industrial   production,   especially   in   auto   and   ancillary   sector,   rising   non-performing assets (NPAs) among banks and rising unemployment',
+			postLink: '/i1007'
 		}
 	];
 	const showArticles = articles.length ? (
