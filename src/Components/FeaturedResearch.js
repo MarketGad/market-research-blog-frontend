@@ -14,7 +14,7 @@ const FeaturedResearch = () => {
 			postLink: 'https://drive.google.com/file/d/1l3pzZAZbP0_-Gnf8wqKqxfekRkxBKhBa/view?usp=sharing'
 		},
 		{
-			postName: 'Logistics Sectors in India',
+			postName: 'Logistics Sector in India',
 			postImage:
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594916046/Articles%20Photos/Industry/Logistic%20Sector%20of%20India/1-min_ft40ju.jpg',
 			key: '2',
