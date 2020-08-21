@@ -5,10 +5,12 @@ const Aboutus = () => {
 	return (
 		<div>
 			<div>
-				<div className='container'>
-					<h3 className='article-head center'>About US</h3>
+				<div className='container' style={{ fontFamily: 'GlacialIndifferenceMedium' }}>
+					<h3 className='article-head center' style={{ fontWeight: '600', letterSpacing: '0.04em' }}>
+						About Us
+					</h3>
 					<br />
-					<p className='article-content'>
+					<p className='aboutus'>
 						Google wasn’t the first search engine in the world. It was the 9th to come. Imagine if Larry
 						Page had given up on his dreams considering this fact, we could have never got something that
 						made our lives so convenient.
@@ -21,13 +23,19 @@ const Aboutus = () => {
 					<div className='center'>
 						<a
 							href='/whatwedo'
-							style={{ background: '#080808d9', margin: '1em', fontSize: '1.3em', fontWeight: '500' }}
+							style={{
+								background: '#080808d9',
+								margin: '1em',
+								fontSize: '1.3em',
+								fontWeight: '600',
+								letterSpacing: '0.1em'
+							}}
 							className='btn waves-effect waves-light'
 						>
 							Join us
 						</a>
 					</div>
-					<p className='article-content'>
+					<p className=' aboutus'>
 						We help in data-driven decision making for the people who are ambitious enough to dream big. You
 						just need an idea to pitch us. We’ll pave the path for you to take your idea and form a company
 						and go beyond your imaginations. At MarketGad, our goal is to get you through the first phase.
@@ -38,11 +46,11 @@ const Aboutus = () => {
 						depends on the kind of company you want to start.
 					</p>
 
-					<p className='article-subhead'>
+					<p className='article-subhead '>
 						59% of start-ups fail because they create something that isn’t required at the first place. We
 						validate your ideas and products with market research
 					</p>
-					<p className='article-content'>
+					<p className='aboutus'>
 						As per our primary research, 59% of start-ups fail due to lack of market analysis. We are a
 						group of people at MarketGad, from various technology and business backgrounds, taking an
 						initiative to transform the start-up ecosystem of India by de-risking entrepreneurship. On our
@@ -56,7 +64,7 @@ const Aboutus = () => {
 						Money follows passion. Not the other way round. Pitch decks are made after validated ideas. Not
 						the other way round
 					</p>
-					<p className='article-content'>
+					<p className=' aboutus'>
 						There is a huge difference between start-ups and small businesses. If you’re looking for the
 						later one, go on pursue it. But if you’re looking for a start-up, it simply means growth. That’s
 						what triggers investors to put their money in. When you’re aiming for a 100% growth with a
@@ -65,12 +73,12 @@ const Aboutus = () => {
 						and launch a product that your customers actually need, we help you create an investor pitch.
 					</p>
 					<p className='article-subhead'>Investment is just the beginning of a long journey</p>
-					<p className='article-content'>
+					<p className=' aboutus'>
 						We’ll help you throughout your start-up journey, from recruiting your first set of employees to
 						marketing your final product. More than just a company, you’ll build a network of experts, who
 						can help you to building your business.
 					</p>
-					<p className='article-content'>
+					<p className=' aboutus'>
 						Again, it is never about the idea. It is all about the execution, validation, iteration,
 						persistence and not to mention belief, that transform something worth a few thousand rupees to a
 						billion-dollar business. Forget the money, it adds values to a million lives.{' '}

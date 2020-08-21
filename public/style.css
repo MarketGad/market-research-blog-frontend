@@ -42,7 +42,10 @@ label + .MuiInput-formControl {
 }
 
 nav ul a {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
+	letter-spacing: 0.05em;
+	font-family: 'GlacialIndifferenceRegular';
+	font-weight: 600;
 	padding: 0 25px;
 }
 
@@ -225,6 +228,8 @@ nav {
 /*-------------------------------------------------- subscribe------------------- */
 
 .subscribe {
+	font-family: 'GlacialIndifferenceRegular';
+	letter-spacing: 0.07em;
 	background-color: rgba(0, 0, 0, 0.9);
 	padding: 10px;
 }
@@ -314,7 +319,10 @@ nav {
 .detail-hover:hover {
 	border-bottom: #080808d9 2px solid;
 }
-
+/* ---about */
+.aboutus {
+	font-size: 1.5em;
+}
 /* ----------Footer------------- */
 
 .footer-two {
@@ -371,6 +379,10 @@ nav {
 	background-color: #080808d9;
 	margin-top: 2em;
 	font-family: 'GlacialIndifferenceBold';
+}
+.read-more:hover {
+	background-color: #c1c1c1;
+	color: #080808d9;
 }
 
 .tabContainer {

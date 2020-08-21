@@ -50,9 +50,13 @@ const Whatwedo = () => {
 	} else {
 		return (
 			<div>
-				<div className='container'>
-					<h2 className='center privacy-top'>What do we offer?</h2>
-					<h4 className='privacy-head'>1.IDEATORS AND ENTREPRENEURS</h4>
+				<div className='container' style={{ fontFamily: 'GlacialIndifferenceMedium' }}>
+					<h2 className='center privacy-top' style={{ fontWeight: '600', letterSpacing: '0.02em' }}>
+						What do we offer?
+					</h2>
+					<h4 className='privacy-head' style={{ fontWeight: '600' }}>
+						1.IDEATORS AND ENTREPRENEURS
+					</h4>
 					<p style={{ fontSize: '1.5em' }}>
 						<i>
 							“Some of the world’s most ground breaking businesses came from ordinary people who had
@@ -78,7 +82,9 @@ const Whatwedo = () => {
 						</li>
 						<li>Creating investor ready pitch deck</li>
 					</ol>
-					<h4 className='privacy-head'>2. STARTUPS</h4>
+					<h4 className='privacy-head' style={{ fontWeight: '600' }}>
+						2. STARTUPS
+					</h4>
 					<p className='flow-text'>
 						We provide with market research and help start-ups in data driven decision making.
 					</p>

@@ -48,7 +48,7 @@ const FeaturedResearch = () => {
 
 	const showArticles = articles.length ? (
 		articles.map((article) => {
-			if (article.key % 2 == 1) {
+			if (article.key % 2 === 1) {
 				return (
 					<div className='row card-h'>
 						<div className='col l5 s12'>
