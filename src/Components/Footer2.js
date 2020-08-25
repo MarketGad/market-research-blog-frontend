@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer2 = () => {
 	return (
 		<div>
-			<footer id='footer'>
+			<footer id='footer2'>
 				<div className='footer-two'>
 					<i className='material-icons copyright'>copyright</i>
 					<a
@@ -18,4 +18,4 @@ const Footer = () => {
 		</div>
 	);
 };
-export default Footer;
+export default Footer2;

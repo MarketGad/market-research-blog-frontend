@@ -17,6 +17,7 @@ import Slide from '@material-ui/core/Slide';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import GoogleLogin from 'react-google-login';
+import Footer from '../Components/Footer2';
 
 const Transition = React.forwardRef(function Transition (props, ref) {
 	return <Slide direction='up' ref={ref} {...props} />;
@@ -128,170 +129,173 @@ export default function SignUp () {
 	};
 
 	return (
-		<Container component='main' maxWidth='sm'>
-			<CssBaseline />
-			<div className={classes.paper}>
-				<Typography component='h2' variant='h4'>
-					Submit your idea
-				</Typography>
-				<form className={classes.form} onSubmit={submitHandler}>
-					<Grid container spacing={2}>
-						<Grid spacing={2} item xs={12}>
-							<TextField
-								type='email'
-								variant='outlined'
-								required
-								fullWidth
-								id='email'
-								label='Use your email'
-								name='email'
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<TextField
-								id='outlined-select-sector'
-								fullWidth
-								select
-								required
-								label='Idea Stage'
-								value={sector}
-								helperText='Choose the stage of your idea'
-								variant='outlined'
-								onChange={(e) => setSector(e.target.value)}
-							>
-								{sectors.map((option) => (
-									<MenuItem key={option.value} value={option.value}>
-										{option.label}
-									</MenuItem>
-								))}
-							</TextField>
-						</Grid>
-						<Grid item xs={12}>
-							<div className='containerinput'>
+		<div>
+			<Container component='main' maxWidth='sm'>
+				<CssBaseline />
+				<div className={classes.paper}>
+					<Typography component='h2' variant='h4'>
+						Submit your idea
+					</Typography>
+					<form className={classes.form} onSubmit={submitHandler}>
+						<Grid container spacing={2}>
+							<Grid spacing={2} item xs={12}>
 								<TextField
-									variant='outlined'
-									required
-									fullWidth
-									id='topic'
-									label='Give your idea in one line'
-									name='topic'
-									value={topic}
-									onChange={(e) => setTopic(e.target.value)}
-								/>
-							</div>
-						</Grid>
-						<Grid item xs={12}>
-							<div className='containerinput'>
-								<TextField
-									variant='outlined'
-									required
-									fullWidth
-									id='standard-basic'
-									label='Brief us about your idea'
-									name='briefIdea'
-									value={briefIdea}
-									onChange={(e) => setBriefIdea(e.target.value)}
-								/>
-							</div>
-						</Grid>
-						<Grid item xs={12}>
-							<div className='containerinput'>
-								<TextField
-									variant='outlined'
-									required
-									fullWidth
-									id='phone'
-									label='Phone No.'
-									name='phone'
-									value={phone}
-									onChange={(e) => setPhone(e.target.value)}
-								/>
-							</div>
-						</Grid>
-
-						<Grid item xs={12}>
-							<FormControlLabel
-								control={<Checkbox value='allowExtraEmails' color='primary' />}
-								label='Hereby you agree that the data sharing between you and MarketGad us will be strictly confidential and private'
-							/>
-						</Grid>
-						<Grid container justify='flex-begin'>
-							<Grid item>
-								<Link href='/privacy' variant='body2' target='_blank'>
-									Click Here to view our privacy policy
-								</Link>
-							</Grid>
-						</Grid>
-						<Typography style={{ alignSelf: 'center' }} component='h1' variant='h5'>
-							Refer Your Friends
-						</Typography>
-
-						<div className='center' style={{ margin: 'auto' }}>
-							<Grid item xs={12}>
-								<TextField
-									required={true}
-									id='email'
 									type='email'
-									label='Email Address 1'
-									name='f1email'
-									value={f1email}
-									onChange={(e) => setF1email(e.target.value)}
+									variant='outlined'
+									required
+									fullWidth
+									id='email'
+									label='Use your email'
+									name='email'
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
 								/>
 							</Grid>
 							<Grid item xs={12}>
 								<TextField
-									id='email'
-									type='email'
-									label='Email Address 2'
-									name='f2email'
-									value={f2email}
-									onChange={(e) => setF2email(e.target.value)}
+									id='outlined-select-sector'
+									fullWidth
+									select
+									required
+									label='Idea Stage'
+									value={sector}
+									helperText='Choose the stage of your idea'
+									variant='outlined'
+									onChange={(e) => setSector(e.target.value)}
+								>
+									{sectors.map((option) => (
+										<MenuItem key={option.value} value={option.value}>
+											{option.label}
+										</MenuItem>
+									))}
+								</TextField>
+							</Grid>
+							<Grid item xs={12}>
+								<div className='containerinput'>
+									<TextField
+										variant='outlined'
+										required
+										fullWidth
+										id='topic'
+										label='Give your idea in one line'
+										name='topic'
+										value={topic}
+										onChange={(e) => setTopic(e.target.value)}
+									/>
+								</div>
+							</Grid>
+							<Grid item xs={12}>
+								<div className='containerinput'>
+									<TextField
+										variant='outlined'
+										required
+										fullWidth
+										id='standard-basic'
+										label='Brief us about your idea'
+										name='briefIdea'
+										value={briefIdea}
+										onChange={(e) => setBriefIdea(e.target.value)}
+									/>
+								</div>
+							</Grid>
+							<Grid item xs={12}>
+								<div className='containerinput'>
+									<TextField
+										variant='outlined'
+										required
+										fullWidth
+										id='phone'
+										label='Phone No.'
+										name='phone'
+										value={phone}
+										onChange={(e) => setPhone(e.target.value)}
+									/>
+								</div>
+							</Grid>
+
+							<Grid item xs={12}>
+								<FormControlLabel
+									control={<Checkbox value='allowExtraEmails' color='primary' />}
+									label='Hereby you agree that the data sharing between you and MarketGad us will be strictly confidential and private'
 								/>
 							</Grid>
+							<Grid container justify='flex-begin'>
+								<Grid item>
+									<Link href='/privacy' variant='body2' target='_blank'>
+										Click Here to view our privacy policy
+									</Link>
+								</Grid>
+							</Grid>
+							<Typography style={{ alignSelf: 'center' }} component='h1' variant='h5'>
+								Refer Your Friends
+							</Typography>
+
+							<div className='center' style={{ margin: 'auto' }}>
+								<Grid item xs={12}>
+									<TextField
+										required={true}
+										id='email'
+										type='email'
+										label='Email Address 1'
+										name='f1email'
+										value={f1email}
+										onChange={(e) => setF1email(e.target.value)}
+									/>
+								</Grid>
+								<Grid item xs={12}>
+									<TextField
+										id='email'
+										type='email'
+										label='Email Address 2'
+										name='f2email'
+										value={f2email}
+										onChange={(e) => setF2email(e.target.value)}
+									/>
+								</Grid>
+							</div>
+						</Grid>
+						<Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
+							Scale Up!
+						</Button>
+					</form>
+				</div>
+				<Box m={3}>
+					<Copyright />
+				</Box>
+				<div>
+					<Dialog
+						open={open}
+						TransitionComponent={Transition}
+						keepMounted
+						onClose={handleClose}
+						aria-labelledby='alert-dialog-slide-title'
+						aria-describedby='alert-dialog-slide-description'
+					>
+						<div className='center' style={{ padding: '10px', fontSize: '20px' }}>
+							<DialogTitle id='alert-dialog-slide-title'>
+								Welcome! Please sign in before submitting the form
+							</DialogTitle>
 						</div>
-					</Grid>
-					<Button type='submit' fullWidth variant='contained' color='primary' className={classes.submit}>
-						Scale Up!
-					</Button>
-				</form>
-			</div>
-			<Box m={3}>
-				<Copyright />
-			</Box>
-			<div>
-				<Dialog
-					open={open}
-					TransitionComponent={Transition}
-					keepMounted
-					onClose={handleClose}
-					aria-labelledby='alert-dialog-slide-title'
-					aria-describedby='alert-dialog-slide-description'
-				>
-					<div className='center' style={{ padding: '10px', fontSize: '20px' }}>
-						<DialogTitle id='alert-dialog-slide-title'>
-							Welcome! Please sign in before submitting the form
-						</DialogTitle>
-					</div>
-					<div className='center' style={{ padding: '10px' }}>
-						<DialogActions>
-							{/* <Button onClick={handleClose} variant="contained" color="primary" href="/dashboard">
+						<div className='center' style={{ padding: '10px' }}>
+							<DialogActions>
+								{/* <Button onClick={handleClose} variant="contained" color="primary" href="/dashboard">
                                 LinkedIn Login
                                             </Button> */}
-							<Button onClick={handleClose} href='/'>
-								<GoogleLogin
-									clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
-									onSuccess={responseSuccessGoogle}
-									onFailure={responseErrorGoogle}
-									cookiePolicy={'single_host_origin'}
-									redirectUri={'/dashboard'}
-								/>
-							</Button>
-						</DialogActions>
-					</div>
-				</Dialog>
-			</div>
-		</Container>
+								<Button onClick={handleClose} href='/'>
+									<GoogleLogin
+										clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
+										onSuccess={responseSuccessGoogle}
+										onFailure={responseErrorGoogle}
+										cookiePolicy={'single_host_origin'}
+										redirectUri={'/dashboard'}
+									/>
+								</Button>
+							</DialogActions>
+						</div>
+					</Dialog>
+				</div>
+			</Container>
+			<Footer />
+		</div>
 	);
 }

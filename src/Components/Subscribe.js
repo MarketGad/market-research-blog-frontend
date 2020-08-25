@@ -78,8 +78,9 @@ const Subscribe = () => {
 						<div className='row subscribe-area'>
 							<div className='col l9 s12'>
 								<Grid item xs={12}>
-									<div className='containerinput'>
+									<div>
 										<TextField
+											type='email'
 											variant='outlined'
 											required
 											fullWidth

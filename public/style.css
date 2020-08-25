@@ -1,5 +1,9 @@
+/* ------------input---------------- */
+
 input {
 	border-bottom: none !important;
+	padding-left: 14px !important;
+	margin: 0 !important;
 }
 
 input:focus {
@@ -9,26 +13,27 @@ input:focus {
 
 input[type="text"] {
 	width: 100%;
-	height: 0.5em !important;
+	margin: 0;
+	height: 1.6rem !important;
 	padding: 14px !important;
 }
 
 input[type="email"] {
-	padding-left: 10px !important;
+	padding-left: 14px !important;
+	padding-top: 0 !important;
 }
 
-.containerinput label {
-	height: 36px;
-	top: -6px;
+input#email.MuiInputBase-input.MuiOutlinedInput-input {
+	margin: 0;
+	height: 3.5rem;
 }
-
-/* 
-.container label[data-shrink="true"] {
-  top: 0;
-} */
+input#password.MuiInputBase-input.MuiOutlinedInput-input {
+	margin: 0;
+	height: 3.5rem;
+}
 
 label + .MuiInput-formControl {
-	margin-top: 0 !important;
+	margin-top: auto !important;
 }
 
 /* ------------------Navbar -------------------------*/
@@ -242,7 +247,7 @@ nav {
 	font-weight: 600;
 	transition-duration: 0.4s;
 	border-radius: 5px;
-	height: 2.667em;
+	height: 3.4rem;
 }
 
 .signup-button:hover {
@@ -324,7 +329,11 @@ nav {
 	font-size: 1.5em;
 }
 /* ----------Footer------------- */
-
+#footer2 {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
 .footer-two {
 	background: #080808;
 	padding: 5px 30px;
