@@ -36,7 +36,7 @@ const FeaturedResearch = () => {
 			postLink: 'https://drive.google.com/file/d/1jGBTzrtWh8Bv6sVXHG_yMk0RJtn9Pzry/view?usp=sharing'
 		},
 		{
-			postName: 'Part II: Impact Of Covid-19 On Logistics Sector In India',
+			postName: 'Impact Of Covid-19 On Logistics Sector In India',
 			postImage:
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597767818/Articles%20Photos/Industry/Logistics%20Sector%20Of%20India%20Part%20II/2_2_mys3kv.jpg',
 			key: '4',
