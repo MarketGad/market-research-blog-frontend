@@ -41,7 +41,7 @@ const FeaturedResearch = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597767818/Articles%20Photos/Industry/Logistics%20Sector%20Of%20India%20Part%20II/2_2_mys3kv.jpg',
 			key: '4',
 			postBrief:
-				'Since   the   3rd   quarter   of   2019,   the   Indian   economy   is   facing   turbulences   due   to   fallingmanufacturing/industrial   production,   especially   in   auto   and   ancillary   sector,   rising   non-performing assets (NPAs) among banks and rising unemployment',
+				'Since   the   3rd   quarter   of   2019,   the   Indian   economy   is   facing   turbulences   due   to   falling manufacturing/industrial   production,   especially   in   auto   and   ancillary   sector,   rising   non-performing assets (NPAs) among banks and rising unemployment',
 			postLink: '/i1007'
 		}
 	];
