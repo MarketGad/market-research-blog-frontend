@@ -58,7 +58,7 @@ const Industry = () => {
 			postLink: '/i1006'
 		},
 		{
-			postName: 'Part II: Impact Of Covid-19 On Logistics Sector In India',
+			postName: 'Impact Of Covid-19 On Logistics Sector In India',
 			postImage:
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597767828/Articles%20Photos/Industry/Logistics%20Sector%20Of%20India%20Part%20II/1_1_nybaqx.jpg',
 			key: '7',
