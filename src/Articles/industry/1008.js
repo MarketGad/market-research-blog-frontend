@@ -6,6 +6,9 @@ const i1008 = () => {
         <div>
             <div className="container">
                 <h3 className="article-head center">Opportunities In Warehousing Technologies In India</h3>
+                <div className="center article-content" style={{ textAlign: "center" }}>
+                    Market Research by <b><a href="https://www.linkedin.com/in/bisleshana-brahma-prakash/">Bisleshana Brahma Prakash</a></b><br />
+                </div>
                 <br />
                 <p className="article-subhead">Introduction </p>
                 <p className="article-content">
