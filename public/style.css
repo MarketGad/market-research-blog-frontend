@@ -1,3 +1,14 @@
+:root {
+	--alert-success-bg-color: #d4edda;
+	--alert-success-text-color: #155724;
+	--alert-danger-bg-color: #f5c6cb;
+	--alert-danger-text-color: #721c24;
+}
+
+* {
+	font-family: 'GlacialIndifferenceRegular';
+}
+
 /* ------------input---------------- */
 
 input {
@@ -43,7 +54,7 @@ label + .MuiInput-formControl {
 	width: 50px;
 	height: 55px;
 	margin-right: 50px;
-	top: 5px;
+	top: 3px;
 }
 
 nav ul a {
@@ -54,10 +65,14 @@ nav ul a {
 	padding: 0 25px;
 }
 
-.nav-wrapper ul li:nth-child(n + 2):hover {
+.navmenu ul li:nth-child(n + 2):hover {
 	background: rgba(38, 39, 37, 0.6);
 }
 
+.dropdown-content li:hover,
+.dropdown-content li:active {
+	background-color: rgba(38, 39, 37, 0.6);
+}
 li a img {
 	height: 55px;
 }
@@ -150,6 +165,52 @@ nav {
 .slider .indicators .indicator-item.active {
 	background-color: rgba(0, 0, 0, 0.6);
 }
+
+.text-block {
+	margin-top: 1rem;
+	bottom: 24%;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5.5%;
+	position: absolute;
+	height: 6%;
+	top: 76%;
+	left: 48%;
+	margin: -100px 0 0 -121px;
+	font-family: "GlacialIndifferenceBold";
+	background: #1815156b;
+	font-size: 1.2rem;
+	font-weight: 900;
+	border-radius: 45%;
+  }
+  .text-block p{
+	  font-size: 1.5rem;
+  }
+
+  .text-block1 {
+	margin-top: 1rem;
+	bottom: 24%;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 5.5%;
+	position: absolute;
+	height: 6%;
+	top: 70%;
+	left: 48%;
+	margin: -100px 0 0 -121px;
+	font-family: "GlacialIndifferenceBold";
+	background: #1815156b;
+	font-size: 1.2rem;
+	font-weight: 900;
+	border-radius: 45%;
+	display: none;
+  }
+  .text-block1 p{
+	  font-size: 1.5rem;
+  }
+
 
 /* ----------seo---------- */
 
@@ -546,6 +607,251 @@ nav {
 	font-weight: 450;
 }
 
+/* ------------------------People-------------------------*/
+/* ------------------------People-------------------------*/
+.hirenow-btn {
+	font-family: 'GlacialIndifferenceBold';
+	border-radius: 4px;
+	font-weight: 300;
+	background-color: #0f0f0f;
+	color: #ffffff;
+}
+.hirenow-btn:hover {
+	background-color: #080808d9;
+}
+
+.register-job {
+	font-family: 'GlacialIndifferenceBold';
+	border-radius: 4px;
+	background-color: #0f0f0f;
+	color: #ffffff;
+	position: relative;
+	top: 2.5em;
+}
+.register-job:hover {
+	background-color: #61383b;
+}
+.hire-btn1 {
+	font-family: 'GlacialIndifferenceBold';
+	border-radius: 4px;
+	font-weight: 300;
+	background-color: #0f0f0f;
+	color: #ffffff;
+	width: 7em;
+	padding-top: 0%;
+}
+.hire-btn1:hover {
+	background-color: #080808;
+}
+
+.card-image {
+	padding: 0.6rem;
+}
+.card1 {
+	height: 7rem;
+}
+.userimg {
+	height: 10rem;
+	width: 10rem;
+}
+/* jpbprofile screen */
+.job-link-icons {
+	position: relative;
+	padding: 0 10px;
+	vertical-align: middle;
+	font-size: large;
+}
+.profile-container {
+	margin-top: 2%;
+}
+.profile-section {
+	padding: 3px 0;
+}
+.link-container {
+	font-size: 1.5em;
+	margin-left: 15%;
+	margin-top: 15%;
+}
+/*-------------------Products--------------------------*/
+.product-job-page-container {
+	margin: 0 12%;
+}
+.pro-btn1 {
+	font-family: 'GlacialIndifferenceBold';
+	border-radius: 4px;
+	font-weight: 300;
+	background-color: #0f0f0f;
+	color: #ffffff;
+	width: 12em;
+	padding: 0%;
+	position: relative;
+	top: 4.5em;
+}
+.pro-btn1:hover {
+	background-color: #080808;
+}
+.productdetails-container {
+	margin-top: 3%;
+}
+
+.product-container {
+	border-radius: '5px';
+	height: auto;
+	padding: 10px 5px;
+}
+.comment-container {
+	height: 5em;
+}
+
+.pro-img {
+	height: 100px !important;
+	width: 100px !important;
+	border-radius: 5px;
+}
+.product-head {
+	font-family: 'GlacialIndifferenceBold';
+	padding: 10px 0;
+	font-size: 2.4em;
+	font-weight: 600;
+	line-height: .5em;
+}
+.product-subhead {
+	font-family: 'GlacialIndifferenceBold';
+	font-size: 1.9em;
+	line-height: 0.3em;
+	font-weight: 500;
+}
+.product-content {
+	font-family: 'GlacialIndifferenceMedium';
+	font-size: 1.5em;
+}
+.product-desc {
+	font-size: 1.23em;
+	padding: 2px 0;
+	height: 2.5em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.product-link-container {
+	margin-bottom: 0 !important;
+}
+.comment-box {
+	margin-top: 8px;
+	float: right;
+}
+.comment-count {
+	position: relative;
+	top: -3px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.upvote-container {
+	border: .2em solid black;
+	border-radius: 8px;
+	cursor: pointer;
+	text-align: center;
+	color: #080808d9;
+}
+.upvote-container:hover {
+	background-color: #f3efef;
+}
+.upvote-count {
+	font-size: 1.5em;
+	text-align: center;
+	position: relative;
+	top: -1em;
+}
+.product-right-container {
+	padding-left: 8%;
+	width: 90%;
+}
+.product-link {
+	font-size: 1.25em;
+	padding: 2px 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.product-comment {
+	font-weight: 800 !important;
+	letter-spacing: 0.03em;
+}
+.links {
+	color: #080808d9;
+	max-width: 80%;
+	display: inline-block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	vertical-align: middle;
+}
+.links:hover {
+	text-decoration: underline;
+}
+.hire-connect-btn {
+	margin-top: 10px;
+	font-family: 'GlacialIndifferenceBold';
+	width: 8em;
+	padding-top: 2px;
+	display: inline-block;
+	border-radius: 30px;
+	text-align: center;
+	background-color: white;
+	color: black;
+}
+.hire-connect-btn:hover {
+	background-color: #c1c1c1;
+}
+/*---------------------comment------------------*/
+.comment-btn1 {
+	display: inline-block;
+	border-radius: 30px;
+	padding: 4px 10px;
+	text-align: center;
+	font-weight: 300;
+	background-color: white;
+	color: black;
+}
+.comment-btn1:hover {
+	background-color: #c1c1c1;
+}
+.comment-head {
+	color: #080808d9;
+}
+.comment-head:hover {
+	text-decoration: underline;
+}
+.comment {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.comment-body {
+	min-height: 2px !important;
+	padding-left: 50px;
+}
+/* ----------------alert-------------- */
+.alert {
+	margin-top: 40px;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	position: fixed;
+	top: 1.5em;
+	margin-right: 40%;
+	margin-left: 40%;
+	width: 20%;
+	font-size: 2em;
+}
+
+.alert-success {
+	background-color: var(--alert-success-bg-color);
+	color: var(--alert-success-text-color);
+}
+
+.alert-danger {
+	background-color: var(--alert-danger-bg-color);
+	color: var(--alert-danger-text-color);
+}
+
 /* ------------------mobile----------------------------------- 
 ---------------------view--------------------------------
 */
@@ -585,6 +891,33 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+	.text-block{
+		display: none;
+	}
+	.text-block1 {
+		margin-top: 1rem;
+		bottom: 24%;
+		color: white;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 5.5%;
+		position: absolute;
+		height: 10%;
+		top: 68%;
+		left: 48%;
+		margin: -100px 0 0 -121px;
+		font-family: "GlacialIndifferenceBold";
+		background: #1815156b;
+		font-size: 1.2rem;
+		font-weight: 900;
+		border-radius: 45%;
+		display: block;
+	  }
+
+	  .text-block1 p{
+		  font-size: 1.5rem;
+	  }
+
 	.nav-center {
 		display: inline;
 		justify-content: left;
@@ -780,5 +1113,101 @@ nav {
 	}
 	.desktop-hide {
 		display: block;
+	}
+	/* ------------product page */
+	.product-job-page-container {
+		margin: 0 1%;
+	}
+	.pro-btn1 {
+		font-family: 'GlacialIndifferenceBold';
+		width: auto;
+		padding: auto;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.product-container {
+		height: 140px;
+	}
+	.product-right-container {
+		padding-left: 10%;
+		width: 85%;
+	}
+	.pro-img {
+		height: 75px !important;
+		width: 75px !important;
+	}
+	.product-desc {
+		font-size: 1.25em;
+		padding: 0;
+		height: 1.25em;
+		white-space: nowrap;
+	}
+	.product-link {
+		font-size: 1.2em;
+		padding: 0;
+	}
+	/* .product-head {
+		font-size: 2.4em;
+		line-height: .5em;
+	}
+	.product-subhead {
+		font-size: 1.9em;
+		line-height: 0.3em;
+		font-weight: 500;
+	}
+	.product-content {
+		font-size: 1.5em;
+	} */
+
+	.comment-box {
+		padding-top: 0;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+	.comment-count {
+		font-size: 14px;
+	}
+	.upvote-container {
+		border-radius: 8px;
+		top: 5px !important;
+		right: 10px !important;
+	}
+
+	.upvote-count {
+		font-size: 1.3em;
+		top: -0.6em;
+	}
+	.upvote-icon {
+		font-size: 3.2em !important;
+	}
+
+	.product-comment {
+		font-weight: 800 !important;
+		letter-spacing: 0.03em;
+	}
+	.links {
+		max-width: 80%;
+	}
+
+	/*---------------------comment------------------*/
+	.comment-btn1 {
+		display: inline-block;
+		border-radius: 30px;
+		padding: 4px 10px;
+		text-align: center;
+		font-weight: 300;
+		background-color: #080808d9;
+		color: #ffffff;
+	}
+	.comment-btn1:hover {
+		background-color: #080808;
+	}
+	.comment {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.comment-body {
+		min-height: 2px !important;
+		padding-left: 50px;
 	}
 }
