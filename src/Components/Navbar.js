@@ -186,7 +186,7 @@ const Navbar = () => {
 					</li>
 				</ul>
 				<ul className='sidenav' id='mobile-demo'>
-					<nav>
+					{/* <nav>
 						<div className='nav-wrapper'>
 							<form>
 								<div className='input-field'>
@@ -198,7 +198,7 @@ const Navbar = () => {
 								</div>
 							</form>
 						</div>
-					</nav>
+					</nav> */}
 					<li>
 						<a href='/'>Home</a>
 					</li>
@@ -210,13 +210,14 @@ const Navbar = () => {
 					<li>
 						<a href='/funding'>Funding</a>
 					</li>
-					{/* {show()} */}
+
 					{/* <li>
 						<a onClick={handleClickOpen}>Dashboard</a>
 					</li> */}
 					<li>
 						<a href='/about'>About Us</a>
 					</li>
+					{show()}
 				</ul>
 				<div>
 					<Dialog
