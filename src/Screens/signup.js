@@ -249,9 +249,9 @@ export default function SignUp () {
 						</div>
 					</Container>
 				</div>
-				<div style={{ marginTop: '8%' }}>
+				{/* <div style={{ marginTop: '8%' }}>
 					<Footer />
-				</div>
+				</div> */}
 			</div>
 		);
 	}
