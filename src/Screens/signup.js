@@ -103,13 +103,12 @@ export default function SignUp () {
 				<Alert msg={successMsg} type='success' />
 				<h4 className='center'>Verify Your email</h4>
 				<form className={classes.form} onSubmit={otpsubmitHandler}>
-					<div className='center' style={{ width: '6%', margin: '0 47%' }}>
+					<div className='center' style={{ width: 'auto', margin: 'auto' }}>
 						<Grid spacing={2} item xs={12}>
 							<TextField
 								variant='outlined'
 								margin='normal'
 								required
-								fullWidth
 								name='otp'
 								label='Enter Otp'
 								type='password'
