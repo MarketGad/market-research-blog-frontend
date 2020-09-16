@@ -10,7 +10,7 @@ const ProductList = () => {
 
 	const loadProducts = async () => {
 		try {
-			const res = await fetch('/api/productdetails');
+			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/productdetails');
 			const data = await res.json();
 			setProducts(data);
 		} catch (err) {
@@ -29,21 +29,27 @@ const ProductList = () => {
 				Authorization: `Bearer ${token}`
 			}
 		};
-		axios.post('/api/productdetails/' + product_id + '/upvotes/add', {}, config).then(
-			(response) => {
-				console.log(response);
-				alert('upvote added');
-				window.location.reload();
-			},
-			(error) => {
-				console.log(error);
-				if (token) {
-					alert('upvote already added');
-				} else {
-					alert('please login in to upvote');
+		axios
+			.post(
+				'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + product_id + '/upvotes/add',
+				{},
+				config
+			)
+			.then(
+				(response) => {
+					console.log(response);
+					alert('upvote added');
+					window.location.reload();
+				},
+				(error) => {
+					console.log(error);
+					if (token) {
+						alert('upvote already added');
+					} else {
+						alert('please login in to upvote');
+					}
 				}
-			}
-		);
+			);
 	};
 
 	const showProducts = products.length ? (
