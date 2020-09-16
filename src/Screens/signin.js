@@ -46,7 +46,7 @@ export default function SignIn () {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		axios
-			.post('/api/user/loginUser', {
+			.post('https://serieux-saucisson-31787.herokuapp.com/api/user/loginUser', {
 				email: email.toLowerCase(),
 				password: password
 			})

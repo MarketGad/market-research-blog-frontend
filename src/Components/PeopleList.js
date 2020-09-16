@@ -7,7 +7,7 @@ const PeopleList = () => {
 
 	const loadProducts = async () => {
 		try {
-			const res = await fetch('/api/jobprofiles');
+			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles');
 			const data = await res.json();
 			setPeople(data);
 		} catch (err) {

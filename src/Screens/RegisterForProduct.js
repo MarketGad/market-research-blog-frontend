@@ -86,7 +86,7 @@ export default function RegisterForProduct () {
 			};
 			axios
 				.post(
-					'/api/productdetails',
+					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails',
 					{
 						logo: previewSource,
 						name: name,

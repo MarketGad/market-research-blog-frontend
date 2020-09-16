@@ -64,7 +64,7 @@ const ProductProfile = (props) => {
 			};
 			axios
 				.post(
-					'/api/productdetails/' + id + '/comments',
+					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + id + '/comments',
 					{
 						comment: comment
 					},

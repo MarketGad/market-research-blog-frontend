@@ -54,7 +54,7 @@ export default function SignUp () {
 		e.preventDefault();
 		if (password === confirmPassword) {
 			axios
-				.post('/api/user/signupUser', {
+				.post('https://serieux-saucisson-31787.herokuapp.com/api/user/signupUser', {
 					email: email.toLowerCase(),
 					password: password,
 					phone: phoneno,
@@ -78,7 +78,7 @@ export default function SignUp () {
 	const otpsubmitHandler = (e) => {
 		e.preventDefault();
 		axios
-			.post('/api/user/otpverify', {
+			.post('https://serieux-saucisson-31787.herokuapp.com/api/user/otpverify', {
 				email: email.toLowerCase(),
 				otp: otp
 			})

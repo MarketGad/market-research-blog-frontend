@@ -102,7 +102,7 @@ export default function RegisterForJobs () {
 		};
 		axios
 			.post(
-				'/api/jobprofiles',
+				'https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles',
 				{
 					skills: skills,
 					location: location,
