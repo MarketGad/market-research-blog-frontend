@@ -68,7 +68,9 @@ export default function SignUp () {
 						}
 					},
 					(error) => {
-						setErrMsg('Something went Wrong');
+						if (error.response.data.err === 'Email Already Registered and Verified') {
+							setErrMsg('Email Already Registered and Verified');
+						} else setErrMsg('Something went wrong');
 					}
 				);
 		} else {
