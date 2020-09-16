@@ -8,6 +8,7 @@ import logo from './Favicon.jpg';
 import Slide from '@material-ui/core/Slide';
 import GoogleLogin from 'react-google-login';
 import { Redirect } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const Transition = React.forwardRef(function Transition (props, ref) {
 	return <Slide direction='up' ref={ref} {...props} />;
@@ -46,18 +47,29 @@ const Navbar = () => {
 		console.log(response);
 	};
 	/*----------------------------conditional rendering of user name-----------------------------------*/
-
-	// const show = () => {
-	// if (name === "") {
-	// return (<li><a onClick={handleClickOpen}>Login</a></li>)
-	// }
-	// else {
-	//     return (
-	//         <React.Fragment>
-	//             <li><a>{name}</a></li>
-	//         </React.Fragment>)
-	// }
-	// }
+	const removecookie = () => {
+		Cookies.remove('session-id');
+	};
+	const show = () => {
+		const cookie = Cookies.get('session-id');
+		if (!cookie) {
+			return (
+				<li>
+					<a href='/signin'>Login</a>
+				</li>
+			);
+		} else {
+			return (
+				<React.Fragment>
+					<li>
+						<a onClick={removecookie} href='/'>
+							Logout
+						</a>
+					</li>
+				</React.Fragment>
+			);
+		}
+	};
 
 	/*---------------------------------------------------------------------------------------------------*/
 
@@ -66,6 +78,7 @@ const Navbar = () => {
 	} else {
 		return (
 			<div>
+				{/* <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a> */}
 				<div className='navbar-fixed'>
 					<nav className='nav-center' role='navigation'>
 						<div className='nav-wrapper'>
@@ -81,53 +94,97 @@ const Navbar = () => {
 									alt='logo-mob'
 								/>
 							</a>
-							{/* <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a> */}
-							<ul
-								id='nav-mobilecomp-menu '
-								style={{ backgroundColor: 'black' }}
-								className='hide-on-med-and-down'
-							>
+							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 								<li>
-									<a className='logo' href='/'>
-										<img style={{ position: 'relative' }} src={logo} alt='logo' />
+									<a
+										href='/industry'
+										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+									>
+										Industry
 									</a>
 								</li>
 								<li>
-									<a href='/industry'>Industry</a>
+									<a
+										href='/startup'
+										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+									>
+										Start-ups
+									</a>
 								</li>
 								<li>
-									<a href='/startup'>Start-ups</a>
-								</li>
-								<li>
-									<a href='/venturehack'>Venture Hacks</a>
-								</li>
-								<li>
-									<a href='/about'>About Us</a>
-								</li>
-								{/* {show()} */}
-								<li>
-									<a onClick={handleClickOpen}>Dashboard</a>
+									<a
+										href='/venturehack'
+										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+									>
+										Venture Hacks
+									</a>
 								</li>
 							</ul>
-							{/* <ul>
-                                <a href="#a" className="search" id="search-icon"><i className="material-icons">search</i></a>
-                            </ul> */}
-							<div>
-								<form>
-									<div className='input-field' style={{ display: 'none' }} id='search-div'>
-										<input id='search-txt' type='search' />
-										<label className='label-icon' htmlFor='search-txt'>
-											<i className='material-icons'>search</i>
-										</label>
-										<i className='material-icons' id='close-icon'>
-											close
-										</i>
-									</div>
-								</form>
+							<div className='navmenu'>
+								<ul
+									id='nav-mobilecomp-menu'
+									style={{ backgroundColor: 'black' }}
+									className='hide-on-med-and-down'
+								>
+									<li>
+										<a className='logo' href='/'>
+											<img style={{ position: 'relative' }} src={logo} alt='logo' />
+										</a>
+									</li>
+									<li>
+										<a href='/funding'>Funding</a>
+									</li>
+									<li>
+										<a className='dropdown-trigger' data-target='dropdown1'>
+											Market Research
+										</a>
+									</li>
+									<li>
+										<a href='/about'>About Us</a>
+									</li>
+									{/* <li>
+										<a onClick={handleClickOpen}>Dashboard</a>
+									</li> */}
+									{show()}
+								</ul>
 							</div>
 						</div>
 					</nav>
+
+					{/* <ul>
+                                <a href="#a" className="search" id="search-icon"><i className="material-icons">search</i></a>
+                            </ul> */}
+					<div>
+						<form>
+							<div className='input-field' style={{ display: 'none' }} id='search-div'>
+								<input id='search-txt' type='search' />
+								<label className='label-icon' htmlFor='search-txt'>
+									<i className='material-icons'>search</i>
+								</label>
+								<i className='material-icons' id='close-icon'>
+									close
+								</i>
+							</div>
+						</form>
+					</div>
 				</div>
+				<ul id='dropdown2' className='dropdown-content' style={{ backgroundColor: 'black' }}>
+					<li>
+						<a href='/industry' style={{ color: 'white' }}>
+							Industry
+						</a>
+					</li>
+					<li>
+						<a href='/startup' style={{ color: 'white' }}>
+							Start-ups
+						</a>
+					</li>
+					<li>
+						<a href='/venturehack' style={{ color: 'white' }}>
+							Venture Hacks
+						</a>
+					</li>
+				</ul>
 				<ul className='sidenav' id='mobile-demo'>
 					<nav>
 						<div className='nav-wrapper'>
@@ -146,18 +203,17 @@ const Navbar = () => {
 						<a href='/'>Home</a>
 					</li>
 					<li>
-						<a href='/industry'>Industry</a>
+						<a className='dropdown-trigger1' data-target='dropdown2'>
+							Market Research<i className='material-icons right'>arrow_drop_side</i>
+						</a>
 					</li>
 					<li>
-						<a href='/startup'>Start-ups</a>
-					</li>
-					<li>
-						<a href='/venturehack'>Venture Hacks</a>
+						<a href='/funding'>Funding</a>
 					</li>
 					{/* {show()} */}
-					<li>
+					{/* <li>
 						<a onClick={handleClickOpen}>Dashboard</a>
-					</li>
+					</li> */}
 					<li>
 						<a href='/about'>About Us</a>
 					</li>

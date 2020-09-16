@@ -14,6 +14,8 @@ import Whatwedo from './Screens/Whatwedo';
 import Privacy from './Screens/Privacy';
 import SignUp from './Screens/signup';
 import SignIn from './Screens/signin';
+import Products from './Screens/Products';
+import RegisterForJobs from './Screens/RegisterForJobs';
 import I1001 from './Articles/industry/1001';
 import I1002 from './Articles/industry/1002';
 import I1003 from './Articles/industry/1003';
@@ -34,6 +36,9 @@ import v3001 from './Articles/venturehacks/v3001';
 import v3002 from './Articles/venturehacks/v3002';
 import v3003 from './Articles/venturehacks/v3003';
 import v3004 from './Articles/venturehacks/v3004';
+import RegisterForProduct from './Screens/RegisterForProduct';
+import ProductProfile from './Screens/ProductProfile';
+import JobProfile from './Screens/JobProfile';
 
 function App () {
 	useEffect(() => {
@@ -45,7 +50,7 @@ function App () {
 			<div className='App'>
 				<Navbar />
 				<Switch>
-					<Route exact path='/' component={Home} />
+					<Route exact path='/' component={Products} />
 					<Route exact path='/form' component={Form} />
 					<Route exact path='/whatwedo' component={Whatwedo} />
 					<Route exact path='/industry' component={Industry} />
@@ -55,8 +60,11 @@ function App () {
 					<Route exact path='/privacy' component={Privacy} />
 					<Route exact path='/startup' component={Startup} />
 					<Route exact path='/venturehack' component={Venturehack} />
-					<Route exact path='/signup' component = {SignUp}/>
-					<Route exact path='/signin' component = {SignIn}/>
+					<Route exact path='/signup' component={SignUp} />
+					<Route exact path='/signin' component={SignIn} />
+					<Route exact path='/funding' component={Home} />
+					<Route exact path='/registerforjobs' component={RegisterForJobs} />
+					<Route exact path='/registerforproduct' component={RegisterForProduct} />
 					<Route exact path='/i1001' component={I1001} />
 					<Route exact path='/i1002' component={I1002} />
 					<Route exact path='/i1003' component={I1003} />
@@ -77,6 +85,8 @@ function App () {
 					<Route exact path='/v3002' component={v3002} />
 					<Route exact path='/v3003' component={v3003} />
 					<Route exact path='/v3004' component={v3004} />
+					<Route path='/p:product_id' component={ProductProfile} />
+					<Route path='/:job_id' component={JobProfile} />
 				</Switch>
 			</div>
 		</BrowserRouter>
