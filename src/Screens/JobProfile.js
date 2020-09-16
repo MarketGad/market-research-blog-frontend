@@ -165,7 +165,7 @@ const JobProfile = (props) => {
 								</div>
 								<div style={{ padding: '5px' }}>
 									<p className='product-subhead'>Pricing</p>
-									<p className='product-content'>Rs.{UserProfile.offeringPrice || null}</p>
+									<p className='product-content'>Rs.{UserProfile.offeringPrice / 100 || null}</p>
 								</div>
 								<a
 									className='waves-effect waves-light btn-small hirenow-btn'
