@@ -18,7 +18,7 @@ const Products = () => {
 							>
 								Add Product
 							</a>
-							<div className='right-align add-mobile circle'>
+							{/* <div className='right-align add-mobile circle'>
 								<a
 									className='waves-effect waves-light btn pro-btn1'
 									style={{ borderRadius: '50%' }}
@@ -26,7 +26,7 @@ const Products = () => {
 								>
 									<AddIcon style={{ position: 'relative', top: '5px', fontSize: '1.8em' }} />
 								</a>
-							</div>
+							</div> */}
 						</div>
 						<ProductList />
 					</div>
@@ -41,7 +41,7 @@ const Products = () => {
 									Register
 								</a>
 							</div>
-							<div className='right-align add-mobile circle'>
+							{/* <div className='right-align add-mobile circle'>
 								<a
 									className='waves-effect waves-light btn pro-btn1'
 									style={{ borderRadius: '50%' }}
@@ -49,7 +49,7 @@ const Products = () => {
 								>
 									<AddIcon style={{ position: 'relative', top: '5px', fontSize: '1.8em' }} />
 								</a>
-							</div>
+							</div> */}
 						</div>
 						<PeopleList />
 					</div>

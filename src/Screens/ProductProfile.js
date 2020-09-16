@@ -98,42 +98,48 @@ const ProductProfile = (props) => {
 							</div>
 						</div>
 						<div className='link-container'>
-							<div>
-								<span>
-									<span className='material-icons job-link-icons'>
-										<LinkIcon />
-									</span>
+							{product.websiteLink.length > 0 && (
+								<div>
 									<span>
-										<a className='links' href={product.websiteLink}>
-											{product.websiteLink}
-										</a>
+										<span className='material-icons job-link-icons'>
+											<LinkIcon />
+										</span>
+										<span>
+											<a className='links' href={product.websiteLink}>
+												{product.websiteLink}
+											</a>
+										</span>
 									</span>
-								</span>
-							</div>
-							<div>
-								<span>
-									<span className=' material-icons job-link-icons'>
-										<ShopIcon />
-									</span>
+								</div>
+							)}
+							{product.playStoreLink.length > 0 && (
+								<div>
 									<span>
-										<a className='links' href={product.playStoreLink}>
-											{product.name}
-										</a>
+										<span className=' material-icons job-link-icons'>
+											<ShopIcon />
+										</span>
+										<span>
+											<a className='links' href={product.playStoreLink}>
+												{product.name}
+											</a>
+										</span>
 									</span>
-								</span>
-							</div>
-							<div>
-								<span>
-									<span className='material-icons job-link-icons'>
-										<AppleIcon />
-									</span>
+								</div>
+							)}
+							{product.appStoreLink.length > 0 && (
+								<div>
 									<span>
-										<a className='links' href={product.appStoreLink}>
-											{product.name}
-										</a>
+										<span className='material-icons job-link-icons'>
+											<AppleIcon />
+										</span>
+										<span>
+											<a className='links' href={product.appStoreLink}>
+												{product.name}
+											</a>
+										</span>
 									</span>
-								</span>
-							</div>
+								</div>
+							)}
 						</div>
 						<div className='contact-container'>
 							<p className='product-subhead'>Contact</p>

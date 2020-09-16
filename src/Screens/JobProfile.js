@@ -96,18 +96,6 @@ const JobProfile = (props) => {
 									</span>
 								</span>
 							</div>
-							<div style={{ padding: '3px' }}>
-								<span>
-									<span className='material-icons job-link-icons'>
-										<LinkIcon />
-									</span>
-									<span>
-										<a className='links' href={UserProfile.portfolioLink}>
-											{UserProfile.portfolioLink}
-										</a>
-									</span>
-								</span>
-							</div>
 							<div
 								style={{
 									padding: '3px'
@@ -122,6 +110,20 @@ const JobProfile = (props) => {
 									</a>
 								</span>
 							</div>
+							{UserProfile.portfolioLink.length > 0 && (
+								<div style={{ padding: '3px' }}>
+									<span>
+										<span className='material-icons job-link-icons'>
+											<LinkIcon />
+										</span>
+										<span>
+											<a className='links' href={UserProfile.portfolioLink}>
+												{UserProfile.portfolioLink}
+											</a>
+										</span>
+									</span>
+								</div>
+							)}
 						</div>
 					</Grid>
 					<Grid item xs={12} sm={12} md={6} elevation={6} square>

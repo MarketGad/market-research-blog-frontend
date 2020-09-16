@@ -217,6 +217,12 @@ const Navbar = () => {
 					<li>
 						<a href='/about'>About Us</a>
 					</li>
+					<li>
+						<a href='/registerforjob'>Register Product</a>
+					</li>
+					<li>
+						<a href='/registerforjobs'>Register for Jobs</a>
+					</li>
 					{show()}
 				</ul>
 				<div>
