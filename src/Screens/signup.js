@@ -75,57 +75,14 @@ export default function SignUp () {
 			setErrMsg('Password Mismatch');
 		}
 	};
-	const otpsubmitHandler = (e) => {
-		e.preventDefault();
-		axios
-			.post('https://serieux-saucisson-31787.herokuapp.com/api/user/otpverify', {
-				email: email.toLowerCase(),
-				otp: otp
-			})
-			.then(
-				(response) => {
-					if (response.data.success === true) {
-						setOtpsuccess(true);
-					}
-				},
-				(error) => {
-					console.log(error);
-					setErrMsg('Please Check Your OTP again!');
-				}
-			);
-	};
-	if (otpsuccess === true) {
-		return <Redirect to='/signin' />;
-	} else if (signupsuccess === true) {
+	if (signupsuccess === true) {
 		return (
-			<div>
-				<Alert msg={errMsg} type='danger' />
-				<Alert msg={successMsg} type='success' />
-				<h4 className='center'>Verify Your email</h4>
-				<form className={classes.form} onSubmit={otpsubmitHandler}>
-					<div className='center' style={{ width: 'auto', margin: 'auto' }}>
-						<Grid spacing={2} item xs={12}>
-							<TextField
-								variant='outlined'
-								margin='normal'
-								required
-								name='otp'
-								label='Enter Otp'
-								type='password'
-								id='password'
-								value={otp}
-								onChange={(e) => setOtp(e.target.value)}
-							/>
-						</Grid>
-					</div>
-
-					<div className='center'>
-						<Button type='submit' variant='contained' color='primary' className={classes.submit}>
-							Verify
-						</Button>
-					</div>
-				</form>
-			</div>
+			<Redirect
+				to={{
+					pathname: '/verifyotp',
+					state: { email: email }
+				}}
+			/>
 		);
 	} else {
 		return (

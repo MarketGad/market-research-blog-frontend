@@ -61,7 +61,7 @@ export default function SignIn () {
 				},
 				(error) => {
 					console.log(error);
-					setErrMsg('Invalid email or password');
+					// setErrMsg('Invalid email or password');
 				}
 			);
 	};
