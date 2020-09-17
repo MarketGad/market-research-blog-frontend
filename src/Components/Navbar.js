@@ -203,7 +203,7 @@ const Navbar = () => {
 						<a href='/'>Home</a>
 					</li>
 					<li>
-						<a href='/industry' className='dropdown-trigger1' data-target='dropdown2'>
+						<a className='dropdown-trigger1' data-target='dropdown2'>
 							Research<i className='material-icons right'>arrow_drop_side</i>
 						</a>
 					</li>
