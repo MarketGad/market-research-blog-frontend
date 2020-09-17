@@ -105,9 +105,18 @@ const ProductProfile = (props) => {
 											<LinkIcon />
 										</span>
 										<span>
-											<a className='links' href={product.websiteLink}>
-												{product.websiteLink}
-											</a>
+											{/^https?:\/\//.test(product.websiteLink) ? (
+												<a
+													className='links'
+													target='_blank'
+													rel='noopener noreferrer'
+													href={product.websiteLink}
+												>
+													{product.websiteLink}
+												</a>
+											) : (
+												<a className='links'>{product.websiteLink}</a>
+											)}
 										</span>
 									</span>
 								</div>
