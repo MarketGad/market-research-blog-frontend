@@ -724,7 +724,7 @@ nav {
 	padding: 10px 5px;
 }
 .comment-container {
-	height: 5em;
+	max-height: 5em;
 }
 
 .pro-img {
@@ -752,7 +752,7 @@ nav {
 .product-desc {
 	font-size: 1.23em;
 	padding: 2px 0;
-	height: 2.5em;
+	max-height: 2.5em;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
