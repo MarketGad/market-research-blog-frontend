@@ -111,8 +111,10 @@ export default function RegisterForProduct () {
 					(error) => {
 						if (error.message === 'Request failed with status code 413') {
 							alert('upload photo size should be less than 500kb');
-						} else {
+						} else if (error.response.data === 'Unauthorized') {
 							alert('make sure that you are logged in');
+						} else {
+							alert('registeration failed');
 						}
 					}
 				);
@@ -162,6 +164,7 @@ export default function RegisterForProduct () {
 									</Grid>
 									<Grid item xs={12} sm={6}>
 										<input
+											required
 											style={{ padding: '3px 0' }}
 											id='fileInput'
 											type='file'

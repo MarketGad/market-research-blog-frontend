@@ -183,6 +183,7 @@ export default function RegisterForJobs () {
 									</Grid>
 									<Grid item xs={12} sm={6}>
 										<input
+											required
 											style={{ padding: '3px 0' }}
 											id='fileInput'
 											type='file'
