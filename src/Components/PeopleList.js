@@ -41,7 +41,7 @@ const PeopleList = () => {
 									</b>
 								</Link>
 
-								<p>
+								<div>
 									<b>Skills: </b>
 									{user.skills[0]}
 									<br />
@@ -76,7 +76,7 @@ const PeopleList = () => {
 											</span>
 										</Tooltip>
 									</div>
-								</p>
+								</div>
 								<Link
 									className='waves-effect waves-light btn-small hire-connect-btn'
 									to={{

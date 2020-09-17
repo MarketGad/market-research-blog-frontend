@@ -41,6 +41,7 @@ const ProductProfile = (props) => {
 	const [ comment, setComment ] = React.useState('');
 	const id = props.match.params.product_id;
 	const product = props.location.state.product;
+	const weblink = props.location.state.weblink;
 	const comments = product.comments;
 	const history = useHistory();
 
@@ -105,18 +106,14 @@ const ProductProfile = (props) => {
 											<LinkIcon />
 										</span>
 										<span>
-											{/^https?:\/\//.test(product.websiteLink) ? (
-												<a
-													className='links'
-													target='_blank'
-													rel='noopener noreferrer'
-													href={product.websiteLink}
-												>
-													{product.websiteLink}
-												</a>
-											) : (
-												<a className='links'>{product.websiteLink}</a>
-											)}
+											<a
+												className='links'
+												target='_blank'
+												rel='noopener noreferrer'
+												href={weblink}
+											>
+												{product.websiteLink}
+											</a>
 										</span>
 									</span>
 								</div>
