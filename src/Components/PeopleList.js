@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Cookies from 'js-cookie';
+import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 
 const PeopleList = () => {
@@ -66,9 +67,14 @@ const PeopleList = () => {
 										>
 											fiber_manual_record
 										</span>
-										<span style={{ fontSize: '16px', padding: '1px', fontWeight: '600' }}>
-											{user.user.reputation}
-										</span>
+										<Tooltip
+											title='Reputation Points i.e Likes: 1 Comments:4)'
+											placement='right-start'
+										>
+											<span style={{ fontSize: '16px', padding: '1px', fontWeight: '600' }}>
+												{user.user.reputation}
+											</span>
+										</Tooltip>
 									</div>
 								</p>
 								<Link

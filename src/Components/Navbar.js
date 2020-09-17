@@ -135,8 +135,8 @@ const Navbar = () => {
 										<a href='/funding'>Funding</a>
 									</li>
 									<li>
-										<a className='dropdown-trigger' data-target='dropdown1'>
-											Market Research
+										<a href='/industry' className='dropdown-trigger' data-target='dropdown1'>
+											Research
 										</a>
 									</li>
 									<li>
@@ -203,8 +203,8 @@ const Navbar = () => {
 						<a href='/'>Home</a>
 					</li>
 					<li>
-						<a className='dropdown-trigger1' data-target='dropdown2'>
-							Market Research<i className='material-icons right'>arrow_drop_side</i>
+						<a href='/industry' className='dropdown-trigger1' data-target='dropdown2'>
+							Research<i className='material-icons right'>arrow_drop_side</i>
 						</a>
 					</li>
 					<li>

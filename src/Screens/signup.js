@@ -41,7 +41,6 @@ export default function SignUp () {
 	const [ email, setEmail ] = React.useState('');
 	const [ first_name, setFirstName ] = React.useState('');
 	const [ last_name, setLastName ] = React.useState('');
-	const [ phoneno, setPhoneno ] = React.useState('');
 	const [ password, setPassword ] = React.useState('');
 	const [ confirmPassword, setConfirmPassword ] = React.useState('');
 	const [ signupsuccess, setSignupsuccess ] = React.useState(false);
@@ -57,7 +56,6 @@ export default function SignUp () {
 				.post('https://serieux-saucisson-31787.herokuapp.com/api/user/signupUser', {
 					email: email.toLowerCase(),
 					password: password,
-					phone: phoneno,
 					firstname: first_name,
 					lastname: last_name
 				})
@@ -139,18 +137,6 @@ export default function SignUp () {
 											autoComplete='email'
 											value={email}
 											onChange={(e) => setEmail(e.target.value)}
-										/>
-									</Grid>
-									<Grid item xs={12}>
-										<TextField
-											variant='outlined'
-											required
-											fullWidth
-											id='phone'
-											label='Phone Number'
-											name='phone'
-											value={phoneno}
-											onChange={(e) => setPhoneno(e.target.value)}
 										/>
 									</Grid>
 

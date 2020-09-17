@@ -11,7 +11,7 @@ const Products = () => {
 				<div className='row'>
 					<div className='col s12 l8'>
 						<div className='relative-add'>
-							<div className='product-page-head'>Hot Products</div>
+							<div className='product-page-head'>Hot or not ?</div>
 							<a
 								className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
 								href='/registerforproduct'

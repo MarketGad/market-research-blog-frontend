@@ -127,18 +127,20 @@ const ProductList = () => {
 									<br />
 									<span className='upvote-count'>{product.upvotes}</span>
 								</div>
-								<div className='comment-container'>
-									<Link
-										to={{
-											pathname: `/p${product._id}`,
-											state: { product: product }
-										}}
-										className='comment-head product-content'
-									>
-										Comments ({product.comments.length})
-									</Link>
-									<ShowComment comment={product.comments[0]} />
-								</div>
+								{product.comments.length > 0 && (
+									<div className='comment-container'>
+										<Link
+											to={{
+												pathname: `/p${product._id}`,
+												state: { product: product }
+											}}
+											className='comment-head product-content'
+										>
+											Comments ({product.comments.length})
+										</Link>
+										<ShowComment comment={product.comments[0]} />
+									</div>
+								)}
 							</div>
 						</li>
 					</ul>
