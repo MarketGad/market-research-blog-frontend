@@ -4,9 +4,14 @@ import axios from 'axios';
 import ShowComment from './ShowComment';
 import LinkIcon from '@material-ui/icons/Link';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 const addUpvote = (product_id) => {
 	const token = Cookies.get('session-id');
+	if(!token){
+		alert("SignUp / Login to continue")
+		return <Redirect to='/signup' />;
+	}
 	console.log(token);
 	const config = {
 		headers: {

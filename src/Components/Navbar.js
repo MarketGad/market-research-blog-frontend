@@ -145,7 +145,7 @@ const Navbar = () => {
 									{/* <li>
 										<a onClick={handleClickOpen}>Dashboard</a>
 									</li> */}
-									{show()}
+									{/* {show()} */}
 								</ul>
 							</div>
 						</div>

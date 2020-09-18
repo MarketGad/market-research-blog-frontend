@@ -11,6 +11,7 @@ import { useHistory } from 'react-router';
 // import Footer2 from '../Components/Footer2';
 import Cookies from 'js-cookie';
 import ShowComment from '../Components/ShowComment';
+import { Redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -58,6 +59,10 @@ const ProductProfile = (props) => {
 		e.preventDefault();
 		if (comment) {
 			const token = Cookies.get('session-id');
+			if(!token){
+				alert("SignUp / Login to continue")
+				return <Redirect to='/signup' />;
+			}
 			const config = {
 				headers: {
 					Authorization: `Bearer  ${token}`
