@@ -8,11 +8,8 @@ import { Redirect } from 'react-router-dom';
 
 const addUpvote = (product_id) => {
 	const token = Cookies.get('session-id');
-	if(!token){
-		alert("SignUp / Login to continue")
-		return <Redirect to='/signup' />;
-	}
 	console.log(token);
+
 	const config = {
 		headers: {
 			Authorization: `Bearer ${token}`
