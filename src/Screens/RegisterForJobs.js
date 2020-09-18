@@ -64,6 +64,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RegisterForJobs () {
 	const classes = useStyles();
+	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+
 	const [ fileInputState, setFileInputState ] = React.useState('');
 	const [ selectedFile, setSelectedFile ] = React.useState('');
 	const [ previewSource, setPreviewSource ] = React.useState('');
@@ -135,8 +137,9 @@ export default function RegisterForJobs () {
 				}
 			);
 	};
-
-	if (RegisterJobSuccess) {
+	if (!LoginCheck) {
+		return <Redirect to='/signin' />;
+	} else if (RegisterJobSuccess) {
 		return <Redirect to='/' />;
 	} else {
 		return (

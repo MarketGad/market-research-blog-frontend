@@ -8,8 +8,9 @@ import LinkIcon from '@material-ui/icons/Link';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { useHistory } from 'react-router';
+import { Redirect } from 'react-router-dom';
 // import Footer2 from '../Components/Footer2';
-import Cookies from 'js-cookie';
+import Cookies, { set } from 'js-cookie';
 import ShowComment from '../Components/ShowComment';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
 const ProductProfile = (props) => {
 	const classes = useStyles();
 	const [ comment, setComment ] = React.useState('');
+	const [ readytocomment, setReadytoComment ] = React.useState('');
 	const id = props.match.params.product_id;
 	const product = props.location.state.product;
 	const weblink = props.location.state.weblink;
@@ -56,8 +58,11 @@ const ProductProfile = (props) => {
 	);
 	const submitHandler = (e) => {
 		e.preventDefault();
+		const token = Cookies.get('session-id');
+		if (!token) {
+			setReadytoComment(false);
+		}
 		if (comment) {
-			const token = Cookies.get('session-id');
 			const config = {
 				headers: {
 					Authorization: `Bearer  ${token}`
@@ -87,7 +92,9 @@ const ProductProfile = (props) => {
 			alert('empty comment');
 		}
 	};
-	if (product.name) {
+	if (readytocomment === false) {
+		return <Redirect to='/signin' />;
+	} else if (product.name) {
 		return (
 			<div className='productdetails-container'>
 				<Grid container component='main'>
