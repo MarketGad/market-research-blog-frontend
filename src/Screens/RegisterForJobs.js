@@ -187,6 +187,7 @@ export default function RegisterForJobs () {
 											style={{ padding: '3px 0' }}
 											id='fileInput'
 											type='file'
+											accept='image/*'
 											name='image'
 											onChange={handleFileInputChange}
 											value={fileInputState}
