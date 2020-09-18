@@ -3,6 +3,7 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 import ShowComment from './ShowComment';
 import LinkIcon from '@material-ui/icons/Link';
+import Visit from '@material-ui/icons/NearMe';
 import { Link, Redirect } from 'react-router-dom';
 
 const ProductList = () => {
@@ -61,26 +62,27 @@ const ProductList = () => {
 							</Link>
 							<div className='product-desc'>{product.briefDescription}</div>
 							<div className='row product-link-container'>
-								<div className='col l10 s12'>
-									<div className='product-list-link'>
-										<span>
-											<span className='material-icons job-link-icons'>
-												<LinkIcon />
-											</span>
-											<span>
-												<a
-													className='links'
-													target='_blank'
-													rel='noopener noreferrer'
-													href={weblink}
-												>
-													{product.websiteLink}
-												</a>
-											</span>
-										</span>
-									</div>
-								</div>
 								<div className='col l2 s12 comment-box'>
+									<a
+										target='_blank'
+										rel='noopener noreferrer'
+										href={weblink}
+										className='waves-effect waves-light btn-small visit-btn'
+									>
+										<span className='comment-count'>visit</span>
+										<span
+											className='material-icons chat-icon'
+											style={{
+												position: 'relative',
+												padding: '0 5px',
+												fontSize: '16px'
+											}}
+										>
+											near_me
+										</span>
+									</a>
+								</div>
+								<div className='col l2 s12 comment-box comment-in-list'>
 									<Link
 										to={{
 											pathname: `/p${product._id}`,

@@ -853,6 +853,20 @@ nav {
 .comment-btn1:hover {
 	background-color: #c1c1c1;
 }
+.visit-btn {
+	display: inline-block;
+	border-radius: 30px;
+	vertical-align: middle;
+	padding: 4px 10px;
+	letter-spacing: .1em;
+	text-align: center;
+	text-transform: capitalize;
+	background-color: white;
+	color: black;
+}
+.visit-btn:hover {
+	background-color: #c1c1c1;
+}
 .comment-head {
 	color: #080808d9;
 }
@@ -1210,8 +1224,15 @@ nav {
 	}
 	.comment-box {
 		padding-top: 0;
-		margin-top: 0;
+		margin-top: 5px;
 		padding-bottom: 0;
+	}
+	.visit-btn {
+		font-weight: 800;
+		line-height: 2em;
+		height: 2em;
+	}
+	.comment-in-list {
 		display: none;
 	}
 	.comment-count {
