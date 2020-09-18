@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import ShowComment from './ShowComment';
-import LinkIcon from '@material-ui/icons/Link';
-import Visit from '@material-ui/icons/NearMe';
 import { Link, Redirect } from 'react-router-dom';
 
 const ProductList = () => {
@@ -113,15 +111,6 @@ const ProductList = () => {
 							</div>
 							{product.comments.length > 0 && (
 								<div className='comment-container'>
-									<Link
-										to={{
-											pathname: `/p${product._id}`,
-											state: { product: product }
-										}}
-										className='comment-head product-content'
-									>
-										Comments ({product.comments.length})
-									</Link>
 									<ShowComment comment={product.comments[0]} />
 								</div>
 							)}

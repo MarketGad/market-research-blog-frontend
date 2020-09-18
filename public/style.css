@@ -725,6 +725,7 @@ nav {
 }
 .comment-container {
 	max-height: 5em;
+	padding: 10px 0;
 }
 
 .pro-img {
