@@ -60,7 +60,7 @@ const ProductList = () => {
 							</Link>
 							<div className='product-desc'>{product.briefDescription}</div>
 							<div className='row product-link-container'>
-								<div className='col l2 s12 comment-box'>
+								<div className='col l2 s6 comment-box'>
 									<a
 										target='_blank'
 										rel='noopener noreferrer'
@@ -80,13 +80,13 @@ const ProductList = () => {
 										</span>
 									</a>
 								</div>
-								<div className='col l2 s12 comment-box comment-in-list'>
+								<div className='col l2 s4 comment-box'>
 									<Link
 										to={{
 											pathname: `/p${product._id}`,
 											state: { product: product }
 										}}
-										className='waves-effect waves-light btn-small comment-btn1'
+										className='waves-effect waves-light btn-small visit-btn'
 									>
 										<span className='comment-count'>{product.comments.length}</span>
 										<span

@@ -1233,15 +1233,13 @@ nav {
 		line-height: 2em;
 		height: 2em;
 	}
-	.comment-in-list {
-		display: none;
-	}
 	.comment-count {
 		font-size: 14px;
 	}
 	.comment-container {
 		margin-top: 3px;
 		height: auto;
+		display: none;
 	}
 	.upvote-container {
 		border-radius: 8px;
