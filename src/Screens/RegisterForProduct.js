@@ -48,9 +48,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RegisterForProduct () {
 	// const token = Cookies.get('session-id');
+<<<<<<< HEAD
 	
 	const classes = useStyles();
 	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'))
+=======
+
+	const classes = useStyles();
+	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+>>>>>>> 6d8222dc9dd6cc135d80af73560e8983861d5fb6
 
 	const [ fileInputState, setFileInputState ] = React.useState('');
 	const [ selectedFile, setSelectedFile ] = React.useState('');
@@ -126,11 +132,17 @@ export default function RegisterForProduct () {
 			alert('Please mention your website or playstore link to continue');
 		}
 	};
+<<<<<<< HEAD
 	if(!LoginCheck) {
 		alert("SignUp / Login to continue")
 		return <Redirect to='/signup' />;
 	}
 	else if (RegisterProductSuccess) {
+=======
+	if (!LoginCheck) {
+		return <Redirect to='/signin' />;
+	} else if (RegisterProductSuccess) {
+>>>>>>> 6d8222dc9dd6cc135d80af73560e8983861d5fb6
 		return <Redirect to='/' />;
 	} else {
 		return (
