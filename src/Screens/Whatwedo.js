@@ -58,7 +58,7 @@ const Whatwedo = () => {
 					<h4 className='privacy-head' style={{ fontWeight: '800' }}>
 						1.IDEATORS AND ENTREPRENEURS
 					</h4>
-					<p style={{ fontSize: '22px' }}>
+					<p style={{ fontSize: '22px', textAlign: 'justify' }}>
 						<i>
 							“Some of the world’s most ground breaking businesses came from ordinary people who had
 							courage to believe in their crazy ideas.”
