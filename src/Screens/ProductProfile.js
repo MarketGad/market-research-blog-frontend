@@ -12,7 +12,6 @@ import { Redirect } from 'react-router-dom';
 // import Footer2 from '../Components/Footer2';
 import Cookies, { set } from 'js-cookie';
 import ShowComment from '../Components/ShowComment';
-import { Redirect } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -64,14 +63,6 @@ const ProductProfile = (props) => {
 			setReadytoComment(false);
 		}
 		if (comment) {
-<<<<<<< HEAD
-			const token = Cookies.get('session-id');
-			if(!token){
-				alert("SignUp / Login to continue")
-				return <Redirect to='/signup' />;
-			}
-=======
->>>>>>> 6d8222dc9dd6cc135d80af73560e8983861d5fb6
 			const config = {
 				headers: {
 					Authorization: `Bearer  ${token}`

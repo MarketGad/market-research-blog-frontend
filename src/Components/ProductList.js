@@ -34,8 +34,6 @@ const ProductList = () => {
 					console.log(error);
 					if (token) {
 						alert('upvote already added');
-					} else {
-						alert('please login in to upvote');
 					}
 				}
 			);
