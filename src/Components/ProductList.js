@@ -26,7 +26,6 @@ const ProductList = () => {
 			)
 			.then(
 				(response) => {
-					console.log(response);
 					alert('upvote added');
 					window.location.reload();
 				},

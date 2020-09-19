@@ -1194,10 +1194,12 @@ nav {
 		width: 75px !important;
 	}
 	.product-desc {
-		font-size: 1.25em;
+		font-size: 1.05em;
 		padding: 0;
-		height: 1.25em;
 		white-space: nowrap;
+	}
+	.product-name {
+		font-size: 1.3em;
 	}
 	.product-link {
 		font-size: 1.2em;
