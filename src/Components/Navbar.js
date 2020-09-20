@@ -218,7 +218,7 @@ const Navbar = () => {
 						<a href='/about'>About Us</a>
 					</li>
 					<li>
-						<a href='/registerforjob'>Register Product</a>
+						<a href='/registerforproduct'>Register Product</a>
 					</li>
 					<li>
 						<a href='/registerforjobs'>Register for Jobs</a>
