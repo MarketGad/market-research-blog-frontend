@@ -23,8 +23,8 @@ const DisplayArray = (props) => {
 };
 
 const JobProfile = (props) => {
-	let id = props.match.params.job_id;
 	const UserProfile = props.location.state.UserProfile;
+	const linkedIn = props.location.state.linkedIn;
 	if (UserProfile.err) {
 		return (
 			<div>
@@ -105,7 +105,7 @@ const JobProfile = (props) => {
 									<LinkedInIcon />
 								</span>
 								<span>
-									<a className='links' href={UserProfile.linkedIn}>
+									<a target='_blank' rel='noopener noreferrer' className='links' href={linkedIn}>
 										<span>LinkedIn</span>
 									</a>
 								</span>
@@ -117,7 +117,12 @@ const JobProfile = (props) => {
 											<LinkIcon />
 										</span>
 										<span>
-											<a className='links' href={UserProfile.portfolioLink}>
+											<a
+												target='_blank'
+												rel='noopener noreferrer'
+												className='links'
+												href={UserProfile.portfolioLink}
+											>
 												{UserProfile.portfolioLink}
 											</a>
 										</span>

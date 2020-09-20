@@ -44,7 +44,15 @@ const ProductList = () => {
 			<div>
 				<ul className='collection product-container'>
 					<li className='collection-item avatar'>
-						<img className='circle pro-img' src={product.logo} alt={product.name} />
+						<Link
+							to={{
+								pathname: `/p${product._id}`,
+								state: { product: product, weblink: weblink }
+							}}
+						>
+							<img className='circle pro-img' src={product.logo} alt={product.name} />
+						</Link>
+
 						<div className='product-right-container'>
 							<Link
 								style={{ color: 'black' }}
@@ -82,7 +90,7 @@ const ProductList = () => {
 									<Link
 										to={{
 											pathname: `/p${product._id}`,
-											state: { product: product }
+											state: { product: product, weblink: weblink }
 										}}
 										className='waves-effect waves-light btn-small visit-btn'
 									>
