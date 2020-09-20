@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Cookies from 'js-cookie';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 const PeopleCard = (props) => {
@@ -95,8 +94,6 @@ const PeopleList = () => {
 	useEffect(() => {
 		loadProducts();
 	}, []);
-	const cookie = Cookies.get('session-id');
-
 	const showPeople = people.length ? (
 		people.map((user) => {
 			if (!/^https?:\/\//.test(user.linkedIn)) {

@@ -8,38 +8,38 @@ import { Link, Redirect } from 'react-router-dom';
 const ProductList = () => {
 	const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
-	const addUpvote = (product_id) => {
-		const token = Cookies.get('session-id');
-		if (!token) {
-			setReadytoupvote(false);
-		}
-		const config = {
-			headers: {
-				Authorization: `Bearer ${token}`
-			}
-		};
-		axios
-			.post(
-				'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + product_id + '/upvotes/add',
-				{},
-				config
-			)
-			.then(
-				(response) => {
-					alert('upvote added');
-					window.location.reload();
-				},
-				(error) => {
-					console.log(error);
-					if (token) {
-						alert('upvote already added');
-					}
-				}
-			);
-	};
 	const ProductCard = (props) => {
 		const product = props.product;
 		const weblink = props.weblink;
+		const [ upvote, setUpvote ] = React.useState(props.upvote);
+		const addUpvote = (product_id) => {
+			const token = Cookies.get('session-id');
+			if (!token) {
+				setReadytoupvote(false);
+			}
+			const config = {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			};
+			axios
+				.post(
+					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + product_id + '/upvotes/add',
+					{},
+					config
+				)
+				.then(
+					(response) => {
+						setUpvote(upvote + 1);
+					},
+					(error) => {
+						// console.log(error);
+						if (token) {
+							alert('upvote already added');
+						}
+					}
+				);
+		};
 		return (
 			<div>
 				<ul className='collection product-container'>
@@ -113,7 +113,7 @@ const ProductList = () => {
 									arrow_drop_up
 								</i>
 								<br />
-								<span className='upvote-count'>{product.upvotes}</span>
+								<span className='upvote-count'>{upvote}</span>
 							</div>
 							{product.comments.length > 0 && (
 								<div className='comment-container'>
@@ -143,8 +143,8 @@ const ProductList = () => {
 		products.slice(0).reverse().map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
-				return <ProductCard product={product} weblink={weblink} />;
-			} else return <ProductCard product={product} weblink={product.websiteLink} />;
+				return <ProductCard product={product} weblink={weblink} upvote={product.upvotes} />;
+			} else return <ProductCard product={product} weblink={product.websiteLink} upvote={product.upvotes} />;
 		})
 	) : (
 		<div className='center'> Loading... </div>

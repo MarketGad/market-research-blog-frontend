@@ -11,7 +11,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Chip from '@material-ui/core/Chip';
-import PersonAddIcon from '@material-ui/icons/Person';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
