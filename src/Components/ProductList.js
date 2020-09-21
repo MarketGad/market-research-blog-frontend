@@ -18,12 +18,11 @@ const ProductList = () => {
 		const weblink = props.weblink;
 		const [ upvote, setUpvote ] = React.useState(product.upvotes);
 		const [ activeupvote, setactiveupvote ] = React.useState(false);
-		if (product.upvotesList.includes(user_id)) {
-			// setactiveupvote(true);
-		}
+
 		const addUpvote = (product_id, product) => {
 			if (!token) {
 				setReadytoupvote(false);
+				return;
 			}
 			const config = {
 				headers: {

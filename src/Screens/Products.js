@@ -1,6 +1,8 @@
 import React from 'react';
+// import Footer from '../Components/Footer';
 import PeopleList from '../Components/PeopleList';
 import ProductList from '../Components/ProductList';
+// import Subscribe from '../Components/Subscribe';
 
 const Products = () => {
 	return (
@@ -35,7 +37,8 @@ const Products = () => {
 					</div>
 				</div>
 			</div>
-			{/* <Footer2 /> */}
+			{/* <Subscribe /> */}
+			{/* <Footer /> */}
 		</div>
 	);
 };

@@ -83,13 +83,14 @@ li a img {
 
 nav {
 	background-color: black;
+	padding: 0 3%;
 }
 
-.nav-center {
+/* .nav-center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 .break {
 	margin-right: 50px;
@@ -948,6 +949,9 @@ nav {
 		display: block;
 	}
 	#search-icon {
+		display: none;
+	}
+	.add-mobile-btn {
 		display: none;
 	}
 }

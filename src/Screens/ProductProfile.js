@@ -63,6 +63,7 @@ const ProductProfile = (props) => {
 		const token = Cookies.get('session-id');
 		if (!token) {
 			setReadytoComment(false);
+			return;
 		}
 		if (comment) {
 			const config = {

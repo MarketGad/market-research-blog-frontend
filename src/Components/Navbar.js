@@ -54,6 +54,26 @@ const Navbar = () => {
 		const cookie = Cookies.get('session-id');
 		if (!cookie) {
 			return (
+				<li className='right'>
+					<a href='/signin'>Login</a>
+				</li>
+			);
+		} else {
+			return (
+				<React.Fragment>
+					<li className='right'>
+						<a onClick={removecookie} href='/'>
+							Logout
+						</a>
+					</li>
+				</React.Fragment>
+			);
+		}
+	};
+	const showmobile = () => {
+		const cookie = Cookies.get('session-id');
+		if (!cookie) {
+			return (
 				<li>
 					<a href='/signin'>Login</a>
 				</li>
@@ -78,7 +98,6 @@ const Navbar = () => {
 	} else {
 		return (
 			<div>
-				{/* <a href="#a" className="login-mob right sidenav-trigger" onClick={handleClickOpen}><i className="material-icons">person_add_alt_1</i></a> */}
 				<div className='navbar-fixed'>
 					<nav className='nav-center' role='navigation'>
 						<div className='nav-wrapper'>
@@ -142,10 +161,7 @@ const Navbar = () => {
 									<li>
 										<a href='/about'>About Us</a>
 									</li>
-									{/* <li>
-										<a onClick={handleClickOpen}>Dashboard</a>
-									</li> */}
-									{/* {show()} */}
+									{show()}
 								</ul>
 							</div>
 						</div>
@@ -223,7 +239,7 @@ const Navbar = () => {
 					<li>
 						<a href='/registerforjobs'>Register for Jobs</a>
 					</li>
-					{show()}
+					{showmobile()}
 				</ul>
 				<div>
 					<Dialog
