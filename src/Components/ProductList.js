@@ -6,14 +6,14 @@ import ShowComment from './ShowComment';
 import { Link, Redirect } from 'react-router-dom';
 
 const ProductList = () => {
+	const token = Cookies.get('session-id');
 	const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
 	const ProductCard = (props) => {
 		const product = props.product;
 		const weblink = props.weblink;
-		const [ upvote, setUpvote ] = React.useState(props.upvote);
-		const addUpvote = (product_id) => {
-			const token = Cookies.get('session-id');
+		const [ upvote, setUpvote ] = React.useState(product.upvotes);
+		const addUpvote = (product_id, product) => {
 			if (!token) {
 				setReadytoupvote(false);
 			}
@@ -22,23 +22,29 @@ const ProductList = () => {
 					Authorization: `Bearer ${token}`
 				}
 			};
-			axios
-				.post(
-					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + product_id + '/upvotes/add',
-					{},
-					config
-				)
-				.then(
-					(response) => {
-						setUpvote(upvote + 1);
-					},
-					(error) => {
-						// console.log(error);
-						if (token) {
-							alert('upvote already added');
+			const token_info = JSON.parse(atob(token.split('.')[1]));
+			if (product.upvotesList.includes(token_info._id)) {
+				alert('already upvoted');
+			} else {
+				setUpvote(product.upvotes + 1);
+				axios
+					.post(
+						'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' +
+							product_id +
+							'/upvotes/add',
+						{},
+						config
+					)
+					.then(
+						(response) => {
+							console.log('added');
+						},
+						(error) => {
+							console.log(error);
+							// alert(error);
 						}
-					}
-				);
+					);
+			}
 		};
 		return (
 			<div>
@@ -108,10 +114,18 @@ const ProductList = () => {
 									</Link>
 								</div>
 							</div>
-							<div className='secondary-content upvote-container'>
-								<i className='medium upvote-icon material-icons' onClick={() => addUpvote(product._id)}>
-									arrow_drop_up
-								</i>
+							{/* { && (
+								<div className='secondary-content upvote-container-active'>
+									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
+									<br />
+									<span className='upvote-count'>{upvote}</span>
+								</div>
+							)} */}
+							<div
+								onClick={() => addUpvote(product._id, product)}
+								className='secondary-content upvote-container'
+							>
+								<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 								<br />
 								<span className='upvote-count'>{upvote}</span>
 							</div>
@@ -143,8 +157,8 @@ const ProductList = () => {
 		products.slice(0).reverse().map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
-				return <ProductCard product={product} weblink={weblink} upvote={product.upvotes} />;
-			} else return <ProductCard product={product} weblink={product.websiteLink} upvote={product.upvotes} />;
+				return <ProductCard product={product} weblink={weblink} />;
+			} else return <ProductCard product={product} weblink={product.websiteLink} />;
 		})
 	) : (
 		<div className='center'> Loading... </div>

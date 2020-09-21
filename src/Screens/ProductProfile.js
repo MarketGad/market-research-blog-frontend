@@ -85,7 +85,7 @@ const ProductProfile = (props) => {
 						}
 					},
 					(error) => {
-						alert('please login to continue');
+						alert('something went wrong');
 					}
 				);
 		} else {
@@ -184,7 +184,7 @@ const ProductProfile = (props) => {
 															fullWidth
 															id='outlined-textarea'
 															label='Comment'
-															placeholder='Write your comment'
+															placeholder='What’s cool about this?'
 															multiline
 															variant='outlined'
 															value={comment}
