@@ -785,13 +785,13 @@ nav {
 	font-weight: 600;
 }
 .upvote-container-active {
-	border: .15em solid #0153a5;
+	border: .15em solid black;
 	border-radius: 8px;
 	cursor: pointer;
 	text-align: center;
 	top: 5px !important;
 	background-color: #f3efef;
-	color: #0153a5 !important;
+	color: #0153a5;
 }
 .upvote-container {
 	border: .15em solid black;

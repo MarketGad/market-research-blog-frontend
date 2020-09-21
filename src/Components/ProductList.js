@@ -9,10 +9,18 @@ const ProductList = () => {
 	const token = Cookies.get('session-id');
 	const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
+	if (token) {
+		const token_id = JSON.parse(atob(token.split('.')[1]));
+		var user_id = token_id._id;
+	}
 	const ProductCard = (props) => {
 		const product = props.product;
 		const weblink = props.weblink;
 		const [ upvote, setUpvote ] = React.useState(product.upvotes);
+		const [ activeupvote, setactiveupvote ] = React.useState(false);
+		if (product.upvotesList.includes(user_id)) {
+			// setactiveupvote(true);
+		}
 		const addUpvote = (product_id, product) => {
 			if (!token) {
 				setReadytoupvote(false);
@@ -27,6 +35,7 @@ const ProductList = () => {
 				alert('already upvoted');
 			} else {
 				setUpvote(product.upvotes + 1);
+				setactiveupvote(true);
 				axios
 					.post(
 						'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' +
@@ -46,6 +55,7 @@ const ProductList = () => {
 					);
 			}
 		};
+
 		return (
 			<div>
 				<ul className='collection product-container'>
@@ -114,21 +124,32 @@ const ProductList = () => {
 									</Link>
 								</div>
 							</div>
-							{/* { && (
-								<div className='secondary-content upvote-container-active'>
+							{product.upvotesList.includes(user_id) && (
+								<div id='upvote-count' className='secondary-content upvote-container-active'>
 									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 									<br />
 									<span className='upvote-count'>{upvote}</span>
 								</div>
-							)} */}
-							<div
-								onClick={() => addUpvote(product._id, product)}
-								className='secondary-content upvote-container'
-							>
-								<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
-								<br />
-								<span className='upvote-count'>{upvote}</span>
-							</div>
+							)}
+							{activeupvote === true && (
+								<div id='upvote-count' className='secondary-content upvote-container-active'>
+									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
+									<br />
+									<span className='upvote-count'>{upvote}</span>
+								</div>
+							)}
+							{(!product.upvotesList.includes(user_id) || !token) &&
+							activeupvote === false && (
+								<div
+									onClick={() => addUpvote(product._id, product)}
+									className='secondary-content upvote-container'
+								>
+									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
+									<br />
+									<span className='upvote-count'>{upvote}</span>
+								</div>
+							)}
+
 							{product.comments.length > 0 && (
 								<div className='comment-container'>
 									<ShowComment comment={product.comments[0]} />
