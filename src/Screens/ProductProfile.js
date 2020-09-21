@@ -39,23 +39,25 @@ const useStyles = makeStyles((theme) => ({
 
 const ProductProfile = (props) => {
 	const classes = useStyles();
-	const [ comment, setComment ] = React.useState('');
-	const [ readytocomment, setReadytoComment ] = React.useState('');
 	const id = props.match.params.product_id;
 	const product = props.location.state.product;
 	const weblink = props.location.state.weblink;
-	const comments = product.comments;
+	const [ comment, setComment ] = React.useState('');
+	const [ readytocomment, setReadytoComment ] = React.useState('');
+	const [ comments, setComments ] = React.useState(product.comments);
+
 	const history = useHistory();
 
-	const showComment = comments.length ? (
-		comments.map((comment) => {
-			if (comment) {
-				return <ShowComment comment={comment} />;
-			}
-		})
-	) : (
-		<div className='center'> No Comments to show :( </div>
-	);
+	const showComments = (comments) =>
+		comments.length ? (
+			comments.map((comment) => {
+				if (comment) {
+					return <ShowComment comment={comment} />;
+				}
+			})
+		) : (
+			<div className='center'> No Comments to show :( </div>
+		);
 	const submitHandler = (e) => {
 		e.preventDefault();
 		const token = Cookies.get('session-id');
@@ -78,18 +80,15 @@ const ProductProfile = (props) => {
 				)
 				.then(
 					(response) => {
-						console.log(response);
 						if (response.data) {
-							alert('comment added');
-							history.goBack();
+							setComments(response.data);
+							setComment('');
 						}
 					},
 					(error) => {
 						alert('something went wrong');
 					}
 				);
-		} else {
-			alert('empty comment');
 		}
 	};
 	if (readytocomment === false) {
@@ -202,7 +201,7 @@ const ProductProfile = (props) => {
 													</Grid>
 												</Grid>
 											</form>
-											{showComment}
+											{showComments(comments)}
 										</div>
 									</div>
 								</div>
