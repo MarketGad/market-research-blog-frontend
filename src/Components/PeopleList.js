@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import FadingLoader from '../Components/FadingLoader';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 const PeopleCard = (props) => {
@@ -95,16 +96,25 @@ const PeopleList = () => {
 		loadProducts();
 	}, []);
 	const showPeople = people.length ? (
-		people.map((user) => {
+		people.map((user, i) => {
 			if (!/^https?:\/\//.test(user.linkedIn)) {
 				let weblink = 'https://' + user.linkedIn;
-				return <PeopleCard user={user} linkedIn={weblink} />;
-			} else return <PeopleCard user={user} linkedIn={user.linkedIn} />;
+				return <PeopleCard key={i} user={user} linkedIn={weblink} />;
+			} else return <PeopleCard key={i} user={user} linkedIn={user.linkedIn} />;
 		})
 	) : (
 		<div className='center'>Loading... </div>
 	);
-	return <div>{showPeople}</div>;
+	return (
+		<div>
+			{people && <div>{showPeople}</div>}
+			{!people && (
+				<div>
+					<FadingLoader imageyype='circle' />
+				</div>
+			)}
+		</div>
+	);
 };
 
 export default PeopleList;

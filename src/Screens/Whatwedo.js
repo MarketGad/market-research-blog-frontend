@@ -1,11 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
-import GoogleLogin from 'react-google-login';
 import { Redirect } from 'react-router-dom';
 import Footer from '../Components/Footer';
 
@@ -20,7 +15,7 @@ const Whatwedo = () => {
 	// const [picture, setPicture] = React.useState("");
 
 	const handleClickOpen = () => {
-		alert("Signup and Register your Product !!")
+		alert('Signup and Register your Product !!');
 		setOpen(true);
 	};
 
@@ -50,7 +45,7 @@ const Whatwedo = () => {
 		return <Redirect to='/signup' />;
 	} else {
 		return (
-			<div style={{fontSize: '12px', fontWeight: '400'}}>
+			<div style={{ fontSize: '12px', fontWeight: '400' }}>
 				<div className='container' style={{ fontFamily: 'GlacialIndifferenceMedium' }}>
 					<h2 className='center privacy-top' style={{ fontWeight: '600', letterSpacing: '0.02em' }}>
 						What do we offer?
@@ -64,12 +59,16 @@ const Whatwedo = () => {
 							courage to believe in their crazy ideas.”
 						</i>
 					</p>
-					<p className='flow-text' style={{fontSize: '22px', fontWeight: '400', textAlign: 'justify'}}>
+					<p className='flow-text' style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}>
 						If you have an idea which you think can become the next Indian unicorn, why don’t you test its
 						feasibility with us? We provide end-to-end market research, idea validation strategy design and
 						assistance in investments, free of cost for a limited time.
 					</p>
-					<ol className='flow-text' type='1' style={{fontSize: '22px', fontWeight: '400', textAlign: 'justify'}}>
+					<ol
+						className='flow-text'
+						type='1'
+						style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}
+					>
 						<li>
 							We analyse your idea and research about the market you’re interested in with a
 							non-disclosure agreement
@@ -86,11 +85,15 @@ const Whatwedo = () => {
 					<h4 className='privacy-head' style={{ fontWeight: '600' }}>
 						2. STARTUPS
 					</h4>
-					<p className='flow-text' style={{fontSize: '22px', fontWeight: '400', textAlign: 'justify'}}>
+					<p className='flow-text' style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}>
 						We provide with market research and help start-ups in data driven decision making.
 					</p>
 
-					<ol className='flow-text' type='1' style={{fontSize: '22px', fontWeight: '400', textAlign: 'justify'}}>
+					<ol
+						className='flow-text'
+						type='1'
+						style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}
+					>
 						<li>
 							Industry trend analysis and competitor landscaping for organizations to predict how products
 							and services will fare in the market place

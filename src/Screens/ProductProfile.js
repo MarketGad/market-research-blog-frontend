@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,10 +7,9 @@ import AppleIcon from '@material-ui/icons/Apple';
 import LinkIcon from '@material-ui/icons/Link';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { useHistory } from 'react-router';
 import { Redirect } from 'react-router-dom';
 // import Footer2 from '../Components/Footer2';
-import Cookies, { set } from 'js-cookie';
+import Cookies from 'js-cookie';
 import ShowComment from '../Components/ShowComment';
 
 const useStyles = makeStyles((theme) => ({
@@ -45,8 +44,6 @@ const ProductProfile = (props) => {
 	const [ comment, setComment ] = React.useState('');
 	const [ readytocomment, setReadytoComment ] = React.useState('');
 	const [ comments, setComments ] = React.useState(product.comments);
-
-	const history = useHistory();
 
 	const showComments = (comments) =>
 		comments.length ? (

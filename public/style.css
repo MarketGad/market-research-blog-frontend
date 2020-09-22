@@ -791,8 +791,8 @@ nav {
 	cursor: pointer;
 	text-align: center;
 	top: 5px !important;
-	background-color: #f3efef;
-	color: #ff9529;
+	background-color: #fdfafa;
+	color: green;
 }
 .upvote-container {
 	border: 1.5px solid #e0e0e0;
@@ -811,6 +811,9 @@ nav {
 	text-align: center;
 	position: relative;
 	top: -1em;
+}
+.upvote-count-active {
+	color: #ff9529;
 }
 .product-right-container {
 	padding-left: 8%;

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import ShowComment from './ShowComment';
+import FadingLoader from './FadingLoader';
 
 import { Link, Redirect } from 'react-router-dom';
 
@@ -127,14 +128,14 @@ const ProductList = () => {
 								<div id='upvote-count' className='secondary-content upvote-container-active'>
 									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 									<br />
-									<span className='upvote-count'>{upvote}</span>
+									<span className='upvote-count upvote-count-active'>{upvote}</span>
 								</div>
 							)}
 							{activeupvote === true && (
 								<div id='upvote-count' className='secondary-content upvote-container-active'>
 									<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 									<br />
-									<span className='upvote-count'>{upvote}</span>
+									<span className='upvote-count upvote-count-active'>{upvote}</span>
 								</div>
 							)}
 							{(!product.upvotesList.includes(user_id) || !token) &&
@@ -149,11 +150,11 @@ const ProductList = () => {
 								</div>
 							)}
 
-							{product.comments.length > 0 && (
+							{/* {product.comments.length > 0 && (
 								<div className='comment-container'>
 									<ShowComment comment={product.comments[0]} />
 								</div>
-							)}
+							)} */}
 						</div>
 					</li>
 				</ul>
@@ -184,7 +185,17 @@ const ProductList = () => {
 		<div className='center'> Loading... </div>
 	);
 	if (readytoupvote === false) return <Redirect to='/signin' />;
-	else return <div>{showProducts}</div>;
+	else
+		return (
+			<div>
+				{products && <div>{showProducts}</div>}
+				{!products && (
+					<div>
+						<FadingLoader />
+					</div>
+				)}
+			</div>
+		);
 };
 
 export default ProductList;
