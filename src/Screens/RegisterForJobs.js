@@ -136,7 +136,7 @@ export default function RegisterForJobs () {
 			);
 	};
 	if (!LoginCheck) {
-		return <Redirect to='/signin' />;
+		return <Redirect to='/signup' />;
 	} else if (RegisterJobSuccess) {
 		return <Redirect to='/' />;
 	} else {

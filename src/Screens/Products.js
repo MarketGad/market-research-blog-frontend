@@ -10,20 +10,22 @@ const Products = () => {
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>
-						<div className='relative-add'>
-							<div className='product-page-head '>What's Hot ?</div>
-							{/* <a
+						<div className='product-page-head'>What's hot ?</div>
+						<h6 style={{ paddingTop: '0', margin: '0' }}>
+							Latest cool stuffs to fix your pain points. Vote the best one
+						</h6>
+						{/* <a
 								className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
 								href='/registerforproduct'
 							>
 								Add Product
 							</a> */}
-						</div>
+
 						<ProductList />
 					</div>
 					<div className='col s12 l4'>
 						<div className='relative-add'>
-							<div className='product-page-head '>Trending Talents</div>
+							<div className='product-page-head '>Trending talents</div>
 						</div>
 						<PeopleList />
 					</div>

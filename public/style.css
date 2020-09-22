@@ -698,10 +698,9 @@ nav {
 /*-------------------Products--------------------------*/
 .product-page-head {
 	font-size: 2em;
-	font-family: 'GlacialIndifferenceBold';
-
-	text-transform: uppercase;
-	padding: 15px 0;
+	letter-spacing: 0.05em;
+	font-weight: 600;
+	padding-top: 15px;
 }
 .add-mobile {
 	display: none;

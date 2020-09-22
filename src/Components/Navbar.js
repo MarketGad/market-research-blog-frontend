@@ -117,12 +117,9 @@ const Navbar = () => {
 										<a href='/industry' className='dropdown-trigger' data-target='dropdown1'>
 											Research
 										</a>
-										<span class='material-icons' fontSize='32px!important'>
-											account_circle
-										</span>
 									</li>
 									<li>
-										<a href='/about'>About Us</a>
+										<a href='/about'>About us</a>
 									</li>
 									<li className='right'>
 										<div
@@ -141,7 +138,7 @@ const Navbar = () => {
 						{show()}
 						<li>
 							<a href='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
-								Add Product
+								Add product
 							</a>
 						</li>
 						<li>
@@ -185,13 +182,13 @@ const Navbar = () => {
 						<a onClick={handleClickOpen}>Dashboard</a>
 					</li> */}
 					<li>
-						<a href='/about'>About Us</a>
+						<a href='/about'>About us</a>
 					</li>
 					<li>
-						<a href='/registerforproduct'>Register Product</a>
+						<a href='/registerforproduct'>Add product</a>
 					</li>
 					<li>
-						<a href='/registerforjobs'>Register for Jobs</a>
+						<a href='/registerforjobs'>Add job profile</a>
 					</li>
 					{showmobile()}
 				</ul>
