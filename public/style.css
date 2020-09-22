@@ -786,17 +786,17 @@ nav {
 	font-weight: 600;
 }
 .upvote-container-active {
-	border: .15em solid black;
+	border: 1.5px solid #e0e0e0;
 	border-radius: 8px;
 	cursor: pointer;
 	text-align: center;
 	top: 5px !important;
 	background-color: #f3efef;
-	color: #0153a5;
+	color: #ff9529;
 }
 .upvote-container {
-	border: .15em solid black;
-	border-radius: 8px;
+	border: 1.5px solid #e0e0e0;
+	border-radius: 5px;
 	cursor: pointer;
 	text-align: center;
 	color: #080808d9;
