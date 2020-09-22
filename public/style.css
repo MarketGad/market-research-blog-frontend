@@ -76,6 +76,9 @@ nav ul a {
 li a img {
 	height: 55px;
 }
+.dropdown-content {
+	width: fit-content;
+}
 
 .fnavbar {
 	background-color: black;
@@ -83,7 +86,7 @@ li a img {
 
 nav {
 	background-color: black;
-	padding: 0 3%;
+	padding: 0 9.2%;
 }
 
 /* .nav-center {
@@ -696,16 +699,14 @@ nav {
 .product-page-head {
 	font-size: 2em;
 	font-family: 'GlacialIndifferenceBold';
-	text-align: center;
+
 	text-transform: uppercase;
-	padding: 15px;
+	padding: 15px 0;
 }
 .add-mobile {
 	display: none;
 }
-.left-head {
-	text-align: left;
-}
+
 .product-job-page-container {
 	margin: 0 10%;
 }
@@ -787,16 +788,16 @@ nav {
 }
 .upvote-container-active {
 	border: 1.5px solid #e0e0e0;
-	border-radius: 8px;
+	border-radius: 3px;
 	cursor: pointer;
 	text-align: center;
 	top: 5px !important;
 	background-color: #fdfafa;
-	color: green;
+	color: #ff9529;
 }
 .upvote-container {
 	border: 1.5px solid #e0e0e0;
-	border-radius: 5px;
+	border-radius: 3px;
 	cursor: pointer;
 	text-align: center;
 	color: #080808d9;
@@ -812,9 +813,7 @@ nav {
 	position: relative;
 	top: -1em;
 }
-.upvote-count-active {
-	color: #ff9529;
-}
+
 .product-right-container {
 	padding-left: 8%;
 	width: 90%;
@@ -977,6 +976,12 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+	/* ----nav -------- */
+
+	nav {
+		padding: 0;
+	}
+	/* ---------- */
 	.text-block {
 		display: none;
 	}
@@ -1290,9 +1295,12 @@ nav {
 		display: none;
 	}
 	.upvote-container {
-		border-radius: 8px;
 		top: 5px !important;
-		right: 10px !important;
+		right: 5px !important;
+	}
+	.upvote-container-active {
+		top: 5px !important;
+		right: 5px !important;
 	}
 	.details-page-logo {
 		height: 150px;

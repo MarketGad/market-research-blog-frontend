@@ -29,10 +29,10 @@ const Loader = (props) => {
 
 const ImageList = (props) => (
 	<React.Fragment>
-		{Array(5)
+		{Array(8)
 			.fill('')
 			.map((e, i) => (
-				<Loader screen='desktop' key={i} style={{ opacity: Number(2 / i).toFixed(1) }} {...props} />
+				<Loader screen='desktop' key={i} style={{ opacity: Number(7 / i).toFixed(1) }} {...props} />
 			))}
 	</React.Fragment>
 );
