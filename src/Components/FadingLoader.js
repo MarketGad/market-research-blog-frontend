@@ -2,17 +2,17 @@ import React from 'react';
 import ContentLoader from 'react-content-loader';
 
 const Loader = (props) => {
-	let width = '90%';
+	var width = document.documentElement.clientWidth;
+	if (width > 1000) {
+		width = width * 0.5;
+		if (props.imagetype === 'circle') {
+			width = width * 0.5;
+		}
+	} else width = width * 0.9;
 	let height = '100';
 	return (
 		<div>
-			<ContentLoader
-				viewBox={`0 0 ${width} ${height} preserveAspectRatio="none"`}
-				height={height}
-				width={width}
-				speed={2}
-				{...props}
-			>
+			<ContentLoader viewBox={`0 0 ${width} ${height}`} height={height} width={width} speed={2} {...props}>
 				{props.imagetype === 'circle' ? (
 					<circle cx='60' cy='45' r='30' />
 				) : (

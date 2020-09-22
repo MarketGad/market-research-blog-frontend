@@ -110,7 +110,7 @@ const PeopleList = () => {
 			{people && <div>{showPeople}</div>}
 			{!people && (
 				<div>
-					<FadingLoader imageyype='circle' />
+					<FadingLoader imagetype='circle' />
 				</div>
 			)}
 		</div>

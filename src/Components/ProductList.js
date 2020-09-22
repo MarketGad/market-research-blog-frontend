@@ -178,8 +178,8 @@ const ProductList = () => {
 		products.slice(0).reverse().map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
-				return <ProductCard product={product} weblink={weblink} />;
-			} else return <ProductCard product={product} weblink={product.websiteLink} />;
+				return <ProductCard key={index} product={product} weblink={weblink} />;
+			} else return <ProductCard key={index} product={product} weblink={product.websiteLink} />;
 		})
 	) : (
 		<div className='center'> Loading... </div>
