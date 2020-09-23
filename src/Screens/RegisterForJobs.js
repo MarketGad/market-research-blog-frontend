@@ -13,7 +13,8 @@ import Container from '@material-ui/core/Container';
 import Chip from '@material-ui/core/Chip';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Redirect } from 'react-router-dom';
-import Cookies from 'js-cookie';
+import Cookies, { set } from 'js-cookie';
+import ThreeDotLoad from '../Components/ThreeDotLoad';
 
 function Copyright () {
 	return (
@@ -77,7 +78,7 @@ export default function RegisterForJobs () {
 	const [ location, setLocation ] = React.useState('');
 	const [ service, setService ] = React.useState('');
 	const [ price, setPrice ] = React.useState('');
-
+	const [ load, setLoad ] = React.useState('');
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0];
 		previewFile(file);
@@ -100,45 +101,49 @@ export default function RegisterForJobs () {
 				Authorization: `Bearer  ${token}`
 			}
 		};
-		axios
-			.post(
-				'https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles',
-				{
-					skills: skills,
-					location: location,
-					experience: experience,
-					qualification: qualification,
-					passionateAbout: passionate,
-					portfolioLink: portfolio,
-					linkedIn: linkedIn,
-					rating: '1',
-					serviceName: service,
-					offeringPrice: price,
-					profilePic: previewSource
-				},
-				config
-			)
-			.then(
-				(response) => {
-					if (response.status === 200) {
-						setRegisterJobSuccess(true);
-					} else {
-						alert(response.err);
-					}
-				},
-				(error) => {
-					if (error.message === 'Request failed with status code 413') {
-						alert('upload photo size should be less than 500kb');
-					} else {
-						alert('One user can register once');
-					}
+		const data = {
+			skills: skills,
+			location: location,
+			experience: experience,
+			qualification: qualification,
+			passionateAbout: passionate,
+			portfolioLink: portfolio,
+			linkedIn: linkedIn,
+			rating: '1',
+			serviceName: service,
+			offeringPrice: price,
+			profilePic: previewSource
+		};
+		setLoad(true);
+		axios.post('https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles', data, config).then(
+			(response) => {
+				if (response.status === 200) {
+					setRegisterJobSuccess(true);
+					setLoad(false);
+				} else {
+					alert(response.err);
 				}
-			);
+			},
+			(error) => {
+				if (error.message === 'Request failed with status code 413') {
+					alert('upload photo size should be less than 500kb');
+				} else {
+					alert('One user can register once');
+					window.location.reload(false);
+				}
+			}
+		);
 	};
 	if (!LoginCheck) {
 		return <Redirect to='/signup' />;
 	} else if (RegisterJobSuccess) {
 		return <Redirect to='/' />;
+	} else if (load === true) {
+		return (
+			<div style={{ textAlign: 'center' }}>
+				<ThreeDotLoad />
+			</div>
+		);
 	} else {
 		return (
 			<div>
