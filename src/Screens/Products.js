@@ -11,8 +11,8 @@ const Products = () => {
 				<div className='row'>
 					<div className='col s12 l8'>
 						<div className='product-page-head'>What's hot ?</div>
-						<h6 style={{ paddingTop: '0', margin: '0' }}>
-							Latest cool stuffs to fix your pain points. Vote the best one
+						<h6 style={{ paddingTop: '0', fontSize: '1.1em', marginBottom: '15px' }}>
+							Latest cool stuffs to fix your pain points.Vote the best one.
 						</h6>
 						{/* <a
 								className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
@@ -24,7 +24,7 @@ const Products = () => {
 						<ProductList />
 					</div>
 					<div className='col s12 l4'>
-						<div className='relative-add'>
+						<div className='relative-add joblist'>
 							<div className='product-page-head '>Trending talents</div>
 						</div>
 						<PeopleList />

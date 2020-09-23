@@ -82,14 +82,14 @@ const ProductList = () => {
 							</Link>
 							<div className='product-desc'>{product.briefDescription}</div>
 							<div className='row product-link-container'>
-								<div className='col l2 s6 comment-box'>
+								<div className='col l1 s3 comment-box'>
 									<a
 										target='_blank'
 										rel='noopener noreferrer'
 										href={weblink}
 										className='waves-effect waves-light btn-small visit-btn'
 									>
-										<span className='comment-count'>visit</span>
+										{/* <span className='comment-count'>visit</span> */}
 										<span
 											className='material-icons chat-icon'
 											style={{

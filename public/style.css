@@ -680,6 +680,9 @@ nav {
 .profile-container {
 	margin-top: 2%;
 }
+.joblist {
+	margin-top: 1.4em !important;
+}
 .profile-section {
 	padding: 3px 0;
 }
@@ -778,6 +781,7 @@ nav {
 .comment-box {
 	margin-top: 8px;
 	float: right;
+	margin-right: 2%;
 }
 .comment-count {
 	position: relative;
@@ -1236,15 +1240,15 @@ nav {
 	}
 
 	.product-right-container {
-		padding-left: 10%;
+		padding-left: 5%;
 		width: 85%;
 	}
 	.pro-img {
-		height: 75px !important;
-		width: 75px !important;
+		height: 60px !important;
+		width: 60px !important;
 	}
 	.product-desc {
-		font-size: 1.05em;
+		font-size: 0.7em;
 		padding: 0;
 		white-space: nowrap;
 	}
@@ -1324,6 +1328,9 @@ nav {
 	.job-userdetails-container {
 		margin-left: 10%;
 		margin-top: 5%;
+	}
+	.joblist {
+		margin-top: 0 !important;
 	}
 	.product-details-right-container {
 		padding: 0 5%;
