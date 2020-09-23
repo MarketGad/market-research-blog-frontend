@@ -11,7 +11,7 @@ const Products = () => {
 				<div className='row'>
 					<div className='col s12 l8'>
 						<div className='product-page-head'>What's hot ?</div>
-						<h6 style={{ paddingTop: '0', fontSize: '1.1em', marginBottom: '15px' }}>
+						<h6 style={{ paddingTop: '0', fontSize: '1.05em', marginBottom: '15px' }}>
 							Latest cool stuffs to fix your pain points.Vote the best one.
 						</h6>
 						{/* <a

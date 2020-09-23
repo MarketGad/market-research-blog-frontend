@@ -889,7 +889,7 @@ nav {
 	display: inline-block;
 	border-radius: 30px;
 	vertical-align: middle;
-	padding: 4px 10px;
+	padding: 4px 13px;
 	letter-spacing: .1em;
 	text-align: center;
 	text-transform: capitalize;
@@ -1285,6 +1285,7 @@ nav {
 		padding-bottom: 0;
 	}
 	.visit-btn {
+		padding: 4px 10px;
 		font-weight: 800;
 		line-height: 2em;
 		height: 2em;
