@@ -14,18 +14,19 @@ const Products = () => {
 						<h6 style={{ paddingTop: '0', fontSize: '1.05em', marginBottom: '15px' }}>
 							Latest cool stuffs to fix your pain points.Vote the best one.
 						</h6>
-						{/* <a
-								className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
-								href='/registerforproduct'
-							>
-								Add Product
-							</a> */}
-
 						<ProductList />
 					</div>
 					<div className='col s12 l4'>
 						<div className='relative-add joblist'>
-							<div className='product-page-head '>Trending talents</div>
+							<div className='product-page-head left-head'>Trending talents</div>
+							<div className='right-align'>
+								<a
+									className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
+									href='/registerforjobs'
+								>
+									Add profile
+								</a>
+							</div>
 						</div>
 						<PeopleList />
 					</div>
