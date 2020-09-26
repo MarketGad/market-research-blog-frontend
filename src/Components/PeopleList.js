@@ -56,25 +56,30 @@ const PeopleCard = (props) => {
 							</Tooltip>
 						</div>
 					</div>
-					<Link
-						className='waves-effect waves-light btn-small hire-connect-btn'
-						to={{
-							pathname: `/${user._id}`,
-							state: { UserProfile: user, linkedIn: linkedIn }
-						}}
-					>
-						Hire
-					</Link>
-
-					<a
-						target='_blank'
-						rel='noopener noreferrer'
-						className='waves-effect waves-light btn-small hire-connect-btn'
-						style={{ float: 'right' }}
-						href={linkedIn}
-					>
-						Connect
-					</a>
+					<div className='row' style={{ marginBottom: '5px' }}>
+						<div className='col s6'>
+							<Link
+								className='waves-effect waves-light btn-small hire-connect-btn'
+								to={{
+									pathname: `/${user._id}`,
+									state: { UserProfile: user, linkedIn: linkedIn }
+								}}
+							>
+								Hire
+							</Link>
+						</div>
+						<div className='col s6'>
+							<a
+								target='_blank'
+								rel='noopener noreferrer'
+								className='waves-effect waves-light btn-small hire-connect-btn'
+								style={{ float: 'right' }}
+								href={linkedIn}
+							>
+								Connect
+							</a>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</div>

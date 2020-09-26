@@ -17,15 +17,21 @@ const Products = () => {
 						<ProductList />
 					</div>
 					<div className='col s12 l4'>
-						<div className='relative-add joblist'>
-							<div className='product-page-head left-head'>Trending talents</div>
-							<div className='right-align'>
-								<a
-									className='waves-effect waves-light btn pro-btn1 add-mobile-btn'
-									href='/registerforjobs'
-								>
-									Add profile
-								</a>
+						<div className='joblist'>
+							<div className='row'>
+								<div className='col s8'>
+									<div className='product-page-head left-head'>Trending talents</div>
+								</div>
+								<div className='col s4'>
+									<div className='right-align'>
+										<a
+											className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn'
+											href='/registerforjobs'
+										>
+											Add profile
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 						<PeopleList />
