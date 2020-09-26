@@ -4,8 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Location from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
-import Footer2 from '../Components/Footer2';
 import MailIcon from '@material-ui/icons/Mail';
+import HireNow from '../Components/HireNow';
 
 const DisplayArray = (props) => {
 	if (props.data) {
@@ -174,12 +174,7 @@ const JobProfile = (props) => {
 										<p className='product-subhead'>Pricing</p>
 										<p className='product-content'>Rs.{UserProfile.offeringPrice / 100 || null}</p>
 									</div>
-									<a
-										className='waves-effect waves-light btn-small hirenow-btn'
-										style={{ marginTop: '2%' }}
-									>
-										Hire Now
-									</a>
+									<HireNow profile={UserProfile} />
 								</div>
 							</div>
 						</Grid>
