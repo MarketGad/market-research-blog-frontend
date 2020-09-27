@@ -681,7 +681,7 @@ nav {
 	margin-top: 2%;
 }
 .joblist {
-	margin-top: 1.6em !important;
+	margin-top: 1.7% !important;
 }
 .profile-section {
 	padding: 3px 0;
@@ -700,15 +700,15 @@ nav {
 
 /*-------------------Products--------------------------*/
 .product-page-head {
-	font-size: 2em;
+	font-size: 1.8em;
 	letter-spacing: 0.05em;
 	font-weight: 600;
 	padding-top: 15px;
 }
 .product-quote {
-	padding-top: 0;
+	padding: 4px 0;
+	margin: 0;
 	font-size: 1.05em;
-	margin-bottom: 15px;
 }
 .add-mobile {
 	display: none;
