@@ -705,6 +705,11 @@ nav {
 	font-weight: 600;
 	padding-top: 15px;
 }
+.product-quote {
+	padding-top: 0;
+	font-size: 1.05em;
+	margin-bottom: 15px;
+}
 .add-mobile {
 	display: none;
 }
@@ -737,9 +742,9 @@ nav {
 }
 
 .product-container {
-	border-radius: '5px';
+	border-radius: 3px;
 	height: auto;
-	padding: 10px 5px;
+	padding: 5px;
 }
 .comment-container {
 	max-height: 5em;
@@ -747,8 +752,8 @@ nav {
 }
 
 .pro-img {
-	height: 100px !important;
-	width: 100px !important;
+	height: 90px !important;
+	width: 90px !important;
 	border-radius: 5px;
 }
 .product-head {
@@ -868,6 +873,20 @@ nav {
 	width: 200px;
 	height: 200px;
 	border-radius: 7px;
+}
+/* -----trending ----------- */
+.trend-img {
+	right: 10px !important;
+	left: auto !important;
+	width: 90px !important;
+	height: 90px !important;
+}
+.trending-product-container {
+	padding-left: 4% !important;
+	padding: 3%;
+}
+.trending-product-left-container {
+	width: 84%;
 }
 /*---------------------comment------------------*/
 .addComment {

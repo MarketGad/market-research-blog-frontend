@@ -175,7 +175,7 @@ const ProductList = () => {
 	}, []);
 
 	const showProducts = products.length ? (
-		products.slice(0).reverse().map((product, index) => {
+		products.map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
 				return <ProductCard key={index} product={product} weblink={weblink} />;
