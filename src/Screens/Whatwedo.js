@@ -46,7 +46,7 @@ const Whatwedo = () => {
 	} else {
 		return (
 			<div style={{ fontSize: '12px', fontWeight: '400' }}>
-				<div className='container' style={{ fontFamily: 'GlacialIndifferenceMedium' }}>
+				<div className='container'>
 					<h2 className='center privacy-top' style={{ fontWeight: '600', letterSpacing: '0.02em' }}>
 						What do we offer?
 					</h2>

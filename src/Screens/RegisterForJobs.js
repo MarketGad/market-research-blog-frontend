@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 	submit: {
 		margin: theme.spacing(4, 0, 2),
 		padding: '5px',
-		fontFamily: 'GlacialIndifferenceBold',
 		fontWeight: '800',
 		fontSize: '1.4em',
 		letterSpacing: '0.1em'
@@ -290,8 +289,7 @@ export default function RegisterForJobs () {
 											variant='h5'
 											style={{
 												margin: '15px',
-												textAlign: 'center',
-												fontFamily: 'GlacialIndifferenceMedium'
+												textAlign: 'center'
 											}}
 										>
 											Premium Offerings (If any)

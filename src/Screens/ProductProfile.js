@@ -98,7 +98,7 @@ const ProductProfile = (props) => {
 					<Grid item xs={12} md={3}>
 						<div className='center'>
 							<img src={product.logo} alt={product.name} className='details-page-logo' />
-							<div className='article-subhead center' style={{ fontFamily: 'GlacialIndifferenceBold' }}>
+							<div className='article-subhead center' style={{ fontWeight: 800 }}>
 								{product.name}
 							</div>
 						</div>

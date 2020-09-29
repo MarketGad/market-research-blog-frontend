@@ -6,9 +6,8 @@
 }
 
 * {
-	font-family: 'GlacialIndifferenceRegular';
+	font-family: 'Open Sans', sans-serif;
 }
-
 /* ------------input---------------- */
 
 input {
@@ -59,9 +58,8 @@ label + .MuiInput-formControl {
 
 nav ul a {
 	font-size: 1.3em;
-	letter-spacing: 0.05em;
-	font-family: 'GlacialIndifferenceRegular';
-	font-weight: 600;
+	letter-spacing: 0.01em;
+	font-weight: 800;
 	padding: 0 25px;
 }
 
@@ -136,10 +134,10 @@ nav {
 .join-btn {
 	margin-top: 68vh;
 	font-size: 1.4em;
-	font-family: 'GlacialIndifferenceBold';
+
 	border-radius: 4px;
 	border: 1.5px solid #fff;
-	font-weight: 500;
+	font-weight: 800;
 	background-color: #0f0f0f;
 	color: #ffffff;
 }
@@ -180,7 +178,7 @@ nav {
 	top: 76%;
 	left: 48%;
 	margin: -100px 0 0 -121px;
-	font-family: "GlacialIndifferenceBold";
+
 	background: #1815156b;
 	font-size: 1.2rem;
 	font-weight: 900;
@@ -202,7 +200,7 @@ nav {
 	top: 70%;
 	left: 48%;
 	margin: -100px 0 0 -121px;
-	font-family: "GlacialIndifferenceBold";
+
 	background: #1815156b;
 	font-size: 1.2rem;
 	font-weight: 900;
@@ -243,18 +241,14 @@ nav {
 }
 
 .tagline1 {
-	font-family: 'GlacialIndifferenceBold';
 	font-size: 3.4em;
 	line-height: 1.7em;
-	letter-spacing: 0.05rem;
-	font-weight: 550;
+	font-weight: 800;
 }
 
 .tagline2 {
-	font-family: 'GlacialIndifferenceMedium';
 	font-size: 2.45em;
 	line-height: 1.6em;
-	letter-spacing: 0.05rem;
 	font-weight: 450;
 }
 .join-now-seo-btn {
@@ -282,7 +276,8 @@ nav {
 
 .offeringhead {
 	color: #0153a5;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
+
 	padding: 20px;
 	font-size: 3.5em;
 	text-transform: uppercase;
@@ -295,8 +290,6 @@ nav {
 /*-------------------------------------------------- subscribe------------------- */
 
 .subscribe {
-	font-family: 'GlacialIndifferenceRegular';
-	letter-spacing: 0.07em;
 	background-color: rgba(0, 0, 0, 0.9);
 	padding: 10px;
 }
@@ -306,7 +299,7 @@ nav {
 	color: black;
 	margin-top: 0;
 	font-size: 1.1rem;
-	font-weight: 600;
+	font-weight: 800;
 	transition-duration: 0.4s;
 	border-radius: 5px;
 	height: 3.4rem;
@@ -356,14 +349,15 @@ nav {
 	color: #0153a5;
 	font-size: 1.9em;
 	line-height: 1.2em;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 }
 
 .featuredDetails {
 	margin-top: 1.5em;
 	font-size: 1.5em;
 	padding: 5px;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
+
 	color: #080808d9;
 }
 
@@ -379,8 +373,7 @@ nav {
 
 .featured-brief {
 	padding: 5px;
-	font-family: 'GlacialIndifferenceMedium';
-	font-size: 1.5em;
+	font-size: 1.35em;
 }
 
 .detail-hover:hover {
@@ -393,7 +386,7 @@ nav {
 }
 .aboutus-bold {
 	font-size: 1.8em;
-	font-weight: 600;
+	font-weight: 800;
 	padding: 5px;
 }
 .about-subhead {
@@ -456,13 +449,12 @@ nav {
 }
 
 .post-brief {
-	font-size: 2.1vh;
-	font-family: 'GlacialIndifferenceMedium';
+	font-size: 1.9vh;
 }
 .read-more {
 	background-color: #080808d9;
 	margin-top: 2em;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 }
 .read-more:hover {
 	background-color: #c1c1c1;
@@ -477,14 +469,14 @@ nav {
 	box-shadow: 2px 2px 5px 1px #888;
 }
 .landing-head {
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 	font-size: 3em;
 	text-transform: uppercase;
 }
 
 .landing-post-head {
 	font-size: 2.3em;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 }
 
 .sidebar-button {
@@ -559,19 +551,18 @@ nav {
 /* --------------articles------------------ */
 
 .article-head {
-	font-size: 3.2em;
-	font-weight: 450;
+	font-size: 3em;
+	font-weight: 800;
 }
 
 .article-subhead {
-	font-size: 2.3em;
-	font-weight: 450;
+	font-size: 2.2em;
+	font-weight: 700;
 	margin: 5px 0;
 }
 
 .article-content {
-	font-size: 1.5em;
-	letter-spacing: 0.02em;
+	font-size: 1.3em;
 }
 
 .img-container {
@@ -624,9 +615,8 @@ nav {
 /* ------------------------People-------------------------*/
 /* ------------------------People-------------------------*/
 .hirenow-btn {
-	font-family: 'GlacialIndifferenceBold';
 	border-radius: 4px;
-	font-weight: 300;
+	font-weight: 800;
 	background-color: #0f0f0f;
 	color: #ffffff;
 }
@@ -635,7 +625,7 @@ nav {
 }
 
 .register-job {
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 	border-radius: 4px;
 	background-color: #0f0f0f;
 	color: #ffffff;
@@ -647,9 +637,8 @@ nav {
 	background-color: #61383b;
 }
 .hire-btn1 {
-	font-family: 'GlacialIndifferenceBold';
 	border-radius: 4px;
-	font-weight: 300;
+	font-weight: 800;
 	background-color: #0f0f0f;
 	color: #ffffff;
 	width: 7em;
@@ -701,8 +690,7 @@ nav {
 /*-------------------Products--------------------------*/
 .product-page-head {
 	font-size: 1.8em;
-	letter-spacing: 0.05em;
-	font-weight: 600;
+	font-weight: 800;
 	padding-top: 15px;
 }
 .product-quote {
@@ -727,7 +715,7 @@ nav {
 }
 .pro-btn1 {
 	margin-top: 20px;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 	font-size: 1em;
 	border-radius: 4px;
 	background-color: #0f0f0f;
@@ -757,26 +745,23 @@ nav {
 	border-radius: 5px;
 }
 .product-head {
-	font-family: 'GlacialIndifferenceBold';
 	padding: 10px 0;
 	font-size: 2.4em;
-	font-weight: 600;
+	font-weight: 800;
 	line-height: .5em;
 }
 .product-subhead {
-	font-family: 'GlacialIndifferenceBold';
 	font-size: 1.9em;
 	line-height: 0.3em;
-	font-weight: 500;
+	font-weight: 800;
 }
 .product-content {
-	font-family: 'GlacialIndifferenceMedium';
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .product-desc {
-	font-size: 1.23em;
-	padding: 2px 0;
-	max-height: 2.5em;
+	font-size: 1.05em;
+	padding: 4px 0;
+	max-height: 3em;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
@@ -792,7 +777,7 @@ nav {
 	position: relative;
 	top: -3px;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 800;
 }
 .upvote-container-active {
 	border: 1.5px solid #e0e0e0;
@@ -821,6 +806,9 @@ nav {
 	position: relative;
 	top: -1em;
 }
+.product-name {
+	font-weight: 600;
+}
 
 .product-right-container {
 	padding-left: 8%;
@@ -837,7 +825,6 @@ nav {
 }
 .product-comment {
 	font-weight: 800 !important;
-	letter-spacing: 0.03em;
 }
 .links {
 	color: #080808d9;
@@ -853,7 +840,7 @@ nav {
 }
 .hire-connect-btn {
 	margin-top: 10px;
-	font-family: 'GlacialIndifferenceBold';
+	font-weight: 800;
 	width: 8em;
 	padding-top: 2px;
 	display: inline-block;
@@ -886,7 +873,7 @@ nav {
 	padding: 3%;
 }
 .trending-product-left-container {
-	width: 84%;
+	width: 83%;
 }
 /*---------------------comment------------------*/
 .addComment {
@@ -909,7 +896,6 @@ nav {
 	border-radius: 30px;
 	vertical-align: middle;
 	padding: 4px 13px;
-	letter-spacing: .1em;
 	text-align: center;
 	text-transform: capitalize;
 	background-color: white;
@@ -1018,7 +1004,7 @@ nav {
 		height: 10%;
 		left: 48%;
 		margin: -100px 0 0 -121px;
-		font-family: "GlacialIndifferenceBold";
+
 		background: #1815156b;
 		font-size: 1.2rem;
 		font-weight: 900;
@@ -1085,13 +1071,11 @@ nav {
 		margin: 10px 0;
 	}
 	.tagline1 {
-		font-size: 2em;
-		letter-spacing: 0.015rem;
+		font-size: 1.9em;
 		padding: 10px 5px;
 	}
 	.tagline2 {
 		font-size: 1.65em;
-		letter-spacing: 0.01em;
 		padding: 7px 5px;
 	}
 
@@ -1166,8 +1150,7 @@ nav {
 		font-size: 1.8em;
 	}
 	.article-content {
-		font-size: 1.2em;
-		letter-spacing: 0.02em;
+		font-size: 1.1em;
 	}
 	.article-img {
 		height: 250px;
@@ -1177,15 +1160,15 @@ nav {
 	}
 	/* ------About us--------- */
 	.aboutus {
-		font-size: 1.5em;
+		font-size: 1.3em;
 		padding: 3px;
 	}
 	.aboutus-bold {
-		font-size: 1.5em;
+		font-size: 1.3em;
 		padding: 3px;
 	}
 	.about-subhead {
-		font-size: 2em;
+		font-size: 1.7em;
 		padding: 5px 3px;
 	}
 
@@ -1218,8 +1201,8 @@ nav {
 		height: fit-content;
 	}
 	.featured-brief {
-		font-size: 1.3em;
-		line-height: 1.4em;
+		font-size: 1.15em;
+		line-height: 1.35em;
 	}
 	.featured-mobile {
 		display: block;
@@ -1267,21 +1250,24 @@ nav {
 		width: 60px !important;
 	}
 	.product-desc {
-		font-size: 0.7em;
-		padding: 0;
-		white-space: nowrap;
+		font-size: 0.85em;
+		padding: 2px 0 10px 0;
+		line-height: normal;
+		margin-bottom: 3px;
 	}
 	.product-name {
-		font-size: 1.3em;
+		font-size: 1.25em;
 	}
 	.product-link {
 		font-size: 1.2em;
 		padding: 0;
 	}
+	.product-quote {
+		font-size: 0.9em;
+	}
 	.product-page-head {
 		font-size: 1.7em;
-		padding-top: 20px;
-		text-align: center;
+		padding-top: 4px;
 	}
 	/* .product-head {
 		font-size: 2.4em;
@@ -1291,10 +1277,10 @@ nav {
 		font-size: 1.9em;
 		line-height: 0.3em;
 		font-weight: 500;
-	}
+	}*/
 	.product-content {
-		font-size: 1.5em;
-	} */
+		font-size: 1.3em;
+	}
 	.comment-head {
 		font-size: 1.2em;
 	}
@@ -1365,7 +1351,6 @@ nav {
 
 	.product-comment {
 		font-weight: 800 !important;
-		letter-spacing: 0.03em;
 	}
 	.links {
 		max-width: 80%;

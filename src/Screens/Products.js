@@ -27,7 +27,7 @@ const Products = () => {
 							<TrendingProduct />
 						</div>
 						<div className='row' style={{ margin: '0', padding: '0' }}>
-							<div className='col s8'>
+							<div className='col s12 m8'>
 								<div className='product-page-head left-head' style={{ paddingTop: '5px' }}>
 									Trending talents
 								</div>

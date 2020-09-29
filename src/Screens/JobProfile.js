@@ -47,10 +47,10 @@ const JobProfile = (props) => {
 								style={{ width: '200px', height: '200px', borderRadius: '7px' }}
 							/>
 						</div>
-						<div className='article-subhead center' style={{ fontFamily: 'GlacialIndifferenceBold' }}>
+						<div className='article-subhead center' style={{ fontWeight: '800' }}>
 							{UserProfile.user.firstname} {UserProfile.user.lastname}
 						</div>
-						<div style={{ textAlign: 'center', fontFamily: 'GlacialIndifferenceBold' }}>
+						<div style={{ textAlign: 'center', fontWeight: '800' }}>
 							<h6>
 								<span className='material-icons job-link-icons'>
 									<Location />
@@ -74,7 +74,7 @@ const JobProfile = (props) => {
 								</span>
 								<span
 									style={{
-										fontFamily: 'GlacialIndifferenceBold',
+										fontWeight: 800,
 										fontSize: '1.4em',
 										verticalAlign: 'middle'
 									}}

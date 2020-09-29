@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(4, 0, 2),
 		padding: '5px',
 		fontWeight: '800',
-		fontFamily: 'GlacialIndifferenceBold',
 		fontSize: '1.4em',
 		letterSpacing: '0.05em'
 	},
