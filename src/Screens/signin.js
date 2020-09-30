@@ -14,6 +14,7 @@ import Footer from '../Components/Footer2';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import Alert from '../Components/Alert';
+import GoogleLogin from 'react-google-login';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -43,6 +44,28 @@ export default function SignIn () {
 	const [ password, setPassword ] = React.useState('');
 	const [ otpsuccess, setOtpsuccess ] = React.useState(true);
 	const [ errMsg, setErrMsg ] = useState('');
+
+	const responseSuccessGoogle = (response) => {
+		console.log(response);
+		console.log(response.tokenId);
+		axios({
+			method: 'POST',
+			url: 'https://serieux-saucisson-31787.herokuapp.com/api/user/googlelogin',
+			data: { tokenId: response.tokenId }
+		}).then((response) => {
+			console.log(response);
+			if (response.data.success) {
+				setLoginsuccess(true);
+				Cookies.set('session-id', response.data['token']);
+				window.location.reload(false);
+			}
+			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
+		});
+	};
+
+	const responseErrorGoogle = (response) => {
+		console.log(response);
+	};
 
 	const submitHandler = (e) => {
 		e.preventDefault();
@@ -137,6 +160,7 @@ export default function SignIn () {
 								>
 									Sign In
 								</Button>
+
 								<Grid container>
 									<Grid item xs>
 										<Link href='#' variant='body2' />
@@ -147,6 +171,17 @@ export default function SignIn () {
 										</Link>
 									</Grid>
 								</Grid>
+
+								<div className='center' style={{ paddingTop: '10px' }}>
+									<GoogleLogin
+										className='black-text'
+										clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
+										onSuccess={responseSuccessGoogle}
+										onFailure={responseErrorGoogle}
+										cookiePolicy={'single_host_origin'}
+										redirectUri={'/'}
+									/>
+								</div>
 							</form>
 						</div>
 					</Container>
