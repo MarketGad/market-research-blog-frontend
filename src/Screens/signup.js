@@ -117,9 +117,23 @@ export default function SignUp () {
 							<Avatar className={classes.avatar}>
 								<PersonAddIcon />
 							</Avatar>
-							<Typography component='h1' variant='h5'>
+							<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
 								Sign Up
 							</Typography>
+							<div className='center'>
+								<GoogleLogin
+									className='black-text'
+									buttonText='Sign up with Google'
+									clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
+									onSuccess={responseSuccessGoogle}
+									onFailure={responseErrorGoogle}
+									cookiePolicy={'single_host_origin'}
+									redirectUri={'/'}
+								/>
+							</div>
+							<h6 className='signin-divider'>
+								<span>or</span>
+							</h6>
 							<form className={classes.form} onSubmit={submitHandler}>
 								<Grid container spacing={2}>
 									<Grid item xs={12} sm={6}>
@@ -211,17 +225,6 @@ export default function SignUp () {
 										</Link>
 									</Grid>
 								</Grid>
-								<div className='center' style={{ paddingTop: '10px' }}>
-									<GoogleLogin
-										className='black-text'
-										buttonText='Signup with Google'
-										clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
-										onSuccess={responseSuccessGoogle}
-										onFailure={responseErrorGoogle}
-										cookiePolicy={'single_host_origin'}
-										redirectUri={'/'}
-									/>
-								</div>
 							</form>
 						</div>
 					</Container>
