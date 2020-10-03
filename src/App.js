@@ -36,6 +36,7 @@ import v3001 from './Articles/venturehacks/v3001';
 import v3002 from './Articles/venturehacks/v3002';
 import v3003 from './Articles/venturehacks/v3003';
 import v3004 from './Articles/venturehacks/v3004';
+import v3005 from './Articles/venturehacks/v3005';
 import RegisterForProduct from './Screens/RegisterForProduct';
 import ProductProfile from './Screens/ProductProfile';
 import JobProfile from './Screens/JobProfile';
@@ -86,6 +87,7 @@ function App () {
 					<Route exact path='/v3002' component={v3002} />
 					<Route exact path='/v3003' component={v3003} />
 					<Route exact path='/v3004' component={v3004} />
+					<Route exact path='/v3005' component={v3005} />
 					<Route exact path='/verifyotp' component={VerifyOtp} />
 					<Route path='/p:product_id' component={ProductProfile} />
 					<Route path='/:job_id' component={JobProfile} />
