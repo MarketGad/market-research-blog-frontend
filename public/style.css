@@ -1167,7 +1167,9 @@ nav {
 		font-size: 1.1em;
 	}
 	.article-img {
-		height: 250px;
+		padding: 10px;
+		width: 100%;
+		height: 220px;
 	}
 	.article-img-desc {
 		font-size: 1em;
