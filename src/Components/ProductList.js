@@ -191,7 +191,7 @@ const ProductList = () => {
 				{products && <div>{showProducts}</div>}
 				{!products && (
 					<div>
-						<FadingLoader />
+						<FadingLoader loadno={5} />
 					</div>
 				)}
 			</div>

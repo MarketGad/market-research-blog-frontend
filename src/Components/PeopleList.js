@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import FadingLoader from '../Components/FadingLoader';
-import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
+import ReputationPoint from './ReputaionPoints';
 const PeopleCard = (props) => {
 	const user = props.user;
 	const linkedIn = props.linkedIn;
@@ -38,22 +38,7 @@ const PeopleCard = (props) => {
 								borderRadius: '10px'
 							}}
 						>
-							<span
-								style={{
-									position: 'relative',
-									padding: '2px',
-									fontSize: '12px',
-									color: '#ff9529'
-								}}
-								className='material-icons'
-							>
-								fiber_manual_record
-							</span>
-							<Tooltip title='Reputation Points i.e Likes: 1 Comments:4)' placement='right-start'>
-								<span style={{ fontSize: '16px', padding: '1px', fontWeight: '600' }}>
-									{user.user.reputation}
-								</span>
-							</Tooltip>
+							<ReputationPoint ReputationPoint={user.user.reputation} />
 						</div>
 					</div>
 					<div className='row' style={{ marginBottom: '5px' }}>
@@ -115,7 +100,7 @@ const PeopleList = () => {
 			{people && <div>{showPeople}</div>}
 			{!people && (
 				<div>
-					<FadingLoader imagetype='circle' />
+					<FadingLoader imagetype='circle' loadno={6} />
 				</div>
 			)}
 		</div>

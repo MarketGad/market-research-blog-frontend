@@ -191,7 +191,7 @@ const TodayLaunch = () => {
 				{products && <div>{showProducts}</div>}
 				{!products && (
 					<div>
-						<FadingLoader />
+						<FadingLoader loadno={3} />
 					</div>
 				)}
 			</div>

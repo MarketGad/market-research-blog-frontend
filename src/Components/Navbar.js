@@ -1,16 +1,34 @@
 import React from 'react';
 import AccountIcon from '@material-ui/icons/AccountCircle';
 import logo from './Favicon.jpg';
-import Slide from '@material-ui/core/Slide';
+import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import ReputationPoint from './ReputaionPoints';
 
 const Navbar = () => {
 	const [ redirect, setRedirect ] = React.useState(false);
+	const [ reputation, setReputation ] = React.useState('');
 
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
 		Cookies.remove('session-id');
+	};
+	const getReputation = () => {
+		const cookie = Cookies.get('session-id');
+		const config = {
+			headers: {
+				Authorization: `Bearer ${cookie}`
+			}
+		};
+		axios.get('https://serieux-saucisson-31787.herokuapp.com/api/user/profile', config).then(
+			(response) => {
+				setReputation(response.data.user.reputation);
+			},
+			(error) => {
+				console.log(error);
+			}
+		);
 	};
 	const show = () => {
 		const cookie = Cookies.get('session-id');
@@ -23,6 +41,7 @@ const Navbar = () => {
 				</li>
 			);
 		} else {
+			getReputation();
 			return (
 				<li>
 					<a style={{ color: 'white', fontSize: '1em' }} onClick={removecookie} href='/'>
@@ -73,11 +92,15 @@ const Navbar = () => {
 									alt='logo-mob'
 								/>
 							</a>
+							<a className='right sidenav-trigger'>
+								{reputation && <ReputationPoint ReputationPoint={reputation} />}
+							</a>
+
 							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 								<li>
 									<a
 										href='/industry'
-										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Industry
 									</a>
@@ -85,7 +108,7 @@ const Navbar = () => {
 								<li>
 									<a
 										href='/startup'
-										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Start-ups
 									</a>
@@ -93,7 +116,7 @@ const Navbar = () => {
 								<li>
 									<a
 										href='/venturehack'
-										style={{ color: 'white', fontSize: '1.25em', paddingLeft: '25px' }}
+										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Venture Hacks
 									</a>
@@ -123,11 +146,16 @@ const Navbar = () => {
 									</li>
 									<li className='right'>
 										<div
-											style={{ padding: '0 25px 0 90px' }}
+											style={{ padding: '0 25px 0 80px' }}
 											className='dropdown-trigger'
 											data-target='account-dropdown'
 										>
-											<AccountIcon fontSize='large' style={{ verticalAlign: 'middle' }} />
+											{reputation && <ReputationPoint ReputationPoint={reputation} />}
+											<AccountIcon
+												fontSize='large'
+												className='nav-icon'
+												style={{ verticalAlign: 'middle' }}
+											/>
 										</div>
 									</li>
 								</ul>

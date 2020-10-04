@@ -6,6 +6,7 @@ import Location from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
 import MailIcon from '@material-ui/icons/Mail';
 import HireNow from '../Components/HireNow';
+import ReputationPoint from '../Components/ReputaionPoints';
 
 const DisplayArray = (props) => {
 	if (props.data) {
@@ -60,27 +61,7 @@ const JobProfile = (props) => {
 						</div>
 						<div style={{ textAlign: 'center' }}>
 							<span style={{ textAlign: 'center' }}>
-								<span
-									style={{
-										position: 'relative',
-										padding: '0 5px',
-										fontSize: '1.4em',
-										verticalAlign: 'middle',
-										color: '#ff9529'
-									}}
-									className='material-icons'
-								>
-									fiber_manual_record
-								</span>
-								<span
-									style={{
-										fontWeight: 800,
-										fontSize: '1.4em',
-										verticalAlign: 'middle'
-									}}
-								>
-									{UserProfile.user.reputation}
-								</span>
+								<ReputationPoint ReputationPoint={UserProfile.user.reputation} />
 							</span>
 						</div>
 						<div className='link-container'>

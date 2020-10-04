@@ -122,7 +122,7 @@ const TrendingProduct = () => {
 			{products && <div>{showProducts}</div>}
 			{!products && (
 				<div>
-					<FadingLoader imagetype='circle' />
+					<FadingLoader imagetype='circle' loadno={3} />
 				</div>
 			)}
 		</div>
