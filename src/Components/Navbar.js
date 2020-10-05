@@ -134,6 +134,12 @@ const Navbar = () => {
 										</a>
 									</li>
 									<li>
+										<a href='/jobs'>Jobs</a>
+									</li>
+									<li>
+										<a href='/discounts'>Discounts</a>
+									</li>
+									<li>
 										<a href='/funding'>Funding</a>
 									</li>
 									<li>
@@ -174,6 +180,11 @@ const Navbar = () => {
 								Add job profile
 							</a>
 						</li>
+						<li>
+							<a href='/addjobs' style={{ color: 'white', fontSize: '1em' }}>
+								Add jobs/interships
+							</a>
+						</li>
 					</ul>
 				</div>
 				<ul id='dropdown2' className='dropdown-content' style={{ backgroundColor: 'black' }}>
@@ -198,12 +209,18 @@ const Navbar = () => {
 						<a href='/'>Home</a>
 					</li>
 					<li>
+						<a href='/funding'>Funding</a>
+					</li>
+					<li>
+						<a href='/jobs'>Jobs</a>
+					</li>
+					<li>
+						<a href='/discounts'>Discounts</a>
+					</li>
+					<li>
 						<a className='dropdown-trigger1' data-target='dropdown2'>
 							Research<i className='material-icons right'>arrow_drop_side</i>
 						</a>
-					</li>
-					<li>
-						<a href='/funding'>Funding</a>
 					</li>
 
 					{/* <li>
@@ -217,6 +234,9 @@ const Navbar = () => {
 					</li>
 					<li>
 						<a href='/registerforjobs'>Add job profile</a>
+					</li>
+					<li>
+						<a href='/addjobs'>Add jobs/interships</a>
 					</li>
 					{showmobile()}
 				</ul>

@@ -15,6 +15,8 @@ import Privacy from './Screens/Privacy';
 import SignUp from './Screens/signup';
 import SignIn from './Screens/signin';
 import Products from './Screens/Products';
+import Jobs from './Screens/Jobs';
+import JobForm from './Screens/JobForm';
 import RegisterForJobs from './Screens/RegisterForJobs';
 import I1001 from './Articles/industry/1001';
 import I1002 from './Articles/industry/1002';
@@ -41,6 +43,7 @@ import RegisterForProduct from './Screens/RegisterForProduct';
 import ProductProfile from './Screens/ProductProfile';
 import JobProfile from './Screens/JobProfile';
 import VerifyOtp from './Screens/VerifyOtp';
+import Discounts from './Screens/Discounts';
 
 function App () {
 	useEffect(() => {
@@ -65,6 +68,9 @@ function App () {
 					<Route exact path='/signup' component={SignUp} />
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
+					<Route exact path='/jobs' component={Jobs} />
+					<Route exact path='/addjobs' component={JobForm} />
+					<Route exact path='/discounts' component={Discounts} />
 					<Route exact path='/registerforjobs' component={RegisterForJobs} />
 					<Route exact path='/registerforproduct' component={RegisterForProduct} />
 					<Route exact path='/i1001' component={I1001} />

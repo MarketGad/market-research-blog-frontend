@@ -59,7 +59,7 @@ label + .MuiInput-formControl {
 nav ul a {
 	font-size: 1.3em;
 	letter-spacing: 0.01em;
-	font-weight: 800;
+	font-weight: 600;
 	padding: 0 25px;
 }
 
@@ -855,12 +855,10 @@ nav {
 	text-decoration: underline;
 }
 .hire-connect-btn {
-	margin-top: 10px;
+	padding: 0 10px;
 	font-weight: 800;
-	width: 8em;
-	padding-top: 2px;
-	display: inline-block;
-	border-radius: 30px;
+	width: 7em;
+	border-radius: 12px;
 	text-align: center;
 	background-color: white;
 	color: black;
@@ -895,18 +893,6 @@ nav {
 .addComment {
 	background-color: #080808d9;
 }
-.comment-btn1 {
-	display: inline-block;
-	border-radius: 30px;
-	padding: 4px 10px;
-	text-align: center;
-	font-weight: 300;
-	background-color: white;
-	color: black;
-}
-.comment-btn1:hover {
-	background-color: #c1c1c1;
-}
 .visit-btn {
 	display: inline-block;
 	border-radius: 30px;
@@ -933,6 +919,21 @@ nav {
 .comment-body {
 	min-height: 2px !important;
 	padding-left: 50px;
+}
+/* -------jobs-------- */
+.job-img {
+	height: 60px !important;
+	width: 60px !important;
+	border-radius: 5px;
+}
+.job-right-container {
+	padding: 5px 15px;
+	width: 73%;
+}
+.job-page-head {
+	font-size: 1.8em;
+	font-weight: 800;
+	padding-top: 2em;
 }
 /* ----------------alert-------------- */
 .alert {
@@ -1000,8 +1001,6 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
-	/* ----nav -------- */
-
 	nav {
 		padding: 0;
 	}
@@ -1358,6 +1357,10 @@ nav {
 	}
 	.product-details-right-container {
 		padding: 0 5%;
+	}
+	.hire-connect-btn {
+		padding: 0 5px;
+		width: 6.5em;
 	}
 	.upvote-count {
 		font-size: 1.3em;

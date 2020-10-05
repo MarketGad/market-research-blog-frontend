@@ -41,7 +41,13 @@ const PeopleCard = (props) => {
 							<ReputationPoint ReputationPoint={user.user.reputation} />
 						</div>
 					</div>
-					<div className='row' style={{ marginBottom: '5px' }}>
+					<div
+						className='row'
+						style={{
+							marginBottom: '5px',
+							marginTop: '10px'
+						}}
+					>
 						<div className='col s6'>
 							<Link
 								className='waves-effect waves-light btn-small hire-connect-btn'
