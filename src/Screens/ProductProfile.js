@@ -166,7 +166,7 @@ const ProductProfile = (props) => {
 								{product.detailedDescription}
 							</div>
 						</div>
-						<div>
+						<div id='comments'>
 							<div className='row'>
 								<div className='col s12 l11' style={{ padding: '0', margin: '0' }}>
 									<div className='card'>

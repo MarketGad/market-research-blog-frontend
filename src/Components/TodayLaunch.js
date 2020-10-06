@@ -187,7 +187,7 @@ const TodayLaunch = () => {
 	if (readytoupvote === false) return <Redirect to='/signin' />;
 	else
 		return (
-			<div>
+			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 				{products && <div>{showProducts}</div>}
 				{!products && (
 					<div>

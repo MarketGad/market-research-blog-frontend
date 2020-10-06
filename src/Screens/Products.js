@@ -8,7 +8,7 @@ import TrendingProduct from '../Components/TrendingProduct';
 
 const Products = () => {
 	return (
-		<div>
+		<div style={{ backgroundColor: 'rgb(249, 249, 249)' }}>
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>
@@ -18,7 +18,6 @@ const Products = () => {
 						</h6>
 						<TodayLaunch />
 						<div className='product-page-head'>Most liked</div>
-
 						<ProductList />
 					</div>
 					<div className='col s12 l4 joblist'>

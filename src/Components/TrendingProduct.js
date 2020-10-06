@@ -118,7 +118,7 @@ const TrendingProduct = () => {
 	);
 
 	return (
-		<div>
+		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{products && <div>{showProducts}</div>}
 			{!products && (
 				<div>

@@ -7,7 +7,7 @@ const PeopleCard = (props) => {
 	const linkedIn = props.linkedIn;
 	return (
 		<div>
-			<ul className='collection'>
+			<ul className='collection product-container'>
 				<li className='collection-item avatar'>
 					<img src={user.profilePic} alt='' className='circle' />
 					<Link
@@ -102,7 +102,7 @@ const PeopleList = () => {
 		<div className='center'>Loading... </div>
 	);
 	return (
-		<div>
+		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{people && <div>{showPeople}</div>}
 			{!people && (
 				<div>

@@ -145,18 +145,7 @@ export default function RegisterForProduct () {
 							</Typography>
 							<form className={classes.form} onSubmit={submitHandler}>
 								<Grid container spacing={2}>
-									{previewSource && (
-										<img
-											src={previewSource}
-											alt='chosen'
-											style={{
-												width: '40%',
-												height: '150px',
-												textAlign: 'center',
-												margin: '0 30%'
-											}}
-										/>
-									)}
+									{previewSource && <img src={previewSource} alt='chosen' className='showpic' />}
 									<Grid item xs={12} sm={6}>
 										<Chip
 											className={classes.chip}
