@@ -970,6 +970,32 @@ nav {
 /* ------------------mobile----------------------------------- 
 ---------------------view--------------------------------
 */
+@media only screen and (max-width: 1024px) {
+	.product-job-page-container {
+		margin: 0 1%;
+	}
+
+	.comment-box {
+		margin-top: 8px;
+		float: right;
+		margin-right: 7%;
+	}
+	.product-desc {
+		padding-right: 10%;
+	}
+	.post-container {
+		margin: 0 2%;
+	}
+	.container {
+		margin-right: 5%;
+		margin-left: 5%;
+		width: auto;
+	}
+	/* .slider .slides .active .mobile1{
+        height: 85%;
+        width: 100%;
+    }*/
+}
 
 @media only screen and (max-width: 992px) {
 	.nav-center {
@@ -1005,6 +1031,12 @@ nav {
 	}
 	#search-icon {
 		display: none;
+	}
+	.product-job-page-container {
+		margin: 0 1%;
+	}
+	.post-container {
+		margin: 0 2%;
 	}
 }
 
@@ -1411,5 +1443,12 @@ nav {
 	.comment-body {
 		min-height: 2px !important;
 		padding-left: 50px;
+	}
+}
+@media only screen and (max-width: 280px) {
+	.comment-box {
+		margin-top: 8px;
+		float: right;
+		margin-right: 7%;
 	}
 }
