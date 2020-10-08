@@ -14,6 +14,7 @@ import Whatwedo from './Screens/Whatwedo';
 import Privacy from './Screens/Privacy';
 import SignUp from './Screens/signup';
 import SignIn from './Screens/signin';
+import MyProfile from './Screens/MyProfile';
 import Products from './Screens/Products';
 import Jobs from './Screens/Jobs';
 import JobForm from './Screens/JobForm';
@@ -69,6 +70,8 @@ function App () {
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
 					<Route exact path='/jobs' component={Jobs} />
+					<Route exact path='/MyProfile' component={MyProfile} />
+
 					<Route exact path='/addjobs' component={JobForm} />
 					<Route exact path='/discounts' component={Discounts} />
 					<Route exact path='/registerforjobs' component={RegisterForJobs} />

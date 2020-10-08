@@ -58,6 +58,7 @@ const Navbar = () => {
 				<li>
 					<a href='/signin'>Login</a>
 				</li>
+				
 			);
 		} else {
 			return (
@@ -139,6 +140,7 @@ const Navbar = () => {
 									<li>
 										<a href='/discounts'>Discounts</a>
 									</li>
+									
 									<li>
 										<a href='/funding'>Funding</a>
 									</li>
@@ -150,6 +152,7 @@ const Navbar = () => {
 									<li>
 										<a href='/about'>About us</a>
 									</li>
+									
 									<li className='right'>
 										<div
 											style={{ padding: '0 25px 0 80px' }}
@@ -170,6 +173,11 @@ const Navbar = () => {
 					</nav>
 					<ul id='account-dropdown' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						{show()}
+						<li>
+							<a href='/MyProfile' style={{ color: 'white', fontSize: '1em' }}>
+								My Profile
+							</a>
+						</li>
 						<li>
 							<a href='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
 								Add product
@@ -237,6 +245,9 @@ const Navbar = () => {
 					</li>
 					<li>
 						<a href='/addjobs'>Add jobs/interships</a>
+					</li>
+					<li>
+						<a href='/MyProfile'>My Profile</a>
 					</li>
 					{showmobile()}
 				</ul>
