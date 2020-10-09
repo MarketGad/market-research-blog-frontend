@@ -48,7 +48,7 @@ import Discounts from './Screens/Discounts';
 import Community from './Screens/Community';
 
 import { connect } from 'react-redux';
-import { fetchProducts, fetchJobProfiles, fetchTodayLaunch, fetchTrendingProducts } from './redux/ActionCreator';
+import { fetchProducts, fetchJobProfiles, fetchTodayLaunch, fetchTrendingProducts, fetchJobs, fetchInternships } from './redux/ActionCreator';
 
 const mapStateToProps = state => {
 	return {
@@ -56,6 +56,8 @@ const mapStateToProps = state => {
 		jobProfiles: state.jobProfiles,
 		todayLaunch: state.todayLaunch,
 		trending: state.trending,
+		jobs: state.jobs,
+		internship: state.internship,
 	}
 }
 
@@ -64,7 +66,9 @@ const mapDispatchToProps = dispatch => ({
 	fetchJobProfiles: () => { dispatch(fetchJobProfiles())},
 	fetchTodayLaunch: () => { dispatch(fetchTodayLaunch())},
 	fetchTrendingProducts: () => { dispatch(fetchTrendingProducts())},
-
+	fetchJobs: () => { dispatch(fetchJobs())},
+	fetchInternships: () => { dispatch(fetchInternships())},
+	
 });
 
 class MainApp extends React.Component {
@@ -75,6 +79,8 @@ class MainApp extends React.Component {
 		await this.props.fetchJobProfiles();
 		await this.props.fetchTodayLaunch();
 		await this.props.fetchTrendingProducts();
+		await this.props.fetchJobs();
+		await this.props.fetchInternships();
 	}
 	render(){
 		return (
@@ -103,7 +109,11 @@ class MainApp extends React.Component {
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
 					<Route exact path='/jobs' component={
-							()=> <Jobs jobProfiles={this.props.jobProfiles.jobProfiles} />
+							()=> <Jobs 
+							jobProfiles={this.props.jobProfiles.jobProfiles} 
+							jobs={this.props.jobs.jobs}
+							internship={this.props.internship.internship}
+							/>
 						} 
 					/>
 					<Route exact path='/community' component={

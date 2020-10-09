@@ -155,6 +155,82 @@ export const addTrendingProducts = (trendingProducts) => ({
   payload: trendingProducts
 });
 
+export const fetchJobs = () => (dispatch) => {
+
+  dispatch(jobsLoading(true));
+
+  return fetch('https://serieux-saucisson-31787.herokuapp.com/api/jobs/full-time')
+  .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        var error = new Error('Error ' + response.status + ': ' + response.statusText);
+        error.response = response;
+        throw error;
+      }
+    },
+    error => {
+          var errmess = new Error(error.message);
+          throw errmess;
+    })
+  .then(response => response.json())
+  .then(jobs => dispatch(addJobs(jobs)))
+  .catch(error => dispatch(jobsFailed(error.message)));
+}
+
+
+export const jobsLoading = () => ({
+  type: ActionTypes.GET_JOBS_LOADING
+});
+
+export const jobsFailed = (errmess) => ({
+  type: ActionTypes.GET_JOBS_FAILED,
+  payload: errmess
+});
+
+export const addJobs = (jobs) => ({
+  type: ActionTypes.GET_JOBS,
+  payload: jobs
+});
+
+export const fetchInternships = () => (dispatch) => {
+
+  dispatch(jobsLoading(true));
+
+  return fetch('https://serieux-saucisson-31787.herokuapp.com/api/jobs/internship')
+  .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        var error = new Error('Error ' + response.status + ': ' + response.statusText);
+        error.response = response;
+        throw error;
+      }
+    },
+    error => {
+          var errmess = new Error(error.message);
+          throw errmess;
+    })
+  .then(response => response.json())
+  .then(internships => dispatch(addInternships(internships)))
+  .catch(error => dispatch(internshipsFailed(error.message)));
+}
+
+
+export const internshipsLoading = () => ({
+  type: ActionTypes.GET_JOBS_LOADING
+});
+
+export const internshipsFailed = (errmess) => ({
+  type: ActionTypes.GET_JOBS_FAILED,
+  payload: errmess
+});
+
+export const addInternships = (jobs) => ({
+  type: ActionTypes.GET_JOBS,
+  payload: jobs
+});
+
 
 
 // export const fetchCommunityPosts = () => (dispatch) => {

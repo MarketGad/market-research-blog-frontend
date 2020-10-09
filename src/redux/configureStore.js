@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { Products, LaunchedToday, TrendingProducts } from './Products';
 import { JobProfiles } from './JobProfiles';
+import { Jobs, Internships } from './Jobs';
 
 export const ConfigureStore = () => {
     const store = createStore(
@@ -11,7 +12,8 @@ export const ConfigureStore = () => {
             todayLaunch: LaunchedToday,
             trending: TrendingProducts,
             jobProfiles: JobProfiles,
-            
+            jobs: Jobs,
+            internship: Internships,
         }),
         applyMiddleware(thunk, logger)
     );

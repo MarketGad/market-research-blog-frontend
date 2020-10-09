@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
-const Internshiplist = () => {
+const Internshiplist = (props) => {
 	const [ internships, setInternships ] = React.useState('');
 	const loadProducts = async () => {
 		try {
@@ -17,8 +17,8 @@ const Internshiplist = () => {
 		loadProducts();
 	}, []);
 
-	const showInternships = internships.length ? (
-		internships.map((internship, index) => {
+	const showInternships = props.internship.length ? (
+		props.internship.map((internship, index) => {
 			if (!/^https?:\/\//.test(internship.jobLink)) {
 				let weblink = 'https://' + internship.jobLink;
 				return <JobsandInternshipcard key={index} jobdetails={internship} weblink={weblink} />;
@@ -29,8 +29,8 @@ const Internshiplist = () => {
 	);
 	return (
 		<div>
-			{internships[0] && <div>{showInternships}</div>}
-			{!internships[0] && (
+			{props.internship[0] && <div>{showInternships}</div>}
+			{props.internship.length == 0 && (
 				<div>
 					<FadingLoader loadno={3} />
 				</div>

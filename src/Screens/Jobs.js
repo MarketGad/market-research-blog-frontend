@@ -10,9 +10,9 @@ const ListProduct = (props) => {
 				<div className='row'>
 					<div className='col s12 l8'>
 						<div className='job-page-head'>Trending jobs</div>
-						<Joblist />
+						<Joblist jobs={props.jobs}/>
 						<div className='product-page-head'>Internships</div>
-						<Internshiplist />
+						<Internshiplist internship={props.internship} />
 					</div>
 					<div className='col s12 l4 joblist'>
 						<div className='row' style={{ margin: '0', padding: '0' }}>

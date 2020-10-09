@@ -162,7 +162,7 @@ const ProductProfile = (props) => {
 					<Grid item xs={12} sm={12} md={9} className='product-details-right-container'>
 						<div>
 							<div className='product-head'>About</div>
-							<div style={{ padding: '10px 0' }} className='article-content'>
+							<div style={{ padding: '10px 0', textAlign: 'justify',  }} className='article-content'>
 								{product.detailedDescription}
 							</div>
 						</div>
