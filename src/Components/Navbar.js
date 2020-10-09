@@ -1,35 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AccountIcon from '@material-ui/icons/AccountCircle';
 import logo from './Favicon.jpg';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import ReputationPoint from './ReputaionPoints';
 
 const Navbar = () => {
 	const [ redirect, setRedirect ] = React.useState(false);
 	const [ reputation, setReputation ] = React.useState('');
+	const [ user, setUser ] = React.useState('');
 
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
 		Cookies.remove('session-id');
 	};
-	const getReputation = () => {
+	const loadUser = async () => {
 		const cookie = Cookies.get('session-id');
 		const config = {
 			headers: {
 				Authorization: `Bearer ${cookie}`
 			}
 		};
-		axios.get('https://serieux-saucisson-31787.herokuapp.com/api/user/profile', config).then(
-			(response) => {
-				setReputation(response.data.user.reputation);
-			},
-			(error) => {
-				console.log(error);
-			}
-		);
+		try {
+			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/user/profile', config);
+			const response = await res.json();
+			setReputation(response.user.reputation);
+			setUser(response.user);
+		} catch (err) {
+			console.error(err);
+		}
 	};
+	useEffect(() => {
+		loadUser();
+	}, []);
 	const show = () => {
 		const cookie = Cookies.get('session-id');
 		if (!cookie) {
@@ -41,13 +45,25 @@ const Navbar = () => {
 				</li>
 			);
 		} else {
-			getReputation();
 			return (
-				<li>
-					<a style={{ color: 'white', fontSize: '1em' }} onClick={removecookie} href='/'>
-						Logout
-					</a>
-				</li>
+				<div>
+					<li>
+						<a style={{ color: 'white', fontSize: '1em' }} onClick={removecookie} href='/'>
+							Logout
+						</a>
+					</li>
+					<li>
+						<Link
+							style={{ color: 'white', fontSize: '1em' }}
+							to={{
+								pathname: 'myprofile',
+								state: { user: user }
+							}}
+						>
+							My Profile
+						</Link>
+					</li>
+				</div>
 			);
 		}
 	};
@@ -58,7 +74,6 @@ const Navbar = () => {
 				<li>
 					<a href='/signin'>Login</a>
 				</li>
-				
 			);
 		} else {
 			return (
@@ -140,7 +155,7 @@ const Navbar = () => {
 									<li>
 										<a href='/discounts'>Discounts</a>
 									</li>
-									
+
 									<li>
 										<a href='/funding'>Funding</a>
 									</li>
@@ -152,7 +167,7 @@ const Navbar = () => {
 									<li>
 										<a href='/about'>About us</a>
 									</li>
-									
+
 									<li className='right'>
 										<div
 											style={{ padding: '0 25px 0 80px' }}
@@ -173,11 +188,7 @@ const Navbar = () => {
 					</nav>
 					<ul id='account-dropdown' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						{show()}
-						<li>
-							<a href='/MyProfile' style={{ color: 'white', fontSize: '1em' }}>
-								My Profile
-							</a>
-						</li>
+
 						<li>
 							<a href='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
 								Add product
