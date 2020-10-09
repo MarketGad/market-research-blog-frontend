@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Location from '@material-ui/icons/LocationOn';
+// import Location from '@material-ui/icons/LocationOn';
 import MailIcon from '@material-ui/icons/Mail';
 import ReputationPoint from '../Components/ReputaionPoints';
 

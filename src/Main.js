@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
-import ReactGa from 'react-ga';
+import React from 'react';
 import Navbar from './Components/Navbar';
 import Home from './Screens/Home';
 import Startup from './Screens/Startup';
 import Venturehack from './Screens/VentureHack';
 import Industry from './Screens/Industry';
-import { Switch, BrowserRouter, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import Form from './Screens/Form';
 import AboutUs from './Screens/Aboutus';
 import Dashboard from './Screens/dashboard';

@@ -19,7 +19,7 @@ function loadScript (src) {
 const __DEV__ = document.domain === 'localhost';
 const HireNow = (props) => {
 	const [ readytohire, setReadytohire ] = React.useState('');
-	const [ paymentsuccess, setpaymentsuccess ] = React.useState('');
+	// const [ paymentsuccess, setpaymentsuccess ] = React.useState('');
 	const token = Cookies.get('session-id');
 	const hiresuccess = (id) => {
 		console.log(id);

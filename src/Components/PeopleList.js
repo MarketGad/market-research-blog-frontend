@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FadingLoader from '../Components/FadingLoader';
 import { Link } from 'react-router-dom';
 import ReputationPoint from './ReputaionPoints';
@@ -90,7 +90,7 @@ const PeopleList = (props) => {
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{props.jobProfiles && <div>{showPeople}</div>}
-			{props.jobProfiles.length == 0 && (
+			{props.jobProfiles.length === 0 && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={6} />
 				</div>

@@ -33,7 +33,7 @@ const ListProduct = (props) => {
 								</div>
 							</div>
 						</div>
-						<PeopleList jobProfiles={props.jobProfiles == undefined ? [] : props.jobProfiles}/>
+						<PeopleList jobProfiles={props.jobProfiles === undefined ? [] : props.jobProfiles}/>
 					</div>
 				</div>
 			</div>

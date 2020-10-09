@@ -1,21 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
 const Internshiplist = (props) => {
-	const [ internships, setInternships ] = React.useState('');
-	const loadProducts = async () => {
-		try {
-			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/jobs/internship');
-			const data = await res.json();
-			setInternships(data);
-		} catch (err) {
-			console.error(err);
-		}
-	};
-	useEffect(() => {
-		loadProducts();
-	}, []);
 
 	const showInternships = props.internship.length ? (
 		props.internship.map((internship, index) => {
@@ -30,7 +17,7 @@ const Internshiplist = (props) => {
 	return (
 		<div>
 			{props.internship[0] && <div>{showInternships}</div>}
-			{props.internship.length == 0 && (
+			{props.internship.length === 0 && (
 				<div>
 					<FadingLoader loadno={3} />
 				</div>
