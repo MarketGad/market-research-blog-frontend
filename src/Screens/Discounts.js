@@ -7,7 +7,7 @@ const Discounts = () => {
 	};
 	return (
 		<div className='container'>
-			<div className='center article-content'>
+			<div className='product-content center'>
 				<h5>
 					Burn your interaction points to join the exclusive club and earn discounts on your subscriptions
 				</h5>

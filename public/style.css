@@ -828,6 +828,7 @@ nav {
 }
 .product-name {
 	font-weight: 600;
+	text-align: justify;
 }
 
 .product-right-container {
@@ -893,6 +894,12 @@ nav {
 }
 .trending-product-left-container {
 	width: 83%;
+}
+/* -----community----------- */
+.trend-desc {
+	font-size: 1.05em;
+	padding: 4px 0;
+	text-align: justify;
 }
 /*---------------------comment------------------*/
 .addComment {
