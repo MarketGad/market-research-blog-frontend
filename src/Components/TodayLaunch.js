@@ -177,7 +177,7 @@ const TodayLaunch = (props) => {
 		return (
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 				{props.todayLaunch && <div>{showProducts}</div>}
-				{!props.todayLaunch && (
+				{props.todayLaunch.length == 0 && (
 					<div>
 						<FadingLoader loadno={3} />
 					</div>

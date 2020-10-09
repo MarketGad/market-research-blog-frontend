@@ -177,7 +177,7 @@ const ProductList = (props) => {
 		return (
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 				{props.products && <div>{showProducts}</div>}
-				{!props.products && (
+				{props.products.length == 0 && (
 					<div>
 						<FadingLoader loadno={5} />
 					</div>
