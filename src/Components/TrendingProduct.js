@@ -109,7 +109,7 @@ const TrendingProduct = (props) => {
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{props.trending && <div>{showProducts}</div>}
-			{!props.trending && (
+			{props.trending.length == 0 && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={3} />
 				</div>

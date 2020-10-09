@@ -90,7 +90,7 @@ const PeopleList = (props) => {
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{props.jobProfiles && <div>{showPeople}</div>}
-			{!props.jobProfiles && (
+			{props.jobProfiles.length == 0 && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={6} />
 				</div>
