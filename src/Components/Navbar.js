@@ -39,18 +39,18 @@ const Navbar = () => {
 		if (!cookie) {
 			return (
 				<li>
-					<a style={{ color: 'white', fontSize: '1em' }} href='/signin'>
+					<Link to='/signin' style={{ color: 'white', fontSize: '1em' }}>
 						Login
-					</a>
+					</Link>
 				</li>
 			);
 		} else {
 			return (
 				<div>
 					<li>
-						<a style={{ color: 'white', fontSize: '1em' }} onClick={removecookie} href='/'>
+						<Link to='/' style={{ color: 'white', fontSize: '1em' }} onClick={removecookie}>
 							Logout
-						</a>
+						</Link>
 					</li>
 					<li>
 						<Link
@@ -72,15 +72,15 @@ const Navbar = () => {
 		if (!cookie) {
 			return (
 				<li>
-					<a href='/signin'>Login</a>
+					<Link to='/signin'>Login</Link>
 				</li>
 			);
 		} else {
 			return (
 				<li>
-					<a onClick={removecookie} href='/'>
+					<Link to='/' onClick={removecookie}>
 						Logout
-					</a>
+					</Link>
 				</li>
 			);
 		}
@@ -96,10 +96,10 @@ const Navbar = () => {
 				<div className='navbar-fixed'>
 					<nav className='nav-center' role='navigation'>
 						<div className='nav-wrapper'>
-							<a href='/' data-target='mobile-demo' className='sidenav-trigger'>
+							<Link to='/' data-target='mobile-demo' className='sidenav-trigger'>
 								<i className='material-icons'>menu</i>
-							</a>
-							<a href='/' className='brand-logo logo sidenav-trigger'>
+							</Link>
+							<Link to='/' className='brand-logo logo sidenav-trigger'>
 								<img
 									height='55px'
 									width='60px'
@@ -107,35 +107,35 @@ const Navbar = () => {
 									src={logo}
 									alt='logo-mob'
 								/>
-							</a>
+							</Link>
 							<a className='right sidenav-trigger'>
 								{reputation && <ReputationPoint ReputationPoint={reputation} />}
 							</a>
 
 							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 								<li>
-									<a
-										href='/industry'
+									<Link
+										to='/industry'
 										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Industry
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href='/startup'
+									<Link
+										to='/startup'
 										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Start-ups
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href='/venturehack'
+									<Link
+										to='/venturehack'
 										style={{ color: 'white', fontSize: '1.1em', paddingLeft: '25px' }}
 									>
 										Venture Hacks
-									</a>
+									</Link>
 								</li>
 							</ul>
 							<div className='navmenu'>
@@ -145,29 +145,29 @@ const Navbar = () => {
 									className='hide-on-med-and-down'
 								>
 									<li>
-										<a className='logo' href='/'>
+										<Link to='/' className='logo'>
 											<img style={{ position: 'relative' }} src={logo} alt='logo' />
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a href='/jobs'>Jobs</a>
+										<Link to='/jobs'>Jobs</Link>
 									</li>
 									<li>
-										<a href='/discounts'>Bazaar</a>
+										<Link to='/discounts'>Bazaar</Link>
 									</li>
 									<li>
-										<a href='/community'>Community</a>
+										<Link to='/community'>Community</Link>
 									</li>
 									<li>
-										<a href='/funding'>Funding</a>
+										<Link to='/funding'>Funding</Link>
 									</li>
 									<li>
-										<a href='/industry' className='dropdown-trigger' data-target='dropdown1'>
+										<Link to='/industry' className='dropdown-trigger' data-target='dropdown1'>
 											Research
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a href='/about'>About us</a>
+										<Link to='/about'>About us</Link>
 									</li>
 
 									<li className='right'>
@@ -192,54 +192,54 @@ const Navbar = () => {
 						{show()}
 
 						<li>
-							<a href='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
+							<Link to='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
 								Add product
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href='/registerforjobs' style={{ color: 'white', fontSize: '1em' }}>
+							<Link to='/registerforjobs' style={{ color: 'white', fontSize: '1em' }}>
 								Add job profile
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a href='/addjobs' style={{ color: 'white', fontSize: '1em' }}>
+							<Link to='/addjobs' style={{ color: 'white', fontSize: '1em' }}>
 								Add jobs/interships
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>
 				<ul id='dropdown2' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 					<li>
-						<a href='/industry' style={{ color: 'white' }}>
+						<Link to='/industry' style={{ color: 'white' }}>
 							Industry
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href='/startup' style={{ color: 'white' }}>
+						<Link to='/startup' style={{ color: 'white' }}>
 							Start-ups
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href='/venturehack' style={{ color: 'white' }}>
+						<Link to='/venturehack' style={{ color: 'white' }}>
 							Venture Hacks
-						</a>
+						</Link>
 					</li>
 				</ul>
 				<ul className='sidenav' id='mobile-demo'>
 					<li>
-						<a href='/'>Home</a>
+						<Link to='/'>Home</Link>
 					</li>
 					<li>
-						<a href='/funding'>Funding</a>
+						<Link to='/funding'>Funding</Link>
 					</li>
 					<li>
-						<a href='/jobs'>Jobs</a>
+						<Link to='/jobs'>Jobs</Link>
 					</li>
 					<li>
-						<a href='/discounts'>Bazaar</a>
+						<Link to='/discounts'>Bazaar</Link>
 					</li>
 					<li>
-						<a href='/community'>Community</a>
+						<Link path='/community'>Community</Link>
 					</li>
 					<li>
 						<a className='dropdown-trigger1' data-target='dropdown2'>
@@ -251,19 +251,19 @@ const Navbar = () => {
 						<a onClick={handleClickOpen}>Dashboard</a>
 					</li> */}
 					<li>
-						<a href='/about'>About us</a>
+						<Link to='/about'>About us</Link>
 					</li>
 					<li>
-						<a href='/registerforproduct'>Add product</a>
+						<Link to='/registerforproduct'>Add product</Link>
 					</li>
 					<li>
-						<a href='/registerforjobs'>Add job profile</a>
+						<Link to='/registerforjobs'>Add job profile</Link>
 					</li>
 					<li>
-						<a href='/addjobs'>Add jobs/interships</a>
+						<Link to='/addjobs'>Add jobs/interships</Link>
 					</li>
 					<li>
-						<a href='/MyProfile'>My Profile</a>
+						<Link to='/MyProfile'>My Profile</Link>
 					</li>
 					{showmobile()}
 				</ul>
