@@ -834,7 +834,8 @@ nav {
 	width: 90%;
 }
 .product-details-right-container {
-	padding: 0 3%;
+	padding: 0 5%;
+	text-align: justify;
 }
 .product-link {
 	font-size: 1.25em;
@@ -871,7 +872,7 @@ nav {
 }
 .contact-container {
 	margin-top: 15%;
-	margin-left: 17%;
+	margin-left: 15%;
 }
 .details-page-logo {
 	width: 200px;
@@ -1378,7 +1379,7 @@ nav {
 	}
 	.contact-container {
 		margin-top: 8%;
-		margin-left: 12%;
+		margin-left: 10%;
 	}
 	.profile-container {
 		margin-top: 5%;
@@ -1453,12 +1454,10 @@ nav {
 	}
 }
 
-@media only screen and (min-width: 960px){
-    .myprofile-container {
+@media only screen and (min-width: 960px) {
+	.myprofile-container {
 		margin-left: 13%;
-	
-        margin-top: 8%;
+
+		margin-top: 8%;
 	}
-	
-		 
 }
