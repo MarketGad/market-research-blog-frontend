@@ -1,5 +1,5 @@
 import React from 'react';
-import Joblist from '../Components/Joblist';
+// import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
 
 const Community = (props) => {

@@ -25,7 +25,7 @@ class Products extends React.Component{
 							</h6>
 							<TodayLaunch todayLaunch={this.props.todayLaunch} />
 							<div className='product-page-head'>Most liked</div>
-							<ProductList products={this.props.products == undefined ? [] : this.props.products} />
+							<ProductList products={this.props.products === undefined ? [] : this.props.products} />
 						</div>
 						<div className='col s12 l4 joblist'>
 							<div className='add-mobile-btn'>
@@ -50,7 +50,7 @@ class Products extends React.Component{
 									</div>
 								</div>
 							</div>
-							<PeopleList  jobProfiles={this.props.jobProfiles == undefined ? [] : this.props.jobProfiles}/>
+							<PeopleList  jobProfiles={this.props.jobProfiles === undefined ? [] : this.props.jobProfiles}/>
 						</div>
 					</div>
 				</div>

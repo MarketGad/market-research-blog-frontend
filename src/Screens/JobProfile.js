@@ -71,7 +71,7 @@ const JobProfile = (props) => {
 										<MailIcon />
 									</span>
 									<span>
-										<a className='links' href='#'>
+										<a className='links' MAILTO={UserProfile.user.email}>
 											{UserProfile.user.email}
 										</a>
 									</span>

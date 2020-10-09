@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Cookies from 'js-cookie';
 import axios from 'axios';
-import ShowComment from './ShowComment';
 import FadingLoader from './FadingLoader';
 
 import { Link, Redirect } from 'react-router-dom';
@@ -177,7 +176,7 @@ const ProductList = (props) => {
 		return (
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 				{props.products && <div>{showProducts}</div>}
-				{props.products.length == 0 && (
+				{props.products.length === 0 && (
 					<div>
 						<FadingLoader loadno={5} />
 					</div>

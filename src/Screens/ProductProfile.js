@@ -50,6 +50,8 @@ const ProductProfile = (props) => {
 			comments.map((comment) => {
 				if (comment) {
 					return <ShowComment comment={comment} />;
+				}else{
+					return <div></div>;
 				}
 			})
 		) : (

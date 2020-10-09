@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AccountIcon from '@material-ui/icons/AccountCircle';
 import logo from './Favicon.jpg';
-import axios from 'axios';
+// import axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import ReputationPoint from './ReputaionPoints';

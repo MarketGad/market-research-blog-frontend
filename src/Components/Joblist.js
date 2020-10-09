@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
@@ -17,7 +17,7 @@ const Joblist = (props) => {
 	return (
 		<div>
 			{props.jobs[0] && <div>{showJobs}</div>}
-			{props.jobs.length == 0 && (
+			{props.jobs.length === 0 && (
 				<div>
 					<FadingLoader loadno={3} />
 				</div>

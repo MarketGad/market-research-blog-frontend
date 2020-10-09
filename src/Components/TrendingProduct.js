@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
-import Cookies from 'js-cookie';
-import axios from 'axios';
-import ShowComment from './ShowComment';
+import React from 'react';
+// import Cookies from 'js-cookie';
 import FadingLoader from './FadingLoader';
 
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const TrendingProduct = (props) => {
-	const token = Cookies.get('session-id');
 	// const [ products, setProducts ] = React.useState('');
 
 	const ProductCard = (props) => {
@@ -108,7 +105,7 @@ const TrendingProduct = (props) => {
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 			{props.trending && <div>{showProducts}</div>}
-			{props.trending.length == 0 && (
+			{props.trending.length === 0 && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={3} />
 				</div>
