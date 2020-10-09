@@ -50,7 +50,7 @@ import Community from './Screens/Community';
 import { connect } from 'react-redux';
 import { fetchProducts, fetchJobProfiles, fetchTodayLaunch, fetchTrendingProducts, fetchJobs, fetchInternships } from './redux/ActionCreator';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return {
 		products: state.products,
 		jobProfiles: state.jobProfiles,
@@ -72,29 +72,31 @@ const mapDispatchToProps = dispatch => ({
 });
 
 class MainApp extends React.Component {
-
-	componentDidMount=async ()=>  {
-		console.log("Mounted Main");
+	componentDidMount = async () => {
+		console.log('Mounted Main');
 		await this.props.fetchProducts();
 		await this.props.fetchJobProfiles();
 		await this.props.fetchTodayLaunch();
 		await this.props.fetchTrendingProducts();
 		await this.props.fetchJobs();
 		await this.props.fetchInternships();
-	}
+	};
 	render(){
 		return (
 			<div className='App'>
 				<Navbar />
 				<Switch>
-					<Route exact path='/' component={
-							() => <Products 
-							products={this.props.products.products} 
-							jobProfiles={this.props.jobProfiles.jobProfiles} 
-							todayLaunch={this.props.todayLaunch.todayLaunch} 
-							trending={this.props.trending.trending}
+					<Route
+						exact
+						path='/'
+						component={() => (
+							<Products
+								products={this.props.products.products}
+								jobProfiles={this.props.jobProfiles.jobProfiles}
+								todayLaunch={this.props.todayLaunch.todayLaunch}
+								trending={this.props.trending.trending}
 							/>
-						} 
+						)}
 					/>
 					<Route exact path='/form' component={Form} />
 					<Route exact path='/whatwedo' component={Whatwedo} />
@@ -108,19 +110,27 @@ class MainApp extends React.Component {
 					<Route exact path='/signup' component={SignUp} />
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
-					<Route exact path='/jobs' component={
-							()=> <Jobs 
-							jobProfiles={this.props.jobProfiles.jobProfiles} 
-							jobs={this.props.jobs.jobs}
-							internship={this.props.internship.internship}
+					<Route 
+						exact 
+						path='/jobs' 
+						component={ () => (
+							<Jobs 
+								jobProfiles={this.props.jobProfiles.jobProfiles} 
+								jobs={this.props.jobs.jobs}
+								internship={this.props.internship.internship}
 							/>
-						} 
+						)}
+					/> 
+					<Route
+						exact
+						path='/community'
+						component={() => (
+							<Community 
+								jobProfiles={this.props.jobProfiles.jobProfiles} 
+							/>
+						)}
 					/>
-					<Route exact path='/community' component={
-							()=> <Community jobProfiles={this.props.jobProfiles.jobProfiles} />
-						} 
-					/>
-					<Route exact path='/MyProfile' component={MyProfile} />
+					<Route exact path='/profile' component={MyProfile} />
 					<Route exact path='/addjobs' component={JobForm} />
 					<Route exact path='/discounts' component={Discounts} />
 					<Route exact path='/registerforjobs' component={RegisterForJobs} />
@@ -155,4 +165,3 @@ class MainApp extends React.Component {
 	}
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainApp));
-

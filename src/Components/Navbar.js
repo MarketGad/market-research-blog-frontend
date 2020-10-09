@@ -56,7 +56,7 @@ const Navbar = () => {
 						<Link
 							style={{ color: 'white', fontSize: '1em' }}
 							to={{
-								pathname: 'myprofile',
+								pathname: 'profile',
 								state: { user: user }
 							}}
 						>
@@ -79,7 +79,14 @@ const Navbar = () => {
 			return (
 				<div>
 					<li>
-						<Link to='/MyProfile'>My Profile</Link>
+						<Link
+							to={{
+								pathname: 'profile',
+								state: { user: user }
+							}}
+						>
+							My Profile
+						</Link>
 					</li>
 					<li>
 						<Link to='/' onClick={removecookie}>
