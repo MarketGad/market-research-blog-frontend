@@ -6,9 +6,9 @@ import FadingLoader from './FadingLoader';
 
 import { Link, Redirect } from 'react-router-dom';
 
-const ProductList = () => {
+const ProductList = (props) => {
 	const token = Cookies.get('session-id');
-	const [ products, setProducts ] = React.useState('');
+	// const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
 	if (token) {
 		const token_id = JSON.parse(atob(token.split('.')[1]));
@@ -161,21 +161,9 @@ const ProductList = () => {
 			</div>
 		);
 	};
-	const loadProducts = async () => {
-		try {
-			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/productdetails');
-			const data = await res.json();
-			setProducts(data);
-		} catch (err) {
-			console.error(err);
-		}
-	};
-	useEffect(() => {
-		loadProducts();
-	}, []);
 
-	const showProducts = products.length ? (
-		products.map((product, index) => {
+	const showProducts = props.products.length ? (
+		props.products.map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
 				return <ProductCard key={index} product={product} weblink={weblink} />;
@@ -188,8 +176,8 @@ const ProductList = () => {
 	else
 		return (
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
-				{products && <div>{showProducts}</div>}
-				{!products && (
+				{props.products && <div>{showProducts}</div>}
+				{!props.products && (
 					<div>
 						<FadingLoader loadno={5} />
 					</div>

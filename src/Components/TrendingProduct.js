@@ -6,9 +6,9 @@ import FadingLoader from './FadingLoader';
 
 import { Link, Redirect } from 'react-router-dom';
 
-const TrendingProduct = () => {
+const TrendingProduct = (props) => {
 	const token = Cookies.get('session-id');
-	const [ products, setProducts ] = React.useState('');
+	// const [ products, setProducts ] = React.useState('');
 
 	const ProductCard = (props) => {
 		const product = props.product;
@@ -93,21 +93,10 @@ const TrendingProduct = () => {
 			</div>
 		);
 	};
-	const loadProducts = async () => {
-		try {
-			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/hotproducts');
-			const data = await res.json();
-			setProducts(data);
-		} catch (err) {
-			console.error(err);
-		}
-	};
-	useEffect(() => {
-		loadProducts();
-	}, []);
 
-	const showProducts = products.length ? (
-		products.slice(0).reverse().map((product, index) => {
+
+	const showProducts = props.trending.length ? (
+		props.trending.slice(0).reverse().map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
 				return <ProductCard key={index} product={product} weblink={weblink} />;
@@ -119,8 +108,8 @@ const TrendingProduct = () => {
 
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
-			{products && <div>{showProducts}</div>}
-			{!products && (
+			{props.trending && <div>{showProducts}</div>}
+			{!props.trending && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={3} />
 				</div>

@@ -3,7 +3,7 @@ import Internshiplist from '../Components/internshiplist';
 import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
 
-const ListProduct = () => {
+const ListProduct = (props) => {
 	return (
 		<div>
 			<div className='product-job-page-container'>
@@ -33,7 +33,7 @@ const ListProduct = () => {
 								</div>
 							</div>
 						</div>
-						<PeopleList />
+						<PeopleList jobProfiles={props.jobProfiles == undefined ? [] : props.jobProfiles}/>
 					</div>
 				</div>
 			</div>

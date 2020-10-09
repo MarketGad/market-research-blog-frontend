@@ -2,7 +2,7 @@ import React from 'react';
 import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
 
-const Community = () => {
+const Community = (props) => {
 	return (
 		<div style={{ backgroundColor: 'rgb(249, 249, 249)' }}>
 			<div className='product-job-page-container'>
@@ -27,7 +27,7 @@ const Community = () => {
 						<div className='product-page-head left-head' style={{ paddingTop: '5px' }}>
 							Leaderboard
 						</div>
-						<PeopleList />
+						<PeopleList jobProfiles={props.jobProfiles} />
 					</div>
 				</div>
 			</div>

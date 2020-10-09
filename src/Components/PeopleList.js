@@ -76,23 +76,9 @@ const PeopleCard = (props) => {
 		</div>
 	);
 };
-const PeopleList = () => {
-	const [ people, setPeople ] = React.useState('');
-
-	const loadProducts = async () => {
-		try {
-			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles');
-			const data = await res.json();
-			setPeople(data);
-		} catch (err) {
-			console.log(err);
-		}
-	};
-	useEffect(() => {
-		loadProducts();
-	}, []);
-	const showPeople = people.length ? (
-		people.map((user, i) => {
+const PeopleList = (props) => {
+	const showPeople = props.jobProfiles.length ? (
+		props.jobProfiles.map((user, i) => {
 			if (!/^https?:\/\//.test(user.linkedIn)) {
 				let weblink = 'https://' + user.linkedIn;
 				return <PeopleCard key={i} user={user} linkedIn={weblink} />;
@@ -103,8 +89,8 @@ const PeopleList = () => {
 	);
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
-			{people && <div>{showPeople}</div>}
-			{!people && (
+			{props.jobProfiles && <div>{showPeople}</div>}
+			{!props.jobProfiles && (
 				<div>
 					<FadingLoader imagetype='circle' loadno={6} />
 				</div>
