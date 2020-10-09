@@ -15,11 +15,11 @@ const MyProfile = (props) => {
 				<Grid item xs={12} md={3}>
 					<div className='image' style={{ textAlign: 'center' }}>
 						<img
-							src='https://i.pinimg.com/474x/44/06/06/4406065a7f788f941c98fccdde98735e.jpg'
+							src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiUY7RQ-eUe_fmk6--gEvDXvallGC7ZA7suQ&usqp=CAU'
 							alt='ggg'
 							style={{ width: '200px', height: '200px', borderRadius: '7px' }}
 						/>
-						<div>
+						<div style={{ padding: '5px' }}>
 							<span>
 								<ReputationPoint ReputationPoint={user.reputation} />
 							</span>
