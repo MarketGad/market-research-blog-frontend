@@ -153,9 +153,11 @@ const Navbar = () => {
 										<a href='/jobs'>Jobs</a>
 									</li>
 									<li>
-										<a href='/discounts'>Discounts</a>
+										<a href='/discounts'>Bazaar</a>
 									</li>
-
+									<li>
+										<a href='/community'>Community</a>
+									</li>
 									<li>
 										<a href='/funding'>Funding</a>
 									</li>
@@ -234,7 +236,10 @@ const Navbar = () => {
 						<a href='/jobs'>Jobs</a>
 					</li>
 					<li>
-						<a href='/discounts'>Discounts</a>
+						<a href='/discounts'>Bazaar</a>
+					</li>
+					<li>
+						<a href='/community'>Community</a>
 					</li>
 					<li>
 						<a className='dropdown-trigger1' data-target='dropdown2'>

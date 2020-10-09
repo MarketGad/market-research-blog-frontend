@@ -45,6 +45,7 @@ import ProductProfile from './Screens/ProductProfile';
 import JobProfile from './Screens/JobProfile';
 import VerifyOtp from './Screens/VerifyOtp';
 import Discounts from './Screens/Discounts';
+import Community from './Screens/Community';
 
 function App () {
 	useEffect(() => {
@@ -70,8 +71,8 @@ function App () {
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
 					<Route exact path='/jobs' component={Jobs} />
+					<Route exact path='/community' component={Community} />
 					<Route exact path='/MyProfile' component={MyProfile} />
-
 					<Route exact path='/addjobs' component={JobForm} />
 					<Route exact path='/discounts' component={Discounts} />
 					<Route exact path='/registerforjobs' component={RegisterForJobs} />
