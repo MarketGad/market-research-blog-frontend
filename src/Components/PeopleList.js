@@ -85,7 +85,7 @@ const PeopleList = (props) => {
 			} else return <PeopleCard key={i} user={user} linkedIn={user.linkedIn} />;
 		})
 	) : (
-		<div className='center'>Loading... </div>
+		<div className='center' />
 	);
 	return (
 		<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>

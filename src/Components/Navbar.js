@@ -77,11 +77,16 @@ const Navbar = () => {
 			);
 		} else {
 			return (
-				<li>
-					<Link to='/' onClick={removecookie}>
-						Logout
-					</Link>
-				</li>
+				<div>
+					<li>
+						<Link to='/MyProfile'>My Profile</Link>
+					</li>
+					<li>
+						<Link to='/' onClick={removecookie}>
+							Logout
+						</Link>
+					</li>
+				</div>
 			);
 		}
 	};
@@ -158,9 +163,9 @@ const Navbar = () => {
 									<li>
 										<Link to='/community'>Community</Link>
 									</li>
-									<li>
+									{/* <li>
 										<Link to='/funding'>Funding</Link>
-									</li>
+									</li> */}
 									<li>
 										<Link to='/industry' className='dropdown-trigger' data-target='dropdown1'>
 											Research
@@ -229,9 +234,9 @@ const Navbar = () => {
 					<li>
 						<Link to='/'>Home</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link to='/funding'>Funding</Link>
-					</li>
+					</li> */}
 					<li>
 						<Link to='/jobs'>Jobs</Link>
 					</li>
@@ -261,9 +266,6 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link to='/addjobs'>Add jobs/interships</Link>
-					</li>
-					<li>
-						<Link to='/MyProfile'>My Profile</Link>
 					</li>
 					{showmobile()}
 				</ul>

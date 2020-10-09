@@ -170,7 +170,7 @@ const TodayLaunch = (props) => {
 			} else return <ProductCard key={index} product={product} weblink={product.websiteLink} />;
 		})
 	) : (
-		<div className='center'> Loading... </div>
+		<div className='center' />
 	);
 	if (readytoupvote === false) return <Redirect to='/signin' />;
 	else

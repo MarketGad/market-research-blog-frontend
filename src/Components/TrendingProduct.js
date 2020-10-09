@@ -94,7 +94,6 @@ const TrendingProduct = (props) => {
 		);
 	};
 
-
 	const showProducts = props.trending.length ? (
 		props.trending.slice(0).reverse().map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
@@ -103,7 +102,7 @@ const TrendingProduct = (props) => {
 			} else return <ProductCard key={index} product={product} weblink={product.websiteLink} />;
 		})
 	) : (
-		<div className='center'> Loading... </div>
+		<div className='center' />
 	);
 
 	return (
