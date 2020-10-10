@@ -218,16 +218,16 @@ export const fetchInternships = () => (dispatch) => {
 
 
 export const internshipsLoading = () => ({
-  type: ActionTypes.GET_JOBS_LOADING
+  type: ActionTypes.GET_INTERNSHIPS_LOADING
 });
 
 export const internshipsFailed = (errmess) => ({
-  type: ActionTypes.GET_JOBS_FAILED,
+  type: ActionTypes.GET_INTERNSHIPS_FAILED,
   payload: errmess
 });
 
 export const addInternships = (jobs) => ({
-  type: ActionTypes.GET_JOBS,
+  type: ActionTypes.GET_INTERNSHIPS,
   payload: jobs
 });
 
