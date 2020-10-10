@@ -15,7 +15,10 @@ const Community = (props) => {
 							</div>
 							<div className='col s4'>
 								<div className='right-align' style={{ paddingTop: '10px' }}>
-									<a className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn' href='#'>
+									<a
+										className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn'
+										href='/addtrend'
+									>
 										Start a trend
 									</a>
 								</div>

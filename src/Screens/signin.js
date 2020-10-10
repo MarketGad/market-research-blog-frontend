@@ -55,9 +55,8 @@ export default function SignIn () {
 		}).then((response) => {
 			console.log(response);
 			if (response.data.success) {
-				setLoginsuccess(true);
 				Cookies.set('session-id', response.data['token']);
-				window.location.reload(false);
+				setLoginsuccess(true);
 			}
 			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
 		});
@@ -78,9 +77,8 @@ export default function SignIn () {
 				(response) => {
 					// console.log(response);
 					if (response.data.success) {
-						setLoginsuccess(true);
 						Cookies.set('session-id', response.data['token']);
-						window.location.reload(false);
+						setLoginsuccess(true);
 					}
 				},
 				(error) => {
