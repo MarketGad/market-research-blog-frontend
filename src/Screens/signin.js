@@ -44,13 +44,12 @@ export default function SignIn () {
 	const [ password, setPassword ] = React.useState('');
 	const [ otpsuccess, setOtpsuccess ] = React.useState(true);
 	const [ errMsg, setErrMsg ] = useState('');
-
 	const responseSuccessGoogle = (response) => {
 		console.log(response);
 		console.log(response.tokenId);
 		axios({
 			method: 'POST',
-			url: 'https://serieux-saucisson-31787.herokuapp.com/api/user/googlelogin',
+			url: process.env.REACT_APP_BASEURL + '/api/user/googlelogin',
 			data: { tokenId: response.tokenId }
 		}).then((response) => {
 			console.log(response);
@@ -69,7 +68,7 @@ export default function SignIn () {
 	const submitHandler = (e) => {
 		e.preventDefault();
 		axios
-			.post('https://serieux-saucisson-31787.herokuapp.com/api/user/loginUser', {
+			.post(process.env.REACT_APP_BASEURL + '/api/user/loginUser', {
 				email: email.toLowerCase(),
 				password: password
 			})

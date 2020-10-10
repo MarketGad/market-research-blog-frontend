@@ -49,9 +49,8 @@ export default function RegisterForProduct () {
 	// const token = Cookies.get('session-id');
 
 	const classes = useStyles();
-	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+	const LoginCheck = Cookies.get('session-id');
 	const [ fileInputState, setFileInputState ] = React.useState('');
-	const [ selectedFile, setSelectedFile ] = React.useState('');
 	const [ previewSource, setPreviewSource ] = React.useState('');
 	const [ RegisterProductSuccess, setRegisterProductSuccess ] = React.useState(false);
 	const [ name, setName ] = React.useState('');
@@ -66,7 +65,6 @@ export default function RegisterForProduct () {
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0];
 		previewFile(file);
-		setSelectedFile(file);
 		setFileInputState(e.target.value);
 	};
 
@@ -88,7 +86,7 @@ export default function RegisterForProduct () {
 			};
 			axios
 				.post(
-					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails',
+					process.env.REACT_APP_BASEURL + '/api/productdetails',
 					{
 						logo: previewSource,
 						name: name,

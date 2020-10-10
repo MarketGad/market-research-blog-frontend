@@ -52,7 +52,7 @@ export default function SignUp () {
 		console.log(response.tokenId);
 		axios({
 			method: 'POST',
-			url: 'https://serieux-saucisson-31787.herokuapp.com/api/user/googlelogin',
+			url: process.env.REACT_APP_BASEURL + '/api/user/googlelogin',
 			data: { tokenId: response.tokenId }
 		}).then((response) => {
 			console.log(response);
@@ -72,7 +72,7 @@ export default function SignUp () {
 		e.preventDefault();
 		if (password === confirmPassword) {
 			axios
-				.post('https://serieux-saucisson-31787.herokuapp.com/api/user/signupUser', {
+				.post(process.env.REACT_APP_BASEURL + '/api/user/signupUser', {
 					email: email.toLowerCase(),
 					password: password,
 					firstname: first_name,

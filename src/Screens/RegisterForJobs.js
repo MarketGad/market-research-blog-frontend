@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 import Chip from '@material-ui/core/Chip';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Redirect } from 'react-router-dom';
-import Cookies, { set } from 'js-cookie';
+import Cookies from 'js-cookie';
 import ThreeDotLoad from '../Components/ThreeDotLoad';
 
 function Copyright () {
@@ -63,9 +63,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function RegisterForJobs () {
 	const classes = useStyles();
-	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+	const LoginCheck = Cookies.get('session-id');
 	const [ fileInputState, setFileInputState ] = React.useState('');
-	const [ selectedFile, setSelectedFile ] = React.useState('');
 	const [ previewSource, setPreviewSource ] = React.useState('');
 	const [ RegisterJobSuccess, setRegisterJobSuccess ] = React.useState(false);
 	const [ passionate, setPassionate ] = React.useState('');
@@ -81,7 +80,6 @@ export default function RegisterForJobs () {
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0];
 		previewFile(file);
-		setSelectedFile(file);
 		setFileInputState(e.target.value);
 	};
 
@@ -114,7 +112,7 @@ export default function RegisterForJobs () {
 			profilePic: previewSource
 		};
 		setLoad(true);
-		axios.post('https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles', data, config).then(
+		axios.post(process.env.REACT_APP_BASEURL + '/api/jobprofiles', data, config).then(
 			(response) => {
 				if (response.status === 200) {
 					setRegisterJobSuccess(true);

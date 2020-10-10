@@ -50,8 +50,8 @@ const ProductProfile = (props) => {
 			comments.map((comment) => {
 				if (comment) {
 					return <ShowComment comment={comment} />;
-				}else{
-					return <div></div>;
+				} else {
+					return <div />;
 				}
 			})
 		) : (
@@ -72,7 +72,7 @@ const ProductProfile = (props) => {
 			};
 			axios
 				.post(
-					'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' + id + '/comments',
+					process.env.REACT_APP_BASEURL + '/api/productdetails/' + id + '/comments',
 					{
 						comment: comment
 					},
