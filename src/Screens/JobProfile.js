@@ -9,7 +9,7 @@ import HireNow from '../Components/HireNow';
 import ReputationPoint from '../Components/ReputaionPoints';
 
 const DisplayArray = (props) => {
-	if (props.data) {
+	if (props.data.length !== 0) {
 		const showdata = props.data.map((data) => {
 			if (data) {
 				return <div>{data}</div>;
@@ -123,7 +123,7 @@ const JobProfile = (props) => {
 							<div className='profile-section'>
 								<p className='product-subhead'>Experience</p>
 								<p className='product-content'>
-									<DisplayArray data={UserProfile.experience} />
+									<DisplayArray data={UserProfile.experience[0] === '' ? ["Fresher", "0 - 2 yrs"] : UserProfile.experience} />
 								</p>
 							</div>
 							<div className='profile-section'>

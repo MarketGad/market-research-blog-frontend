@@ -28,7 +28,7 @@ const PeopleCard = (props) => {
 						{user.skills[0]}
 						<br />
 						<b>Experience: </b>
-						{user.experience[0]}
+						{user.experience[0] == '' ? "0 - 2 yrs" : user.experience[0]}
 						<br />
 						<div
 							className='secondary-content'
