@@ -14,6 +14,7 @@ const Navbar = () => {
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
 		Cookies.remove('session-id');
+		setReputation('');
 	};
 	const loadUser = async () => {
 		const cookie = Cookies.get('session-id');
@@ -120,10 +121,10 @@ const Navbar = () => {
 									alt='logo-mob'
 								/>
 							</Link>
+							{loadUser}
 							<a className='right sidenav-trigger'>
 								{reputation && <ReputationPoint ReputationPoint={reputation} />}
 							</a>
-
 							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 								<li>
 									<Link

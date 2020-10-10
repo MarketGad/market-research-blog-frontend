@@ -11,7 +11,7 @@ const Discounts = () => {
 				<h5>
 					Burn your interaction points to join the exclusive club and earn discounts on your subscriptions
 				</h5>
-				<div>
+				<div style={{ padding: '15px' }}>
 					<a className='waves-effect waves-light btn-large pro-btn1' onClick={BurnPoint}>
 						Burn 1000 points to enter
 					</a>

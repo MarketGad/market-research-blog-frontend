@@ -57,9 +57,8 @@ export default function SignUp () {
 		}).then((response) => {
 			console.log(response);
 			if (response.data.success) {
-				setLoginsuccess(true);
 				Cookies.set('session-id', response.data['token']);
-				window.location.reload(false);
+				setLoginsuccess(true);
 			}
 			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
 		});
@@ -220,7 +219,7 @@ export default function SignUp () {
 								</Button>
 								<Grid container justify='flex-end'>
 									<Grid item>
-										<Link href='/signin' variant='body2'>
+										<Link to='/signin' variant='body2'>
 											Already have an account? Sign in
 										</Link>
 									</Grid>

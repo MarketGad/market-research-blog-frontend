@@ -16,6 +16,7 @@ import SignIn from './Screens/signin';
 import MyProfile from './Screens/MyProfile';
 import Products from './Screens/Products';
 import Jobs from './Screens/Jobs';
+import CommunityForm from './Screens/CommunityForm';
 import JobForm from './Screens/JobForm';
 import RegisterForJobs from './Screens/RegisterForJobs';
 import I1001 from './Articles/industry/1001';
@@ -47,7 +48,14 @@ import Discounts from './Screens/Discounts';
 import Community from './Screens/Community';
 
 import { connect } from 'react-redux';
-import { fetchProducts, fetchJobProfiles, fetchTodayLaunch, fetchTrendingProducts, fetchJobs, fetchInternships } from './redux/ActionCreator';
+import {
+	fetchProducts,
+	fetchJobProfiles,
+	fetchTodayLaunch,
+	fetchTrendingProducts,
+	fetchJobs,
+	fetchInternships
+} from './redux/ActionCreator';
 
 const mapStateToProps = (state) => {
 	return {
@@ -56,18 +64,29 @@ const mapStateToProps = (state) => {
 		todayLaunch: state.todayLaunch,
 		trending: state.trending,
 		jobs: state.jobs,
-		internship: state.internship,
-	}
-}
+		internship: state.internship
+	};
+};
 
-const mapDispatchToProps = dispatch => ({
-	fetchProducts: () => { dispatch(fetchProducts())},
-	fetchJobProfiles: () => { dispatch(fetchJobProfiles())},
-	fetchTodayLaunch: () => { dispatch(fetchTodayLaunch())},
-	fetchTrendingProducts: () => { dispatch(fetchTrendingProducts())},
-	fetchJobs: () => { dispatch(fetchJobs())},
-	fetchInternships: () => { dispatch(fetchInternships())},
-	
+const mapDispatchToProps = (dispatch) => ({
+	fetchProducts: () => {
+		dispatch(fetchProducts());
+	},
+	fetchJobProfiles: () => {
+		dispatch(fetchJobProfiles());
+	},
+	fetchTodayLaunch: () => {
+		dispatch(fetchTodayLaunch());
+	},
+	fetchTrendingProducts: () => {
+		dispatch(fetchTrendingProducts());
+	},
+	fetchJobs: () => {
+		dispatch(fetchJobs());
+	},
+	fetchInternships: () => {
+		dispatch(fetchInternships());
+	}
 });
 
 class MainApp extends React.Component {
@@ -80,7 +99,7 @@ class MainApp extends React.Component {
 		await this.props.fetchJobs();
 		await this.props.fetchInternships();
 	};
-	render(){
+	render () {
 		return (
 			<div className='App'>
 				<Navbar />
@@ -109,28 +128,25 @@ class MainApp extends React.Component {
 					<Route exact path='/signup' component={SignUp} />
 					<Route exact path='/signin' component={SignIn} />
 					<Route exact path='/funding' component={Home} />
-					<Route 
-						exact 
-						path='/jobs' 
-						component={ () => (
-							<Jobs 
-								jobProfiles={this.props.jobProfiles.jobProfiles} 
+					<Route
+						exact
+						path='/jobs'
+						component={() => (
+							<Jobs
+								jobProfiles={this.props.jobProfiles.jobProfiles}
 								jobs={this.props.jobs.jobs}
 								internship={this.props.internship.internship}
 							/>
 						)}
-					/> 
+					/>
 					<Route
 						exact
 						path='/community'
-						component={() => (
-							<Community 
-								jobProfiles={this.props.jobProfiles.jobProfiles} 
-							/>
-						)}
+						component={() => <Community jobProfiles={this.props.jobProfiles.jobProfiles} />}
 					/>
 					<Route exact path='/profile' component={MyProfile} />
 					<Route exact path='/addjobs' component={JobForm} />
+					<Route exact path='/addtrend' component={CommunityForm} />
 					<Route exact path='/discounts' component={Discounts} />
 					<Route exact path='/registerforjobs' component={RegisterForJobs} />
 					<Route exact path='/registerforproduct' component={RegisterForProduct} />
