@@ -58,9 +58,8 @@ const categories = [
 
 export default function JobForm () {
 	const classes = useStyles();
-	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+	const LoginCheck = Cookies.get('session-id');
 	const [ fileInputState, setFileInputState ] = React.useState('');
-	const [ selectedFile, setSelectedFile ] = React.useState('');
 	const [ previewSource, setPreviewSource ] = React.useState('');
 	const [ RegisterJobSuccess, setRegisterJobSuccess ] = React.useState(false);
 	const [ name, setName ] = React.useState('');
@@ -71,7 +70,6 @@ export default function JobForm () {
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0];
 		previewFile(file);
-		setSelectedFile(file);
 		setFileInputState(e.target.value);
 	};
 
@@ -92,7 +90,7 @@ export default function JobForm () {
 		};
 		axios
 			.post(
-				'https://serieux-saucisson-31787.herokuapp.com/api/jobs',
+				process.env.REACT_APP_BASEURL + '/api/jobs',
 				{
 					logo: previewSource,
 					companyName: name,

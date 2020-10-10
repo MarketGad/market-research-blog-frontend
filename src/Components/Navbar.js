@@ -24,7 +24,7 @@ const Navbar = () => {
 			}
 		};
 		try {
-			const res = await fetch('https://serieux-saucisson-31787.herokuapp.com/api/user/profile', config);
+			const res = await fetch(process.env.REACT_APP_BASEURL + '/api/user/profile', config);
 			const response = await res.json();
 			setReputation(response.user.reputation);
 			setUser(response.user);

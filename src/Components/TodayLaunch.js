@@ -38,9 +38,7 @@ const TodayLaunch = (props) => {
 				setactiveupvote(true);
 				axios
 					.post(
-						'https://serieux-saucisson-31787.herokuapp.com/api/productdetails/' +
-							product_id +
-							'/upvotes/add',
+						process.env.REACT_APP_BASEURL + '/api/productdetails/' + product_id + '/upvotes/add',
 						{},
 						config
 					)

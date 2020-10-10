@@ -28,7 +28,7 @@ const Whatwedo = () => {
 	// 	// setPicture(response.profileObj.imageUrl);
 	// 	axios({
 	// 		method: 'POST',
-	// 		url: 'https://serieux-saucisson-31787.herokuapp.com/api/googlelogin',
+	// 		url: process.env.REACT_APP_BASEURL +'/api/googlelogin',
 	// 		data: { tokenId: response.tokenId }
 	// 	}).then((response) => {
 	// 		alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
@@ -56,8 +56,8 @@ const Whatwedo = () => {
 				</h4>
 				<p style={{ fontSize: '22px', textAlign: 'justify' }}>
 					<i>
-						“Some of the world’s most ground breaking businesses came from ordinary people who had
-						courage to believe in their crazy ideas.”
+						“Some of the world’s most ground breaking businesses came from ordinary people who had courage
+						to believe in their crazy ideas.”
 					</i>
 				</p>
 				<p className='flow-text' style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}>
@@ -71,16 +71,14 @@ const Whatwedo = () => {
 					style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}
 				>
 					<li>
-						We analyse your idea and research about the market you’re interested in with a
-						non-disclosure agreement
+						We analyse your idea and research about the market you’re interested in with a non-disclosure
+						agreement
 					</li>
 					<li>
 						Consultancy from our team of business professionals and engineers for coming up with a
 						go-tomarket strategy
 					</li>
-					<li>
-						Designing primary research for validation of your idea and strategize its implementation
-					</li>
+					<li>Designing primary research for validation of your idea and strategize its implementation</li>
 					<li>Creating investor ready pitch deck</li>
 				</ol>
 				<h4 className='privacy-head' style={{ fontWeight: '600' }}>
@@ -96,16 +94,16 @@ const Whatwedo = () => {
 					style={{ fontSize: '22px', fontWeight: '400', textAlign: 'justify' }}
 				>
 					<li>
-						Industry trend analysis and competitor landscaping for organizations to predict how products
-						and services will fare in the market place
+						Industry trend analysis and competitor landscaping for organizations to predict how products and
+						services will fare in the market place
 					</li>
 					<li>
-						Devise and evaluate methods for collecting data, such as surveys, focus groups,
-						questionnaires and opinion polls
+						Devise and evaluate methods for collecting data, such as surveys, focus groups, questionnaires
+						and opinion polls
 					</li>
 					<li>
-						Interpreting and organizing the information into statistical tables and present the findings
-						by visual means to assist in data-driven informed decision making
+						Interpreting and organizing the information into statistical tables and present the findings by
+						visual means to assist in data-driven informed decision making
 					</li>
 					<li>Measure effectiveness of marketing programs and strategies</li>
 				</ol>
@@ -151,6 +149,5 @@ const Whatwedo = () => {
 			<Footer />
 		</div>
 	);
-
 };
 export default Whatwedo;

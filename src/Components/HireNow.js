@@ -28,22 +28,17 @@ const HireNow = (props) => {
 				Authorization: `Bearer ${token}`
 			}
 		};
-		axios
-			.post('https://serieux-saucisson-31787.herokuapp.com/api/jobprofiles/hire/' + props.profile._id, {}, config)
-			.then(
-				(response) => {
-					alert(
-						'payment success\n' +
-							'Your payment id is: ' +
-							id.razorpay_payment_id +
-							'\nWe will contact you soon'
-					);
-				},
-				(error) => {
-					console.log(error);
-					alert('something went wrong');
-				}
-			);
+		axios.post(process.env.REACT_APP_BASEURL + '/api/jobprofiles/hire/' + props.profile._id, {}, config).then(
+			(response) => {
+				alert(
+					'payment success\n' + 'Your payment id is: ' + id.razorpay_payment_id + '\nWe will contact you soon'
+				);
+			},
+			(error) => {
+				console.log(error);
+				alert('something went wrong');
+			}
+		);
 	};
 	async function displayRazorpay () {
 		if (!token) {
@@ -55,16 +50,13 @@ const HireNow = (props) => {
 			alert('Razorpay SDK failed to load. Are you online?');
 			return;
 		}
-		const data = await fetch(
-			'https://serieux-saucisson-31787.herokuapp.com/api/payment/razorpay/' + props.profile._id,
-			{
-				method: 'POST',
-				headers: {
-					Authorization: `Bearer ${token}`
-				},
-				body: {}
-			}
-		).then((t) => t.json());
+		const data = await fetch(process.env.REACT_APP_BASEURL + '/api/payment/razorpay/' + props.profile._id, {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${token}`
+			},
+			body: {}
+		}).then((t) => t.json());
 		const options = {
 			key: __DEV__ ? process.env.REACT_APP_RAZORPAY_ID : process.env.REACT_APP_RAZORPAY_ID,
 			currency: data.currency,

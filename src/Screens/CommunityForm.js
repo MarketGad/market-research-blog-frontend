@@ -1,5 +1,4 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -8,9 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
-import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 
@@ -58,7 +55,7 @@ const categories = [
 
 export default function CommunityForm () {
 	const classes = useStyles();
-	const [ LoginCheck, setLoginCheck ] = React.useState(Cookies.get('session-id'));
+	const LoginCheck = Cookies.get('session-id');
 	const [ RegistertrendSuccess, setRegistertrendSuccess ] = React.useState(false);
 	const [ about, setAbout ] = React.useState('');
 	const [ weblink, setWeblink ] = React.useState('');
@@ -75,7 +72,7 @@ export default function CommunityForm () {
 		};
 		axios
 			.post(
-				'https://serieux-saucisson-31787.herokuapp.com/api/disrupterclub/posts',
+				process.env.REACT_APP_BASEURL + '/api/disrupterclub/posts',
 				{
 					title: title,
 					description: about,
