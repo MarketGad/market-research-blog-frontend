@@ -54,7 +54,9 @@ import {
 	fetchTodayLaunch,
 	fetchTrendingProducts,
 	fetchJobs,
-	fetchInternships
+	fetchInternships,
+	fetchCommunityPosts,
+
 } from './redux/ActionCreator';
 
 const mapStateToProps = (state) => {
@@ -64,7 +66,8 @@ const mapStateToProps = (state) => {
 		todayLaunch: state.todayLaunch,
 		trending: state.trending,
 		jobs: state.jobs,
-		internship: state.internship
+		internship: state.internship,
+		posts: state.posts,
 	};
 };
 
@@ -86,6 +89,9 @@ const mapDispatchToProps = (dispatch) => ({
 	},
 	fetchInternships: () => {
 		dispatch(fetchInternships());
+	},
+	fetchCommunityPosts: () => {
+		dispatch(fetchCommunityPosts());
 	}
 });
 
@@ -98,6 +104,7 @@ class MainApp extends React.Component {
 		await this.props.fetchTrendingProducts();
 		await this.props.fetchJobs();
 		await this.props.fetchInternships();
+		await this.props.fetchCommunityPosts();
 	};
 	render () {
 		return (
@@ -142,7 +149,12 @@ class MainApp extends React.Component {
 					<Route
 						exact
 						path='/community'
-						component={() => <Community jobProfiles={this.props.jobProfiles.jobProfiles} />}
+						component={() => (
+							<Community 
+								jobProfiles={this.props.jobProfiles.jobProfiles} 
+								posts={this.props.posts.posts}
+							/>
+						)}
 					/>
 					<Route exact path='/profile' component={MyProfile} />
 					<Route exact path='/addjobs' component={JobForm} />

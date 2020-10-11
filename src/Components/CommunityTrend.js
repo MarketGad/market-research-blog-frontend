@@ -5,9 +5,8 @@ import FadingLoader from './FadingLoader';
 
 import { Link, Redirect } from 'react-router-dom';
 
-const CommunityTrend = () => {
+const CommunityTrend = (props) => {
 	const token = Cookies.get('session-id');
-	const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
 	if (token) {
 		const token_id = JSON.parse(atob(token.split('.')[1]));
@@ -68,9 +67,9 @@ const CommunityTrend = () => {
 											state: { product: product, weblink: weblink }
 										}}
 									>
-										{product.name}
+										{product.title}
 									</Link>
-									<div className='trend-desc'>{product.briefDescription}</div>
+									<div className='trend-desc'>{product.description}</div>
 									<div className='row product-link-container'>
 										<div className='col l1 s3 comment-box'>
 											<Link
@@ -125,7 +124,7 @@ const CommunityTrend = () => {
 										>
 											account_circle
 										</span>
-										<span>saidatta</span>
+										<span>{product.user.firstname}</span>
 										<span
 											style={{
 												margin: '0 10px',
@@ -141,11 +140,11 @@ const CommunityTrend = () => {
 								</div>
 							</div>
 							<div className='col s1'>
-								{product.upvotesList.includes(user_id) && (
+								{product.upvotes.includes(user_id) && (
 									<div id='upvote-count' className='secondary-content upvote-container-active'>
 										<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 										<br />
-										<span className='upvote-count upvote-count-active'>{upvote}</span>
+										<span className='upvote-count upvote-count-active'>{product.upvotes.length}</span>
 									</div>
 								)}
 								{activeupvote === true && (
@@ -155,7 +154,7 @@ const CommunityTrend = () => {
 										<span className='upvote-count upvote-count-active'>{upvote}</span>
 									</div>
 								)}
-								{(!product.upvotesList.includes(user_id) || !token) &&
+								{(!product.upvotes.includes(user_id) || !token) &&
 								activeupvote === false && (
 									<div
 										onClick={() => addUpvote(product._id, product)}
@@ -163,7 +162,7 @@ const CommunityTrend = () => {
 									>
 										<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
 										<br />
-										<span className='upvote-count'>{upvote}</span>
+										<span className='upvote-count'>{product.upvotes.length}</span>
 									</div>
 								)}
 							</div>
@@ -173,21 +172,21 @@ const CommunityTrend = () => {
 			</div>
 		);
 	};
-	const loadProducts = async () => {
-		try {
-			const res = await fetch(process.env.REACT_APP_BASEURL + '/api/hotproducts/recent');
-			const data = await res.json();
-			setProducts(data);
-		} catch (err) {
-			console.error(err);
-		}
-	};
-	useEffect(() => {
-		loadProducts();
-	}, []);
+	// const loadProducts = async () => {
+	// 	try {
+	// 		const res = await fetch(process.env.REACT_APP_BASEURL + '/api/hotproducts/recent');
+	// 		const data = await res.json();
+	// 		setProducts(data);
+	// 	} catch (err) {
+	// 		console.error(err);
+	// 	}
+	// };
+	// useEffect(() => {
+	// 	loadProducts();
+	// }, []);
 
-	const showProducts = products.length ? (
-		products.map((product, index) => {
+	const showProducts = props.posts.length ? (
+		props.posts.map((product, index) => {
 			if (!/^https?:\/\//.test(product.websiteLink)) {
 				let weblink = 'https://' + product.websiteLink;
 				return <ProductCard key={index} product={product} weblink={weblink} />;
@@ -200,10 +199,10 @@ const CommunityTrend = () => {
 	else
 		return (
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
-				{products && <div>{showProducts}</div>}
-				{!products && (
+				{props.posts && <div>{showProducts}</div>}
+				{props.posts.length === 0 && (
 					<div>
-						<FadingLoader loadno={3} />
+						<FadingLoader loadno={10} />
 					</div>
 				)}
 			</div>

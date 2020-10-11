@@ -4,6 +4,7 @@ import logger from 'redux-logger';
 import { Products, LaunchedToday, TrendingProducts } from './Products';
 import { JobProfiles } from './JobProfiles';
 import { Jobs, Internships } from './Jobs';
+import { Community } from './Community';
 
 export const ConfigureStore = () => {
     const store = createStore(
@@ -14,6 +15,8 @@ export const ConfigureStore = () => {
             jobProfiles: JobProfiles,
             jobs: Jobs,
             internship: Internships,
+            posts: Community,
+
         }),
         applyMiddleware(thunk, logger)
     );
