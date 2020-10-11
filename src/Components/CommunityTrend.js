@@ -134,7 +134,7 @@ const CommunityTrend = (props) => {
 											}}
 											className='waves-effect waves-light btn-small black'
 										>
-											#idea
+											{product.hashtag ? product.hashtag : "#idea"}
 										</span>
 									</div>
 								</div>
@@ -172,18 +172,6 @@ const CommunityTrend = (props) => {
 			</div>
 		);
 	};
-	// const loadProducts = async () => {
-	// 	try {
-	// 		const res = await fetch(process.env.REACT_APP_BASEURL + '/api/hotproducts/recent');
-	// 		const data = await res.json();
-	// 		setProducts(data);
-	// 	} catch (err) {
-	// 		console.error(err);
-	// 	}
-	// };
-	// useEffect(() => {
-	// 	loadProducts();
-	// }, []);
 
 	const showProducts = props.posts.length ? (
 		props.posts.map((product, index) => {

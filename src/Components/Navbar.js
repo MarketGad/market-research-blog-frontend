@@ -252,7 +252,7 @@ const Navbar = () => {
 						<Link to='/discounts'>Bazaar</Link>
 					</li>
 					<li>
-						<Link path='/community'>Community</Link>
+						<Link to='/community'>Community</Link>
 					</li>
 					<li>
 						<a className='dropdown-trigger1' data-target='dropdown2'>
