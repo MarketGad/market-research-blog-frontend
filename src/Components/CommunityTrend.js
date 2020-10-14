@@ -29,14 +29,14 @@ const CommunityTrend = (props) => {
 				}
 			};
 			const token_info = JSON.parse(atob(token.split('.')[1]));
-			if (product.upvotesList.includes(token_info._id)) {
+			if (product.upvotes.includes(token_info._id)) {
 				alert('already upvoted');
 			} else {
 				setUpvote(product.upvotes + 1);
 				setactiveupvote(true);
 				axios
 					.post(
-						process.env.REACT_APP_BASEURL + '/api/productdetails/' + product_id + '/upvotes/add',
+						process.env.REACT_APP_BASEURL + '/api/disrupterclub/posts/' + product_id + '/upvote',
 						{},
 						config
 					)
