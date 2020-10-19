@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import PersonIcon from '@material-ui/icons/Person';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Footer from '../Components/Footer2';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import Alert from '../Components/Alert';
 import GoogleLogin from 'react-google-login';
+import Popup from '../Components/Popup';
+import SignUp from './signup';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
-		marginTop: theme.spacing(8),
+		marginTop: theme.spacing(0),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center'
@@ -30,20 +28,23 @@ const useStyles = makeStyles((theme) => ({
 	},
 	form: {
 		width: '100%', // Fix IE 11 issue.
-		marginTop: theme.spacing(1)
+		marginTop: theme.spacing(0)
 	},
 	submit: {
 		margin: theme.spacing(2, 0, 2)
 	}
 }));
 
-export default function SignIn () {
+export default function SignIn (props) {
+	const { openSignin, setOpenSignin } = props;
 	const classes = useStyles();
 	const [ email, setEmail ] = React.useState('');
 	const [ loginsuccess, setLoginsuccess ] = React.useState(false);
 	const [ password, setPassword ] = React.useState('');
 	const [ otpsuccess, setOtpsuccess ] = React.useState(true);
 	const [ errMsg, setErrMsg ] = useState('');
+	const [ openSignup, setOpenSignup ] = useState(false);
+
 	const responseSuccessGoogle = (response) => {
 		console.log(response);
 		console.log(response.tokenId);
@@ -55,6 +56,7 @@ export default function SignIn () {
 			console.log(response);
 			if (response.data.success) {
 				Cookies.set('session-id', response.data['token']);
+				setOpenSignin(false);
 				setLoginsuccess(true);
 			}
 			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
@@ -77,6 +79,7 @@ export default function SignIn () {
 					// console.log(response);
 					if (response.data.success) {
 						Cookies.set('session-id', response.data['token']);
+						setOpenSignin(false);
 						setLoginsuccess(true);
 					}
 				},
@@ -106,87 +109,96 @@ export default function SignIn () {
 	} else {
 		return (
 			<div>
-				<div>
-					<Alert msg={errMsg} type='danger' />
-					<Container component='main' maxWidth='xs'>
-						<CssBaseline />
-						<div className={classes.paper}>
-							<Avatar className={classes.avatar}>
-								<PersonIcon />
-							</Avatar>
-							<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
-								Sign In
-							</Typography>
+				<Alert msg={errMsg} type='danger' />
+				<div className='row'>
+					<div className='col l5 s12 center'>
+						<img
+							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1602391920/Theme/2_f5ppw2.png'
+							alt='login'
+							className='popup-signin-image'
+						/>
+					</div>
+					<div className='col l7 s12 center'>
+						<Container component='main' className='signinform-container' maxWidth='md'>
+							<CssBaseline />
+							<div className={classes.paper}>
+								<div className='center'>
+									<GoogleLogin
+										className='black-text'
+										clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
+										onSuccess={responseSuccessGoogle}
+										onFailure={responseErrorGoogle}
+										cookiePolicy={'single_host_origin'}
+										redirectUri={'/'}
+									/>
+								</div>
+								<h6 className='signin-divider'>
+									<span>or</span>
+								</h6>
+								<form className={classes.form} onSubmit={submitHandler}>
+									<Grid container spacing={2}>
+										<Grid spacing={2} item xs={12}>
+											<TextField
+												type='email'
+												variant='outlined'
+												required
+												fullWidth
+												id='email'
+												label='Email Address'
+												name='email'
+												value={email}
+												onChange={(e) => setEmail(e.target.value)}
+											/>
+										</Grid>
+										<Grid spacing={2} item xs={12}>
+											<TextField
+												variant='outlined'
+												margin='normal'
+												required
+												fullWidth
+												name='password'
+												label='Password'
+												type='password'
+												id='password'
+												value={password}
+												onChange={(e) => setPassword(e.target.value)}
+											/>
+										</Grid>
+									</Grid>
 
-							<div className='center'>
-								<GoogleLogin
-									className='black-text'
-									clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
-									onSuccess={responseSuccessGoogle}
-									onFailure={responseErrorGoogle}
-									cookiePolicy={'single_host_origin'}
-									redirectUri={'/'}
-								/>
+									<Button
+										type='submit'
+										fullWidth
+										variant='contained'
+										color='primary'
+										className={classes.submit}
+									>
+										Sign In
+									</Button>
+
+									<Grid container>
+										<Grid item xs>
+											<Link href='#' variant='body2' />
+										</Grid>
+										<Grid item>
+											<Link
+												onClick={() => {
+													setOpenSignup(true);
+												}}
+												variant='body2'
+											>
+												{"Don't have an account? Sign Up"}
+											</Link>
+										</Grid>
+									</Grid>
+								</form>
 							</div>
-							<h6 className='signin-divider'>
-								<span>or</span>
-							</h6>
-							<form className={classes.form} onSubmit={submitHandler}>
-								<Grid container spacing={2}>
-									<Grid spacing={2} item xs={12}>
-										<TextField
-											type='email'
-											variant='outlined'
-											required
-											fullWidth
-											id='email'
-											label='Email Address'
-											name='email'
-											value={email}
-											onChange={(e) => setEmail(e.target.value)}
-										/>
-									</Grid>
-									<Grid spacing={2} item xs={12}>
-										<TextField
-											variant='outlined'
-											margin='normal'
-											required
-											fullWidth
-											name='password'
-											label='Password'
-											type='password'
-											id='password'
-											value={password}
-											onChange={(e) => setPassword(e.target.value)}
-										/>
-									</Grid>
-								</Grid>
-
-								<Button
-									type='submit'
-									fullWidth
-									variant='contained'
-									color='primary'
-									className={classes.submit}
-								>
-									Sign In
-								</Button>
-
-								<Grid container>
-									<Grid item xs>
-										<Link href='#' variant='body2' />
-									</Grid>
-									<Grid item>
-										<Link href='/signup' variant='body2'>
-											{"Don't have an account? Sign Up"}
-										</Link>
-									</Grid>
-								</Grid>
-							</form>
-						</div>
-					</Container>
+						</Container>
+					</div>
+					<Popup title='Signup' openPopup={openSignup} setOpenPopup={setOpenSignup}>
+						<SignUp {...props} openSignup={openSignup} setOpenSignup={setOpenSignup} />
+					</Popup>
 				</div>
-				<Footer />
 			</div>
 		);
 	}

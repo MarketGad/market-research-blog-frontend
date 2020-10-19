@@ -4,8 +4,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
@@ -16,10 +14,12 @@ import { Redirect } from 'react-router-dom';
 import Alert from '../Components/Alert';
 import Cookies from 'js-cookie';
 import GoogleLogin from 'react-google-login';
+import VerifyOtp from './VerifyOtp';
+import Popup from '../Components/Popup';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
-		marginTop: theme.spacing(8),
+		marginTop: theme.spacing(0),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center'
@@ -37,8 +37,9 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function SignUp () {
+export default function SignUp (props) {
 	const classes = useStyles();
+	const { openSignup, setOpenSignup, setOpenSignin } = props;
 	const [ email, setEmail ] = React.useState('');
 	const [ first_name, setFirstName ] = React.useState('');
 	const [ last_name, setLastName ] = React.useState('');
@@ -46,6 +47,7 @@ export default function SignUp () {
 	const [ confirmPassword, setConfirmPassword ] = React.useState('');
 	const [ signupsuccess, setSignupsuccess ] = React.useState(false);
 	const [ loginsuccess, setLoginsuccess ] = React.useState(false);
+	const [ openOtp, setOpenOtp ] = useState(false);
 	const [ errMsg, setErrMsg ] = useState('');
 	const responseSuccessGoogle = (response) => {
 		console.log(response);
@@ -58,6 +60,8 @@ export default function SignUp () {
 			console.log(response);
 			if (response.data.success) {
 				Cookies.set('session-id', response.data['token']);
+				setOpenSignup(false);
+				setOpenSignin(false);
 				setLoginsuccess(true);
 			}
 			// alert(`Welcome ${response.data.user.name}! You have been Successfully Signed In!`);
@@ -81,6 +85,8 @@ export default function SignUp () {
 				.then(
 					(response) => {
 						if (response.data.success === true) {
+							// setOpenSignup(false);
+							setOpenOtp(true);
 							setSignupsuccess(true);
 						}
 					},
@@ -96,141 +102,145 @@ export default function SignUp () {
 	};
 	if (signupsuccess === true) {
 		return (
-			<Redirect
-				to={{
-					pathname: '/verifyotp',
-					state: { email: email }
-				}}
-			/>
+			<Popup title='VerifyOtp' openPopup={openOtp} setOpenPopup={setOpenOtp}>
+				<VerifyOtp {...props} email={email} openOtp={openOtp} setOpenOtp={setOpenOtp} />
+			</Popup>
 		);
 	} else if (loginsuccess) {
 		return <Redirect to='/' />;
 	} else {
 		return (
 			<div>
-				<div>
-					<Alert msg={errMsg} type='danger' />
-					<Container component='main' maxWidth='xs'>
-						<CssBaseline />
-						<div className={classes.paper}>
-							<Avatar className={classes.avatar}>
-								<PersonAddIcon />
-							</Avatar>
-							<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
-								Sign Up
-							</Typography>
-							<div className='center'>
-								<GoogleLogin
-									className='black-text'
-									buttonText='Sign up with Google'
-									clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
-									onSuccess={responseSuccessGoogle}
-									onFailure={responseErrorGoogle}
-									cookiePolicy={'single_host_origin'}
-									redirectUri={'/'}
-								/>
-							</div>
-							<h6 className='signin-divider'>
-								<span>or</span>
-							</h6>
-							<form className={classes.form} onSubmit={submitHandler}>
-								<Grid container spacing={2}>
-									<Grid item xs={12} sm={6}>
-										<TextField
-											autoComplete='fname'
-											name='firstName'
-											variant='outlined'
-											required
-											fullWidth
-											id='firstName'
-											label='First Name'
-											value={first_name}
-											onChange={(e) => setFirstName(e.target.value)}
-										/>
-									</Grid>
-									<Grid item xs={12} sm={6}>
-										<TextField
-											variant='outlined'
-											required
-											fullWidth
-											id='lastName'
-											label='Last Name'
-											name='lastName'
-											value={last_name}
-											onChange={(e) => setLastName(e.target.value)}
-										/>
-									</Grid>
-									<Grid item xs={12}>
-										<TextField
-											type='email'
-											variant='outlined'
-											required
-											fullWidth
-											id='email'
-											label='Email Address'
-											name='email'
-											autoComplete='email'
-											value={email}
-											onChange={(e) => setEmail(e.target.value)}
-										/>
-									</Grid>
+				<Alert msg={errMsg} type='danger' />
+				<div className='row'>
+					<div className='col l5 s12 center'>
+						<img
+							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1602391920/Theme/2_f5ppw2.png'
+							alt='login'
+							style={{ paddingTop: '20%' }}
+							className='popup-signin-image'
+						/>
+					</div>
+					<div className='col l7 s12 center'>
+						<Container component='main' maxWidth='xs'>
+							<CssBaseline />
 
-									<Grid item xs={12}>
-										<TextField
-											variant='outlined'
-											required
-											fullWidth
-											name='password1'
-											label='Password'
-											type='password'
-											id='password'
-											value={password}
-											onChange={(e) => setPassword(e.target.value)}
-										/>
-									</Grid>
-									<Grid item xs={12}>
-										<TextField
-											variant='outlined'
-											required
-											fullWidth
-											name='password2'
-											label='Confirm Password'
-											type='password'
-											id='password'
-											value={confirmPassword}
-											onChange={(e) => setConfirmPassword(e.target.value)}
-										/>
-									</Grid>
-									<Grid item xs={12}>
-										<FormControlLabel
-											control={<Checkbox value='allowExtraEmails' color='primary' />}
-											label='I want to receive inspiration, marketing promotions and updates via email.'
-										/>
-									</Grid>
-								</Grid>
-								<Button
-									type='submit'
-									fullWidth
-									variant='contained'
-									color='primary'
-									className={classes.submit}
-								>
+							<div className={classes.paper}>
+								<Avatar className={classes.avatar}>
+									<PersonAddIcon />
+								</Avatar>
+								<Typography component='h1' variant='h5' style={{ marginBottom: '25px' }}>
 									Sign Up
-								</Button>
-								<Grid container justify='flex-end'>
-									<Grid item>
-										<Link to='/signin' variant='body2'>
-											Already have an account? Sign in
-										</Link>
+								</Typography>
+								<div className='center'>
+									<GoogleLogin
+										className='black-text'
+										buttonText='Sign up with Google'
+										clientId='798827553844-i0rjoguupm9jucbohldlp16kthi5boif.apps.googleusercontent.com'
+										onSuccess={responseSuccessGoogle}
+										onFailure={responseErrorGoogle}
+										cookiePolicy={'single_host_origin'}
+										redirectUri={'/'}
+									/>
+								</div>
+								<h6 className='signin-divider'>
+									<span>or</span>
+								</h6>
+								<form className={classes.form} onSubmit={submitHandler}>
+									<Grid container spacing={2}>
+										<Grid item xs={12} sm={6}>
+											<TextField
+												autoComplete='fname'
+												name='firstName'
+												variant='outlined'
+												required
+												fullWidth
+												id='firstName'
+												label='First Name'
+												value={first_name}
+												onChange={(e) => setFirstName(e.target.value)}
+											/>
+										</Grid>
+										<Grid item xs={12} sm={6}>
+											<TextField
+												variant='outlined'
+												required
+												fullWidth
+												id='lastName'
+												label='Last Name'
+												name='lastName'
+												value={last_name}
+												onChange={(e) => setLastName(e.target.value)}
+											/>
+										</Grid>
+										<Grid item xs={12}>
+											<TextField
+												type='email'
+												variant='outlined'
+												required
+												fullWidth
+												id='email'
+												label='Email Address'
+												name='email'
+												autoComplete='email'
+												value={email}
+												onChange={(e) => setEmail(e.target.value)}
+											/>
+										</Grid>
+
+										<Grid item xs={12} sm={6}>
+											<TextField
+												variant='outlined'
+												required
+												fullWidth
+												name='password1'
+												label='Password'
+												type='password'
+												id='password'
+												value={password}
+												onChange={(e) => setPassword(e.target.value)}
+											/>
+										</Grid>
+										<Grid item xs={12} sm={6}>
+											<TextField
+												variant='outlined'
+												required
+												fullWidth
+												name='password2'
+												label='Confirm Password'
+												type='password'
+												id='password'
+												value={confirmPassword}
+												onChange={(e) => setConfirmPassword(e.target.value)}
+											/>
+										</Grid>
 									</Grid>
-								</Grid>
-							</form>
-						</div>
-					</Container>
+									<Button
+										type='submit'
+										fullWidth
+										variant='contained'
+										color='primary'
+										className={classes.submit}
+									>
+										Sign Up
+									</Button>
+									<Grid container justify='flex-end'>
+										<Grid item>
+											<Link
+												onClick={() => {
+													setOpenSignup(false);
+												}}
+												variant='body2'
+											>
+												Already have an account? Sign in
+											</Link>
+										</Grid>
+									</Grid>
+								</form>
+							</div>
+						</Container>
+					</div>
 				</div>
-				{/* <div style={{ marginTop: '8%' }}>
-					<Footer />
-				</div> */}
 			</div>
 		);
 	}
