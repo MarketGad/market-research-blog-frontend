@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BurnCoinError = (props) => {
 	return (
@@ -65,21 +66,23 @@ const BurnCoinError = (props) => {
 							You need 1000 interaction coins to activate this.
 						</div>
 						<div className='center'>
-							<div
-								class='btn-small'
-								style={{
-									backgroundColor: '#1e4a72',
-									color: 'white',
-									border: 'none',
-									borderRadius: '9px',
-									padding: '0% 4% 0% 4%',
-									margin: '0% 7% 0% 7%',
-									fontWeight: 'bold',
-									fontSize: '19px'
-								}}
-							>
-								Earn Coins
-							</div>
+							<Link to='/'>
+								<div
+									class='btn-small'
+									style={{
+										backgroundColor: '#1e4a72',
+										color: 'white',
+										border: 'none',
+										borderRadius: '9px',
+										padding: '0% 4% 0% 4%',
+										margin: '0% 7% 0% 7%',
+										fontWeight: 'bold',
+										fontSize: '19px'
+									}}
+								>
+									Earn Coins
+								</div>
+							</Link>
 						</div>
 					</div>
 				</div>
