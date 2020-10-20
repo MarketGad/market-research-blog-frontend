@@ -3,6 +3,8 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 // import ShowComment from './ShowComment';
 import FadingLoader from './FadingLoader';
+import SignIn from '../Screens/signin';
+import Popup from '../Components/Popup';
 
 import { Link, Redirect } from 'react-router-dom';
 
@@ -10,6 +12,7 @@ const TodayLaunch = (props) => {
 	const token = Cookies.get('session-id');
 	// const [ products, setProducts ] = React.useState('');
 	const [ readytoupvote, setReadytoupvote ] = React.useState('');
+	const [ openSignin, setOpenSignin ] = React.useState(false);
 	if (token) {
 		const token_id = JSON.parse(atob(token.split('.')[1]));
 		var user_id = token_id._id;
@@ -22,7 +25,7 @@ const TodayLaunch = (props) => {
 
 		const addUpvote = (product_id, product) => {
 			if (!token) {
-				setReadytoupvote(false);
+				setOpenSignin(true);
 				return;
 			}
 			const config = {
@@ -58,12 +61,7 @@ const TodayLaunch = (props) => {
 			<div>
 				<ul className='collection product-container'>
 					<li className='collection-item avatar'>
-						<Link
-							to={{
-								pathname: `/p${product._id}`,
-								state: { product: product, weblink: weblink }
-							}}
-						>
+						<Link to={`products/${product._id}`}>
 							<img className='circle pro-img' src={product.logo} alt={product.name} />
 						</Link>
 
@@ -71,10 +69,7 @@ const TodayLaunch = (props) => {
 							<Link
 								style={{ color: 'black' }}
 								className='product-content product-name'
-								to={{
-									pathname: `/p${product._id}`,
-									state: { product: product, weblink: weblink }
-								}}
+								to={`products/${product._id}`}
 							>
 								{product.name}
 							</Link>
@@ -102,10 +97,7 @@ const TodayLaunch = (props) => {
 								</div>
 								<div className='col l2 s4 comment-box'>
 									<Link
-										to={{
-											pathname: `/p${product._id}`,
-											state: { product: product, weblink: weblink }
-										}}
+										to={`products/${product._id}`}
 										className='waves-effect waves-light btn-small visit-btn'
 									>
 										<span className='comment-count'>{product.comments.length}</span>
@@ -170,9 +162,9 @@ const TodayLaunch = (props) => {
 	) : (
 		<div className='center' />
 	);
-	if (readytoupvote === false) return <Redirect to='/signin' />;
-	else
-		return (
+
+	return (
+		<div>
 			<div style={{ backgroundColor: 'white', borderRadius: '10px' }}>
 				{props.todayLaunch && <div>{showProducts}</div>}
 				{props.todayLaunch.length === 0 && (
@@ -181,7 +173,11 @@ const TodayLaunch = (props) => {
 					</div>
 				)}
 			</div>
-		);
+			<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
+				<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+			</Popup>
+		</div>
+	);
 };
 
 export default TodayLaunch;

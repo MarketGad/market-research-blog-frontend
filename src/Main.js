@@ -4,15 +4,15 @@ import Home from './Screens/Home';
 import Startup from './Screens/Startup';
 import Venturehack from './Screens/VentureHack';
 import Industry from './Screens/Industry';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import Form from './Screens/Form';
 import AboutUs from './Screens/Aboutus';
 import Dashboard from './Screens/dashboard';
 import submitidea from './Components/submitidea';
 import Whatwedo from './Screens/Whatwedo';
 import Privacy from './Screens/Privacy';
-import SignUp from './Screens/signup';
-import SignIn from './Screens/signin';
+// import SignUp from './Screens/signup';
+// import SignIn from './Screens/signin';
 import MyProfile from './Screens/MyProfile';
 import Products from './Screens/Products';
 import Jobs from './Screens/Jobs';
@@ -43,7 +43,7 @@ import v3005 from './Articles/venturehacks/v3005';
 import RegisterForProduct from './Screens/RegisterForProduct';
 import ProductProfile from './Screens/ProductProfile';
 import JobProfile from './Screens/JobProfile';
-import VerifyOtp from './Screens/VerifyOtp';
+// import VerifyOtp from './Screens/VerifyOtp';
 import Discounts from './Screens/Discounts';
 import Community from './Screens/Community';
 
@@ -55,8 +55,7 @@ import {
 	fetchTrendingProducts,
 	fetchJobs,
 	fetchInternships,
-	fetchCommunityPosts,
-
+	fetchCommunityPosts
 } from './redux/ActionCreator';
 
 const mapStateToProps = (state) => {
@@ -67,7 +66,7 @@ const mapStateToProps = (state) => {
 		trending: state.trending,
 		jobs: state.jobs,
 		internship: state.internship,
-		posts: state.posts,
+		posts: state.posts
 	};
 };
 
@@ -132,8 +131,8 @@ class MainApp extends React.Component {
 					<Route exact path='/privacy' component={Privacy} />
 					<Route exact path='/startup' component={Startup} />
 					<Route exact path='/venturehack' component={Venturehack} />
-					<Route exact path='/signup' component={SignUp} />
-					<Route exact path='/signin' component={SignIn} />
+					{/* <Route exact path='/signup' component={SignUp} />
+					<Route exact path='/signin' component={SignIn} /> */}
 					<Route exact path='/funding' component={Home} />
 					<Route
 						exact
@@ -150,8 +149,8 @@ class MainApp extends React.Component {
 						exact
 						path='/community'
 						component={() => (
-							<Community 
-								jobProfiles={this.props.jobProfiles.jobProfiles} 
+							<Community
+								jobProfiles={this.props.jobProfiles.jobProfiles}
 								posts={this.props.posts.posts}
 							/>
 						)}
@@ -183,9 +182,18 @@ class MainApp extends React.Component {
 					<Route exact path='/v3003' component={v3003} />
 					<Route exact path='/v3004' component={v3004} />
 					<Route exact path='/v3005' component={v3005} />
-					<Route exact path='/verifyotp' component={VerifyOtp} />
-					<Route path='/p:product_id' component={ProductProfile} />
-					<Route path='/:job_id' component={JobProfile} />
+					{/* <Route exact path='/verifyotp' component={VerifyOtp} /> */}
+					<Route
+						exact
+						path='/products/:product_id'
+						render={(props) => <ProductProfile {...props} products={this.props.products.products} />}
+					/>
+					<Route
+						exact
+						path='/jobprofile/:job_id'
+						render={(props) => <JobProfile {...props} jobProfiles={this.props.jobProfiles.jobProfiles} />}
+					/>
+					<Redirect to='/' />
 				</Switch>
 			</div>
 		);
