@@ -16,8 +16,9 @@ const Navbar = () => {
 	const [ openSignin, setOpenSignin ] = React.useState(false);
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
-		Cookies.remove('session-id');
 		setReputation('');
+		setUser('');
+		Cookies.remove('session-id');
 	};
 	const loadUser = async () => {
 		const cookie = Cookies.get('session-id');
@@ -135,7 +136,6 @@ const Navbar = () => {
 									alt='logo-mob'
 								/>
 							</Link>
-							{loadUser}
 							<a className='right sidenav-trigger'>
 								{reputation && <ReputationPoint ReputationPoint={reputation} />}
 							</a>
@@ -204,11 +204,25 @@ const Navbar = () => {
 											data-target='account-dropdown'
 										>
 											{reputation && <ReputationPoint ReputationPoint={reputation} />}
-											<AccountIcon
-												fontSize='large'
-												className='nav-icon'
-												style={{ verticalAlign: 'middle' }}
-											/>
+											{user.profilePic && (
+												<img
+													width='30px'
+													style={{
+														margin: '0 10px',
+														position: 'relative',
+														verticalAlign: 'middle',
+														borderRadius: '50%'
+													}}
+													src={user.profilePic}
+												/>
+											)}
+											{(!user || !user.profilePic) && (
+												<AccountIcon
+													fontSize='large'
+													className='nav-icon'
+													style={{ verticalAlign: 'middle' }}
+												/>
+											)}
 										</div>
 									</li>
 								</ul>
