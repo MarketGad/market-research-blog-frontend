@@ -114,6 +114,25 @@ export default function FormPassion() {
                 /*value={location}
 											onChange={(e) => setLocation(e.target.value)}*/
               />
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="Qualification"
+                label="Qualification"
+                name="Qualification"
+                /*value={qualification}
+                onChange={(e) => setQualification(e.target.value)}*/
+              />
+              <TextField
+                variant="outlined"
+                fullWidth
+                id="portfolio"
+                label="Portfolio Link (if any)"
+                name="portfolio"
+                /*value={portfolio}
+                onChange={(e) => setPortfolio(e.target.value)}*/
+              />
             </div>
           </form>
 
