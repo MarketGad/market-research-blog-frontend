@@ -5,38 +5,23 @@ const BurnCoinError = (props) => {
 	return (
 		<div>
 			<div className='row'>
-				<div
-					className='col l6 s12'
-					style={{
-						backgroundColor: 'white',
-						height:
-							'400px' /*, borderRight:'2px solid #87879f' ,borderTopLeftRadius:'20px', borderBottomLeftRadius:'20px' */
-					}}
-				>
+				<div className='col l6 s12'>
 					<p style={{ textAlign: 'center' }}>
 						<img
 							width='80%'
 							src={
-								'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1602423122/Theme/9_Icon_qdgix7.png'
+								'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603256319/Theme/9_Icon_qdgix7.png'
 							}
-							style={{ paddingBottom: '7%' }}
 						/>
 					</p>
 				</div>
-				<div
-					className='col l6 s12'
-					style={{
-						backgroundColor: 'white',
-						height: '400px' /*,borderTopRightRadius:'20px',borderBottomRightRadius:'20px'*/
-					}}
-				>
+				<div className='col l6 s12' style={{ padding: '5% 0' }}>
 					<div
 						className='center'
 						style={{
 							fontSize: '1.6em',
 							fontFamily: 'Bahnschrift',
-							color: 'darkblue',
-							padding: '3% 7% 3% 5%'
+							color: 'darkblue'
 						}}
 					>
 						997 MG users are in the waiting list!
@@ -47,7 +32,7 @@ const BurnCoinError = (props) => {
 							fontSize: '1.6em',
 							fontFamily: 'Bahnschrift',
 							color: 'darkblue',
-							padding: '3% 7% 7% 7%'
+							margin: '5% 0'
 						}}
 					>
 						Burn your interaction points to join the exclusive discounts on the products.
@@ -58,9 +43,7 @@ const BurnCoinError = (props) => {
 							style={{
 								fontSize: '1.2em',
 								fontFamily: 'Bahnschrift',
-								color: '#87879f',
-								marginBottom: '5%',
-								padding: '0% 22% 0% 22%'
+								color: '#87879f'
 							}}
 						>
 							You need 1000 interaction coins to activate this.
@@ -73,9 +56,9 @@ const BurnCoinError = (props) => {
 										backgroundColor: '#1e4a72',
 										color: 'white',
 										border: 'none',
+										margin: '8% 0',
 										borderRadius: '9px',
-										padding: '0% 4% 0% 4%',
-										margin: '0% 7% 0% 7%',
+										padding: '0% 4%',
 										fontWeight: 'bold',
 										fontSize: '19px'
 									}}
