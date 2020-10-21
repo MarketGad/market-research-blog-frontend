@@ -7,18 +7,30 @@ import ReputationPoint from '../Components/ReputaionPoints';
 
 const MyProfile = (props) => {
 	const user = props.location.state.user;
-	// console.log(user);
+	console.log(user);
 	return (
 		<div className='myprofile-container'>
 			<Grid container component='main'>
 				<CssBaseline />
 				<Grid item xs={12} md={3}>
 					<div className='image' style={{ textAlign: 'center' }}>
-						<img
-							style={{ margin: '15px', width: '200px', height: '200px', borderRadius: '7px' }}
-							src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiUY7RQ-eUe_fmk6--gEvDXvallGC7ZA7suQ&usqp=CAU'
-							alt={user.firstname}
-						/>
+						{user.profilePic && (
+							<img
+								style={{ margin: '15px', width: '200px', height: '200px', borderRadius: '7px' }}
+								src={user.profilePic}
+								alt={user.firstname}
+							/>
+						)}
+						{!user.profilePic && (
+							<img
+								style={{ margin: '15px', width: '200px', height: '200px', borderRadius: '7px' }}
+								src={
+									'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiUY7RQ-eUe_fmk6--gEvDXvallGC7ZA7suQ&usqp=CAU'
+								}
+								alt={user.firstname}
+							/>
+						)}
+
 						<div style={{ padding: '5px' }}>
 							<span>
 								<ReputationPoint ReputationPoint={user.reputation} />
