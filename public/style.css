@@ -945,7 +945,8 @@ nav {
 /*-----------------form experience-------------------------------*/
 .exp-cont {
   background-color: white;
-}
+} /*also used in burn coins error*/
+
 .exp-p1 {
   font-size: 1.4em;
   font-family: Bahnschrift;
@@ -960,6 +961,31 @@ nav {
   margin-bottom: 5%;
   padding: 3% 0 0 0;
   text-align: center;
+}
+/*---------burn coin error------------*/
+.burncoinerr1 {
+  font-size: 1.6em;
+  font-family: Bahnschrift;
+  color: darkblue;
+  text-align: center;
+  margin: 8% 0;
+}
+
+.burncoinerr3 {
+  font-size: 1.2em;
+  font-family: Bahnschrift;
+  color: #87879f;
+  margin-top: 8%;
+}
+.burn-err-button {
+  background-color: #1e4a72;
+  color: white;
+  border: none;
+  margin: 10% 32%;
+  border-radius: 9px;
+  padding: 0 0 0 0;
+  font-weight: bold;
+  font-size: 19px;
 }
 /* -----community----------- */
 .trend-desc {
