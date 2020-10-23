@@ -3,7 +3,6 @@ import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
 const Joblist = (props) => {
-
 	const showJobs = props.jobs.length ? (
 		props.jobs.map((job, index) => {
 			if (!/^https?:\/\//.test(job.jobLink)) {
@@ -16,7 +15,13 @@ const Joblist = (props) => {
 	);
 	return (
 		<div>
-			{props.jobs[0] && <div>{showJobs}</div>}
+			{props.jobs[0] && (
+				<div>
+					<ul className='collection job-container' style={{ borderRadius: '7px' }}>
+						{showJobs}
+					</ul>
+				</div>
+			)}
 			{props.jobs.length === 0 && (
 				<div>
 					<FadingLoader loadno={3} />
