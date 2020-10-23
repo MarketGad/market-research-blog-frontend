@@ -57,6 +57,7 @@ import {
 	fetchInternships,
 	fetchCommunityPosts
 } from './redux/ActionCreator';
+import i1009 from './Articles/industry/1009';
 
 const mapStateToProps = (state) => {
 	return {
@@ -169,6 +170,7 @@ class MainApp extends React.Component {
 					<Route exact path='/i1006' component={I1006} />
 					<Route exact path='/i1007' component={I1007} />
 					<Route exact path='/i1008' component={I1008} />
+					<Route exact path='/i1009' component={i1009} />
 					<Route exact path='/s2001' component={S2001} />
 					<Route exact path='/s2002' component={S2002} />
 					<Route exact path='/s2003' component={S2003} />
