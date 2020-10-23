@@ -33,16 +33,9 @@ export default function FormExperience() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className="exp-cont">
       <div className="row">
-        <div
-          className="col l6 s12"
-          style={{
-            backgroundColor: "white",
-            height:
-              "300px" /*, borderRight:'2px solid #87879f' ,borderTopLeftRadius:'20px', borderBottomLeftRadius:'20px' */,
-          }}
-        >
+        <div className="col l6 s12">
           <p style={{ textAlign: "center" }}>
             <img
               width="80%"
@@ -53,38 +46,12 @@ export default function FormExperience() {
           </p>
         </div>
 
-        <div
-          className="col l6 s12"
-          style={{
-            backgroundColor: "white",
-            height:
-              "300px" /*,borderTopRightRadius:'20px',borderBottomRightRadius:'20px'*/,
-          }}
-        >
-          <div
-            className="center"
-            style={{
-              fontSize: "1.3em",
-              fontFamily: "Bahnschrift",
-              color: "darkblue",
-              padding: "2% 0 0 0",
-              textAlign: "center",
-            }}
-          >
+        <div className="col l6 s12">
+          <div className="center" className="exp-p1">
             It will just take two minutes to launch your the future of your
             career with MarketGad
           </div>
-          <div
-            className="center"
-            style={{
-              fontSize: "1.2em",
-              fontFamily: "Bahnschrift",
-              color: "#87879f",
-              marginBottom: "5%",
-              padding: "3% 0 0 0",
-              textAlign: "center",
-            }}
-          >
+          <div className="center" className="exp-p2">
             Professional Details
           </div>
           <form
