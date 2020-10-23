@@ -913,6 +913,36 @@ nav {
   border-radius: 5px;
   padding: 0.3% 1.5% 0.3% 1.5%;
 }
+/*----------------------GetOtp---------------------------*/
+.otp-body {
+  background-color: white;
+}
+.otpComp {
+  margin: 0% 30% 0% 34%;
+}
+.otp-t1 {
+  font-size: 1.6em;
+  text-align: center;
+  font-family: Bahnschrift;
+  color: darkblue;
+  padding: 0% 10% 3% 10%;
+}
+.otp-t2 {
+  font-size: 1.4em;
+  font-family: Bahnschrift;
+  text-align: center;
+  color: #87879f;
+  margin-bottom: 2%;
+  padding: 0% 17% 0% 17%;
+}
+.otp-t3 {
+  font-size: 1.4em;
+  font-family: Bahnschrift;
+  text-align: center;
+  color: #87879f;
+  margin-bottom: 2%;
+  padding: 2% 17% 0% 17%;
+}
 
 /* -----community----------- */
 .trend-desc {
@@ -1025,6 +1055,10 @@ nav {
     margin-right: 5%;
     margin-left: 5%;
     width: auto;
+  }
+  .otpComp {
+    text-align: center;
+    margin: 0 0 0 0;
   }
   /* .slider .slides .active .mobile1{
         height: 85%;
