@@ -1,16 +1,15 @@
-import React from "react";
-import BurnCoinError from "../Components/BurnCoinError";
-import Popup from "../Components/Popup";
-
-import Footer from "../Components/Footer";
+import React from 'react';
+import BurnCoinError from '../Components/BurnCoinError';
+import Popup from '../Components/Popup';
+import Footer from '../Components/Footer';
 
 const Discounts = () => {
 	const [ openBazaarErr, setOpenBazaarErr ] = React.useState(false);
 	return (
 		<div className='bazaar-bkgrd'>
 			<div
-				className='container'
 				style={{
+					margin: '0 12%',
 					minHeight: '90vh'
 				}}
 			>
@@ -24,7 +23,7 @@ const Discounts = () => {
 						/>
 					</div>
 					<div>
-						<div className='center' className='baz'>
+						<div className='center baz'>
 							Burn your interaction points to join the exclusive club and earn discounts on your
 							subscription
 						</div>
@@ -35,13 +34,10 @@ const Discounts = () => {
 							}
 						/>
 						<div className='center'>
-							<div className='center' className='baz'>
-								Burn 1000 points to enter
-							</div>
+							<div className='baz'>Burn 1000 points to enter</div>
 							<div>
 								<a
-									className='waves-effect waves-light btn-small pro-btn1'
-									className='enter-button'
+									className='waves-effect waves-teal btn enter-button'
 									onClick={() => {
 										setOpenBazaarErr(true);
 									}}
@@ -52,14 +48,14 @@ const Discounts = () => {
 									<BurnCoinError openSignin={openBazaarErr} setOpenSignin={setOpenBazaarErr} />
 								</Popup>
 							</div>
-							<p style={{ textAlign: 'center' }}>
+							<div>
 								<img
-									width='80%'
+									width='65%'
 									src={
 										'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603382240/Theme/Infographic_iffbsf_1_qzzdln.png'
 									}
 								/>
-							</p>
+							</div>
 						</div>
 					</div>
 				</div>
