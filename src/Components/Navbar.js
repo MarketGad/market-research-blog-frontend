@@ -8,6 +8,11 @@ import ReputationPoint from './ReputaionPoints';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
 import VerifyOtp from '../Screens/VerifyOtp';
+import FormPassion from '../Components/FormPassion';
+import FormExperience from './FormExperience';
+import FreelanceAgree from './FreelanceAgree';
+import FreelanceFinish from './FreelanceFinish';
+import PremiumOfferings from './PremiumOfferings';
 
 const Navbar = () => {
 	const [ redirect, setRedirect ] = React.useState(false);
@@ -317,8 +322,8 @@ const Navbar = () => {
 					</li>
 					{showmobile()}
 				</ul>
-				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
-					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+				<Popup title='Signin' openPopup={true} setOpenPopup={setOpenSignin}>
+					<FreelanceFinish openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>
 			</div>
 		);

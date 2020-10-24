@@ -1,12 +1,12 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		'& .MuiTextField-root': {
-			margin: theme.spacing(1),
-			width: '20ch'
+			margin: theme.spacing(0)
 		},
 		paper: {
 			marginTop: theme.spacing(0),
@@ -53,57 +53,65 @@ export default function FormExperience () {
 					<div className='center' className='exp-p2'>
 						Professional Details
 					</div>
-					<form className={classes.root} noValidate autoComplete='off' style={{ textAlign: 'center' }}>
-						<div>
-							<TextField
-								variant='outlined'
-								fullWidth
-								id='experience'
-								label='Experience'
-								name='experience'
-								/*value={experience}
-											onChange={(e) => setExperience(e.target.value)}*/
-							/>
-							<TextField id='experienceyears' label='Experience years' type='number' variant='outlined' />
-							<TextField
-								variant='outlined'
-								required
-								fullWidth
-								id='linkedIn'
-								label='LinkedIn'
-								name='linkedIn'
-								/*value={linkedIn}
+					<form className={classes.root} Validate>
+						<Grid container spacing={2}>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant='outlined'
+									required
+									fullWidth
+									id='linkedIn'
+									label='LinkedIn'
+									name='linkedIn'
+									/*value={linkedIn}
 											onChange={(e) => setlinkedin(e.target.value)}*/
-							/>
-							<TextField
-								variant='outlined'
-								required
-								fullWidth
-								id='skills'
-								label='Skills'
-								name='lastName'
-								autoComplete='skills'
-								/*value={skills}
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant='outlined'
+									required
+									fullWidth
+									id='skills'
+									label='Skills'
+									name='lastName'
+									autoComplete='skills'
+									helperText='separate multiple skills by &#39; , &#39;'
+									/*value={skills}
 											onChange={(e) => setSkills(e.target.value)}*/
-							/>
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField
+									variant='outlined'
+									fullWidth
+									id='experience'
+									label='Experience'
+									name='experience'
+									/*value={experience}
+											onChange={(e) => setExperience(e.target.value)}*/
+								/>
+							</Grid>
+							<Grid item xs={12} sm={6}>
+								<TextField id='experienceyears' label='Experience years' variant='outlined' />
+							</Grid>
+						</Grid>
+						<div className='center'>
+							<button
+								type='submit'
+								class='btn-small'
+								style={{
+									marginTop: '2%',
+									backgroundColor: '#1e4a72',
+									color: 'white',
+									borderRadius: '15px',
+									padding: '0 7%'
+								}}
+							>
+								Next
+							</button>
 						</div>
 					</form>
-
-					<div className='center' style={{ padding: '3% 0 0 2%', textAlign: 'center' }}>
-						<div
-							class='btn-small'
-							style={{
-								backgroundColor: '#1e4a72',
-								color: 'white',
-								border: 'none',
-								borderRadius: '15px',
-								paddingLeft: '7%',
-								paddingRight: '7%'
-							}}
-						>
-							Next
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
