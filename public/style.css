@@ -743,11 +743,8 @@ nav {
 }
 
 .product-container {
-	border-radius: 3px;
-	margin: 0 2px;
-	padding: 5px 10px;
-	border: none;
-	border-bottom: 1px solid #ddd;
+	border-radius: 7px;
+	background-color: white;
 }
 .comment-container {
 	max-height: 5em;
@@ -799,7 +796,7 @@ nav {
 	border-radius: 3px;
 	cursor: pointer;
 	text-align: center;
-	top: 5px !important;
+	top: 10px !important;
 	background-color: #fdfafa;
 	color: #ff9529;
 }
@@ -809,7 +806,7 @@ nav {
 	cursor: pointer;
 	text-align: center;
 	color: #080808d9;
-	top: 5px !important;
+	top: 10px !important;
 }
 .upvote-container:hover {
 	background-color: #f3efef;
@@ -1497,11 +1494,9 @@ nav {
 		display: none;
 	}
 	.upvote-container {
-		top: 5px !important;
 		right: 5px !important;
 	}
 	.upvote-container-active {
-		top: 5px !important;
 		right: 5px !important;
 	}
 	.details-page-logo {
