@@ -10,7 +10,7 @@ const ListProduct = (props) => {
 				<div className='row'>
 					<div className='col s12 l8'>
 						<div className='job-page-head'>Trending jobs</div>
-						<Joblist jobs={props.jobs} />
+						<Joblist jobs={props.jobs} filter='' />
 						<div className='product-page-head'>Internships</div>
 						<Internshiplist internship={props.internship} />
 					</div>
