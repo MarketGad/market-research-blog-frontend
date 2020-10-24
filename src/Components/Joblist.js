@@ -2,57 +2,24 @@ import React from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
-const industries = [
-	{
-		value: 'Software',
-		label: 'Software'
-	},
-	{
-		value: 'Operations',
-		label: 'Operations'
-	},
-	{
-		value: 'Marketing',
-		label: 'Marketing'
-	},
-	{
-		value: 'Finance',
-		label: 'Finance'
-	},
-	{
-		value: 'Engineering',
-		label: 'Engineering'
-	},
-	{
-		value: 'Product',
-		label: 'Product'
-	},
-	{
-		value: 'Other',
-		label: 'Other'
-	}
-];
-
-class Joblist extends React.Component{
-	constructor(props){
+class Joblist extends React.Component {
+	constructor (props) {
 		super(props);
 		this.state = {
-			filter: ""
-		}
+			filter: ''
+		};
 	}
-	render(){
-
+	render () {
 		const filterJobs = (job) => {
-			// console.log(this.state)
-			if(this.state.filter === ""){
+			if (this.props.filter === '') {
 				return true;
 			} else {
-				return this.state.filter === job.industry ? true : false;
+				return this.props.filter === job.industry ? true : false;
 			}
-		}
+		};
 		var jobs = this.props.jobs.slice(0).reverse();
-		jobs = jobs.filter(filterJobs)
-		// console.log(jobs)
+		jobs = jobs.filter(filterJobs);
+
 		// var DD_ARR = [];
 
 		// for (var i = 0; i < jobs.length; ) {
