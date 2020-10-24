@@ -4,9 +4,7 @@ import JobsandInternshipcard from './JobsandInternshipcard';
 
 const Joblist = (props) => {
 	const jobs = props.jobs;
-	jobs.sort(function (a, b) {
-		return b.createdAt > a.createdAt;
-	});
+	jobs.reverse()
 	var DD_ARR = [];
 
 	for (var i = 0; i < jobs.length; ) {
