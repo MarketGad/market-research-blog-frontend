@@ -85,7 +85,13 @@ const Joblist = (props) => {
 	// );
 	return (
 		<div>
-			{props.jobs[0] && <div>{ShowJobsDateWise}</div>}
+			{props.jobs[0] && (
+				<div>
+					<ul className='collection job-container' style={{ borderRadius: '7px' }}>
+						{ShowJobsDateWise}
+					</ul>
+				</div>
+			)}
 			{props.jobs.length === 0 && (
 				<div>
 					<FadingLoader loadno={3} />

@@ -6,7 +6,7 @@
 }
 
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 /* ------------input---------------- */
 
@@ -346,7 +346,7 @@ nav {
 
 .card-h {
 	height: 380px;
-	margin: .5% 6%;
+	margin: 0.5% 6%;
 }
 
 .featuredimg {
@@ -379,7 +379,7 @@ nav {
 
 .featured-right {
 	margin-top: 1em;
-	padding-left: '25px';
+	padding-left: "25px";
 	height: 350px;
 }
 
@@ -763,7 +763,7 @@ nav {
 	padding: 10px 0;
 	font-size: 2.4em;
 	font-weight: 800;
-	line-height: .5em;
+	line-height: 0.5em;
 }
 .product-subhead {
 	font-size: 1.9em;
@@ -890,6 +890,29 @@ nav {
 .trending-product-left-container {
 	width: 83%;
 }
+/*----------------------Bazaar------------------------*/
+.logo-gold {
+	padding: 3% 0 2% 0;
+}
+.bazaar-bkgrd {
+	background-image: url("https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603347962/Theme/Background_gprpm8.jpg");
+	background-size: 100%;
+	/* background-repeat: no-repeat; */
+}
+.baz {
+	font-size: 1.3em;
+	font-family: Bahnschrift;
+	color: white;
+	padding: 0% 18% 1% 18%;
+}
+.enter-button {
+	background-color: white;
+	color: rgb(1, 1, 97);
+	font-weight: bolder;
+	border-radius: 5px;
+	padding: 0.3% 1.5% 0.3% 1.5%;
+}
+
 /* -----community----------- */
 .trend-desc {
 	font-size: 1.05em;

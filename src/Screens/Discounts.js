@@ -7,38 +7,26 @@ import Footer from '../Components/Footer';
 const Discounts = () => {
 	const [ openBazaarErr, setOpenBazaarErr ] = React.useState(false);
 	return (
-		<div
-			style={{
-				backgroundImage:
-					'url(' +
-					'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603347962/Theme/Background_gprpm8.jpg' +
-					')',
-				backgroundSize: '100%'
-			}}
-		>
-			<div className='container'>
+		<div className='bazaar-bkgrd'>
+			<div
+				className='container'
+				style={{
+					minHeight: '90vh'
+				}}
+			>
 				<div className='product-content center'>
-					<div>
+					<div className='logo-gold'>
 						<img
 							width='7%'
 							src={
 								'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603348061/Theme/Golden_MG_Logo_oxwzlm.png'
 							}
-							style={{ padding: '3% 0 2% 0' }}
 						/>
 					</div>
 					<div>
-						<div
-							className='center'
-							style={{
-								fontSize: '1 em',
-								fontFamily: 'Bahnschrift',
-								color: 'white',
-								padding: '0% 25% 1% 25%'
-							}}
-						>
+						<div className='center' className='baz'>
 							Burn your interaction points to join the exclusive club and earn discounts on your
-							subscription..
+							subscription
 						</div>
 						<img
 							width='15%'
@@ -47,26 +35,13 @@ const Discounts = () => {
 							}
 						/>
 						<div className='center'>
-							<div
-								className='center'
-								style={{
-									fontSize: '1 em',
-									fontFamily: 'Bahnschrift',
-									color: 'white',
-
-									padding: '0% 22%'
-								}}
-							>
+							<div className='center' className='baz'>
 								Burn 1000 points to enter
 							</div>
-							<div style={{ padding: '3px' }}>
+							<div>
 								<a
 									className='waves-effect waves-light btn-small pro-btn1'
-									style={{
-										backgroundColor: 'white',
-										color: 'darkblue',
-										padding: '0 2%'
-									}}
+									className='enter-button'
 									onClick={() => {
 										setOpenBazaarErr(true);
 									}}
@@ -74,7 +49,7 @@ const Discounts = () => {
 									Enter Now
 								</a>
 								<Popup title='Signin' openPopup={openBazaarErr} setOpenPopup={setOpenBazaarErr}>
-									<BurnCoinError openBazaarErr={openBazaarErr} setOpenBazaarErr={setOpenBazaarErr} />
+									<BurnCoinError openSignin={openBazaarErr} setOpenSignin={setOpenBazaarErr} />
 								</Popup>
 							</div>
 							<p style={{ textAlign: 'center' }}>
