@@ -34,7 +34,7 @@ const VerifyOtp = (props) => {
 	};
 	if (load === true) {
 		return (
-			<div>
+			<div className='center'>
 				<ThreeOtpLoad />
 			</div>
 		);
@@ -46,29 +46,20 @@ const VerifyOtp = (props) => {
 				We've sent a 6-digital code to <a style={{ color: 'darkblue' }}>{email}</a> The code expires shortly, so
 				please enter it soon.
 			</div>
-			<div
-				className='center'
-				style={{
-					margin: '0% 32%'
-				}}
-			>
+			<div className='otp-input-part'>
 				<OtpComponent setOtp={setOtp} />
 			</div>
-			<div className='center' className='otp-t3'>
-				Can't find your code? Check your spam folder.
-			</div>
+			<div className='center otp-t3'>Can't find your code? Check your spam folder.</div>
 			<div className='center'>
 				<div
 					onClick={otpsubmitHandler}
-					class='btn-small'
+					class='btn-small waves-effect waves-teal'
 					style={{
 						backgroundColor: '#1e4a72',
 						color: 'white',
-						border: 'none',
 						margin: '20px 0',
-						borderRadius: '15px',
-						paddingLeft: '7%',
-						paddingRight: '7%'
+						borderRadius: '8px',
+						padding: '0 20px'
 					}}
 				>
 					Submit
