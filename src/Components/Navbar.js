@@ -314,7 +314,7 @@ const Navbar = () => {
 					</li>
 					{showmobile()}
 				</ul>
-				<Popup title='Signin' openPopup={true} setOpenPopup={setOpenSignin}>
+				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>
 			</div>
