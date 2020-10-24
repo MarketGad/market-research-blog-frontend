@@ -1,8 +1,8 @@
-import React from 'react';
-import BurnCoinError from '../Components/BurnCoinError';
-import Popup from '../Components/Popup';
+import React from "react";
+import BurnCoinError from "../Components/BurnCoinError";
+import Popup from "../Components/Popup";
 
-import Footer from '../Components/Footer';
+import Footer from "../Components/Footer";
 
 const Discounts = () => {
 	const [ openBazaarErr, setOpenBazaarErr ] = React.useState(false);
