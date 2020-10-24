@@ -3,8 +3,8 @@ import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
 
 const Joblist = (props) => {
-	const jobs = props.jobs;
-	jobs.reverse()
+	const jobs = props.jobs.slice(0).reverse();
+
 	var DD_ARR = [];
 
 	for (var i = 0; i < jobs.length; ) {
