@@ -7,8 +7,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const industries = [
 	{
-		value: 'All',
-		label: ''
+		value: '',
+		label: 'All'
 	},{
 		value: 'Software',
 		label: 'Software'
