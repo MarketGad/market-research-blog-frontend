@@ -1035,7 +1035,10 @@ nav {
 .job-page-head {
 	font-size: 1.8em;
 	font-weight: 800;
-	padding-top: 2em;
+	padding-top: 10px;
+}
+.filter-field {
+	width: 25%;
 }
 /* ----------------alert-------------- */
 .alert {
@@ -1598,6 +1601,10 @@ nav {
 	.otp-t3 {
 		font-size: 1.3em;
 		padding: 15px 0;
+	}
+	/* ---jobs---- */
+	.filter-field {
+		width: 40%;
 	}
 }
 @media only screen and (max-width: 280px) {

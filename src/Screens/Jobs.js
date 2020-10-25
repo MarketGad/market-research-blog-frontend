@@ -1,16 +1,72 @@
+import { Grid, MenuItem, TextField } from '@material-ui/core';
 import React from 'react';
 import Internshiplist from '../Components/internshiplist';
 import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
-
+const industries = [
+	{
+		value: '',
+		label: 'All'
+	},
+	{
+		value: 'Software',
+		label: 'Software'
+	},
+	{
+		value: 'Operations',
+		label: 'Operations'
+	},
+	{
+		value: 'Marketing',
+		label: 'Marketing'
+	},
+	{
+		value: 'Finance',
+		label: 'Finance'
+	},
+	{
+		value: 'Engineering',
+		label: 'Engineering'
+	},
+	{
+		value: 'Product',
+		label: 'Product'
+	},
+	{
+		value: 'Other',
+		label: 'Other'
+	}
+];
 const ListProduct = (props) => {
+	const [ filter, setFilter ] = React.useState('');
 	return (
 		<div>
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>
-						<div className='job-page-head'>Trending jobs</div>
-						<Joblist jobs={props.jobs} filter='' />
+						<Grid container spacing={3} className='job-page-head'>
+							<Grid item sm={6} xs={6}>
+								<div>Trending jobs</div>
+							</Grid>
+							<Grid item sm={6} xs={6} className='right-align'>
+								<TextField
+									className='filter-field'
+									select
+									label='Filter'
+									value={filter}
+									variant='outlined'
+									onChange={(e) => setFilter(e.target.value)}
+								>
+									{industries.map((option) => (
+										<MenuItem key={option.value} value={option.value}>
+											{option.label}
+										</MenuItem>
+									))}
+								</TextField>
+							</Grid>
+						</Grid>
+
+						<Joblist jobs={props.jobs} filter={filter} />
 						<div className='product-page-head'>Internships</div>
 						<Internshiplist internship={props.internship} />
 					</div>
