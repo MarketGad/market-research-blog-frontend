@@ -962,7 +962,8 @@ nav {
 /*---------burn coin error------------*/
 .burncoinerr1 {
 	font-size: 1.6em;
-	font-family: Bahnschrift;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
 	color: darkblue;
 	text-align: center;
 	margin: 6% 0;
@@ -970,13 +971,15 @@ nav {
 
 .burncoinerr3 {
 	font-size: 1.3em;
-	font-family: Bahnschrift;
+	font-weight: 600;
+	font-family: 'Lato', sans-serif;
 	color: #87879f;
 }
 .burn-err-button {
 	margin: 10% 0;
 	background-color: #1e4a72;
 	color: white;
+	font-family: 'Lato', sans-serif;
 	border-radius: 8px;
 	font-weight: 800;
 	font-size: 1.05em;
@@ -984,6 +987,9 @@ nav {
 .burn-err-button:hover {
 	background-color: rgb(231, 225, 225);
 	color: #1e4a72;
+}
+.divider-popup {
+	border-right: 2px solid #ebebf7;
 }
 /* -----community----------- */
 .trend-desc {
