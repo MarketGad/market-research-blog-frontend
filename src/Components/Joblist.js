@@ -1,6 +1,40 @@
 import React from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
+
+
+const industries = [
+	{
+		value: 'Software',
+		label: 'Software'
+	},
+	{
+		value: 'Operations',
+		label: 'Operations'
+	},
+	{
+		value: 'Marketing',
+		label: 'Marketing'
+	},
+	{
+		value: 'Finance',
+		label: 'Finance'
+	},
+	{
+		value: 'Engineering',
+		label: 'Engineering'
+	},
+	{
+		value: 'Product',
+		label: 'Product'
+	},
+	{
+		value: 'Other',
+		label: 'Other'
+	}
+];
 
 class Joblist extends React.Component {
 	constructor (props) {
@@ -8,17 +42,27 @@ class Joblist extends React.Component {
 		this.state = {
 			filter: ''
 		};
+		this.setFilter = this.setFilter.bind(this);
+		this.filterJobs = this.filterJobs.bind(this);
 	}
+
+	setFilter = (filter) => {
+		this.setState({
+			filter: filter
+		})
+	}
+
+	filterJobs = (job) => {
+		if (this.state.filter === '') {
+			return true;
+		} else {
+			return this.state.filter === job.industry ? true : false;
+		}
+	};
+
 	render () {
-		const filterJobs = (job) => {
-			if (this.props.filter === '') {
-				return true;
-			} else {
-				return this.props.filter === job.industry ? true : false;
-			}
-		};
 		var jobs = this.props.jobs.slice(0).reverse();
-		jobs = jobs.filter(filterJobs);
+		jobs = jobs.filter(this.filterJobs);
 
 		// var DD_ARR = [];
 
@@ -97,6 +141,24 @@ class Joblist extends React.Component {
 		);
 		return (
 			<div>
+				<div>
+				<TextField
+					id='outlined-select-sector'
+					fullWidth
+					select
+					required
+					label='Options'
+					value={this.state.filter}
+					variant='outlined'
+					onChange={(e) => this.setFilter(e.target.value)}
+				>
+					{industries.map((option) => (
+						<MenuItem key={option.value} value={option.value}>
+							{option.label}
+						</MenuItem>
+					))}
+				</TextField>
+				</div>
 				{this.props.jobs[0] && (
 					<div>
 						<ul className='collection job-container' style={{ borderRadius: '7px' }}>
