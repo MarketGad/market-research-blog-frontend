@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import Popup from './Popup';
+import FormExperience from './FormExperience';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -24,9 +26,25 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function FormPassion () {
+export default function FormPassion (props) {
 	const classes = useStyles();
+	const { openJobprofile, setOpenjobprofile } = props;
+	const [ openExperience, setOpenExperience ] = useState('');
+	const [ passionate, setPassionate ] = useState('');
+	const [ qualification, setQualification ] = useState('');
+	const [ linkedIn, setlinkedin ] = useState('');
+	const [ skills, setSkills ] = useState('');
+	const [ portfolio, setPortfolio ] = useState('');
+	const [ experience, setExperience ] = useState('');
+	const [ location, setLocation ] = useState('');
+	const [ service, setService ] = useState('');
+	const [ price, setPrice ] = useState('');
 
+	const submithandler = (e) => {
+		e.preventDefault();
+		// setOpenjobprofile(false);
+		setOpenExperience(true);
+	};
 	return (
 		<div>
 			<div className='row'>
@@ -66,7 +84,7 @@ export default function FormPassion () {
 					>
 						Professional Details
 					</div>
-					<form className={classes.root} Validate>
+					<form className={classes.root} Validate onSubmit={submithandler}>
 						<div>
 							<Grid container spacing={2}>
 								<Grid item xs={12} sm={6}>
@@ -77,8 +95,8 @@ export default function FormPassion () {
 										id='passionate'
 										label='Passionate About'
 										name='passionate'
-										/*value={passionate}
-											onChange={(e) => setPassionate(e.target.value)}*/
+										value={passionate}
+										onChange={(e) => setPassionate(e.target.value)}
 									/>
 								</Grid>
 								<Grid item xs={12} sm={6}>
@@ -89,8 +107,8 @@ export default function FormPassion () {
 										id='location'
 										label='Current City'
 										name='location'
-										/*value={location}
-											onChange={(e) => setLocation(e.target.value)}*/
+										value={location}
+										onChange={(e) => setLocation(e.target.value)}
 									/>
 								</Grid>
 								<Grid item xs={12} sm={6}>
@@ -101,8 +119,8 @@ export default function FormPassion () {
 										id='Qualification'
 										label='Qualification'
 										name='Qualification'
-										/*value={qualification}
-                onChange={(e) => setQualification(e.target.value)}*/
+										value={qualification}
+										onChange={(e) => setQualification(e.target.value)}
 									/>
 								</Grid>
 								<Grid item xs={12} sm={6}>
@@ -112,8 +130,8 @@ export default function FormPassion () {
 										id='portfolio'
 										label='Portfolio Link (if any)'
 										name='portfolio'
-										/*value={portfolio}
-                onChange={(e) => setPortfolio(e.target.value)}*/
+										value={portfolio}
+										onChange={(e) => setPortfolio(e.target.value)}
 									/>
 								</Grid>
 							</Grid>
@@ -135,6 +153,16 @@ export default function FormPassion () {
 						</div>
 					</form>
 				</div>
+				<Popup openPopup={openExperience} setOpenPopup={setOpenExperience}>
+					<FormExperience
+						qualification={qualification}
+						portfolio={portfolio}
+						passionate={passionate}
+						location={location}
+						openExperience={openExperience}
+						setOpenExperience={setOpenExperience}
+					/>
+				</Popup>
 			</div>
 		</div>
 	);

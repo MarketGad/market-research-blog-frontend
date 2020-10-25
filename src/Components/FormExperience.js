@@ -2,6 +2,8 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
+import FreelanceAgree from './FreelanceAgree';
+import Popup from './Popup';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -29,9 +31,18 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function FormExperience () {
+export default function FormExperience (props) {
 	const classes = useStyles();
-
+	const { qualification, portfolio, passionate, location, openExperience, setOpenExperience } = props;
+	const [ openFreelance, setOpenFreelance ] = React.useState('');
+	const [ linkedIn, setlinkedin ] = React.useState('');
+	const [ skills, setSkills ] = React.useState('');
+	const [ experienceyears, setExperienceyears ] = React.useState('');
+	const [ experience, setExperience ] = React.useState('');
+	const submithandler = (e) => {
+		e.preventDefault();
+		setOpenFreelance(true);
+	};
 	return (
 		<div className='exp-cont'>
 			<div className='row'>
@@ -53,7 +64,7 @@ export default function FormExperience () {
 					<div className='center' className='exp-p2'>
 						Professional Details
 					</div>
-					<form className={classes.root} Validate>
+					<form className={classes.root} Validate onSubmit={submithandler}>
 						<Grid container spacing={2}>
 							<Grid item xs={12} sm={6}>
 								<TextField
@@ -63,8 +74,8 @@ export default function FormExperience () {
 									id='linkedIn'
 									label='LinkedIn'
 									name='linkedIn'
-									/*value={linkedIn}
-											onChange={(e) => setlinkedin(e.target.value)}*/
+									value={linkedIn}
+									onChange={(e) => setlinkedin(e.target.value)}
 								/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
@@ -77,8 +88,8 @@ export default function FormExperience () {
 									name='lastName'
 									autoComplete='skills'
 									helperText='separate multiple skills by &#39; , &#39;'
-									/*value={skills}
-											onChange={(e) => setSkills(e.target.value)}*/
+									value={skills}
+									onChange={(e) => setSkills(e.target.value)}
 								/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
@@ -88,12 +99,18 @@ export default function FormExperience () {
 									id='experience'
 									label='Experience'
 									name='experience'
-									/*value={experience}
-											onChange={(e) => setExperience(e.target.value)}*/
+									value={experience}
+									onChange={(e) => setExperience(e.target.value)}
 								/>
 							</Grid>
 							<Grid item xs={12} sm={6}>
-								<TextField id='experienceyears' label='Experience years' variant='outlined' />
+								<TextField
+									id='experienceyears'
+									label='Experience years'
+									variant='outlined'
+									value={experienceyears}
+									onChange={(e) => setExperienceyears(e.target.value)}
+								/>
 							</Grid>
 						</Grid>
 						<div className='center'>
@@ -113,6 +130,17 @@ export default function FormExperience () {
 						</div>
 					</form>
 				</div>
+				<Popup openPopup={openFreelance} setOpenPopup={setOpenFreelance}>
+					<FreelanceAgree
+						{...props}
+						skills={skills}
+						linkedIn={linkedIn}
+						experience={experience}
+						experienceyears={experienceyears}
+						openExperience={openFreelance}
+						setOpenExperience={setOpenFreelance}
+					/>
+				</Popup>
 			</div>
 		</div>
 	);

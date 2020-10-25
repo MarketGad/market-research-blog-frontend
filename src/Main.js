@@ -160,7 +160,7 @@ class MainApp extends React.Component {
 					<Route exact path='/addjobs' component={JobForm} />
 					<Route exact path='/addtrend' component={CommunityForm} />
 					<Route exact path='/discounts' component={Discounts} />
-					<Route exact path='/registerforjobs' component={RegisterForJobs} />
+					{/* <Route exact path='/registerforjobs' component={RegisterForJobs} /> */}
 					<Route exact path='/registerforproduct' component={RegisterForProduct} />
 					<Route exact path='/i1001' component={I1001} />
 					<Route exact path='/i1002' component={I1002} />
