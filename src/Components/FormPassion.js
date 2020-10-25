@@ -59,7 +59,7 @@ export default function FormPassion (props) {
 					</p>
 				</div>
 
-				<div className='col l7 s12'>
+				<div className='col l7 s12' style={{ padding: '0 5%' }}>
 					<div
 						className='center'
 						style={{

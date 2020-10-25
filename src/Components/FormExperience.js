@@ -57,7 +57,7 @@ export default function FormExperience (props) {
 					</p>
 				</div>
 
-				<div className='col l6 s12'>
+				<div className='col l6 s12' style={{ paddingRight: '5%' }}>
 					<div className='center' className='exp-p1'>
 						It will just take two minutes to launch your the future of your career with MarketGad
 					</div>
@@ -118,7 +118,7 @@ export default function FormExperience (props) {
 								type='submit'
 								class='btn-small'
 								style={{
-									marginTop: '2%',
+									marginTop: '4%',
 									backgroundColor: '#1e4a72',
 									color: 'white',
 									borderRadius: '15px',

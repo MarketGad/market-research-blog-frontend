@@ -7,7 +7,18 @@ import { Redirect } from 'react-router-dom';
 const FreelanceFinish = (props) => {
 	const [ RegisterJobSuccess, setRegisterJobSuccess ] = React.useState(false);
 	const [ load, setLoad ] = React.useState('');
-	const { skills, location, experience, qualification, passionate, portfolio, linkedIn, experienceyears } = props;
+	const {
+		skills,
+		location,
+		experience,
+		qualification,
+		passionate,
+		portfolio,
+		linkedIn,
+		experienceyears,
+		openFinish,
+		setOpenFinish
+	} = props;
 	const submithandler = (e) => {
 		e.preventDefault();
 		const token = Cookies.get('session-id');
@@ -31,7 +42,9 @@ const FreelanceFinish = (props) => {
 			(response) => {
 				if (response.status === 200) {
 					setRegisterJobSuccess(true);
+					setOpenFinish(false);
 					setLoad(false);
+					window.location.reload(false);
 				} else {
 					alert(response.err);
 				}
@@ -40,17 +53,18 @@ const FreelanceFinish = (props) => {
 				if (error.message === 'Request failed with status code 413') {
 					alert('upload photo size should be less than 500kb');
 				} else {
+					console.log(error);
 					alert('One user can register once');
 					window.location.reload(false);
 				}
 			}
 		);
 	};
-	if (RegisterJobSuccess) {
+	if (RegisterJobSuccess === true) {
 		return <Redirect to='/' />;
 	} else if (load === true) {
 		return (
-			<div style={{ textAlign: 'center', padding: '10%' }}>
+			<div style={{ textAlign: 'center', padding: '12%' }}>
 				<ThreeDotLoad />
 			</div>
 		);

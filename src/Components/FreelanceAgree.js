@@ -85,7 +85,7 @@ const FreelanceAgree = (props) => {
 				</div>
 			</div>
 			<Popup openPopup={openFinish} setOpenPopup={setOpenFinish}>
-				<FreelanceFinish {...props} openExperience={openFinish} setOpenExperience={setOpenFinish} />
+				<FreelanceFinish {...props} openFinish={openFinish} setOpenFinish={setOpenFinish} />
 			</Popup>
 			<Popup openPopup={openOffering} setOpenPopup={setOpenOffering}>
 				<PremiumOffering {...props} openOffering={openOffering} setOpenOffering={setOpenOffering} />

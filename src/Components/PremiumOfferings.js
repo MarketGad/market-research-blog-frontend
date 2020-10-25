@@ -62,6 +62,7 @@ export default function PremiumOfferings (props) {
 				if (response.status === 200) {
 					setRegisterJobSuccess(true);
 					setLoad(false);
+					window.location.reload(false);
 				} else {
 					alert(response.err);
 				}

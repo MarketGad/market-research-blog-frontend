@@ -7,7 +7,7 @@ const PeopleCard = (props) => {
 	const linkedIn = props.linkedIn;
 	return (
 		<li className='collection-item avatar'>
-			<img src={user.profilePic} alt='' className='circle' />
+			<img src={user.profilePic || user.user.profilePic} alt='' className='circle' />
 			<Link style={{ color: 'black' }} className='title' to={`jobprofile/${user._id}`}>
 				<b>
 					{user.user.firstname} {user.user.lastname}
@@ -39,13 +39,7 @@ const PeopleCard = (props) => {
 				}}
 			>
 				<div className='col s6'>
-					<Link
-						className='waves-effect waves-light btn-small hire-connect-btn'
-						to={{
-							pathname: `/${user._id}`,
-							state: { UserProfile: user, linkedIn: linkedIn }
-						}}
-					>
+					<Link className='waves-effect waves-light btn-small hire-connect-btn' to={`jobprofile/${user._id}`}>
 						Hire
 					</Link>
 				</div>
