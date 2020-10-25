@@ -7,33 +7,31 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 const industries = [
 	{
+		value: 'All',
+		label: ''
+	},{
 		value: 'Software',
 		label: 'Software'
-	},
-	{
+	},{
 		value: 'Operations',
 		label: 'Operations'
-	},
-	{
+	},{
 		value: 'Marketing',
 		label: 'Marketing'
-	},
-	{
+	},{
 		value: 'Finance',
 		label: 'Finance'
-	},
-	{
+	},{
 		value: 'Engineering',
 		label: 'Engineering'
-	},
-	{
+	},{
 		value: 'Product',
 		label: 'Product'
-	},
-	{
+	},{
 		value: 'Other',
 		label: 'Other'
-	}
+	},
+	
 ];
 
 class Joblist extends React.Component {
@@ -147,7 +145,7 @@ class Joblist extends React.Component {
 					fullWidth
 					select
 					required
-					label='Options'
+					label='Filter'
 					value={this.state.filter}
 					variant='outlined'
 					onChange={(e) => this.setFilter(e.target.value)}
