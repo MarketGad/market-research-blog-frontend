@@ -137,7 +137,7 @@ class Joblist extends React.Component {
 				} else return <JobsandInternshipcard key={index} jobdetails={job} weblink={job.jobLink} />;
 			})
 		) : (
-			<div className='center'> Loading... </div>
+			<div className='center'> Oops! No Jobs To Show !! </div>
 		);
 		return (
 			<div>
