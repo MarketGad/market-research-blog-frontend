@@ -41,6 +41,23 @@ const ListProduct = (props) => {
 	const [ filter, setFilter ] = React.useState('');
 	return (
 		<div>
+     <div
+          style={{
+            borderBottom: "3px solid lightgray",
+
+            backgroundColor: "white",
+
+            /*position: "-webkit-sticky",
+            position: "sticky",
+            display: "block",
+            top: "0",*/
+          }}
+        >
+          <img
+            src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603704567/Theme/Photo_vjcaum.jpg"
+            width="100%"
+          ></img>
+        </div>
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>
