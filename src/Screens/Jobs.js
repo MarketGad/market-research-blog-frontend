@@ -2,6 +2,7 @@ import React from "react";
 import Internshiplist from "../Components/internshiplist";
 import Joblist from "../Components/Joblist";
 import PeopleList from "../Components/PeopleList";
+import Button from "@material-ui/core/Button";
 
 const ListProduct = (props) => {
   return (
@@ -26,7 +27,21 @@ const ListProduct = (props) => {
         </div>
         <div className="product-job-page-container">
           <div className="col s12 l8">
-            <div className="job-page-head">Trending jobs</div>
+            <div className="job-page-head">
+              Trending jobs
+              <Button
+                size="small"
+                style={{
+                  marginLeft: "78%",
+                  width: "18%",
+                }}
+              >
+                <img
+                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603723459/Theme/Untitled-1_wjizu0_e0rdph.png"
+                  width="100%"
+                ></img>
+              </Button>
+            </div>
             <Joblist jobs={props.jobs} filter="" />
             <div className="product-page-head">Internships</div>
             <Internshiplist internship={props.internship} />
