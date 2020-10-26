@@ -1,14 +1,47 @@
-import React from "react";
-import Internshiplist from "../Components/internshiplist";
-import Joblist from "../Components/Joblist";
-import PeopleList from "../Components/PeopleList";
-import Button from "@material-ui/core/Button";
-
+import { Grid, MenuItem, TextField } from '@material-ui/core';
+import React from 'react';
+import Internshiplist from '../Components/internshiplist';
+import Joblist from '../Components/Joblist';
+import PeopleList from '../Components/PeopleList';
+const industries = [
+	{
+		value: '',
+		label: 'All'
+	},
+	{
+		value: 'Software',
+		label: 'Software'
+	},
+	{
+		value: 'Operations',
+		label: 'Operations'
+	},
+	{
+		value: 'Marketing',
+		label: 'Marketing'
+	},
+	{
+		value: 'Finance',
+		label: 'Finance'
+	},
+	{
+		value: 'Engineering',
+		label: 'Engineering'
+	},
+	{
+		value: 'Product',
+		label: 'Product'
+	},
+	{
+		value: 'Other',
+		label: 'Other'
+	}
+];
 const ListProduct = (props) => {
-  return (
-    <div>
-      <div className="row">
-        <div
+	const [ filter, setFilter ] = React.useState('');
+	return (
+		<div>
+     <div
           style={{
             borderBottom: "3px solid lightgray",
 
@@ -25,58 +58,59 @@ const ListProduct = (props) => {
             width="100%"
           ></img>
         </div>
-        <div className="product-job-page-container">
-          <div className="col s12 l8">
-            <div className="job-page-head">
-              Trending jobs
-              <Button
-                size="small"
-                style={{
-                  marginLeft: "78%",
-                  width: "18%",
-                }}
-              >
-                <img
-                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603723459/Theme/Untitled-1_wjizu0_e0rdph.png"
-                  width="100%"
-                ></img>
-              </Button>
-            </div>
-            <Joblist jobs={props.jobs} filter="" />
-            <div className="product-page-head">Internships</div>
-            <Internshiplist internship={props.internship} />
-          </div>
-          <div className="col s12 l4 joblist">
-            <div className="row" style={{ margin: "0", padding: "0" }}>
-              <div className="col s12 m8">
-                <div
-                  className="product-page-head left-head"
-                  style={{ paddingTop: "5px" }}
-                >
-                  Trending talents
-                </div>
-                <h6 className="product-quote">Open for opportunities</h6>
-              </div>
-              <div className="col s4">
-                <div className="right-align">
-                  <a
-                    className="waves-effect waves-light btn-small pro-btn1 add-mobile-btn"
-                    href="/registerforjobs"
-                  >
-                    Add profile
-                  </a>
-                </div>
-              </div>
-            </div>
-            <PeopleList
-              jobProfiles={
-                props.jobProfiles === undefined ? [] : props.jobProfiles
-              }
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+			<div className='product-job-page-container'>
+				<div className='row'>
+					<div className='col s12 l8'>
+						<Grid container spacing={3} className='job-page-head'>
+							<Grid item sm={6} xs={6}>
+								<div>Trending jobs</div>
+							</Grid>
+							<Grid item sm={6} xs={6} className='right-align'>
+								<TextField
+									className='filter-field'
+									select
+									label='Filter'
+									value={filter}
+									variant='outlined'
+									onChange={(e) => setFilter(e.target.value)}
+								>
+									{industries.map((option) => (
+										<MenuItem key={option.value} value={option.value}>
+											{option.label}
+										</MenuItem>
+									))}
+								</TextField>
+							</Grid>
+						</Grid>
+
+						<Joblist jobs={props.jobs} filter={filter} />
+						<div className='product-page-head'>Internships</div>
+						<Internshiplist internship={props.internship} />
+					</div>
+					<div className='col s12 l4 joblist'>
+						<div className='row' style={{ margin: '0', padding: '0' }}>
+							<div className='col s12 m8'>
+								<div className='product-page-head left-head' style={{ paddingTop: '5px' }}>
+									Trending talents
+								</div>
+								<h6 className='product-quote'>Open for opportunities</h6>
+							</div>
+							<div className='col s4'>
+								<div className='right-align'>
+									<a
+										className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn'
+										href='/registerforjobs'
+									>
+										Add profile
+									</a>
+								</div>
+							</div>
+						</div>
+						<PeopleList jobProfiles={props.jobProfiles === undefined ? [] : props.jobProfiles} />
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 export default ListProduct;

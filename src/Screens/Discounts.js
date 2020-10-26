@@ -44,7 +44,12 @@ const Discounts = () => {
 								>
 									Enter Now
 								</a>
-								<Popup title='Signin' openPopup={openBazaarErr} setOpenPopup={setOpenBazaarErr}>
+								<Popup
+									title='Signin'
+									noClose={true}
+									openPopup={openBazaarErr}
+									setOpenPopup={setOpenBazaarErr}
+								>
 									<BurnCoinError openSignin={openBazaarErr} setOpenSignin={setOpenBazaarErr} />
 								</Popup>
 							</div>

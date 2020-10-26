@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import AccountIcon from '@material-ui/icons/AccountCircle';
 import logo from './Favicon.jpg';
-// import axios from 'axios';
 import { Redirect, Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import ReputationPoint from './ReputaionPoints';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
-import VerifyOtp from '../Screens/VerifyOtp';
-
+import FormPassion from './FormPassion';
 const Navbar = () => {
 	const [ redirect, setRedirect ] = React.useState(false);
 	const [ reputation, setReputation ] = React.useState('');
 	const [ user, setUser ] = React.useState('');
 	const [ openSignin, setOpenSignin ] = React.useState(false);
+	const [ openJobprofile, setOpenjobprofile ] = React.useState(false);
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
 		setReputation('');
@@ -113,7 +112,12 @@ const Navbar = () => {
 			);
 		}
 	};
-
+	const jobprofileopen = () => {
+		const cookie = Cookies.get('session-id');
+		if (cookie) {
+			setOpenjobprofile(true);
+		} else setOpenSignin(true);
+	};
 	/*---------------------------------------------------------------------------------------------------*/
 
 	if (redirect) {
@@ -250,7 +254,7 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
-							<Link to='/registerforjobs' style={{ color: 'white', fontSize: '1em' }}>
+							<Link onClick={jobprofileopen} style={{ color: 'white', fontSize: '1em' }}>
 								Add job profile
 							</Link>
 						</li>
@@ -310,7 +314,7 @@ const Navbar = () => {
 						<Link to='/registerforproduct'>Add product</Link>
 					</li>
 					<li>
-						<Link to='/registerforjobs'>Add job profile</Link>
+						<Link onClick={jobprofileopen}>Add job profile</Link>
 					</li>
 					<li>
 						<Link to='/addjobs'>Add jobs/interships</Link>
@@ -319,6 +323,9 @@ const Navbar = () => {
 				</ul>
 				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+				</Popup>
+				<Popup openPopup={openJobprofile} setOpenPopup={setOpenjobprofile}>
+					<FormPassion openJobprofile={openJobprofile} setOpenjobprofile={setOpenjobprofile} />
 				</Popup>
 			</div>
 		);

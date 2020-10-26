@@ -5,20 +5,26 @@ import JobsandInternshipcard from './JobsandInternshipcard';
 class Joblist extends React.Component {
 	constructor (props) {
 		super(props);
-		this.state = {
-			filter: ''
-		};
+		this.filterJobs = this.filterJobs.bind(this);
 	}
+
+	// setFilter = (filter) => {
+	// 	this.setState({
+	// 		filter: filter
+	// 	});
+	// };
+
+	filterJobs = (job) => {
+		if (this.props.filter === '') {
+			return true;
+		} else {
+			return this.props.filter === job.industry ? true : false;
+		}
+	};
+
 	render () {
-		const filterJobs = (job) => {
-			if (this.props.filter === '') {
-				return true;
-			} else {
-				return this.props.filter === job.industry ? true : false;
-			}
-		};
 		var jobs = this.props.jobs.slice(0).reverse();
-		jobs = jobs.filter(filterJobs);
+		jobs = jobs.filter(this.filterJobs);
 
 		// var DD_ARR = [];
 
@@ -93,7 +99,7 @@ class Joblist extends React.Component {
 				} else return <JobsandInternshipcard key={index} jobdetails={job} weblink={job.jobLink} />;
 			})
 		) : (
-			<div className='center'> Loading... </div>
+			<div className='center'> Oops! No Jobs To Show !! </div>
 		);
 		return (
 			<div>
