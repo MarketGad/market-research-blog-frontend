@@ -1,4 +1,5 @@
 import { Grid, MenuItem, TextField } from '@material-ui/core';
+import { Height } from '@material-ui/icons';
 import React from 'react';
 import Internshiplist from '../Components/internshiplist';
 import Joblist from '../Components/Joblist';
@@ -41,23 +42,12 @@ const ListProduct = (props) => {
 	const [ filter, setFilter ] = React.useState('');
 	return (
 		<div>
-     <div
-          style={{
-            borderBottom: "3px solid lightgray",
-
-            backgroundColor: "white",
-
-            /*position: "-webkit-sticky",
-            position: "sticky",
-            display: "block",
-            top: "0",*/
-          }}
-        >
-          <img
-            src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603704567/Theme/Photo_vjcaum.jpg"
-            width="100%"
-          ></img>
-        </div>
+			<div>
+				<img
+					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603704567/Theme/Photo_vjcaum.jpg'
+					width='100%'
+				/>
+			</div>
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>
@@ -87,12 +77,10 @@ const ListProduct = (props) => {
 						<div className='product-page-head'>Internships</div>
 						<Internshiplist internship={props.internship} />
 					</div>
-					<div className='col s12 l4 joblist'>
+					<div className='col s12 l4'>
 						<div className='row' style={{ margin: '0', padding: '0' }}>
 							<div className='col s12 m8'>
-								<div className='product-page-head left-head' style={{ paddingTop: '5px' }}>
-									Trending talents
-								</div>
+								<div className='job-page-head'>Trending talents</div>
 								<h6 className='product-quote'>Open for opportunities</h6>
 							</div>
 							<div className='col s4'>
