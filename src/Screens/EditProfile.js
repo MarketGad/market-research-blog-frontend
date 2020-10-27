@@ -15,8 +15,6 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import ThreeDotLoad from '../Components/ThreeDotLoad';
-import SignIn from './signin';
-import Popup from '../Components/Popup';
 
 function Copyright () {
 	return (
@@ -63,18 +61,17 @@ const useStyles = makeStyles((theme) => ({
 	}
 }));
 
-export default function RegisterForJobs () {
+export default function EditProfile (props) {
 	const classes = useStyles();
+	const user = props.user;
 	const LoginCheck = Cookies.get('session-id');
-	const [ first_name, setFirstName ] = React.useState('');
-	const [ last_name, setLastName ] = React.useState('');
-	const [ password, setPassword ] = React.useState('');
-	const [ confirmPassword, setConfirmPassword ] = React.useState('');
+	const [ first_name, setFirstName ] = React.useState(user.firstname || '');
+	const [ last_name, setLastName ] = React.useState(user.lastname || '');
 	const [ editsuccess, setEditsuccess ] = React.useState(false);
 	const [ fileInputState, setFileInputState ] = React.useState('');
-	const [ previewSource, setPreviewSource ] = React.useState('');
-	const [ RegisterJobSuccess, setRegisterJobSuccess ] = React.useState(false);
+	const [ previewSource, setPreviewSource ] = React.useState(user.profilePic || '');
 	const [ load, setLoad ] = React.useState('');
+
 	const handleFileInputChange = (e) => {
 		const file = e.target.files[0];
 		previewFile(file);
@@ -99,38 +96,37 @@ export default function RegisterForJobs () {
 				Authorization: `Bearer  ${token}`
 			}
 		};
-		if (password === confirmPassword) {
-			const data = {
-				profilePic: previewSource,
-				password: password,
-				firstname: first_name,
-				lastname: last_name
-			};
-			setLoad(true);
-			axios.put(process.env.REACT_APP_BASEURL + '/api/user/profile', data, config).then(
-				(response) => {
-					if (response.status === 200) {
-						setEditsuccess(true);
-						setLoad(false);
-					} else {
-						alert(response.err);
-					}
-				},
-				(error) => {
-					if (error.message === 'Request failed with status code 413') {
-						alert('upload photo size should be less than 500kb');
-					} else {
-						alert('Something went wrong, try again');
-					}
+		const data = {
+			profilePic: previewSource,
+			firstname: first_name,
+			lastname: last_name
+		};
+		setLoad(true);
+		axios.put(process.env.REACT_APP_BASEURL + '/api/user/profile', data, config).then(
+			(response) => {
+				if (response.status === 200) {
+					setEditsuccess(true);
+					setLoad(false);
+				} else {
+					alert(response.err);
 				}
-			);
-		}
+			},
+			(error) => {
+				if (error.message === 'Request failed with status code 413') {
+					alert('upload photo size should be less than 500kb');
+					setLoad(false);
+				} else {
+					alert('Something went wrong, try again');
+					setLoad(false);
+				}
+			}
+		);
 	};
 	if (editsuccess) {
 		return <Redirect to='/' />;
 	} else if (load === true) {
 		return (
-			<div style={{ textAlign: 'center' }}>
+			<div style={{ padding: '10%', textAlign: 'center' }}>
 				<ThreeDotLoad />
 			</div>
 		);
@@ -162,7 +158,6 @@ export default function RegisterForJobs () {
 										alt='chosen'
 										style={{
 											width: '40%',
-											height: '150px',
 											textAlign: 'center',
 											margin: '0 30%'
 										}}
@@ -171,14 +166,13 @@ export default function RegisterForJobs () {
 								<Grid item xs={12} sm={6}>
 									<Chip
 										className={classes.chip}
-										label='Upload Picture'
+										label='Update Picture'
 										color='primary'
 										icon={<CloudUploadIcon />}
 									/>
 								</Grid>
 								<Grid item xs={12} sm={6}>
 									<input
-										required
 										style={{ padding: '3px 0' }}
 										id='fileInput'
 										type='file'
@@ -212,33 +206,6 @@ export default function RegisterForJobs () {
 										name='lastName'
 										value={last_name}
 										onChange={(e) => setLastName(e.target.value)}
-									/>
-								</Grid>
-
-								<Grid item xs={12} sm={12}>
-									<TextField
-										variant='outlined'
-										required
-										fullWidth
-										name='password1'
-										label='Password'
-										type='password'
-										id='password'
-										value={password}
-										onChange={(e) => setPassword(e.target.value)}
-									/>
-								</Grid>
-								<Grid item xs={12} sm={12}>
-									<TextField
-										variant='outlined'
-										required
-										fullWidth
-										name='password2'
-										label='Confirm Password'
-										type='password'
-										id='password'
-										value={confirmPassword}
-										onChange={(e) => setConfirmPassword(e.target.value)}
 									/>
 								</Grid>
 							</Grid>

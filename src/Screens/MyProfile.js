@@ -7,19 +7,23 @@ import ReputationPoint from '../Components/ReputaionPoints';
 import Cookies from 'js-cookie';
 import ThreeDotLoad from '../Components/ThreeDotLoad';
 import { Link } from 'react-router-dom';
+import Popup from '../Components/Popup';
+import EditProfile from './EditProfile';
 
 const MyProfile = (props) => {
 	const [ user, setUser ] = useState('');
+	const [ openEdit, setOpenEdit ] = useState(false);
 	const id = props.match.params.profile_id;
+	const cookie = Cookies.get('session-id') || '';
+
 	const loadUser = async () => {
-		const cookie = Cookies.get('session-id');
 		const config = {
 			headers: {
 				Authorization: `Bearer ${cookie}`
 			}
 		};
 		try {
-			const res = await fetch(process.env.REACT_APP_BASEURL + '/api/user/profile', config);
+			const res = await fetch(process.env.REACT_APP_BASEURL + '/api/user/' + id);
 			const response = await res.json();
 			setUser(response.user);
 		} catch (err) {
@@ -78,13 +82,16 @@ const MyProfile = (props) => {
 								</span>
 							</span>
 						</div>
-						{id === user._id && (
+						{id === JSON.parse(atob(cookie.split('.')[1]))._id && (
 							<div className='center'>
-								<Link to='/editprofile'>Update your profile</Link>
+								<Link onClick={() => setOpenEdit(true)}>Update your profile</Link>
 							</div>
 						)}
 					</Grid>
 				</Grid>
+				<Popup openPopup={openEdit} setOpenPopup={setOpenEdit}>
+					<EditProfile user={user} openEdit={openEdit} setOpenSignin={setOpenEdit} />
+				</Popup>
 			</div>
 		);
 	} else {

@@ -7,7 +7,7 @@ const ShowComment = (props) => {
 	const profilePic = author.profilePic
 		? author.profilePic
 		: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiUY7RQ-eUe_fmk6--gEvDXvallGC7ZA7suQ&usqp=CAU';
-	console.log(author);
+
 	if (comment) {
 		return (
 			<div>
@@ -26,13 +26,7 @@ const ShowComment = (props) => {
 							style={{ left: '5px' }}
 						/>
 						<div className='title'>
-							<Link
-								style={{ color: 'black' }}
-								to={{
-									pathname: '/profile',
-									state: { user: author }
-								}}
-							>
+							<Link style={{ color: 'black' }} to={`/profile/${author._id}`}>
 								<b>
 									{comment.author.firstname} {comment.author.lastname}
 								</b>

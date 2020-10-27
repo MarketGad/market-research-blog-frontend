@@ -42,7 +42,6 @@ const Profile = (props) => {
 	const product = props.product;
 	const id = props.id;
 	const focusComment = props.focusComment;
-	console.log(focusComment);
 	const [ comment, setComment ] = React.useState('');
 	const [ commentdone, setCommentsuccess ] = React.useState(false);
 	const [ readytocomment, setReadytoComment ] = React.useState('');
