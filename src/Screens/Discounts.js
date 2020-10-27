@@ -2,8 +2,12 @@ import React from 'react';
 import BurnCoinError from '../Components/BurnCoinError';
 import Popup from '../Components/Popup';
 import Footer from '../Components/Footer';
+import Cookies from 'js-cookie';
+import SignIn from './signin';
 
 const Discounts = () => {
+	const isLoggedin = Cookies.get('session-id');
+	const [ openSignin, setOpenSignin ] = React.useState(false);
 	const [ openBazaarErr, setOpenBazaarErr ] = React.useState(false);
 	return (
 		<div className='bazaar-bkgrd'>
@@ -24,7 +28,7 @@ const Discounts = () => {
 					</div>
 					<div>
 						<div className='center baz'>
-							Burn your interaction points to join the exclusive club and earn discounts on your
+							Burn your interaction points to join the exclusive club <br /> and earn discounts on your
 							subscription
 						</div>
 						<img
@@ -39,17 +43,13 @@ const Discounts = () => {
 								<a
 									className='waves-effect waves-teal btn enter-button'
 									onClick={() => {
-										setOpenBazaarErr(true);
+										if (isLoggedin) setOpenBazaarErr(true);
+										else setOpenSignin(true);
 									}}
 								>
 									Enter Now
 								</a>
-								<Popup
-									title='Signin'
-									noClose={true}
-									openPopup={openBazaarErr}
-									setOpenPopup={setOpenBazaarErr}
-								>
+								<Popup noClose={true} openPopup={openBazaarErr} setOpenPopup={setOpenBazaarErr}>
 									<BurnCoinError openSignin={openBazaarErr} setOpenSignin={setOpenBazaarErr} />
 								</Popup>
 							</div>
@@ -64,6 +64,9 @@ const Discounts = () => {
 						</div>
 					</div>
 				</div>
+				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
+					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+				</Popup>
 			</div>
 			<Footer />
 		</div>

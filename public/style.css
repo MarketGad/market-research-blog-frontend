@@ -945,22 +945,24 @@ nav {
 .bazaar-bkgrd {
 	background-image: url("https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603347962/Theme/Background_gprpm8.jpg");
 	background-size: 100%;
-	/* background-repeat: no-repeat; */
 }
 .baz {
 	font-size: 1.3em;
-	font-family: Bahnschrift;
+	font-family: 'Lato', sans-serif;
 	color: white;
-	padding: 0% 18% 1% 18%;
+	padding: 10px;
 }
 .enter-button {
 	margin: 2% 0;
-	font-size: 1.1em;
+	font-size: 1em;
 	background-color: white;
 	color: rgb(1, 1, 97);
 	font-weight: 800;
 	border-radius: 5px;
 	padding: 0 20px;
+}
+.enter-button:hover {
+	background-color: rgb(236, 218, 183);
 }
 /*----------------------GetOtp---------------------------*/
 .otp-body {
