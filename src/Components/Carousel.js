@@ -21,6 +21,7 @@ export default function CarouselSlider() {
             logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
             desc="Tag the brand you're wearing."
             background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
+            font={".3em"}
           />
         </Item>
         <Item>
