@@ -42,11 +42,11 @@ import v3004 from './Articles/venturehacks/v3004';
 import v3005 from './Articles/venturehacks/v3005';
 import RegisterForProduct from './Screens/RegisterForProduct';
 import ProductProfile from './Screens/ProductProfile';
+import CommunityProfile from './Screens/CommunityProfile';
 import JobProfile from './Screens/JobProfile';
 // import VerifyOtp from './Screens/VerifyOtp';
 import Discounts from './Screens/Discounts';
 import Community from './Screens/Community';
-
 import { connect } from 'react-redux';
 import {
 	fetchProducts,
@@ -185,6 +185,11 @@ class MainApp extends React.Component {
 					<Route exact path='/v3005' component={v3005} />
 					{/* <Route exact path='/verifyotp' component={VerifyOtp} /> */}
 					<Route exact path='/profile/:profile_id' component={MyProfile} />
+					<Route
+						exact
+						path='/community/:trend_id'
+						render={(props) => <CommunityProfile {...props} posts={this.props.posts.posts} />}
+					/>
 					<Route
 						exact
 						path='/products/:product_id'

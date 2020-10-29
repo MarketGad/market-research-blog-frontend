@@ -1050,6 +1050,9 @@ nav {
 	padding: 4px 0;
 	text-align: justify;
 }
+.communitydetails-container {
+	padding: 2% 10%;
+}
 /*---------------------comment------------------*/
 .addComment {
 	background-color: #080808d9;
@@ -1664,6 +1667,10 @@ nav {
 	/* ---jobs---- */
 	.filter-field {
 		width: 40%;
+	}
+	/* ---community */
+	.communitydetails-container {
+		padding: 5%;
 	}
 }
 @media only screen and (max-width: 280px) {
