@@ -18,6 +18,7 @@ const Navbar = () => {
 		setReputation('');
 		setUser('');
 		Cookies.remove('session-id');
+		Cookies.remove('job-profile');
 	};
 	const loadUser = async () => {
 		const cookie = Cookies.get('session-id');

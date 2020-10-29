@@ -93,9 +93,10 @@ const Profile = (props) => {
 				)
 				.then(
 					(response) => {
+						console.log(response.data.post.comments);
 						if (response.data) {
 							setCommentsuccess(true);
-							setComments(response.data);
+							setComments(response.data.post.comments);
 							setComment('');
 						}
 					},

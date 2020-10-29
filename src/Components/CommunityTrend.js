@@ -140,7 +140,7 @@ const CommunityTrend = (props) => {
 									style={{ textAlign: 'center', position: 'relative', top: '-1em' }}
 								>
 									<img
-										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603348649/Theme/Upvote_Icon_tvffmk.png'
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603987863/Theme/CommunityUpvote_Icon_gaye3c.png'
 										alt=''
 										width='100%'
 									/>

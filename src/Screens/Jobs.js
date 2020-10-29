@@ -44,7 +44,7 @@ const ListProduct = (props) => {
 		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
 				<img
-					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603704567/Theme/Photo_vjcaum.jpg'
+					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603987758/Theme/job_cover_pic_lbcydh.jpg'
 					width='100%'
 				/>
 			</div>

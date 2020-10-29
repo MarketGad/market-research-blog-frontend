@@ -44,6 +44,7 @@ const FreelanceFinish = (props) => {
 					setRegisterJobSuccess(true);
 					setOpenFinish(false);
 					setLoad(false);
+					Cookies.set('job-profile', 'true');
 					window.location.reload(false);
 				} else {
 					alert(response.err);
