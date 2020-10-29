@@ -115,7 +115,13 @@ const Aboutus = () => {
 						<br /> passionate about
 					</div>
 					<img
+						className='hide-on-med-and-down'
 						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603822251/Theme/aboutwebinfo_qa6zzo.png'
+						width='100%'
+					/>
+					<img
+						className='hide-on-large-only'
+						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731712/Theme/aboutmobileinfo_lgqovb.png'
 						width='100%'
 					/>
 				</div>
