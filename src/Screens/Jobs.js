@@ -41,7 +41,7 @@ const industries = [
 const ListProduct = (props) => {
 	const [ filter, setFilter ] = React.useState('');
 	return (
-		<div>
+		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
 				<img
 					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603704567/Theme/Photo_vjcaum.jpg'
