@@ -1053,6 +1053,13 @@ nav {
 .communitydetails-container {
 	padding: 2% 10%;
 }
+.bulb-count {
+	top: 1.5em !important;
+	right: -1em !important;
+	font-size: 1.3em;
+	color: blue;
+	border-bottom: 2px solid;
+}
 /*---------------------comment------------------*/
 .addComment {
 	background-color: #080808d9;
@@ -1671,6 +1678,10 @@ nav {
 	/* ---community */
 	.communitydetails-container {
 		padding: 5%;
+	}
+	.bulb-count {
+		top: 0.7em !important;
+		font-size: 1.2em;
 	}
 }
 @media only screen and (max-width: 280px) {

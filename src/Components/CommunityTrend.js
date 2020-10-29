@@ -139,18 +139,7 @@ const CommunityTrend = (props) => {
 											alt=''
 											width='100%'
 										/>
-										<div
-											className='right-align secondary-content'
-											style={{
-												top: '1.6em',
-												right: '-1em',
-												fontSize: '1.3em',
-												color: 'blue',
-												borderBottom: '2px solid'
-											}}
-										>
-											{upvote}
-										</div>
+										<div className='bulb-count secondary-content'>{upvote}</div>
 									</div>
 								)}
 								{activeupvote === true && (
@@ -160,18 +149,7 @@ const CommunityTrend = (props) => {
 											alt=''
 											width='100%'
 										/>
-										<div
-											className='right-align secondary-content'
-											style={{
-												top: '1.6em',
-												right: '-1em',
-												fontSize: '1.3em',
-												color: 'blue',
-												borderBottom: '2px solid'
-											}}
-										>
-											{upvote}
-										</div>
+										<div className='bulb-count right-align secondary-content'>{upvote}</div>
 									</div>
 								)}
 								{(!product.upvotes.includes(user_id) || !token) &&
@@ -190,18 +168,7 @@ const CommunityTrend = (props) => {
 											alt=''
 											width='100%'
 										/>
-										<div
-											className='right-align secondary-content'
-											style={{
-												top: '1.6em',
-												right: '-1em',
-												fontSize: '1.3em',
-												color: 'blue',
-												borderBottom: '2px solid'
-											}}
-										>
-											{upvote}
-										</div>
+										<div className='bulb-count right-align secondary-content'>{upvote}</div>
 									</div>
 								)}
 							</div>
