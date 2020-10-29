@@ -14,7 +14,6 @@ const CommunityTrend = (props) => {
 	}
 	const ProductCard = (props) => {
 		const product = props.product;
-		console.log(product);
 		const weblink = props.weblink;
 		const [ upvote, setUpvote ] = React.useState(product.upvotes.length);
 		const [ activeupvote, setactiveupvote ] = React.useState(false);
@@ -33,7 +32,7 @@ const CommunityTrend = (props) => {
 			if (product.upvotes.includes(token_info._id)) {
 				alert('already upvoted');
 			} else {
-				setUpvote(product.upvotes.length + 1);
+				setUpvote(upvote + 1);
 				setactiveupvote(true);
 				axios
 					.post(
@@ -42,9 +41,7 @@ const CommunityTrend = (props) => {
 						config
 					)
 					.then(
-						(response) => {
-							console.log('added');
-						},
+						(response) => {},
 						(error) => {
 							console.log(error);
 							// alert(error);
@@ -135,28 +132,78 @@ const CommunityTrend = (props) => {
 								</div>
 							</div>
 							<div className='col l1 s2'>
-								<div
-									onClick={() => addUpvote(product._id, product)}
-									style={{ textAlign: 'center', position: 'relative', top: '-1em' }}
-								>
-									<img
-										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603987863/Theme/CommunityUpvote_Icon_gaye3c.png'
-										alt=''
-										width='100%'
-									/>
+								{product.upvotes.includes(user_id) && (
+									<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+											alt=''
+											width='100%'
+										/>
+										<div
+											className='right-align secondary-content'
+											style={{
+												top: '1.6em',
+												right: '-1em',
+												fontSize: '1.3em',
+												color: 'blue',
+												borderBottom: '2px solid'
+											}}
+										>
+											{upvote}
+										</div>
+									</div>
+								)}
+								{activeupvote === true && (
+									<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+											alt=''
+											width='100%'
+										/>
+										<div
+											className='right-align secondary-content'
+											style={{
+												top: '1.6em',
+												right: '-1em',
+												fontSize: '1.3em',
+												color: 'blue',
+												borderBottom: '2px solid'
+											}}
+										>
+											{upvote}
+										</div>
+									</div>
+								)}
+								{(!product.upvotes.includes(user_id) || !token) &&
+								activeupvote === false && (
 									<div
-										className='right-align secondary-content'
+										onClick={() => addUpvote(product._id, product)}
 										style={{
-											top: '1.6em',
-											right: '-1em',
-											fontSize: '1.3em',
-											color: 'blue',
-											borderBottom: '2px solid'
+											textAlign: 'center',
+											position: 'relative',
+											top: '-1em',
+											cursor: 'pointer'
 										}}
 									>
-										{product.upvotes.length}
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991952/Theme/CommunityUpvote_Icon_aexo33.png'
+											alt=''
+											width='100%'
+										/>
+										<div
+											className='right-align secondary-content'
+											style={{
+												top: '1.6em',
+												right: '-1em',
+												fontSize: '1.3em',
+												color: 'blue',
+												borderBottom: '2px solid'
+											}}
+										>
+											{upvote}
+										</div>
 									</div>
-								</div>
+								)}
 							</div>
 						</div>
 					</li>

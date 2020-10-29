@@ -3,7 +3,6 @@ import CommunityTrend from '../Components/CommunityTrend';
 import PeopleList from '../Components/PeopleList';
 
 const Community = (props) => {
-	console.log(props)
 	return (
 		<div style={{ backgroundColor: 'rgb(249, 249, 249)' }}>
 			<div className='product-job-page-container'>
