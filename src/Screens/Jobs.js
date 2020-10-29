@@ -75,7 +75,7 @@ const ListProduct = (props) => {
 
 						<Joblist jobs={props.jobs} filter={filter} />
 						<div className='product-page-head'>Internships</div>
-						<Internshiplist internship={props.internship} />
+						<Internshiplist internships={props.internship}  filter={filter} />
 					</div>
 					<div className='col s12 l4'>
 						<div className='row' style={{ margin: '0', padding: '0' }}>
