@@ -3,9 +3,14 @@ import CommunityTrend from '../Components/CommunityTrend';
 import PeopleList from '../Components/PeopleList';
 
 const Community = (props) => {
-	console.log(props)
 	return (
-		<div style={{ backgroundColor: 'rgb(249, 249, 249)' }}>
+		<div style={{ backgroundColor: '#ececec' }}>
+			<div>
+				<img
+					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603992512/Theme/community_cover_photo_yc8bir.jpg'
+					width='100%'
+				/>
+			</div>
 			<div className='product-job-page-container'>
 				<div className='row'>
 					<div className='col s12 l8'>

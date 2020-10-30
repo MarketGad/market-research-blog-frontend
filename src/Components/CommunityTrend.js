@@ -32,7 +32,7 @@ const CommunityTrend = (props) => {
 			if (product.upvotes.includes(token_info._id)) {
 				alert('already upvoted');
 			} else {
-				setUpvote(product.upvotes.length + 1);
+				setUpvote(upvote + 1);
 				setactiveupvote(true);
 				axios
 					.post(
@@ -41,9 +41,7 @@ const CommunityTrend = (props) => {
 						config
 					)
 					.then(
-						(response) => {
-							console.log('added');
-						},
+						(response) => {},
 						(error) => {
 							console.log(error);
 							// alert(error);
@@ -57,15 +55,12 @@ const CommunityTrend = (props) => {
 				<ul className='collection product-container'>
 					<li className='collection-item avatar' style={{ paddingLeft: '15px' }}>
 						<div className='row' style={{ margin: '0' }}>
-							<div className='col s11'>
+							<div className='col l11 s10'>
 								<div>
 									<Link
 										style={{ color: 'black' }}
 										className='product-content product-name'
-										to={{
-											pathname: `/p${product._id}`,
-											state: { product: product, weblink: weblink }
-										}}
+										to={`/community/${product._id}`}
 									>
 										{product.title}
 									</Link>
@@ -92,10 +87,7 @@ const CommunityTrend = (props) => {
 										</div>
 										<div className='col l2 s4 comment-box'>
 											<Link
-												to={{
-													pathname: `/p${product._id}`,
-													state: { product: product, weblink: weblink }
-												}}
+												to={`/community/${product._id}`}
 												className='waves-effect waves-light btn-small visit-btn'
 											>
 												<span className='comment-count'>{product.comments.length}</span>
@@ -139,32 +131,44 @@ const CommunityTrend = (props) => {
 									</div>
 								</div>
 							</div>
-							<div className='col s1'>
+							<div className='col l1 s2'>
 								{product.upvotes.includes(user_id) && (
-									<div id='upvote-count' className='secondary-content upvote-container-active'>
-										<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
-										<br />
-										<span className='upvote-count upvote-count-active'>
-											{product.upvotes.length}
-										</span>
+									<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+											alt=''
+											width='100%'
+										/>
+										<div className='bulb-count secondary-content'>{upvote}</div>
 									</div>
 								)}
 								{activeupvote === true && (
-									<div id='upvote-count' className='secondary-content upvote-container-active'>
-										<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
-										<br />
-										<span className='upvote-count upvote-count-active'>{upvote}</span>
+									<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+											alt=''
+											width='100%'
+										/>
+										<div className='bulb-count right-align secondary-content'>{upvote}</div>
 									</div>
 								)}
 								{(!product.upvotes.includes(user_id) || !token) &&
 								activeupvote === false && (
 									<div
 										onClick={() => addUpvote(product._id, product)}
-										className='secondary-content upvote-container'
+										style={{
+											textAlign: 'center',
+											position: 'relative',
+											top: '-1em',
+											cursor: 'pointer'
+										}}
 									>
-										<i className='medium upvote-icon material-icons'>arrow_drop_up</i>
-										<br />
-										<span className='upvote-count'>{product.upvotes.length}</span>
+										<img
+											src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991952/Theme/CommunityUpvote_Icon_aexo33.png'
+											alt=''
+											width='100%'
+										/>
+										<div className='bulb-count right-align secondary-content'>{upvote}</div>
 									</div>
 								)}
 							</div>
@@ -183,7 +187,7 @@ const CommunityTrend = (props) => {
 			} else return <ProductCard key={index} product={product} weblink={product.websiteLink} />;
 		})
 	) : (
-		<div className='center'> Loading... </div>
+		<div className='center' />
 	);
 	if (readytoupvote === false) return <Redirect to='/signin' />;
 	else

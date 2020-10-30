@@ -18,6 +18,7 @@ const Navbar = () => {
 		setReputation('');
 		setUser('');
 		Cookies.remove('session-id');
+		Cookies.remove('job-profile');
 	};
 	const loadUser = async () => {
 		const cookie = Cookies.get('session-id');
@@ -130,44 +131,9 @@ const Navbar = () => {
 							<a className='right sidenav-trigger'>
 								{reputation && <ReputationPoint ReputationPoint={reputation} />}
 							</a>
-							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
-								<li>
-									<Link
-										to='/industry'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Industry
-									</Link>
-								</li>
-								<li>
-									<Link
-										to='/startup'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Start-ups
-									</Link>
-								</li>
-								<li>
-									<Link
-										to='/venturehack'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Venture Hacks
-									</Link>
-								</li>
-							</ul>
+
+							{/* -------------------------------desktop navbar------------------------------------------ */}
+
 							<div className='navmenu'>
 								<ul
 									id='nav-mobilecomp-menu'
@@ -188,9 +154,7 @@ const Navbar = () => {
 									<li>
 										<Link to='/community'>Community</Link>
 									</li>
-									{/* <li>
-										<Link to='/funding'>Funding</Link>
-									</li> */}
+
 									<li>
 										<Link to='/industry' className='dropdown-trigger' data-target='dropdown1'>
 											Research
@@ -232,9 +196,30 @@ const Navbar = () => {
 							</div>
 						</div>
 					</nav>
+					{/* -----------------_Research drop down---------------------------- */}
+
+					<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
+						<li>
+							<Link to='/industry' className='dropdown-style'>
+								Industry
+							</Link>
+						</li>
+						<li>
+							<Link to='/startup' className='dropdown-style'>
+								Start-ups
+							</Link>
+						</li>
+						<li>
+							<Link to='/venturehack' className='dropdown-style'>
+								Venture Hacks
+							</Link>
+						</li>
+					</ul>
+
+					{/*---------------------------- Account profile dropdown----------------------------------- */}
+
 					<ul id='account-dropdown' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						{show()}
-
 						<li>
 							<Link to='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
 								Add product
@@ -252,30 +237,13 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				<ul id='dropdown2' className='dropdown-content' style={{ backgroundColor: 'black' }}>
-					<li>
-						<Link to='/industry' style={{ color: 'white' }}>
-							Industry
-						</Link>
-					</li>
-					<li>
-						<Link to='/startup' style={{ color: 'white' }}>
-							Start-ups
-						</Link>
-					</li>
-					<li>
-						<Link to='/venturehack' style={{ color: 'white' }}>
-							Venture Hacks
-						</Link>
-					</li>
-				</ul>
+
+				{/*------------------------------------------ mobile sidenav------------------------------- */}
+
 				<ul className='sidenav sidenav-close' id='mobile-demo'>
 					<li>
 						<Link to='/'>Home</Link>
 					</li>
-					{/* <li>
-						<Link to='/funding'>Funding</Link>
-					</li> */}
 					<li>
 						<Link to='/jobs'>Jobs</Link>
 					</li>
@@ -286,14 +254,14 @@ const Navbar = () => {
 						<Link to='/community'>Community</Link>
 					</li>
 					<li>
-						<a className='dropdown-trigger1' data-target='dropdown2'>
-							Research<i className='material-icons right'>arrow_drop_side</i>
-						</a>
+						<Link to='/industry'>Industry</Link>
 					</li>
-
-					{/* <li>
-						<a onClick={handleClickOpen}>Dashboard</a>
-					</li> */}
+					<li>
+						<Link to='/startup'>Start-ups</Link>
+					</li>
+					<li>
+						<Link to='/venturehack'>Venture Hacks</Link>
+					</li>
 					<li>
 						<Link to='/about'>About us</Link>
 					</li>
@@ -308,6 +276,9 @@ const Navbar = () => {
 					</li>
 					{showmobile()}
 				</ul>
+
+				{/* ---------------------------------------------------------------------------------- */}
+
 				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>

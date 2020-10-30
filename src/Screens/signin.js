@@ -54,6 +54,7 @@ export default function SignIn (props) {
 			console.log(response);
 			if (response.data.success) {
 				Cookies.set('session-id', response.data['token']);
+				Cookies.set('job-profile', response.data.user.isJobProfileCreated);
 				window.location.reload(false);
 				setOpenSignin(false);
 				setLoginsuccess(true);
@@ -74,8 +75,10 @@ export default function SignIn (props) {
 			})
 			.then(
 				(response) => {
+					console.log(response.data);
 					if (response.data.success) {
 						Cookies.set('session-id', response.data['token']);
+						Cookies.set('job-profile', response.data.user.isJobProfileCreated);
 						window.location.reload(false);
 						setOpenSignin(false);
 						setLoginsuccess(true);
