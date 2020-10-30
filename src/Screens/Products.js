@@ -1,104 +1,75 @@
-import React from "react";
-import Footer from "../Components/Footer";
-import PeopleList from "../Components/PeopleList";
-import ProductList from "../Components/ProductList";
-import Subscribe from "../Components/Subscribe";
-import TodayLaunch from "../Components/TodayLaunch";
-import TrendingProduct from "../Components/TrendingProduct";
-import CarouselSlider from "../Components/Carousel";
-import SimpleCard from "../Components/Demo";
+import React from 'react';
+import Footer from '../Components/Footer';
+import PeopleList from '../Components/PeopleList';
+import ProductList from '../Components/ProductList';
+import Subscribe from '../Components/Subscribe';
+import TodayLaunch from '../Components/TodayLaunch';
+import TrendingProduct from '../Components/TrendingProduct';
+import CarouselSlider from '../Components/Carousel';
+import SimpleCard from '../Components/Demo';
 
 class Products extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: this.props.products,
-    };
-  }
-  render() {
-    return (
-      <div style={{ backgroundColor: "rgb(240,240,240)" }}>
-        <img
-          src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg"
-          width="100%"
-        ></img>
+	constructor (props) {
+		super(props);
+		this.state = {
+			products: this.props.products
+		};
+	}
+	render () {
+		return (
+			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
+				<div>
+					<img
+						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg'
+						width='100%'
+					/>
+				</div>
 
-        <div style={{ margin: "1% 10%" }}>
-          <h5 style={{ padding: "1% 0" }}>What's New?</h5>
-          <div style={{ padding: "3% 1%", backgroundColor: "white" }}>
-            <CarouselSlider />
-          </div>
-        </div>
-        <div style={{ marginTop: "2%" }}>
-          <div className="topnav-prod">
-            <a href="#topprod">Top Products</a>
-            <a href="#">Trending Talents</a>
-          </div>
-        </div>
-        <h4>
-          <a name="topprod"></a>
-        </h4>
-        <div>
-          <div>
-            <div className="buttonContainer">
-              <button className="sidebar-button editorpick-button editorpickactive">
-                Editors's pick
-              </button>
-              <button className="sidebar-button latest-button">latest</button>
-            </div>
-            <div className="tabPanel editorpick-content">
-              <div className="row">
-                <div className="col s3">
-                  <div className="center">pic1</div>
-                </div>
-                <div className="col s9">
-                  <div>Lorem ipsum dolor sit amet sit libero.</div>
-                </div>
-              </div>
-            </div>
-            <div className="tabPanel latest-content">
-              <div className="row">
-                <div className="col s3">
-                  <div className="center">pic2</div>
-                </div>
-                <div className="col s9">
-                  <div>Lorem ipsum dolor sit amet libero.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="prod-cards">
-          <div className="row" style={{ padding: "0 2%" }}>
-            <div className="col s12 m6 l4 " style={{ padding: "0 1% 2% 1%" }}>
-              <SimpleCard
-                style={{ margin: "5px" }}
-                logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
-                desc="Tag the brand you're wearing."
-                background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
-              />
-            </div>
-            <div className="col s12 m6 l4 " style={{ padding: "0 1% 2% 1%" }}>
-              <SimpleCard
-                style={{ margin: "5px" }}
-                logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
-                desc="Tag the brand you're wearing."
-                background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
-              />
-            </div>
-            <div className="col s12 m6 l4" style={{ padding: "0 1% 2% 1%" }}>
-              <SimpleCard
-                style={{ margin: "5px" }}
-                logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
-                desc="Tag the brand you're wearing."
-                background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* <div className="product-job-page-container">
+				<div className='product-job-page-container'>
+					<div>
+						<h5>What's New?</h5>
+						<div style={{ padding: '1%' }}>
+							<CarouselSlider />
+						</div>
+					</div>
+					<div>
+						<div className='topnav-prod'>
+							<a className='topnav-active'>Top Products</a>
+							<a>Trending Talents</a>
+						</div>
+					</div>
+					<div className='prod-cards row'>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
+								desc='Tag the brand you&#39;re wearing.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
+								desc='Tag the brand you&#39;re wearing.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
+								desc='Tag the brand you&#39;re wearing.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
+								desc='Tag the brand you&#39;re wearing.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+					</div>
+				</div>
+				{/* <div className="product-job-page-container">
           <div className="row">
             <div className="col s12 l8">
               <div className="product-page-head">What's hot today?</div>
@@ -149,11 +120,11 @@ class Products extends React.Component {
             </div>
           </div>
 			</div>*/}
-        <Subscribe />
-        <Footer />
-      </div>
-    );
-  }
+				<Subscribe />
+				<Footer />
+			</div>
+		);
+	}
 }
 
 export default Products;

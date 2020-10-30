@@ -726,19 +726,18 @@ nav {
 .topnav-prod {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding-left: 40%;
-  margin-bottom: 5%;
+  text-align: center;
 }
 
 .topnav-prod a {
-  float: left;
-  display: block;
+  display: inline-block;
   color: darkcyan;
-  text-align: center;
-  padding: 14px 16px;
+  margin: 10px;
   text-decoration: none;
   font-size: 1.2em;
-  border-bottom: 3px solid transparent;
+}
+.topnav-active {
+  font-weight: bold;
 }
 
 .topnav-prod a:hover {
@@ -1732,14 +1731,6 @@ nav {
   .filter-field {
     width: 40%;
   }
-  /* ---community */
-  .communitydetails-container {
-    padding: 5%;
-  }
-  .bulb-count {
-    top: 0.7em !important;
-    font-size: 1.2em;
-  }
 }
 @media only screen and (max-width: 280px) {
   .comment-box {
@@ -1759,7 +1750,7 @@ nav {
 
 @media only screen and (min-width: 1025px) {
   .prod-cards {
-    padding: 0 15%;
+    padding: 0 2%;
   }
 }
 @media only screen and (max-width: 415px) {
