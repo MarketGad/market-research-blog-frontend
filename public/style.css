@@ -120,6 +120,11 @@ nav {
 	width: 55%;
 	padding-top: 10%;
 }
+.dropdown-style {
+	color: white !important;
+	font-size: 1.1em;
+	padding-left: 25px !important;
+}
 /* =---------------------divider signin---------- */
 
 .signin-divider {

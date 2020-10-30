@@ -154,9 +154,7 @@ const Navbar = () => {
 									<li>
 										<Link to='/community'>Community</Link>
 									</li>
-									{/* <li>
-										<Link to='/funding'>Funding</Link>
-									</li> */}
+
 									<li>
 										<Link to='/industry' className='dropdown-trigger' data-target='dropdown1'>
 											Research
@@ -198,48 +196,30 @@ const Navbar = () => {
 							</div>
 						</div>
 					</nav>
+					{/* -----------------_Research drop down---------------------------- */}
 
 					<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						<li>
-							<Link
-								to='/industry'
-								style={{
-									color: 'white',
-									fontSize: '1.1em',
-									paddingLeft: '25px'
-								}}
-							>
+							<Link to='/industry' className='dropdown-style'>
 								Industry
 							</Link>
 						</li>
 						<li>
-							<Link
-								to='/startup'
-								style={{
-									color: 'white',
-									fontSize: '1.1em',
-									paddingLeft: '25px'
-								}}
-							>
+							<Link to='/startup' className='dropdown-style'>
 								Start-ups
 							</Link>
 						</li>
 						<li>
-							<Link
-								to='/venturehack'
-								style={{
-									color: 'white',
-									fontSize: '1.1em',
-									paddingLeft: '25px'
-								}}
-							>
+							<Link to='/venturehack' className='dropdown-style'>
 								Venture Hacks
 							</Link>
 						</li>
 					</ul>
+
+					{/*---------------------------- Account profile dropdown----------------------------------- */}
+
 					<ul id='account-dropdown' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						{show()}
-
 						<li>
 							<Link to='/registerforproduct' style={{ color: 'white', fontSize: '1em' }}>
 								Add product
