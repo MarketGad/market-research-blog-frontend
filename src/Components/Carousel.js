@@ -14,7 +14,13 @@ const breakPoints = [
 export default function CarouselSlider() {
   return (
     <div className="Ap">
-      <Carousel breakPoints={breakPoints}>
+      <Carousel
+        breakPoints={breakPoints}
+        pagination={false}
+        enableAutoPlay={true}
+        autoPlaySpeed={500}
+        disableArrowsOnEnd={false}
+      >
         <Item>
           <SimpleCard
             style={{ margin: "5px" }}
@@ -54,6 +60,24 @@ export default function CarouselSlider() {
             logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png"
             desc="Shop for the latest collection of fun, quirky and premium socks for men."
             background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg"
+          />
+        </Item>
+        <Item>
+          <SimpleCard
+            style={{ margin: "5px" }}
+            logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
+            desc="Tag the brand you're wearing."
+            background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
+            font={".3em"}
+          />
+        </Item>
+        <Item>
+          <SimpleCard
+            style={{ margin: "5px" }}
+            logoUrl="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png"
+            desc="Tag the brand you're wearing."
+            background="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
+            font={".3em"}
           />
         </Item>
 

@@ -97,7 +97,7 @@ const SimpleCard = (props) => {
             color: "white",
             textAlign: "right",
             height: "70px",
-            fontSize: "20px",
+            fontSize: "18px",
             paddingLeft: "40%",
           }}
         >
