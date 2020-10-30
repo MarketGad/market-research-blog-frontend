@@ -28,22 +28,51 @@ class Products extends React.Component {
 				<div className='product-job-page-container'>
 					<div>
 						<h5>What's New?</h5>
-						<div style={{ padding: '1%' }}>
+						<div style={{ padding: '1%', backgroundColor: 'white', borderRadius: '8px' }}>
 							<CarouselSlider />
 						</div>
 					</div>
-					<div>
+					<div style={{ padding: '10px' }}>
 						<div className='topnav-prod'>
 							<a className='topnav-active'>Top Products</a>
 							<a>Trending Talents</a>
 						</div>
 					</div>
-					<div className='prod-cards row'>
+					<div className='row'>
 						<div className='col s12 m6 l3'>
 							<SimpleCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
+								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
+							/>
+						</div>
+
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
+								desc='Tag the brand you&#39;re wearing.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
+								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
+								desc='Prepare for your interview using AI bots. '
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
@@ -55,9 +84,23 @@ class Products extends React.Component {
 						</div>
 						<div className='col s12 m6 l3'>
 							<SimpleCard
-								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
-								desc='Tag the brand you&#39;re wearing.'
-								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
+								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
+								desc='Prepare for your interview using AI bots. '
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
+								desc='Prepare for your interview using AI bots. '
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
@@ -65,6 +108,20 @@ class Products extends React.Component {
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
+								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
+							/>
+						</div>
+						<div className='col s12 m6 l3'>
+							<SimpleCard
+								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
+								desc='Prepare for your interview using AI bots. '
+								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 					</div>
