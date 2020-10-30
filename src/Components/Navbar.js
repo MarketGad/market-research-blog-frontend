@@ -131,44 +131,9 @@ const Navbar = () => {
 							<a className='right sidenav-trigger'>
 								{reputation && <ReputationPoint ReputationPoint={reputation} />}
 							</a>
-							<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
-								<li>
-									<Link
-										to='/industry'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Industry
-									</Link>
-								</li>
-								<li>
-									<Link
-										to='/startup'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Start-ups
-									</Link>
-								</li>
-								<li>
-									<Link
-										to='/venturehack'
-										style={{
-											color: 'white',
-											fontSize: '1.1em',
-											paddingLeft: '25px'
-										}}
-									>
-										Venture Hacks
-									</Link>
-								</li>
-							</ul>
+
+							{/* -------------------------------desktop navbar------------------------------------------ */}
+
 							<div className='navmenu'>
 								<ul
 									id='nav-mobilecomp-menu'
@@ -233,6 +198,45 @@ const Navbar = () => {
 							</div>
 						</div>
 					</nav>
+
+					<ul id='dropdown1' className='dropdown-content' style={{ backgroundColor: 'black' }}>
+						<li>
+							<Link
+								to='/industry'
+								style={{
+									color: 'white',
+									fontSize: '1.1em',
+									paddingLeft: '25px'
+								}}
+							>
+								Industry
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/startup'
+								style={{
+									color: 'white',
+									fontSize: '1.1em',
+									paddingLeft: '25px'
+								}}
+							>
+								Start-ups
+							</Link>
+						</li>
+						<li>
+							<Link
+								to='/venturehack'
+								style={{
+									color: 'white',
+									fontSize: '1.1em',
+									paddingLeft: '25px'
+								}}
+							>
+								Venture Hacks
+							</Link>
+						</li>
+					</ul>
 					<ul id='account-dropdown' className='dropdown-content' style={{ backgroundColor: 'black' }}>
 						{show()}
 
@@ -253,30 +257,13 @@ const Navbar = () => {
 						</li>
 					</ul>
 				</div>
-				<ul id='dropdown2' className='dropdown-content' style={{ backgroundColor: 'black' }}>
-					<li>
-						<Link to='/industry' style={{ color: 'white' }}>
-							Industry
-						</Link>
-					</li>
-					<li>
-						<Link to='/startup' style={{ color: 'white' }}>
-							Start-ups
-						</Link>
-					</li>
-					<li>
-						<Link to='/venturehack' style={{ color: 'white' }}>
-							Venture Hacks
-						</Link>
-					</li>
-				</ul>
+
+				{/*------------------------------------------ mobile sidenav------------------------------- */}
+
 				<ul className='sidenav sidenav-close' id='mobile-demo'>
 					<li>
 						<Link to='/'>Home</Link>
 					</li>
-					{/* <li>
-						<Link to='/funding'>Funding</Link>
-					</li> */}
 					<li>
 						<Link to='/jobs'>Jobs</Link>
 					</li>
@@ -287,14 +274,14 @@ const Navbar = () => {
 						<Link to='/community'>Community</Link>
 					</li>
 					<li>
-						<a className='dropdown-trigger1' data-target='dropdown2'>
-							Research<i className='material-icons right'>arrow_drop_side</i>
-						</a>
+						<Link to='/industry'>Industry</Link>
 					</li>
-
-					{/* <li>
-						<a onClick={handleClickOpen}>Dashboard</a>
-					</li> */}
+					<li>
+						<Link to='/startup'>Start-ups</Link>
+					</li>
+					<li>
+						<Link to='/venturehack'>Venture Hacks</Link>
+					</li>
 					<li>
 						<Link to='/about'>About us</Link>
 					</li>
@@ -309,6 +296,9 @@ const Navbar = () => {
 					</li>
 					{showmobile()}
 				</ul>
+
+				{/* ---------------------------------------------------------------------------------- */}
+
 				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>
