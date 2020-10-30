@@ -55,7 +55,7 @@ class Internshiplist extends React.Component {
 				} else return <JobsandInternshipcard key={index} jobdetails={internship} weblink={internship.jobLink} />;
 			})
 		) : (
-			<div className='center'> Oops! No Jobs To Show !! </div>
+			<div className='center'> Oops! No Internships To Show !! </div>
 		);
 		return (
 			<div>
