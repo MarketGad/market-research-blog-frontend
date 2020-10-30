@@ -18,7 +18,7 @@ export default function CarouselSlider() {
         breakPoints={breakPoints}
         pagination={false}
         enableAutoPlay={true}
-        autoPlaySpeed={500}
+        autoPlaySpeed={1000}
         disableArrowsOnEnd={false}
       >
         <Item>

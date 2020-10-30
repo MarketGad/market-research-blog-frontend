@@ -22,11 +22,12 @@ class Products extends React.Component {
           src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg"
           width="100%"
         ></img>
-        <div style={{ margin: "1%", backgroundColor: "white" }}>
-          <p style={{ marginLeft: "5%", fontSize: "1.6em", paddingTop: "1%" }}>
-            What's New?
-          </p>
-          <CarouselSlider />
+
+        <div style={{ margin: "1% 10%" }}>
+          <h5 style={{ padding: "1% 0" }}>What's New?</h5>
+          <div style={{ padding: "3% 1%", backgroundColor: "white" }}>
+            <CarouselSlider />
+          </div>
         </div>
         <div style={{ marginTop: "2%" }}>
           <div className="topnav-prod">
