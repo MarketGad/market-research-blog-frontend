@@ -7,37 +7,26 @@ import TodayLaunch from '../Components/TodayLaunch';
 import TrendingProduct from '../Components/TrendingProduct';
 import CarouselSlider from '../Components/Carousel';
 import SimpleCard from '../Components/Demo';
+import ThreeDotLoad from '../Components/ThreeDotLoad';
 
 class Products extends React.Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			products: this.props.products
+			products: this.props.products,
+			tabValue: 'product'
 		};
 	}
 	render () {
-		return (
-			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
-				<div>
-					<img
-						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg'
-						width='100%'
-					/>
-				</div>
-
-				<div className='product-job-page-container'>
-					<div>
-						<h5>What's New?</h5>
-						<div style={{ padding: '1%', backgroundColor: 'white', borderRadius: '8px' }}>
-							<CarouselSlider />
-						</div>
-					</div>
-					<div style={{ padding: '10px' }}>
-						<div className='topnav-prod'>
-							<a className='topnav-active'>Top Products</a>
-							<a>Trending Talents</a>
-						</div>
-					</div>
+		const handleProduct = () => {
+			this.setState({ tabValue: 'product' });
+		};
+		const handleTalent = () => {
+			this.setState({ tabValue: 'talent' });
+		};
+		const show = () => {
+			if (this.state.tabValue === 'product') {
+				return (
 					<div className='row'>
 						<div className='col s12 m6 l3'>
 							<SimpleCard
@@ -125,6 +114,56 @@ class Products extends React.Component {
 							/>
 						</div>
 					</div>
+				);
+			} else {
+				return (
+					<div style={{ margin: '0 25%' }}>
+						<PeopleList jobProfiles={this.props.jobProfiles === undefined ? [] : this.props.jobProfiles} />
+					</div>
+				);
+			}
+		};
+		return (
+			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
+				<div>
+					<img
+						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg'
+						width='100%'
+					/>
+				</div>
+
+				<div className='product-job-page-container'>
+					<div>
+						<h5>What's New?</h5>
+						<div style={{ padding: '1%', backgroundColor: 'white', borderRadius: '8px' }}>
+							<CarouselSlider />
+						</div>
+					</div>
+					<div style={{ padding: '10px' }}>
+						<div className='topnav-prod'>
+							{this.state.tabValue === 'product' && (
+								<div>
+									<a id='topProduct' onClick={handleProduct} className='topnav-active'>
+										Top Products
+									</a>
+									<a id='trendingTalent' onClick={handleTalent}>
+										Trending Talents
+									</a>
+								</div>
+							)}
+							{this.state.tabValue === 'talent' && (
+								<div>
+									<a id='topProduct' onClick={handleProduct}>
+										Top Products
+									</a>
+									<a id='trendingTalent' className='topnav-active' onClick={handleTalent}>
+										Trending Talents
+									</a>
+								</div>
+							)}
+						</div>
+					</div>
+					{show()}
 				</div>
 				{/* <div className="product-job-page-container">
           <div className="row">

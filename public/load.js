@@ -20,19 +20,6 @@ $(document).ready(function () {
 		$('#search-icon').fadeIn();
 		$('#comp-menu').fadeIn();
 	});
-
-	$('.editorpick-button').click(function (e) {
-		$('.editorpick-button').addClass('editorpickactive');
-		$('.latest-button').removeClass('editorpickactive');
-		$('.editorpick-content').css('display', 'block');
-		$('.latest-content').css('display', 'none');
-	});
-	$('.latest-button').click(function (e) {
-		$('.editorpick-button').removeClass('editorpickactive');
-		$('.latest-button').addClass('editorpickactive');
-		$('.latest-content').css('display', 'block');
-		$('.editorpick-content').css('display', 'none');
-	});
 	$('.myreviews').carousel({
 		numVisible: 5,
 		shift: 55,

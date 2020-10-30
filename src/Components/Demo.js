@@ -42,24 +42,30 @@ const ProductCard = (props) => {
 		>
 			<CardContent style={{ position: 'relative', top: '-40px' }}>
 				<div style={{ margin: '0' }}>
-					<Link style={{ position: 'absolute', marginLeft: '67%' }}>
-						<img
-							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603348649/Theme/Upvote_Icon_tvffmk.png'
-							width='50px'
-						/>
-					</Link>
-					<div
-						className='right-align secondary-content'
-						style={{
-							right: '2px',
-							top: '1em',
-							fontSize: '20px',
-							position: 'relative',
-							color: 'white',
-							borderBottom: '2px solid'
-						}}
-					>
-						12
+					<div className='secondary-content'>
+						<Link
+							style={{
+								position: 'absolute',
+								right: '40px'
+							}}
+						>
+							<img
+								src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603348649/Theme/Upvote_Icon_tvffmk.png'
+								width='50px'
+							/>
+						</Link>
+						<div
+							className='right-align '
+							style={{
+								top: '1em',
+								fontSize: '20px',
+								position: 'relative',
+								color: 'white',
+								borderBottom: '2px solid'
+							}}
+						>
+							12
+						</div>
 					</div>
 
 					<h5
