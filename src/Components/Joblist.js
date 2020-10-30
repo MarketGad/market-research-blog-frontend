@@ -1,18 +1,19 @@
 import React from 'react';
 import FadingLoader from './FadingLoader';
 import JobsandInternshipcard from './JobsandInternshipcard';
+import Button from '@material-ui/core/Button'
 
 class Joblist extends React.Component {
 	constructor (props) {
 		super(props);
-		this.filterJobs = this.filterJobs.bind(this);
-	}
 
-	// setFilter = (filter) => {
-	// 	this.setState({
-	// 		filter: filter
-	// 	});
-	// };
+		this.state = {
+			isExpandTrue: false,
+			filter: ''
+		}
+		this.filterJobs = this.filterJobs.bind(this);
+		this.handleReadMore = this.handleReadMore.bind(this);
+	}
 
 	filterJobs = (job) => {
 		if (this.props.filter === '') {
@@ -22,10 +23,28 @@ class Joblist extends React.Component {
 		}
 	};
 
+	handleReadMore = () => {
+		this.setState({
+			isExpandTrue: true
+		})
+	}
+
 	render () {
 		var jobs = this.props.jobs.slice(0).reverse();
 		jobs = jobs.filter(this.filterJobs);
 
+		if(this.props.filter !== this.state.filter){
+			this.setState({
+				isExpandTrue: false,
+				filter: this.props.filter
+			})
+		}
+
+		if(this.state.isExpandTrue === false && jobs.length > 5){
+			jobs = jobs.slice(0,5);
+		}
+
+		
 		// var DD_ARR = [];
 
 		// for (var i = 0; i < jobs.length; ) {
@@ -103,18 +122,36 @@ class Joblist extends React.Component {
 		);
 		return (
 			<div>
-				{this.props.jobs[0] && (
-					<div>
-						<ul className='collection job-container' style={{ borderRadius: '7px' }}>
-							{showJobs}
-						</ul>
-					</div>
-				)}
-				{this.props.jobs.length === 0 && (
-					<div>
-						<FadingLoader loadno={3} />
-					</div>
-				)}
+				<div>
+					{this.props.jobs[0] && (
+						<div>
+							<ul className='collection job-container' style={{ borderRadius: '7px' }}>
+								{showJobs}
+							</ul>
+						</div>
+					)}
+					{this.props.jobs.length === 0 && (
+						<div>
+							<FadingLoader loadno={3} />
+						</div>
+					)}
+				</div>
+				<div>
+					{(this.props.jobs.filter(this.filterJobs).length > 5 && this.state.isExpandTrue === false) ? (
+						<div
+							style={{
+								textAlign: 'center'
+							}}
+						>
+							<Button 
+							variant="contained"
+							onClick={this.handleReadMore}
+							>Show More</Button>
+						</div>
+					):(
+						<></>
+					)}
+				</div>
 			</div>
 		);
 	}
