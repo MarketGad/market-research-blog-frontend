@@ -117,7 +117,7 @@ class Products extends React.Component {
 				);
 			} else {
 				return (
-					<div style={{ margin: '0 25%' }}>
+					<div className='trendingtalent-home-container'>
 						<PeopleList jobProfiles={this.props.jobProfiles === undefined ? [] : this.props.jobProfiles} />
 					</div>
 				);
