@@ -14,6 +14,9 @@ import { Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import ThreeDotLoad from '../Components/ThreeDotLoad';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -48,13 +51,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function RegisterForProduct () {
-	// const token = Cookies.get('session-id');
-
 	const classes = useStyles();
 	const LoginCheck = Cookies.get('session-id');
 	const [ openSignin, setOpenSignin ] = React.useState(false);
-	const [ fileInputState, setFileInputState ] = React.useState('');
-	const [ previewSource, setPreviewSource ] = React.useState('');
+	const [ logo, setLogo ] = React.useState('');
+	const [ theme, setTheme ] = React.useState('');
+	const [ themeState, setThemestate ] = React.useState('');
+	const [ logoState, setLogostate ] = React.useState('');
 	const [ RegisterProductSuccess, setRegisterProductSuccess ] = React.useState(false);
 	const [ name, setName ] = React.useState('');
 	const [ weblink, setWeblink ] = React.useState('');
@@ -64,18 +67,24 @@ export default function RegisterForProduct () {
 	const [ detaildesc, setDetaildesc ] = React.useState('');
 	const [ email, setEmail ] = React.useState('');
 	const [ contact, setContact ] = React.useState('');
+	const [ load, setLoad ] = React.useState('');
 
-	const handleFileInputChange = (e) => {
+	const handleTheme = (e) => {
 		const file = e.target.files[0];
-		previewFile(file);
-		setFileInputState(e.target.value);
-	};
-
-	const previewFile = (file) => {
+		setThemestate(e.target.value);
 		const reader = new FileReader();
 		reader.readAsDataURL(file);
 		reader.onloadend = () => {
-			setPreviewSource(reader.result);
+			setTheme(reader.result);
+		};
+	};
+	const handlelogo = (e) => {
+		const file = e.target.files[0];
+		setLogostate(e.target.value);
+		const reader = new FileReader();
+		reader.readAsDataURL(file);
+		reader.onloadend = () => {
+			setLogo(reader.result);
 		};
 	};
 	const submitHandler = (e) => {
@@ -91,46 +100,51 @@ export default function RegisterForProduct () {
 					Authorization: `Bearer  ${token}`
 				}
 			};
-			axios
-				.post(
-					process.env.REACT_APP_BASEURL + '/api/productdetails',
-					{
-						logo: previewSource,
-						name: name,
-						websiteLink: weblink,
-						playStoreLink: playlink,
-						appStoreLink: applelink,
-						briefDescription: briefdesc,
-						detailedDescription: detaildesc,
-						pointOfContact: contact,
-						emailId: email
-					},
-					config
-				)
-				.then(
-					(response) => {
-						if (response.status === 200) {
-							setRegisterProductSuccess(true);
-						} else {
-							alert(response.err);
-						}
-					},
-					(error) => {
-						if (error.message === 'Request failed with status code 413') {
-							alert('upload photo size should be less than 500kb');
-						} else if (error.response.data === 'Unauthorized') {
-							alert('make sure that you are logged in');
-						} else {
-							alert('registeration failed');
-						}
+			const data = {
+				logo: logo,
+				theme: theme,
+				name: name,
+				websiteLink: weblink,
+				playStoreLink: playlink,
+				appStoreLink: applelink,
+				briefDescription: briefdesc,
+				detailedDescription: detaildesc,
+				pointOfContact: contact,
+				emailId: email
+			};
+			setLoad(true);
+			axios.post(process.env.REACT_APP_BASEURL + '/api/productdetails', data, config).then(
+				(response) => {
+					if (response.status === 200) {
+						setRegisterProductSuccess(true);
+						setLoad(false);
+					} else {
+						alert(response.err);
 					}
-				);
+				},
+				(error) => {
+					if (error.message === 'Request failed with status code 413') {
+						alert('upload photo size should be less than 500kb');
+					} else if (error.response.data === 'Unauthorized') {
+						alert('make sure that you are logged in');
+					} else {
+						alert('registeration failed');
+					}
+					setLoad(false);
+				}
+			);
 		} else {
 			alert('Please mention your website or playstore link to continue');
 		}
 	};
 	if (RegisterProductSuccess) {
 		return <Redirect to='/' />;
+	} else if (load === true) {
+		return (
+			<div style={{ padding: '10%', textAlign: 'center' }}>
+				<ThreeDotLoad />
+			</div>
+		);
 	} else {
 		return (
 			<div>
@@ -148,7 +162,51 @@ export default function RegisterForProduct () {
 							</Typography>
 							<form className={classes.form} onSubmit={submitHandler}>
 								<Grid container spacing={2}>
-									{previewSource && <img src={previewSource} alt='chosen' className='showpic' />}
+									{logo &&
+									theme && (
+										<Grid item xs={12}>
+											<Card
+												style={{
+													width: '60%',
+													margin: '0 20%',
+													height: '250px',
+													backgroundImage: `url(${theme})`,
+													backgroundSize: '100% 100%'
+												}}
+											>
+												<CardContent>
+													<div className='left-align'>
+														<img
+															src={logo}
+															style={{ maxheight: '100px', maxWidth: '150px' }}
+														/>
+													</div>
+												</CardContent>
+											</Card>
+										</Grid>
+									)}
+
+									<Grid item xs={12} sm={6}>
+										<Chip
+											className={classes.chip}
+											label='Upload Theme'
+											color='primary'
+											icon={<CloudUploadIcon />}
+										/>
+									</Grid>
+									<Grid item xs={12} sm={6}>
+										<input
+											required
+											style={{ padding: '3px 0' }}
+											id='fileInput'
+											type='file'
+											accept='image/*'
+											name='image'
+											onChange={handleTheme}
+											value={themeState}
+											className='form-input'
+										/>
+									</Grid>
 									<Grid item xs={12} sm={6}>
 										<Chip
 											className={classes.chip}
@@ -165,8 +223,8 @@ export default function RegisterForProduct () {
 											type='file'
 											accept='image/*'
 											name='image'
-											onChange={handleFileInputChange}
-											value={fileInputState}
+											onChange={handlelogo}
+											value={logoState}
 											className='form-input'
 										/>
 									</Grid>

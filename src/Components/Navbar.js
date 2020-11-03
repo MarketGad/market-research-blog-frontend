@@ -166,7 +166,7 @@ const Navbar = () => {
 
 									<li className='right'>
 										<div
-											style={{ padding: '0 25px 0 80px' }}
+											style={{ padding: '0 25px 0 70px' }}
 											className='dropdown-trigger'
 											data-target='account-dropdown'
 										>
@@ -230,11 +230,6 @@ const Navbar = () => {
 								Add job profile
 							</Link>
 						</li>
-						<li>
-							<Link to='/addjobs' style={{ color: 'white', fontSize: '1em' }}>
-								Add jobs/interships
-							</Link>
-						</li>
 					</ul>
 				</div>
 
@@ -270,9 +265,6 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link onClick={jobprofileopen}>Add job profile</Link>
-					</li>
-					<li>
-						<Link to='/addjobs'>Add jobs/interships</Link>
 					</li>
 					{showmobile()}
 				</ul>
