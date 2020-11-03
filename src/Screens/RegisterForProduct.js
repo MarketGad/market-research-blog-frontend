@@ -175,8 +175,11 @@ export default function RegisterForProduct () {
 												}}
 											>
 												<CardContent>
-													<div style={{ margin: '0', textAlign: 'left', padding: '10px' }}>
-														<img src={logo} height='30px' />
+													<div className='left-align'>
+														<img
+															src={logo}
+															style={{ maxheight: '100px', maxWidth: '150px' }}
+														/>
 													</div>
 												</CardContent>
 											</Card>
