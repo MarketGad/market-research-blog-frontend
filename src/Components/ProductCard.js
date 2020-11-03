@@ -14,7 +14,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
 	root: {
 		width: '100%',
-		margin: '0'
+		margin: '0',
+		maxHeight: '320px'
 	},
 	bullet: {
 		display: 'inline-block',
@@ -88,7 +89,7 @@ const ProductCard = (props) => {
 			}}
 		>
 			<CardContent>
-				<div style={{ margin: '0', position: 'relative', top: '-35px' }}>
+				<div style={{ margin: '0', position: 'relative', top: '-20px' }}>
 					{product.upvotesList.includes(user_id) && (
 						<div className='secondary-content'>
 							<div
@@ -178,18 +179,18 @@ const ProductCard = (props) => {
 							</div>
 						</div>
 					)}
-
-					<h5
-						style={{
-							textAlign: 'left',
-							padding: '20px 0',
-							color: 'white'
-						}}
-					>
-						<Link to={`products/${product._id}`}>
-							<img src={product.logo} height='40px' />
-						</Link>
-					</h5>
+				</div>
+				<div
+					style={{
+						position: 'relative',
+						top: '-10px',
+						textAlign: 'left',
+						padding: '5px 0'
+					}}
+				>
+					<Link to={`products/${product._id}`}>
+						<img src={product.logo} height='90px' maxWidth='120px' />
+					</Link>
 				</div>
 
 				<Typography
@@ -242,61 +243,3 @@ const ProductCard = (props) => {
 	);
 };
 export default ProductCard;
-
-// <li className='collection-item avatar'>
-// 	<Link to={`products/${product._id}`}>
-// 		<img className='circle pro-img' src={product.logo} alt={product.name} />
-// 	</Link>
-
-// 	<div className='product-right-container'>
-// 		<Link
-// 			style={{ color: 'black' }}
-// 			className='product-content product-name'
-// 			to={`products/${product._id}`}
-// 		>
-// 			{product.name}
-// 		</Link>
-// 		<div className='product-desc'>{product.briefDescription}</div>
-// 		<div className='row product-link-container'>
-// 			<div className='col l1 s3 comment-box'>
-// 				<a
-// 					target='_blank'
-// 					rel='noopener noreferrer'
-// 					href={weblink}
-// 					className='waves-effect waves-light btn-small visit-btn'
-// 				>
-// 					{/* <span className='comment-count'>visit</span> */}
-// 					<span
-// 						className='material-icons chat-icon'
-// 						style={{
-// 							position: 'relative',
-// 							padding: '0 5px',
-// 							fontSize: '16px'
-// 						}}
-// 					>
-// 						near_me
-// 					</span>
-// 				</a>
-// 			</div>
-// 			<div className='col l2 s4 comment-box'>
-// 				<Link
-// 					to={`products/${product._id}?q=comment`}
-// 					className='waves-effect waves-light btn-small visit-btn'
-// 				>
-// 					<span className='comment-count'>{product.comments.length}</span>
-// 					<span
-// 						className='material-icons chat-icon'
-// 						style={{
-// 							position: 'relative',
-// 							padding: '0 5px',
-// 							fontSize: '16px'
-// 						}}
-// 					>
-// 						chat
-// 					</span>
-// 				</Link>
-// 			</div>
-// 		</div>
-//
-// 	</div>
-// </li>
