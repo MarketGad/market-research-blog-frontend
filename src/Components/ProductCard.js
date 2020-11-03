@@ -89,108 +89,112 @@ const ProductCard = (props) => {
 			}}
 		>
 			<CardContent>
-				<div style={{ margin: '0', position: 'relative', top: '-20px' }}>
-					{product.upvotesList.includes(user_id) && (
-						<div className='secondary-content'>
-							<div
-								style={{
-									position: 'absolute',
-									right: '30px'
-								}}
-							>
-								<img
-									src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
-									alt='clickedbulb'
-									width='50px'
-								/>
+				<div className='row'>
+					<div
+						className='col s9'
+						style={{
+							position: 'relative',
+							top: '-16px',
+							textAlign: 'left',
+							padding: '5px 0'
+						}}
+					>
+						<Link to={`products/${product._id}`}>
+							<img src={product.logo} height='90px' maxWidth='120px' />
+						</Link>
+					</div>
+					<div className='col s3' style={{ margin: '0', position: 'relative', top: '-20px' }}>
+						{product.upvotesList.includes(user_id) && (
+							<div className='secondary-content'>
+								<div
+									style={{
+										position: 'absolute',
+										right: '35px'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+										alt='clickedbulb'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										right: '-3px',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
 							</div>
-							<div
-								className='right-align'
-								style={{
-									top: '1.3em',
-									fontSize: '16px',
-									fontWeight: '800',
-									position: 'relative',
-									color: 'white',
-									borderBottom: '2px solid'
-								}}
-							>
-								{upvote}
+						)}
+						{activeupvote === true && (
+							<div className='secondary-content'>
+								<div
+									style={{
+										position: 'absolute',
+										right: '35px'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+										alt='clickedbulb'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
 							</div>
-						</div>
-					)}
-					{activeupvote === true && (
-						<div className='secondary-content'>
-							<div
-								style={{
-									position: 'absolute',
-									right: '30px'
-								}}
-							>
-								<img
-									src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
-									alt='clickedbulb'
-									width='50px'
-								/>
+						)}
+						{(!product.upvotesList.includes(user_id) || !token) &&
+						activeupvote === false && (
+							<div className='secondary-content'>
+								<div
+									onClick={() => addUpvote(product._id, product)}
+									style={{
+										position: 'absolute',
+										right: '35px',
+										cursor: 'pointer'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604412704/Theme/Upvote_Icon_tvffmk.png'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
 							</div>
-							<div
-								className='right-align'
-								style={{
-									top: '1.3em',
-									fontSize: '16px',
-									fontWeight: '800',
-									position: 'relative',
-									color: 'white',
-									borderBottom: '2px solid'
-								}}
-							>
-								{upvote}
-							</div>
-						</div>
-					)}
-					{(!product.upvotesList.includes(user_id) || !token) &&
-					activeupvote === false && (
-						<div className='secondary-content'>
-							<div
-								onClick={() => addUpvote(product._id, product)}
-								style={{
-									position: 'absolute',
-									right: '30px',
-									cursor: 'pointer'
-								}}
-							>
-								<img
-									src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604412704/Theme/Upvote_Icon_tvffmk.png'
-									width='50px'
-								/>
-							</div>
-							<div
-								className='right-align'
-								style={{
-									top: '1.3em',
-									fontSize: '16px',
-									fontWeight: '800',
-									position: 'relative',
-									color: 'white',
-									borderBottom: '2px solid'
-								}}
-							>
-								{upvote}
-							</div>
-						</div>
-					)}
-				</div>
-				<div
-					style={{
-						position: 'relative',
-						top: '-10px',
-						textAlign: 'left',
-						padding: '5px 0'
-					}}
-				>
-					<Link to={`products/${product._id}`}>
-						<img src={product.logo} height='90px' maxWidth='120px' />
-					</Link>
+						)}
+					</div>
 				</div>
 
 				<Typography
@@ -199,9 +203,9 @@ const ProductCard = (props) => {
 					className='prodcard-desc right-align'
 					style={{
 						color: 'white',
-						height: '70px',
+						height: '60px',
 						position: 'relative',
-						top: '-2em',
+						top: '-2.5em',
 						fontWeight: '600',
 						fontSize: '16px',
 						paddingLeft: '40%'
