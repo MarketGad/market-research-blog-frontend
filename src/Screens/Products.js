@@ -42,7 +42,7 @@ class Products extends React.Component {
 
 				<div className='product-job-page-container'>
 					<div>
-						<h5>
+						<h5 style={{ padding: '0 10px' }}>
 							<b>What's New?</b>
 						</h5>
 						<TodayLaunch todayLaunch={this.props.todayLaunch} />
