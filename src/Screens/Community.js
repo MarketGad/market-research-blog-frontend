@@ -7,7 +7,7 @@ const Community = (props) => {
 		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
 				<img
-					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603992512/Theme/community_cover_photo_yc8bir.jpg'
+					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604393124/Theme/community_cover_myo0r3.jpg'
 					width='100%'
 				/>
 			</div>

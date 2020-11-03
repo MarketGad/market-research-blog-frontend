@@ -44,7 +44,7 @@ const ListProduct = (props) => {
 		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
 				<img
-					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603987758/Theme/job_cover_pic_lbcydh.jpg'
+					src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604393112/Theme/job-page-cover_np3nv8.jpg'
 					width='100%'
 				/>
 			</div>
@@ -75,7 +75,7 @@ const ListProduct = (props) => {
 
 						<Joblist jobs={props.jobs} filter={filter} />
 						<div className='product-page-head'>Internships</div>
-						<Internshiplist internships={props.internship}  filter={filter} />
+						<Internshiplist internships={props.internship} filter={filter} />
 					</div>
 					<div className='col s12 l4'>
 						<div className='row' style={{ margin: '0', padding: '0' }}>

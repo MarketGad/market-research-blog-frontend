@@ -6,7 +6,7 @@ import Subscribe from '../Components/Subscribe';
 import TodayLaunch from '../Components/TodayLaunch';
 import TrendingProduct from '../Components/TrendingProduct';
 import CarouselSlider from '../Components/Carousel';
-import SimpleCard from '../Components/Demo';
+import ProductCard from '../Components/ProductCard';
 import ThreeDotLoad from '../Components/ThreeDotLoad';
 
 class Products extends React.Component {
@@ -29,14 +29,15 @@ class Products extends React.Component {
 				return (
 					<div className='row'>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							{/* <Productc products={this.props.products === undefined ? [] : this.props.products} /> */}
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
 								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
@@ -44,70 +45,70 @@ class Products extends React.Component {
 						</div>
 
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
 								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
 								desc='Prepare for your interview using AI bots. '
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
 								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
 								desc='Prepare for your interview using AI bots. '
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
 								desc='Prepare for your interview using AI bots. '
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603978970/Theme/Woovly_wssc8n.png'
 								desc='Tag the brand you&#39;re wearing.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603979339/Theme/SockSoho_mk74rd.png'
 								desc='Shop for the latest collection of fun, quirky and premium socks for men.'
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603980780/Theme/SockSoho_llzf1p.jpg'
 							/>
 						</div>
 						<div className='col s12 m6 l3'>
-							<SimpleCard
+							<ProductCard
 								logoUrl='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990000/Theme/Expertron_dkfwhd.png'
 								desc='Prepare for your interview using AI bots. '
 								background='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603990088/Theme/Expertron_lzfgc0.jpg'
@@ -127,7 +128,7 @@ class Products extends React.Component {
 			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
 				<div>
 					<img
-						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731354/Theme/home_cover_Photo_xklaxg.jpg'
+						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604393121/Theme/homepagecover_ojaz0x.jpg'
 						width='100%'
 					/>
 				</div>
