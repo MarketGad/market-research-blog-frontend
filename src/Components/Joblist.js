@@ -8,8 +8,9 @@ class Joblist extends React.Component {
 		super(props);
 
 		this.state = {
-			isExpandTrue: false,
-			filter: ''
+			expandUpto: 5,
+			filter: '',
+			jobs: this.props.jobs.slice(0).reverse().filter(this.filterJobs)
 		}
 		this.filterJobs = this.filterJobs.bind(this);
 		this.handleReadMore = this.handleReadMore.bind(this);
@@ -24,8 +25,10 @@ class Joblist extends React.Component {
 	};
 
 	handleReadMore = () => {
+		// alert(this.state.expandUpto + "  " + this.state.jobs.length)
+
 		this.setState({
-			isExpandTrue: true
+			expandUpto: Math.min(this.state.expandUpto + 5, this.state.jobs.length)
 		})
 	}
 
@@ -35,14 +38,15 @@ class Joblist extends React.Component {
 
 		if(this.props.filter !== this.state.filter){
 			this.setState({
-				isExpandTrue: false,
-				filter: this.props.filter
+				expandUpto: 5,
+				filter: this.props.filter,
+				jobs: this.props.jobs.slice(0).reverse().filter(this.filterJobs)
 			})
 		}
 
-		if(this.state.isExpandTrue === false && jobs.length > 5){
-			jobs = jobs.slice(0,5);
-		}
+		// if(this.state.expandUpto === false && jobs.length > 5){
+		jobs = jobs.slice(0,this.state.expandUpto);
+		// }
 
 		
 		// var DD_ARR = [];
@@ -120,6 +124,7 @@ class Joblist extends React.Component {
 		) : (
 			<div className='center'> Oops! No Jobs To Show !! </div>
 		);
+		// console.log(this.state)
 		return (
 			<div>
 				<div>
@@ -137,7 +142,8 @@ class Joblist extends React.Component {
 					)}
 				</div>
 				<div>
-					{(this.props.jobs.filter(this.filterJobs).length > 5 && this.state.isExpandTrue === false) ? (
+					
+					{(this.state.jobs.length > 5 && this.state.expandUpto < this.state.jobs.length) ? (
 						<div
 							style={{
 								textAlign: 'center'
