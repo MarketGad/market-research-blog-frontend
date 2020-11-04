@@ -13,7 +13,6 @@ const Subscribe = () => {
 			data: { email }
 		})
 			.then((response) => {
-				console.log(response);
 				setEmail('');
 			})
 			.catch((err) => {
