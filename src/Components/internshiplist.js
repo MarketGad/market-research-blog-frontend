@@ -10,8 +10,9 @@ class Internshiplist extends React.Component {
 		super(props);
 		
 		this.state = {
-			isExpandTrue: false,
-			filter: ''
+			expandUpto: 5,
+			filter: '',
+			internships: []
 		}
 		this.filterJobs = this.filterJobs.bind(this);
 		this.handleReadMore = this.handleReadMore.bind(this);
@@ -27,7 +28,7 @@ class Internshiplist extends React.Component {
 
 	handleReadMore = () => {
 		this.setState({
-			isExpandTrue: true
+			expandUpto: Math.min(this.state.expandUpto + 5, this.state.internships.length)
 		})
 	}
 
@@ -38,14 +39,15 @@ class Internshiplist extends React.Component {
 
 		if(this.props.filter !== this.state.filter){
 			this.setState({
-				isExpandTrue: false,
-				filter: this.props.filter
+				expandUpto: 5,
+				filter: this.props.filter,
+				internships: internships
 			})
 		}
 
-		if(this.state.isExpandTrue === false && internships.length > 5){
-			internships = internships.slice(0,5);
-		}
+		// if(this.state.expandUpto === false && internships.length > 5){
+		internships = internships.slice(0,this.state.expandUpto);
+		// }
 
 		const showInternships = internships.length ? (
 			internships.map((internship, index) => {
@@ -74,7 +76,7 @@ class Internshiplist extends React.Component {
 					)}
 				</div>
 				<div>
-					{(this.props.internships.filter(this.filterJobs).length > 5 && this.state.isExpandTrue === false) ? (
+					{(this.props.internships.filter(this.filterJobs).length > 5 && this.state.expandUpto < this.state.internships.length) ? (
 						<div
 							style={{
 								textAlign: 'center'
