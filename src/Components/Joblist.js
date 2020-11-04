@@ -10,7 +10,7 @@ class Joblist extends React.Component {
 		this.state = {
 			expandUpto: 5,
 			filter: '',
-			jobs: []
+			jobs: this.props.jobs.slice(0).reverse().filter(this.filterJobs)
 		}
 		this.filterJobs = this.filterJobs.bind(this);
 		this.handleReadMore = this.handleReadMore.bind(this);
@@ -25,7 +25,7 @@ class Joblist extends React.Component {
 	};
 
 	handleReadMore = () => {
-		alert(this.state.expandUpto + "  " + this.state.jobs.length)
+		// alert(this.state.expandUpto + "  " + this.state.jobs.length)
 
 		this.setState({
 			expandUpto: Math.min(this.state.expandUpto + 5, this.state.jobs.length)
@@ -40,7 +40,7 @@ class Joblist extends React.Component {
 			this.setState({
 				expandUpto: 5,
 				filter: this.props.filter,
-				jobs: jobs
+				jobs: this.props.jobs.slice(0).reverse().filter(this.filterJobs)
 			})
 		}
 
@@ -124,7 +124,7 @@ class Joblist extends React.Component {
 		) : (
 			<div className='center'> Oops! No Jobs To Show !! </div>
 		);
-
+		// console.log(this.state)
 		return (
 			<div>
 				<div>
@@ -143,7 +143,7 @@ class Joblist extends React.Component {
 				</div>
 				<div>
 					
-					{(this.props.jobs.filter(this.filterJobs).length > 5 && this.state.expandUpto < this.state.jobs.length) ? (
+					{(this.state.jobs.length > 5 && this.state.expandUpto < this.state.jobs.length) ? (
 						<div
 							style={{
 								textAlign: 'center'
