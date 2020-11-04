@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
 import Button from '@material-ui/core/Button';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -15,7 +15,18 @@ const breakPoints = [
 	{ width: 768, itemsToShow: 3 },
 	{ width: 1200, itemsToShow: 4 }
 ];
+
 const TodayLaunch = (props) => {
+	const [ openSignin, setOpenSignin ] = React.useState(false);
+
+	//-------------------------------Carousel infinite loop logic------------------------------------//
+	const carouselRef = useRef(null);
+	var width = document.documentElement.clientWidth;
+	const elementsPerPage = width > 1000 ? 4 : 1;
+	const totalPages = Math.ceil(props.todayLaunch.length / elementsPerPage);
+	let resetTimeout;
+	/*----------------------------------------------------------------------------------------*/
+
 	function myArrow ({ type, onClick, isEdge }) {
 		const pointer = type === consts.PREV ? <ArrowBackIosIcon /> : <ArrowForwardIosIcon />;
 		return (
@@ -31,7 +42,7 @@ const TodayLaunch = (props) => {
 			</Button>
 		);
 	}
-	const [ openSignin, setOpenSignin ] = React.useState(false);
+
 	const showProducts = props.todayLaunch.length ? (
 		props.todayLaunch.map((product, index) => {
 			const weblink = !/^https?:\/\//.test(product.websiteLink)
@@ -59,12 +70,21 @@ const TodayLaunch = (props) => {
 			<div className='Ap' style={{ padding: '1%', backgroundColor: 'white', borderRadius: '8px' }}>
 				{props.todayLaunch.length > 0 && (
 					<Carousel
+						ref={carouselRef}
 						breakPoints={breakPoints}
 						pagination={false}
 						enableAutoPlay={true}
-						autoPlaySpeed={1000}
+						autoPlaySpeed={1500}
 						disableArrowsOnEnd={false}
 						renderArrow={myArrow}
+						onNextEnd={({ index }) => {
+							clearTimeout(resetTimeout);
+							if (index + 1 === totalPages) {
+								resetTimeout = setTimeout(() => {
+									carouselRef.current.goTo(0);
+								}, 1500);
+							}
+						}}
 					>
 						{showProducts}
 					</Carousel>
@@ -75,6 +95,7 @@ const TodayLaunch = (props) => {
 					</div>
 				)}
 			</div>
+
 			<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 				<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 			</Popup>
