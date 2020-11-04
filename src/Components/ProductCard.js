@@ -35,6 +35,7 @@ const ProductCard = (props) => {
 	const classes = useStyles();
 	const token = Cookies.get('session-id');
 	const weblink = props.weblink;
+	const showbuttons = props.showbuttons;
 	const product = props.product === undefined ? [] : props.product;
 	if (product.upvotesList === undefined) {
 		product.upvotesList = [];
@@ -214,35 +215,37 @@ const ProductCard = (props) => {
 					{product.briefDescription}
 				</Typography>
 			</CardContent>
-			<CardActions style={{ float: 'right' }}>
-				<Link to={`products/${product._id}?q=comment`}>
-					<Button
-						className='card-pdt'
-						style={{
-							backgroundColor: 'white',
-							maxWidth: '50px',
-							maxHeight: '35px',
-							minWidth: '50px',
-							minHeight: '35px'
-						}}
-					>
-						<TextsmsOutlinedIcon style={{ color: 'black' }} />
-					</Button>
-				</Link>
-				<a target='_blank' rel='noopener noreferrer' href={weblink}>
-					<Button
-						style={{
-							backgroundColor: 'white',
-							maxWidth: '50px',
-							maxHeight: '35px',
-							minWidth: '50px',
-							minHeight: '35px'
-						}}
-					>
-						<SendOutlinedIcon style={{ color: 'black' }} />
-					</Button>
-				</a>
-			</CardActions>
+			{showbuttons === true && (
+				<CardActions style={{ float: 'right' }}>
+					<Link to={`products/${product._id}?q=comment`}>
+						<Button
+							className='card-pdt'
+							style={{
+								backgroundColor: 'white',
+								maxWidth: '50px',
+								maxHeight: '35px',
+								minWidth: '50px',
+								minHeight: '35px'
+							}}
+						>
+							<TextsmsOutlinedIcon style={{ color: 'black' }} />
+						</Button>
+					</Link>
+					<a target='_blank' rel='noopener noreferrer' href={weblink}>
+						<Button
+							style={{
+								backgroundColor: 'white',
+								maxWidth: '50px',
+								maxHeight: '35px',
+								minWidth: '50px',
+								minHeight: '35px'
+							}}
+						>
+							<SendOutlinedIcon style={{ color: 'black' }} />
+						</Button>
+					</a>
+				</CardActions>
+			)}
 		</Card>
 	);
 };

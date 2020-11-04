@@ -45,6 +45,7 @@ const TodayLaunch = (props) => {
 						key={index}
 						product={product === undefined ? [] : product}
 						weblink={weblink}
+						showbuttons={true}
 					/>
 				</Item>
 			);
