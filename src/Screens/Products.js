@@ -40,13 +40,13 @@ class Products extends React.Component {
 					/>
 				</div>
 
+				<div style={{ margin: '0 2%' }}>
+					<h5 style={{ padding: '0 10px' }}>
+						<b>What's New?</b>
+					</h5>
+					<TodayLaunch todayLaunch={this.props.todayLaunch} />
+				</div>
 				<div className='product-job-page-container'>
-					<div>
-						<h5 style={{ padding: '0 10px' }}>
-							<b>What's New?</b>
-						</h5>
-						<TodayLaunch todayLaunch={this.props.todayLaunch} />
-					</div>
 					<div style={{ padding: '10px' }}>
 						<div className='topnav-prod'>
 							{this.state.tabValue === 'product' && (
