@@ -35,7 +35,7 @@ const Aboutus = () => {
 						<img
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731762/Theme/about_bulb_s8m9jf.png'
 							alt='glowing bulb'
-							width='90%'
+							width='100%'
 						/>
 					</div>
 				</div>
@@ -90,7 +90,7 @@ const Aboutus = () => {
 							width='100%'
 						/>
 					</div>
-					<div className='col l8 s12' style={{ padding: '5% 0 0 5%' }}>
+					<div className='col l8 s12' style={{ padding: '5% 0 0 5%', textAlign: 'right' }}>
 						<div style={{ fontFamily: "'Lato', sans-serif", fontSize: '2em', padding: '10px 0' }}>
 							India's First Product
 							<br /> Launch Platform
@@ -112,7 +112,7 @@ const Aboutus = () => {
 						<img
 							className='hide-on-med-and-down center'
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603822251/Theme/aboutwebinfo_qa6zzo.png'
-							width='80%'
+							width='100%'
 						/>
 					</div>
 
