@@ -13,6 +13,7 @@ import Cookies from 'js-cookie';
 import ShowComment from '../Components/ShowComment';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
+import ProductCard from '../Components/ProductCard';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -110,9 +111,15 @@ const Profile = (props) => {
 			<div className='productdetails-container'>
 				<Grid container component='main'>
 					<Grid item xs={12} md={3}>
-						<div className='center'>
-							<img src={product.logo} alt={product.name} className='details-page-logo' />
-							<div className='article-subhead center' style={{ fontWeight: 800 }}>
+						<div className='center' style={{ maxHeight: '350px', width: '350px', margin: '0 10%' }}>
+							<ProductCard
+								openSignin={openSignin}
+								setOpenSignin={setOpenSignin}
+								product={product === undefined ? [] : product}
+								weblink={weblink}
+								showbuttons={false}
+							/>
+							<div className='article-subhead' style={{ fontWeight: 800 }}>
 								{product.name}
 							</div>
 						</div>

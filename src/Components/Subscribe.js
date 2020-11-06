@@ -10,17 +10,14 @@ const Subscribe = () => {
 		axios({
 			method: 'POST',
 			url: process.env.REACT_APP_BASEURL + '/api/subscribe',
-			// url: "http://localhost:5000/api/subscribe",
 			data: { email }
 		})
 			.then((response) => {
-				console.log(response);
+				setEmail('');
 			})
-			.catch((response) => {
-				console.log(response);
+			.catch((err) => {
+				console.log(err);
 			});
-
-		// make all the field null
 	};
 	return (
 		<section className='subscribe'>

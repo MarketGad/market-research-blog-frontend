@@ -1,7 +1,7 @@
 import { Grid, MenuItem, TextField } from '@material-ui/core';
 import { Height } from '@material-ui/icons';
 import React from 'react';
-import Internshiplist from '../Components/internshiplist';
+// import Internshiplist from '../Components/internshiplist';
 import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
 const industries = [
@@ -75,7 +75,7 @@ const ListProduct = (props) => {
 
 						<Joblist jobs={props.jobs} filter={filter} />
 						<div className='product-page-head'>Internships</div>
-						<Internshiplist internships={props.internship} filter={filter} />
+						<Joblist jobs={props.internship} filter={filter} />
 					</div>
 					<div className='col s12 l4'>
 						<div className='row' style={{ margin: '0', padding: '0' }}>

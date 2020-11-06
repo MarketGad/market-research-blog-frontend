@@ -23,6 +23,7 @@ const ProductList = (props) => {
 						key={index}
 						product={product === undefined ? [] : product}
 						weblink={weblink}
+						showbuttons={true}
 					/>
 				</div>
 			);

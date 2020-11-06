@@ -35,7 +35,7 @@ const Aboutus = () => {
 						<img
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731762/Theme/about_bulb_s8m9jf.png'
 							alt='glowing bulb'
-							width='90%'
+							width='100%'
 						/>
 					</div>
 				</div>
@@ -84,13 +84,13 @@ const Aboutus = () => {
 					</svg>
 				</div> */}
 				<div className='row'>
-					<div className='col l4 s12 hide-on-large-only'>
+					<div className='col l4 s12'>
 						<img
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731643/Theme/aboutrocket_fl6qy7.png'
 							width='100%'
 						/>
 					</div>
-					<div className='col l8 s12' style={{ padding: '5% 5% 0 0' }}>
+					<div className='col l8 s12' style={{ padding: '5% 0 0 5%', textAlign: 'right' }}>
 						<div style={{ fontFamily: "'Lato', sans-serif", fontSize: '2em', padding: '10px 0' }}>
 							India's First Product
 							<br /> Launch Platform
@@ -101,12 +101,6 @@ const Aboutus = () => {
 							hand.
 						</div>
 					</div>
-					<div className='col l4 s12 hide-on-med-and-down'>
-						<img
-							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731643/Theme/aboutrocket_fl6qy7.png'
-							width='100%'
-						/>
-					</div>
 				</div>
 
 				<div>
@@ -114,11 +108,14 @@ const Aboutus = () => {
 						Work for what you are
 						<br /> passionate about
 					</div>
-					<img
-						className='hide-on-med-and-down'
-						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603822251/Theme/aboutwebinfo_qa6zzo.png'
-						width='100%'
-					/>
+					<div className='center'>
+						<img
+							className='hide-on-med-and-down center'
+							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603822251/Theme/aboutwebinfo_qa6zzo.png'
+							width='100%'
+						/>
+					</div>
+
 					<img
 						className='hide-on-large-only'
 						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603731712/Theme/aboutmobileinfo_lgqovb.png'

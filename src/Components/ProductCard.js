@@ -32,20 +32,21 @@ const useStyles = makeStyles({
 });
 
 const ProductCard = (props) => {
-  const classes = useStyles();
-  const token = Cookies.get("session-id");
-  const weblink = props.weblink;
-  const product = props.product === undefined ? [] : props.product;
-  if (product.upvotesList === undefined) {
-    product.upvotesList = [];
-  }
-  const { setOpenSignin } = props;
-  if (token) {
-    const token_id = JSON.parse(atob(token.split(".")[1]));
-    var user_id = token_id._id;
-  }
-  const [upvote, setUpvote] = React.useState(product.upvotes);
-  const [activeupvote, setactiveupvote] = React.useState(false);
+	const classes = useStyles();
+	const token = Cookies.get('session-id');
+	const weblink = props.weblink;
+	const showbuttons = props.showbuttons;
+	const product = props.product === undefined ? [] : props.product;
+	if (product.upvotesList === undefined) {
+		product.upvotesList = [];
+	}
+	const { setOpenSignin } = props;
+	if (token) {
+		const token_id = JSON.parse(atob(token.split('.')[1]));
+		var user_id = token_id._id;
+	}
+	const [ upvote, setUpvote ] = React.useState(product.upvotes);
+	const [ activeupvote, setactiveupvote ] = React.useState(false);
 
   const addUpvote = (product_id, product) => {
     if (!token) {
@@ -84,172 +85,176 @@ const ProductCard = (props) => {
     }
   };
 
-  return (
-    <Card
-      className={classes.root}
-      style={{
-        backgroundImage: `url(${
-          product.theme ||
-          "https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg"
-        })`,
-        backgroundSize: "100% 100%",
-        backgroundRepeat: "no-repeat",
-        margin: "10px 0",
-      }}
-    >
-      <CardContent>
-        <div style={{ margin: "0", position: "relative", top: "-20px" }}>
-          {product.upvotesList.includes(user_id) && (
-            <div className="secondary-content">
-              <div
-                style={{
-                  position: "absolute",
-                  right: "30px",
-                }}
-              >
-                <img
-                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png"
-                  alt="clickedbulb"
-                  width="50px"
-                />
-              </div>
-              <div
-                className="right-align"
-                style={{
-                  top: "1.3em",
-                  fontSize: "16px",
-                  fontWeight: "800",
-                  position: "relative",
-                  color: "white",
-                  borderBottom: "2px solid",
-                }}
-              >
-                {upvote}
-              </div>
-            </div>
-          )}
-          {activeupvote === true && (
-            <div className="secondary-content">
-              <div
-                style={{
-                  position: "absolute",
-                  right: "30px",
-                }}
-              >
-                <img
-                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png"
-                  alt="clickedbulb"
-                  width="50px"
-                />
-              </div>
-              <div
-                className="right-align"
-                style={{
-                  top: "1.3em",
-                  fontSize: "16px",
-                  fontWeight: "800",
-                  position: "relative",
-                  color: "white",
-                  borderBottom: "2px solid",
-                }}
-              >
-                {upvote}
-              </div>
-            </div>
-          )}
-          {(!product.upvotesList.includes(user_id) || !token) &&
-            activeupvote === false && (
-              <div className="secondary-content">
-                <div
-                  onClick={() => addUpvote(product._id, product)}
-                  style={{
-                    position: "absolute",
-                    right: "30px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <img
-                    src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604412704/Theme/Upvote_Icon_tvffmk.png"
-                    width="50px"
-                  />
-                </div>
-                <div
-                  className="right-align"
-                  style={{
-                    top: "1.3em",
-                    fontSize: "16px",
-                    fontWeight: "800",
-                    position: "relative",
-                    color: "white",
-                    borderBottom: "2px solid",
-                  }}
-                >
-                  {upvote}
-                </div>
-              </div>
-            )}
-        </div>
-        <div
-          style={{
-            position: "relative",
-            top: "-10px",
-            textAlign: "left",
-            padding: "5px 0",
-          }}
-        >
-          <Link to={`products/${product._id}`}>
-            <img src={product.logo} height="100px" maxWidth="140px" />
-          </Link>
-        </div>
 
-        <Typography
-          variant="h5"
-          component="h2"
-          className="prodcard-desc right-align"
-          style={{
-            color: "white",
-            height: "70px",
-            position: "relative",
-            top: "-2em",
-            /*fontFamily: "Bahanschrift",*/
-            fontWeight: "600",
-            fontSize: "16px",
-            paddingLeft: "40%",
-          }}
-        >
-          {product.briefDescription}
-        </Typography>
-      </CardContent>
-      <CardActions style={{ float: "right" }}>
-        <Link to={`products/${product._id}?q=comment`}>
-          <Button
-            className="card-pdt"
-            style={{
-              backgroundColor: "white",
-              maxWidth: "50px",
-              maxHeight: "35px",
-              minWidth: "50px",
-              minHeight: "35px",
-            }}
-          >
-            <TextsmsOutlinedIcon style={{ color: "black" }} />
-          </Button>
-        </Link>
-        <a target="_blank" rel="noopener noreferrer" href={weblink}>
-          <Button
-            style={{
-              backgroundColor: "white",
-              maxWidth: "50px",
-              maxHeight: "35px",
-              minWidth: "50px",
-              minHeight: "35px",
-            }}
-          >
-            <SendOutlinedIcon style={{ color: "black" }} />
-          </Button>
-        </a>
-      </CardActions>
-    </Card>
-  );
+	return (
+		<Card
+			className={classes.root}
+			style={{
+				backgroundImage: `url(${product.theme ||
+					'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603981180/Theme/Woovly_wvejpm.jpg'})`,
+				backgroundSize: '100% 100%',
+				backgroundRepeat: 'no-repeat',
+				margin: '10px 0'
+			}}
+		>
+			<CardContent>
+				<div className='row'>
+					<div
+						className='col s9'
+						style={{
+							position: 'relative',
+							top: '-16px',
+							textAlign: 'left',
+							padding: '5px 0'
+						}}
+					>
+						<Link to={`products/${product._id}`}>
+							<img src={product.logo} height='90px' maxWidth='120px' />
+						</Link>
+					</div>
+					<div className='col s3' style={{ margin: '0', position: 'relative', top: '-20px' }}>
+						{product.upvotesList.includes(user_id) && (
+							<div className='secondary-content'>
+								<div
+									style={{
+										position: 'absolute',
+										right: '35px'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+										alt='clickedbulb'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										right: '-3px',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
+							</div>
+						)}
+						{activeupvote === true && (
+							<div className='secondary-content'>
+								<div
+									style={{
+										position: 'absolute',
+										right: '35px'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
+										alt='clickedbulb'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
+							</div>
+						)}
+						{(!product.upvotesList.includes(user_id) || !token) &&
+						activeupvote === false && (
+							<div className='secondary-content'>
+								<div
+									onClick={() => addUpvote(product._id, product)}
+									style={{
+										position: 'absolute',
+										right: '35px',
+										cursor: 'pointer'
+									}}
+								>
+									<img
+										src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604412704/Theme/Upvote_Icon_tvffmk.png'
+										width='50px'
+									/>
+								</div>
+								<div
+									className='right-align'
+									style={{
+										top: '1.3em',
+										fontSize: '16px',
+										fontWeight: '800',
+										position: 'relative',
+										color: 'white',
+										borderBottom: '2px solid'
+									}}
+								>
+									{upvote}
+								</div>
+							</div>
+						)}
+					</div>
+				</div>
+
+				<Typography
+					variant='h5'
+					component='h2'
+					className='prodcard-desc right-align'
+					style={{
+						color: 'white',
+						height: '60px',
+						position: 'relative',
+						top: '-2.5em',
+						fontWeight: '600',
+						fontSize: '16px',
+						paddingLeft: '40%'
+					}}
+				>
+					{product.briefDescription}
+				</Typography>
+			</CardContent>
+			{showbuttons === true && (
+				<CardActions style={{ float: 'right' }}>
+					<Link to={`products/${product._id}?q=comment`}>
+						<Button
+							className='card-pdt'
+							style={{
+								backgroundColor: 'white',
+								maxWidth: '50px',
+								maxHeight: '35px',
+								minWidth: '50px',
+								minHeight: '35px'
+							}}
+						>
+							<TextsmsOutlinedIcon style={{ color: 'black' }} />
+						</Button>
+					</Link>
+					<a target='_blank' rel='noopener noreferrer' href={weblink}>
+						<Button
+							style={{
+								backgroundColor: 'white',
+								maxWidth: '50px',
+								maxHeight: '35px',
+								minWidth: '50px',
+								minHeight: '35px'
+							}}
+						>
+							<SendOutlinedIcon style={{ color: 'black' }} />
+						</Button>
+					</a>
+				</CardActions>
+			)}
+		</Card>
+	);
 };
 export default ProductCard;
