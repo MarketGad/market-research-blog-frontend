@@ -45,9 +45,7 @@ class Products extends React.Component {
 						<b>What's New?</b>
 					</h5>
 					<TodayLaunch todayLaunch={this.props.todayLaunch} />
-				</div>
-				<div className='product-job-page-container'>
-					<div style={{ padding: '10px' }}>
+					<div style={{ padding: '10px 0' }}>
 						<div className='topnav-prod'>
 							{this.state.tabValue === 'product' && (
 								<div>
@@ -71,8 +69,8 @@ class Products extends React.Component {
 							)}
 						</div>
 					</div>
-					{show()}
 				</div>
+				<div className='product-job-page-container'>{show()}</div>
 				<Subscribe />
 				<Footer />
 			</div>
