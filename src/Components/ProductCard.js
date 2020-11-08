@@ -1,34 +1,34 @@
-import React from 'react';
-import Cookies from 'js-cookie';
-import axios from 'axios';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import TextsmsOutlinedIcon from '@material-ui/icons/TextsmsOutlined';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import TextsmsOutlinedIcon from "@material-ui/icons/TextsmsOutlined";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
-	root: {
-		width: '100%',
-		margin: '0',
-		maxHeight: '320px'
-	},
-	bullet: {
-		display: 'inline-block',
-		margin: '0 2px',
-		transform: 'scale(0.8)'
-	},
-	title: {
-		fontSize: 14
-	},
-	pos: {
-		marginBottom: 12,
-		padding: '0'
-	}
+  root: {
+    width: "100%",
+    margin: "0",
+    maxHeight: "320px",
+  },
+  bullet: {
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+    padding: "0",
+  },
 });
 
 const ProductCard = (props) => {
@@ -48,35 +48,43 @@ const ProductCard = (props) => {
 	const [ upvote, setUpvote ] = React.useState(product.upvotes);
 	const [ activeupvote, setactiveupvote ] = React.useState(false);
 
-	const addUpvote = (product_id, product) => {
-		if (!token) {
-			setOpenSignin(true);
-			return;
-		}
-		const config = {
-			headers: {
-				Authorization: `Bearer ${token}`
-			}
-		};
-		const token_info = JSON.parse(atob(token.split('.')[1]));
-		if (product.upvotesList.includes(token_info._id)) {
-			alert('already upvoted');
-		} else {
-			setUpvote(product.upvotes + 1);
-			setactiveupvote(true);
-			axios
-				.post(process.env.REACT_APP_BASEURL + '/api/productdetails/' + product_id + '/upvotes/add', {}, config)
-				.then(
-					(response) => {
-						console.log('added');
-					},
-					(error) => {
-						console.log(error);
-						// alert(error);
-					}
-				);
-		}
-	};
+  const addUpvote = (product_id, product) => {
+    if (!token) {
+      setOpenSignin(true);
+      return;
+    }
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+    const token_info = JSON.parse(atob(token.split(".")[1]));
+    if (product.upvotesList.includes(token_info._id)) {
+      alert("already upvoted");
+    } else {
+      setUpvote(product.upvotes + 1);
+      setactiveupvote(true);
+      axios
+        .post(
+          process.env.REACT_APP_BASEURL +
+            "/api/productdetails/" +
+            product_id +
+            "/upvotes/add",
+          {},
+          config
+        )
+        .then(
+          (response) => {
+            console.log("added");
+          },
+          (error) => {
+            console.log(error);
+            // alert(error);
+          }
+        );
+    }
+  };
+
 
 	return (
 		<Card
