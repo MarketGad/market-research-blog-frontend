@@ -53,5 +53,5 @@
 			"last 1 safari version"
 		]
 	},
-	"proxy": "https://serieux-saucisson-31787.herokuapp.com"
+	"proxy": "http://localhost:5000"
 }

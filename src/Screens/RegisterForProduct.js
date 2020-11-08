@@ -130,9 +130,9 @@ export default function RegisterForProduct () {
 					} else {
 						alert('registeration failed');
 					}
-					setLoad(false);
 				}
 			);
+			setLoad(false);
 		} else {
 			alert('Please mention your website or playstore link to continue');
 		}
