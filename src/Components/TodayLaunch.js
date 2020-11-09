@@ -23,7 +23,7 @@ const TodayLaunch = (props) => {
 	const carouselRef = useRef(null);
 	var width = document.documentElement.clientWidth;
 	const elementsPerPage = width > 1000 ? 4 : 1;
-	const totalPages = Math.ceil(props.todayLaunch.length / elementsPerPage);
+	const totalPages = props.todayLaunch.length - elementsPerPage + 1;
 	let resetTimeout;
 	/*----------------------------------------------------------------------------------------*/
 
@@ -79,12 +79,10 @@ const TodayLaunch = (props) => {
 						renderArrow={myArrow}
 						onNextEnd={({ index }) => {
 							clearTimeout(resetTimeout);
-							if (index + 1 === totalPages) {
+							if (index + 1 === totalPages && carouselRef.current !== null) {
 								resetTimeout = setTimeout(() => {
-									if (carouselRef !== null) {
-										carouselRef.current.goTo(0);
-									}
-								}, 1500);
+									carouselRef.current.goTo(0);
+								}, 2000);
 							}
 						}}
 					>
