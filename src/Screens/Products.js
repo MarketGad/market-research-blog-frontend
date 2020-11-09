@@ -52,13 +52,11 @@ class Products extends React.Component {
           />
         </div>
 
-        <div style={{ margin: "0 2%" }}>
+        <div style={{ margin: "-.3% 2%" }}>
           <div
-            style={
-              {
-                /*padding: "10px 0" */
-              }
-            }
+            style={{
+              margin: "0 -2%",
+            }}
           >
             <div className="topnav-prod">
               {this.state.tabValue === "product" && (
@@ -91,8 +89,8 @@ class Products extends React.Component {
               )}
             </div>
           </div>
-          <h5 style={{ padding: "0 10px", fontFamily: "Bahnschrift Semibold" }}>
-            <b>What's New?</b>
+          <h5 style={{ padding: "0 10px" }}>
+            <b style={{ fontFamily: "Bahnschrift Semibold" }}>What's New?</b>
           </h5>
           <TodayLaunch todayLaunch={this.props.todayLaunch} />
         </div>
