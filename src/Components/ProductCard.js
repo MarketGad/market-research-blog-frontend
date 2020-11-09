@@ -114,7 +114,7 @@ const ProductCard = (props) => {
               <img
                 src={product.logo}
                 width="100%"
-                style={{ maxWidth: "300px", paddingTop: "12%" }}
+                style={{ maxWidth: "300px", paddingTop: "10px" }}
               />
             </Link>
           </div>
