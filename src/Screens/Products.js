@@ -89,7 +89,7 @@ class Products extends React.Component {
               )}
             </div>
           </div>
-          <h5 style={{ padding: "0 10px" }}>
+          <h5 style={{ padding: "3px 10px" }}>
             <b style={{ fontFamily: "Bahnschrift Semibold" }}>What's New?</b>
           </h5>
           <TodayLaunch todayLaunch={this.props.todayLaunch} />

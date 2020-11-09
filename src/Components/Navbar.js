@@ -252,22 +252,6 @@ const Navbar = () => {
             style={{ backgroundColor: "black" }}
           >
             {show()}
-            <li>
-              <Link
-                to="/registerforproduct"
-                style={{ color: "white", fontSize: "1em" }}
-              >
-                Add product
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={jobprofileopen}
-                style={{ color: "white", fontSize: "1em" }}
-              >
-                Add job profile
-              </Link>
-            </li>
           </ul>
         </div>
 
@@ -298,12 +282,7 @@ const Navbar = () => {
           <li>
             <Link to="/about">About us</Link>
           </li>
-          <li>
-            <Link to="/registerforproduct">Add product</Link>
-          </li>
-          <li>
-            <Link onClick={jobprofileopen}>Add job profile</Link>
-          </li>
+
           {showmobile()}
         </ul>
 
