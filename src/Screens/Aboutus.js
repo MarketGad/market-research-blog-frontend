@@ -110,6 +110,7 @@ const Aboutus = () => {
 					</div>
 					<div className='center'>
 						<img
+							style={{ padding: '0 5%' }}
 							className='hide-on-med-and-down center'
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603822251/Theme/aboutwebinfo_qa6zzo.png'
 							width='100%'
