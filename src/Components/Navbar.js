@@ -138,7 +138,7 @@ const Navbar = () => {
                   height="55px"
                   width="60px"
                   style={{ position: "relative" }}
-                  src={logo}
+                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604992014/Theme/F4_qrtlib_p9bwky.png"
                   alt="logo-mob"
                 />
               </Link>
@@ -151,14 +151,14 @@ const Navbar = () => {
               <div className="navmenu">
                 <ul
                   id="nav-mobilecomp-menu"
-                  style={{ backgroundColor: "black" }}
+                  style={{ backgroundColor: "#1d262d" }}
                   className="hide-on-med-and-down"
                 >
                   <li>
                     <Link to="/" className="logo">
                       <img
                         style={{ position: "relative" }}
-                        src={logo}
+                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604992014/Theme/F4_qrtlib_p9bwky.png"
                         alt="logo"
                       />
                     </Link>
@@ -225,7 +225,7 @@ const Navbar = () => {
           <ul
             id="dropdown1"
             className="dropdown-content"
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "#1d262d" }}
           >
             <li>
               <Link to="/industry" className="dropdown-style">
@@ -249,7 +249,7 @@ const Navbar = () => {
           <ul
             id="account-dropdown"
             className="dropdown-content"
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "#1d262d" }}
           >
             {show()}
           </ul>
