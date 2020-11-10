@@ -79,9 +79,11 @@ const TodayLaunch = (props) => {
 						renderArrow={myArrow}
 						onNextEnd={({ index }) => {
 							clearTimeout(resetTimeout);
-							if (index + 1 === totalPages && carouselRef.current !== null) {
+							if (index + 1 === totalPages) {
 								resetTimeout = setTimeout(() => {
-									carouselRef.current.goTo(0);
+									if (carouselRef.current !== null) {
+										carouselRef.current.goTo(0);
+									}
 								}, 2000);
 							}
 						}}

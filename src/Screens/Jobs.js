@@ -1,9 +1,11 @@
 import { Grid, MenuItem, TextField } from '@material-ui/core';
-import { Height } from '@material-ui/icons';
 import React from 'react';
-// import Internshiplist from '../Components/internshiplist';
+import Cookies from 'js-cookie';
 import Joblist from '../Components/Joblist';
 import PeopleList from '../Components/PeopleList';
+import FormPassion from '../Components/FormPassion';
+import Popup from '../Components/Popup';
+import SignIn from './signin';
 const industries = [
 	{
 		value: '',
@@ -40,6 +42,10 @@ const industries = [
 ];
 const ListProduct = (props) => {
 	const [ filter, setFilter ] = React.useState('');
+	const isLoggedin = Cookies.get('session-id');
+	const registered = Cookies.get('job-profile');
+	const [ openSignin, setOpenSignin ] = React.useState(false);
+	const [ openJobprofile, setOpenjobprofile ] = React.useState(false);
 	return (
 		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
@@ -87,7 +93,11 @@ const ListProduct = (props) => {
 								<div className='right-align'>
 									<a
 										className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn'
-										href='/registerforjobs'
+										onClick={() => {
+											if (isLoggedin) {
+												setOpenjobprofile(true);
+											} else setOpenSignin(true);
+										}}
 									>
 										Add profile
 									</a>
@@ -98,6 +108,12 @@ const ListProduct = (props) => {
 					</div>
 				</div>
 			</div>
+			<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
+				<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+			</Popup>
+			<Popup openPopup={openJobprofile} setOpenPopup={setOpenjobprofile}>
+				<FormPassion openJobprofile={openJobprofile} setOpenjobprofile={setOpenjobprofile} />
+			</Popup>
 		</div>
 	);
 };
