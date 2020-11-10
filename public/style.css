@@ -52,6 +52,7 @@ label + .MuiInput-formControl {
   position: relative;
   width: 50px;
   height: 55px;
+  margin-left: -5px;
   margin-right: 50px;
   top: 7px;
 }
@@ -781,7 +782,7 @@ nav {
 }
 
 .product-job-page-container {
-  margin: 3% 10%;
+  margin: 3% 5%;
 }
 .product-list-link {
   padding-top: 2px;
