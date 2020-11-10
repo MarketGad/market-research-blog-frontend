@@ -225,7 +225,7 @@ const ProductCard = (props) => {
             top: "-2.5em",
             height: "60px",
             fontWeight: "600",
-            fontFamily: "Bahnschrift Regular",
+            fontFamily: "Bahnschrift Light",
             fontSize: "16px",
             paddingLeft: "40%",
           }}
