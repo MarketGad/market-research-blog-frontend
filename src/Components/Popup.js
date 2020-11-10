@@ -16,7 +16,7 @@ export default function Popup (props) {
 	const classes = useStyles();
 	return (
 		<Dialog
-			fullWidth='md'
+			// fullWidth='md'
 			open={openPopup}
 			onClose={() => setOpenPopup(false)}
 			maxWidth='md'

@@ -1,8 +1,16 @@
 import React from 'react';
 import CommunityTrend from '../Components/CommunityTrend';
 import PeopleList from '../Components/PeopleList';
+import Cookies from 'js-cookie';
+import Popup from '../Components/Popup';
+import SignIn from './signin';
+import CommunityForm from './CommunityForm';
 
 const Community = (props) => {
+	const isLoggedin = Cookies.get('session-id');
+	const [ openSignin, setOpenSignin ] = React.useState(false);
+	const [ openForm, setOpenForm ] = React.useState(false);
+
 	return (
 		<div style={{ backgroundColor: '#ececec' }}>
 			<div>
@@ -23,7 +31,11 @@ const Community = (props) => {
 								<div className='right-align' style={{ paddingTop: '10px' }}>
 									<a
 										className='waves-effect waves-light btn-small pro-btn1 add-mobile-btn'
-										href='/addtrend'
+										onClick={() => {
+											if (isLoggedin) {
+												setOpenForm(true);
+											} else setOpenSignin(true);
+										}}
 									>
 										Start a trend
 									</a>
@@ -40,6 +52,12 @@ const Community = (props) => {
 					</div>
 				</div>
 			</div>
+			<Popup openPopup={openSignin} setOpenPopup={setOpenSignin}>
+				<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+			</Popup>
+			<Popup openPopup={openForm} setOpenPopup={setOpenForm}>
+				<CommunityForm openForm={openForm} setOpenForm={setOpenForm} />
+			</Popup>
 		</div>
 	);
 };

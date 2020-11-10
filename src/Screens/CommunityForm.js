@@ -15,7 +15,6 @@ import Popup from '../Components/Popup';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
-		marginTop: theme.spacing(2),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center'
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 		marginTop: theme.spacing(1)
 	},
 	submit: {
-		margin: theme.spacing(4, 0, 2),
+		margin: theme.spacing(4, 0, 4),
 		padding: '5px',
 		fontWeight: '800',
 		fontSize: '1.4em',
@@ -116,7 +115,7 @@ export default function CommunityForm () {
 					<Container component='main' maxWidth='sm'>
 						<CssBaseline />
 						<div className={classes.paper}>
-							<Typography component='h1' variant='h5' style={{ marginBottom: '20px' }}>
+							<Typography component='h1' variant='h5' style={{ marginBottom: '5px' }}>
 								<div className='product-content'>Let's share</div>
 							</Typography>
 							<Typography component='h4' variant='h6' style={{ marginBottom: '20px' }}>
