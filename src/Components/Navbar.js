@@ -138,7 +138,7 @@ const Navbar = () => {
                   height="55px"
                   width="60px"
                   style={{ position: "relative" }}
-                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604987207/Theme/F4_aqiqim.png"
+                  src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604992014/Theme/F4_qrtlib_p9bwky.png"
                   alt="logo-mob"
                 />
               </Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
                     <Link to="/" className="logo">
                       <img
                         style={{ position: "relative" }}
-                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604987207/Theme/F4_aqiqim.png"
+                        src="https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604992014/Theme/F4_qrtlib_p9bwky.png"
                         alt="logo"
                       />
                     </Link>
