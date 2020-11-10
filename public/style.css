@@ -955,6 +955,19 @@ nav {
 .trending-product-left-container {
 	width: 83%;
 }
+/* -----------popup---------- */
+.homepopup {
+	width: 500px;
+	height: 500px;
+}
+.popup-btn-home {
+	font-weight: 800;
+	background-color: goldenrod;
+	color: darkblue;
+	margin-top: 60%;
+	border-radius: 8px;
+	font-size: 1.3em;
+}
 /*--------------Login Success popup---------------*/
 .login-success1 {
 	font-size: 1.6em;
@@ -1746,6 +1759,13 @@ nav {
 	/* --home page new */
 	.trendingtalent-home-container {
 		margin: 0 2%;
+	}
+	.homepopup {
+		width: 320px;
+		height: 450px;
+	}
+	.popup-btn-home {
+		margin-top: 80%;
 	}
 }
 @media only screen and (max-width: 280px) {

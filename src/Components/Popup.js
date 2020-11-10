@@ -34,7 +34,7 @@ export default function Popup (props) {
 				</div>
 			)}
 
-			<DialogContent style={{ padding: '0' }}>{children}</DialogContent>
+			<DialogContent style={{ padding: '0', marginBottom: '-10px' }}>{children}</DialogContent>
 		</Dialog>
 	);
 }
