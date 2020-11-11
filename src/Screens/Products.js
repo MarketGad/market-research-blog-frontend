@@ -15,6 +15,7 @@ class Products extends React.Component {
 			tabValue: 'product',
 			modalState: true
 		};
+
 		this.handleShow = this.handleShow.bind(this);
 	}
 	handleShow = () => {
@@ -24,6 +25,7 @@ class Products extends React.Component {
 			};
 		});
 	};
+
 	render () {
 		const handleProduct = () => {
 			this.setState({ tabValue: 'product' });
@@ -42,8 +44,6 @@ class Products extends React.Component {
 				);
 			}
 		};
-		console.log(this.state.modalState);
-		console.log(this.props);
 		return (
 			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
 				{this.props.products.length > 0 &&
@@ -52,7 +52,7 @@ class Products extends React.Component {
 				this.props.trending.length > 0 &&
 				this.props.posts.length > 0 && (
 					<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
-						<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
+						<StartingPopup openHomepopup={this.state.modalState} setOpenHomepopup={this.handleShow} />
 					</Popup>
 				)}
 

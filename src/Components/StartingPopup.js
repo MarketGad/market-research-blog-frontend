@@ -8,14 +8,17 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const StartingPopup = (props) => {
 	const isLoggedin = Cookies.get('session-id');
-	const { openPopup, setOpenPopup } = props;
-	const [ openSignin, setOpenSignin ] = React.useState(false);
+	const { setOpenHomepopup } = props;
+	const [ signin, opensign ] = React.useState(false);
 	var width = document.documentElement.clientWidth;
 	const url =
 		width > 1000
 			? 'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1605029518/Theme/Login_Window_Png_yytnwd.png'
 			: 'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1605089166/Theme/WhatsApp_Image_2020-11-10_at_20.09.30_ahbgob.png';
 
+	const handleClick = () => {
+		opensign(true);
+	};
 	return (
 		<div
 			className='homepopup'
@@ -29,7 +32,7 @@ const StartingPopup = (props) => {
 			<div style={{ textAlign: 'end' }}>
 				<Controls.ActionButton
 					onClick={() => {
-						setOpenPopup(false);
+						setOpenHomepopup(false);
 					}}
 				>
 					<CloseIcon style={{ color: 'white' }} />
@@ -37,18 +40,18 @@ const StartingPopup = (props) => {
 			</div>
 			<div className='center'>
 				{!isLoggedin && (
-					<Link onClick={() => setOpenSignin(true)}>
+					<a onClick={handleClick}>
 						<img
 							className='popup-btn-home'
 							src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1605103275/Theme/Sign_up_1_gsnfwj.png'
 							alt=''
 							width='30%'
 						/>
-					</Link>
+					</a>
 				)}
 			</div>
-			<Popup openPopup={openSignin} setOpenPopup={setOpenSignin}>
-				<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+			<Popup openPopup={signin} setOpenPopup={opensign}>
+				<SignIn openSignin={signin} setOpenSignin={opensign} />
 			</Popup>
 		</div>
 	);
