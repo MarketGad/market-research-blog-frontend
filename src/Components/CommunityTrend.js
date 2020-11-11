@@ -134,7 +134,7 @@ const CommunityTrend = (props) => {
 					</div>
 					<div className='col l1 s2'>
 						{product.upvotes.includes(user_id) && (
-							<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+							<div style={{ textAlign: 'center', position: 'relative', top: '-10px' }}>
 								<img
 									src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
 									alt=''
@@ -144,7 +144,7 @@ const CommunityTrend = (props) => {
 							</div>
 						)}
 						{activeupvote === true && (
-							<div style={{ textAlign: 'center', position: 'relative', top: '-1em' }}>
+							<div style={{ textAlign: 'center', position: 'relative', top: '-10px' }}>
 								<img
 									src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1603991888/Theme/Upvote_Icon_Clicked_fubsbj.png'
 									alt=''
@@ -160,7 +160,7 @@ const CommunityTrend = (props) => {
 								style={{
 									textAlign: 'center',
 									position: 'relative',
-									top: '-1em',
+									top: '-10px',
 									cursor: 'pointer'
 								}}
 							>
