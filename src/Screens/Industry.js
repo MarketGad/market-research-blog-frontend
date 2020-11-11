@@ -27,7 +27,7 @@ const Industry = () => {
 				'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80',
 			key: '3',
 			postBrief:
-				'Given the present market scenario, India stands at a very competitive position in the field. It is among the Top 10 countries dealing with big data. India has more than 600 firms among which 50% being startups provides the country an edge over others. India is expected to grow as a hub for analytical solutions across continents.',
+				'Given the present market scenario, India stands at a very competitive position in the field. It is among the Top 10 countries dealing with big data. India has more than 600 firms among which 50% being startups provides the country an edge over others.',
 			postLink: '/i1003'
 		},
 		{
@@ -45,7 +45,7 @@ const Industry = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594921120/Articles%20Photos/Industry/Covid19%20on%20Education%20Industry/2_3_-min_squcan.jpg',
 			key: '5',
 			postBrief:
-				'Instead of shutting schools in at least 188 countries, over 91 per cent of children around the world are now out of school. The education sector faces unparalleled challenges and needs to change to keep children engaged and, on their way, to learning and find solutions.',
+				'Instead of shutting schools in at least 188 countries, over 91% of children around the world are now out of school. The education sector faces unparalleled challenges and needs to change to keep children engaged.',
 			postLink: '/i1005'
 		},
 		{
@@ -63,7 +63,7 @@ const Industry = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1597767828/Articles%20Photos/Industry/Logistics%20Sector%20Of%20India%20Part%20II/1_1_nybaqx.jpg',
 			key: '7',
 			postBrief:
-				'Since   the   3rd   quarter   of   2019,   the   Indian   economy   is   facing   turbulences   due   to   falling manufacturing/industrial   production,   especially   in   auto   and   ancillary   sector,   rising   non-performing assets (NPAs) among banks and rising unemployment',
+				'Since   the   3rd   quarter   of   2019,   the   Indian   economy   is   facing   turbulences   due   to   falling manufacturing/industrial   production,   especially   in   auto   and   ancillary   sector,   rising   non-performing assets (NPAs)...',
 			postLink: '/i1007'
 		},
 		{
@@ -88,19 +88,21 @@ const Industry = () => {
 	const showArticles = articles.length ? (
 		articles.map((article) => {
 			return (
-				<div className='card'>
-					<div className='card-content'>
-						<div className='row'>
-							<div className='col l9 s12'>
-								<img pos className='post-image' src={article.postImage} alt='1st' />
-							</div>
-							<div className='col s12 l3'>
-								<h5 className='landing-post-head'> {article.postName} </h5>
-								<p className='post-brief'> {article.postBrief} </p>
-								<div className='center'>
-									<a href={article.postLink} className='btn waves-effect waves-light read-more'>
-										Read More
-									</a>
+				<div className='col l6 s12'>
+					<div className='card card-height'>
+						<div className='card-content'>
+							<div className='row' style={{ margin: '0' }}>
+								<div className='col s12'>
+									<img pos className='post-image' src={article.postImage} alt='1st' />
+								</div>
+								<div className='col s12'>
+									<h5 className='landing-post-head'> {article.postName} </h5>
+									<p className='post-brief'> {article.postBrief} </p>
+									<div className='center'>
+										<a href={article.postLink} className='btn waves-effect waves-light read-more'>
+											Read More
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -117,8 +119,8 @@ const Industry = () => {
 			<div className='container'>
 				<h4 className='center landing-head'> Industry </h4>
 			</div>
-			<div className='row post-container'>
-				<div className='col s12'> {showArticles} </div>
+			<div className='post-container'>
+				<div className='row'>{showArticles}</div>
 			</div>
 			<Footer />
 		</div>

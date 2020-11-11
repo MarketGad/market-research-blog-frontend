@@ -34,7 +34,7 @@ const Startup = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1595778128/Articles%20Photos/Startup/WeWork/2_1_nrzq86.jpg',
 			key: '4',
 			postBrief:
-				'Established in the year 2010, WeWork is a private real estate company that provides co-working spaces to individuals and enterprises. The company was founded by Adam Neumann, Miguel McKelvey and Rebekah Neumann. Before establishing WeWork, Neumann and Mckelvey had started “Greendesk” another co-working space, in 2008 which was more eco-friendly.',
+				'Established in the year 2010, WeWork is a private real estate company that provides co-working spaces to individuals and enterprises. The company was founded by Adam Neumann, Miguel McKelvey and Rebekah Neumann.',
 			postLink: '/s2004'
 		},
 		{
@@ -43,7 +43,7 @@ const Startup = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594923614/Articles%20Photos/Startup/Blockchain-in-Healthcare-GetReferd_vlenfv.png',
 			key: '5',
 			postBrief:
-				'Blockchain over recent years has been extolled as a revolution in business technology. In the nine years since its launch, companies, regulators, and financial technologists have spent countless hours exploring its potential. The resulting innovations have started to reshape business processes, particularly in accounting and transactions.',
+				'Blockchain over recent years has been extolled as a revolution in business technology. In the nine years since its launch, companies, regulators, and financial technologists have spent countless hours exploring its potential.',
 			postLink: '/s2005'
 		},
 		{
@@ -77,19 +77,21 @@ const Startup = () => {
 	const showArticles = articles.length ? (
 		articles.map((article) => {
 			return (
-				<div className='card'>
-					<div className='card-content'>
-						<div className='row'>
-							<div className='col l9 s12'>
-								<img pos className='post-image' src={article.postImage} alt='1st' />
-							</div>
-							<div className='col s12 l3'>
-								<h3 className='landing-post-head'>{article.postName}</h3>
-								<p className='post-brief'>{article.postBrief}</p>
-								<div className='center'>
-									<a href={article.postLink} className='btn waves-effect waves-light read-more'>
-										Read More
-									</a>
+				<div className='col l6 s12'>
+					<div className='card card-height'>
+						<div className='card-content'>
+							<div className='row' style={{ margin: '0' }}>
+								<div className='col s12'>
+									<img pos className='post-image' src={article.postImage} alt='1st' />
+								</div>
+								<div className='col s12'>
+									<h5 className='landing-post-head'> {article.postName} </h5>
+									<p className='post-brief'> {article.postBrief} </p>
+									<div className='center'>
+										<a href={article.postLink} className='btn waves-effect waves-light read-more'>
+											Read More
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -106,9 +108,7 @@ const Startup = () => {
 			<div className='container'>
 				<h4 className='center landing-head'>Start-ups</h4>
 			</div>
-			<div className='row post-container'>
-				<div className='col s12'>{showArticles}</div>
-			</div>
+			<div className='row post-container'>{showArticles}</div>
 			<Footer />
 		</div>
 	);

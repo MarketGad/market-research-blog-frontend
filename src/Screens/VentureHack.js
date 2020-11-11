@@ -18,7 +18,7 @@ const VentureHack = () => {
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1595775393/Articles%20Photos/VentureHack/First%20Indian%20Handcrafted%20Beer%20Bira91/Slide6_fwxubr.jpg',
 			key: '2',
 			postBrief:
-				'Bira91 is founded by Ankur Jain, a Computer Science graduate from University of Chicago, who previously had a healthcare startup in New York. There he came across the concept of craft beers, originated in the European countries. Subsequently, he started a company called Cerana Beverages in 2009',
+				'Bira91 is founded by Ankur Jain, a Computer Science graduate from University of Chicago, who previously had a healthcare startup in New York. There he came across the concept of craft beers, originated in the European countries.',
 			postLink: '/v3002'
 		},
 		{
@@ -31,12 +31,12 @@ const VentureHack = () => {
 			postLink: '/v3003'
 		},
 		{
-			postName: '12 Steps to Start a Successful Business/Startup',
+			postName: '12 Steps to Start a Successful Business',
 			postImage:
 				'https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1594928817/Articles%20Photos/VentureHack/startuptop_kzuhdz.jpg',
 			key: '4',
 			postBrief:
-				' Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your startup is how many companies failed or invested resources they didn’t need to move forward.Identify in which step you are and continue down the path without overlooking any of the steps.',
+				' Bypassing some steps or thinking that one or more of the 12 steps below might not apply to your startup is how many companies failed or invested resources they didn’t need to move forward.Identify in which step you are and continue down the path.',
 			postLink: '/v3004'
 		},
 		{
@@ -52,19 +52,21 @@ const VentureHack = () => {
 	const showArticles = articles.length ? (
 		articles.map((article) => {
 			return (
-				<div className='card'>
-					<div className='card-content'>
-						<div className='row'>
-							<div className='col l9 s12'>
-								<img pos className='post-image' src={article.postImage} alt='1st' />
-							</div>
-							<div className='col s12 l3'>
-								<h3 className='landing-post-head'>{article.postName}</h3>
-								<p className='post-brief'>{article.postBrief}</p>
-								<div className='center'>
-									<a href={article.postLink} className='btn waves-effect waves-light read-more'>
-										Read More
-									</a>
+				<div className='col l6 s12'>
+					<div className='card card-height'>
+						<div className='card-content'>
+							<div className='row' style={{ margin: '0' }}>
+								<div className='col s12'>
+									<img pos className='post-image' src={article.postImage} alt='1st' />
+								</div>
+								<div className='col s12'>
+									<h5 className='landing-post-head'> {article.postName} </h5>
+									<p className='post-brief'> {article.postBrief} </p>
+									<div className='center'>
+										<a href={article.postLink} className='btn waves-effect waves-light read-more'>
+											Read More
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -81,9 +83,7 @@ const VentureHack = () => {
 			<div className='container'>
 				<h4 className='center landing-head'>Venture Hack</h4>
 			</div>
-			<div className='row post-container'>
-				<div className='col s12'>{showArticles}</div>
-			</div>
+			<div className='row post-container'>{showArticles}</div>
 			<Footer />
 		</div>
 	);
