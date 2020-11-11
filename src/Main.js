@@ -51,16 +51,18 @@ import Discounts from "./Screens/Discounts";
 import Community from "./Screens/Community";
 import { connect } from "react-redux";
 import {
-  fetchProducts,
-  fetchJobProfiles,
-  fetchTodayLaunch,
-  fetchTrendingProducts,
-  fetchJobs,
-  fetchInternships,
-  fetchCommunityPosts,
-} from "./redux/ActionCreator";
-import i1009 from "./Articles/industry/1009";
 
+	fetchProducts,
+	fetchJobProfiles,
+	fetchTodayLaunch,
+	fetchTrendingProducts,
+	fetchJobs,
+	fetchInternships,
+	fetchCommunityPosts
+} from './redux/ActionCreator';
+import i1009 from './Articles/industry/1009';
+import StartingPopup from './Components/StartingPopup';
+import Popup from './Components/Popup';
 const mapStateToProps = (state) => {
   return {
     products: state.products,
@@ -98,44 +100,62 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MainApp extends React.Component {
-  componentDidMount = async () => {
-    console.log("Mounted Main");
-    await this.props.fetchProducts();
-    await this.props.fetchJobProfiles();
-    await this.props.fetchTodayLaunch();
-    await this.props.fetchTrendingProducts();
-    await this.props.fetchJobs();
-    await this.props.fetchInternships();
-    await this.props.fetchCommunityPosts();
-  };
-  render() {
-    return (
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => (
-              <Products
-                products={this.props.products.products}
-                jobProfiles={this.props.jobProfiles.jobProfiles}
-                todayLaunch={this.props.todayLaunch.todayLaunch}
-                trending={this.props.trending.trending}
-              />
-            )}
-          />
-          <Route exact path="/form" component={Form} />
-          <Route exact path="/whatwedo" component={Whatwedo} />
-          <Route exact path="/industry" component={Industry} />
-          <Route exact path="/research" component={Research} />
-          <Route exact path="/submitidea" component={submitidea} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/about" component={AboutUs} />
-          <Route exact path="/privacy" component={Privacy} />
-          <Route exact path="/startup" component={Startup} />
-          <Route exact path="/venturehack" component={Venturehack} />
-          {/* <Route exact path='/signup' component={SignUp} />
+
+	constructor (props) {
+		super(props);
+		this.handleShow = this.handleShow.bind(this);
+		this.state = {
+			modalState: true
+		};
+	}
+
+	handleShow = () => {
+		this.setState(() => {
+			return {
+				modalState: false
+			};
+		});
+	};
+	componentDidMount = async () => {
+		console.log('Mounted Main');
+		await this.props.fetchProducts();
+		await this.props.fetchJobProfiles();
+		await this.props.fetchTodayLaunch();
+		await this.props.fetchTrendingProducts();
+		await this.props.fetchJobs();
+		await this.props.fetchInternships();
+		await this.props.fetchCommunityPosts();
+	};
+	render () {
+		return (
+			<div className='App'>
+				<Navbar />
+				<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
+					<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
+				</Popup>
+				<Switch>
+					<Route
+						exact
+						path='/'
+						component={() => (
+							<Products
+								products={this.props.products.products}
+								jobProfiles={this.props.jobProfiles.jobProfiles}
+								todayLaunch={this.props.todayLaunch.todayLaunch}
+								trending={this.props.trending.trending}
+							/>
+						)}
+					/>
+					<Route exact path='/form' component={Form} />
+					<Route exact path='/whatwedo' component={Whatwedo} />
+					<Route exact path='/industry' component={Industry} />
+					<Route exact path='/submitidea' component={submitidea} />
+					<Route exact path='/dashboard' component={Dashboard} />
+					<Route exact path='/about' component={AboutUs} />
+					<Route exact path='/privacy' component={Privacy} />
+					<Route exact path='/startup' component={Startup} />
+					<Route exact path='/venturehack' component={Venturehack} />
+					{/* <Route exact path='/signup' component={SignUp} />
 					<Route exact path='/signin' component={SignIn} /> */}
           <Route exact path="/funding" component={Home} />
           <Route
