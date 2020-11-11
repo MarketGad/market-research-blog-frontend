@@ -42,11 +42,20 @@ class Products extends React.Component {
 				);
 			}
 		};
+		console.log(this.state.modalState);
+		console.log(this.props);
 		return (
 			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
-				<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
-					<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
-				</Popup>
+				{this.props.products.length > 0 &&
+				this.props.jobProfiles.length > 0 &&
+				this.props.todayLaunch.length > 0 &&
+				this.props.trending.length > 0 &&
+				this.props.posts.length > 0 && (
+					<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
+						<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
+					</Popup>
+				)}
+
 				<div>
 					<img
 						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604393121/Theme/homepagecover_ojaz0x.jpg'

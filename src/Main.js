@@ -116,6 +116,9 @@ class MainApp extends React.Component {
 								jobProfiles={this.props.jobProfiles.jobProfiles}
 								todayLaunch={this.props.todayLaunch.todayLaunch}
 								trending={this.props.trending.trending}
+								jobs={this.props.jobs.jobs}
+								internship={this.props.internship.internship}
+								posts={this.props.posts.posts}
 							/>
 						)}
 					/>

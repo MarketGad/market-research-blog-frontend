@@ -990,15 +990,12 @@ nav {
 }
 /* -----------popup---------- */
 .homepopup {
-	width: 500px;
+	width: 530px;
 	height: 500px;
 }
 .popup-btn-home {
 	font-weight: 800;
-	background-color: goldenrod;
-	color: darkblue;
-	margin-top: 60%;
-	border-radius: 8px;
+	margin-top: 230px;
 	font-size: 1.3em;
 }
 /*--------------Login Success popup---------------*/
@@ -1798,10 +1795,10 @@ nav {
 	}
 	.homepopup {
 		width: 320px;
-		height: 450px;
+		height: 530px;
 	}
 	.popup-btn-home {
-		margin-top: 80%;
+		margin-top: 270px;
 	}
 }
 @media only screen and (max-width: 280px) {
