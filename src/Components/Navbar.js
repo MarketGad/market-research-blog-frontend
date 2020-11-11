@@ -211,7 +211,7 @@ const Navbar = () => {
 
 				{/*------------------------------------------ mobile sidenav------------------------------- */}
 
-				<ul className='sidenav sidenav-close' id='mobile-demo'>
+				<ul className='sidenav sidenav-close' id='mobile-demo' style={{ backgroundColor: '#1d262d' }}>
 					<li>
 						<Link to='/'>Home</Link>
 					</li>
