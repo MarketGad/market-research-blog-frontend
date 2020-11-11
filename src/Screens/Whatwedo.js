@@ -2,12 +2,14 @@ import React from 'react';
 import Footer from '../Components/Footer';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
+import Cookies from 'js-cookie';
 
 const Whatwedo = () => {
+	const isLoggedin = Cookies.get('session-id');
 	const [ openSignin, setOpenSignin ] = React.useState(false);
 	return (
 		<div style={{ fontSize: '12px', fontWeight: '400' }}>
-			<div className='container'>
+			<div className='container' style={{ minHeight: '100vh' }}>
 				<h2 className='center privacy-top' style={{ fontWeight: '600', letterSpacing: '0.02em' }}>
 					What do we offer?
 				</h2>
@@ -67,15 +69,18 @@ const Whatwedo = () => {
 					</li>
 					<li>Measure effectiveness of marketing programs and strategies</li>
 				</ol>
-				<div className='center'>
-					<button
-						// onClick={() => setOpenSignin(true)}
-						style={{ background: '#080808d9', margin: '1.5em', fontSize: '1.3em', fontWeight: '450' }}
-						className='btn waves-effect waves-light'
-					>
-						Get Started!
-					</button>
-				</div>
+				{!isLoggedin && (
+					<div className='center'>
+						<button
+							onClick={() => setOpenSignin(true)}
+							style={{ background: '#080808d9', margin: '1.5em', fontSize: '1.3em', fontWeight: '450' }}
+							className='btn waves-effect waves-light'
+						>
+							Get Started!
+						</button>
+					</div>
+				)}
+
 				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>

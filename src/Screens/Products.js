@@ -1,7 +1,9 @@
 import React from 'react';
 import Footer from '../Components/Footer';
 import PeopleList from '../Components/PeopleList';
+import Popup from '../Components/Popup';
 import ProductList from '../Components/ProductList';
+import StartingPopup from '../Components/StartingPopup';
 import Subscribe from '../Components/Subscribe';
 import TodayLaunch from '../Components/TodayLaunch';
 
@@ -10,9 +12,18 @@ class Products extends React.Component {
 		super(props);
 		this.state = {
 			products: this.props.products,
-			tabValue: 'product'
+			tabValue: 'product',
+			modalState: true
 		};
+		this.handleShow = this.handleShow.bind(this);
 	}
+	handleShow = () => {
+		this.setState(() => {
+			return {
+				modalState: false
+			};
+		});
+	};
 	render () {
 		const handleProduct = () => {
 			this.setState({ tabValue: 'product' });
@@ -33,6 +44,9 @@ class Products extends React.Component {
 		};
 		return (
 			<div style={{ backgroundColor: 'rgb(240,240,240)' }}>
+				<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
+					<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
+				</Popup>
 				<div>
 					<img
 						src='https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1604393121/Theme/homepagecover_ojaz0x.jpg'

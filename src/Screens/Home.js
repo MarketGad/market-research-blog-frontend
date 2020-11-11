@@ -11,7 +11,7 @@ class Home extends Component {
 	render () {
 		return (
 			<div>
-				<Slider />
+				{/* <Slider /> */}
 				<BriefDetails />
 				<Taglines />
 				{/* <Review /> */}

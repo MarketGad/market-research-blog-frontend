@@ -90,9 +90,9 @@ const Industry = () => {
 			return (
 				<div className='col l6 s12'>
 					<div className='card card-height'>
-						<div className='card-content'>
+						<div className='card-content content-research'>
 							<div className='row' style={{ margin: '0' }}>
-								<div className='col s12'>
+								<div className='col s12' style={{ padding: '0' }}>
 									<img pos className='post-image' src={article.postImage} alt='1st' />
 								</div>
 								<div className='col s12'>
@@ -116,9 +116,6 @@ const Industry = () => {
 
 	return (
 		<div>
-			<div className='container'>
-				<h4 className='center landing-head'> Industry </h4>
-			</div>
 			<div className='post-container'>
 				<div className='row'>{showArticles}</div>
 			</div>
