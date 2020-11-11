@@ -58,6 +58,8 @@ import {
 	fetchCommunityPosts
 } from './redux/ActionCreator';
 import i1009 from './Articles/industry/1009';
+import StartingPopup from './Components/StartingPopup';
+import Popup from './Components/Popup';
 
 const mapStateToProps = (state) => {
 	return {
@@ -96,6 +98,21 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class MainApp extends React.Component {
+	constructor (props) {
+		super(props);
+		this.handleShow = this.handleShow.bind(this);
+		this.state = {
+			modalState: true
+		};
+	}
+
+	handleShow = () => {
+		this.setState(() => {
+			return {
+				modalState: false
+			};
+		});
+	};
 	componentDidMount = async () => {
 		console.log('Mounted Main');
 		await this.props.fetchProducts();
@@ -110,6 +127,9 @@ class MainApp extends React.Component {
 		return (
 			<div className='App'>
 				<Navbar />
+				<Popup noClose={true} openPopup={this.state.modalState} setOpenPopup={this.handleShow}>
+					<StartingPopup openPopup={this.state.modalState} setOpenPopup={this.handleShow} />
+				</Popup>
 				<Switch>
 					<Route
 						exact
