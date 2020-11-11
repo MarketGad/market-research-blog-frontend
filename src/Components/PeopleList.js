@@ -2,6 +2,7 @@ import React from 'react';
 import FadingLoader from '../Components/FadingLoader';
 import { Link } from 'react-router-dom';
 import ReputationPoint from './ReputaionPoints';
+import Button from '@material-ui/core/Button';
 const PeopleCard = (props) => {
 	const user = props.user;
 	const linkedIn = props.linkedIn;
@@ -59,8 +60,15 @@ const PeopleCard = (props) => {
 	);
 };
 const PeopleList = (props) => {
-	const showPeople = props.jobProfiles.length ? (
-		props.jobProfiles.map((user, i) => {
+	const [ expandupto, setExpandupto ] = React.useState(7);
+	var profiles = props.jobProfiles;
+	profiles = profiles.slice(0, expandupto);
+	const handleReadMore = () => {
+		setExpandupto(Math.min(expandupto + 7, props.jobProfiles.length));
+	};
+	console.log(profiles);
+	const showPeople = profiles.length ? (
+		profiles.map((user, i) => {
 			if (!/^https?:\/\//.test(user.linkedIn)) {
 				let weblink = 'https://' + user.linkedIn;
 				return <PeopleCard key={i} user={user} linkedIn={weblink} />;
@@ -70,17 +78,30 @@ const PeopleList = (props) => {
 		<div className='center' />
 	);
 	return (
-		<div style={{}}>
-			{props.jobProfiles.length > 0 && (
-				<div>
-					<ul className='collection product-container'>{showPeople}</ul>
-				</div>
-			)}
-			{props.jobProfiles.length === 0 && (
-				<div>
-					<FadingLoader imagetype='circle' loadno={6} />
-				</div>
-			)}
+		<div>
+			<div>
+				{props.jobProfiles.length > 0 && (
+					<div>
+						<ul className='collection product-container'>{showPeople}</ul>
+					</div>
+				)}
+				{props.jobProfiles.length === 0 && (
+					<div>
+						<FadingLoader imagetype='circle' loadno={6} />
+					</div>
+				)}
+			</div>
+			<div>
+				{props.jobProfiles.length > 7 && expandupto < props.jobProfiles.length ? (
+					<div className='center'>
+						<Button variant='contained' onClick={handleReadMore}>
+							Show More
+						</Button>
+					</div>
+				) : (
+					<div />
+				)}
+			</div>
 		</div>
 	);
 };

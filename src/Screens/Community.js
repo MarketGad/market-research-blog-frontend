@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 import Popup from '../Components/Popup';
 import SignIn from './signin';
 import CommunityForm from './CommunityForm';
+import Footer from '../Components/Footer';
 
 const Community = (props) => {
 	const isLoggedin = Cookies.get('session-id');
@@ -58,6 +59,7 @@ const Community = (props) => {
 			<Popup openPopup={openForm} setOpenPopup={setOpenForm}>
 				<CommunityForm openForm={openForm} setOpenForm={setOpenForm} />
 			</Popup>
+			<Footer />
 		</div>
 	);
 };

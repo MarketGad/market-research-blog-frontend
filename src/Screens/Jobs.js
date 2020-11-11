@@ -6,6 +6,7 @@ import PeopleList from '../Components/PeopleList';
 import FormPassion from '../Components/FormPassion';
 import Popup from '../Components/Popup';
 import SignIn from './signin';
+import Footer from '../Components/Footer';
 const industries = [
 	{
 		value: '',
@@ -114,6 +115,7 @@ const ListProduct = (props) => {
 			<Popup openPopup={openJobprofile} setOpenPopup={setOpenjobprofile}>
 				<FormPassion openJobprofile={openJobprofile} setOpenjobprofile={setOpenjobprofile} />
 			</Popup>
+			<Footer />
 		</div>
 	);
 };
