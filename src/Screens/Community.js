@@ -48,12 +48,14 @@ const Community = (props) => {
 						</div>
 						<div
 							style={{
+								width: '100%',
 								backgroundColor: 'white',
 								padding: '10px',
 								cursor: 'pointer',
 								borderRadius: '7px',
-								fontSize: '1.2em',
-								fontWeight: '600'
+								fontSize: '1.3em',
+								fontWeight: '600',
+								border: '1px solid pink'
 							}}
 							onClick={() => {
 								if (isLoggedin) {
@@ -61,10 +63,20 @@ const Community = (props) => {
 								} else setOpenSignin(true);
 							}}
 						>
-							<span style={{ position: 'relative', verticalAlign: 'middle', padding: '0 15px' }}>
+							<span
+								className='btn-floating pulse'
+								style={{
+									position: 'relative',
+									verticalAlign: 'middle',
+									padding: '5px 10px',
+									backgroundColor: '#dddeee',
+									color: 'black',
+									borderColor: 'black'
+								}}
+							>
 								<BorderColorOutlinedIcon />
 							</span>
-							What is cooking in your mind ?
+							<span style={{ paddingLeft: '15px' }}>What is cooking in your mind ?</span>
 						</div>
 						<CommunityTrend posts={props.posts} />
 					</div>
