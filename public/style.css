@@ -993,6 +993,10 @@ nav {
 	width: 530px;
 	height: 500px;
 }
+.communitypopup {
+	width: 600px;
+	height: 600px;
+}
 .popup-btn-home {
 	font-weight: 800;
 	margin-top: 230px;
@@ -1796,6 +1800,10 @@ nav {
 	.homepopup {
 		width: 320px;
 		height: 530px;
+	}
+	.communitypopup {
+		width: 350px;
+		height: 350px;
 	}
 	.popup-btn-home {
 		margin-top: 270px;

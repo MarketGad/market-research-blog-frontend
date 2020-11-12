@@ -7,12 +7,15 @@ import ReputationPoint from './ReputaionPoints';
 import SignIn from '../Screens/signin';
 import Popup from '../Components/Popup';
 import FormPassion from './FormPassion';
+import CommunityPopup from './CommunityPopup';
 const Navbar = () => {
 	const [ redirect, setRedirect ] = React.useState(false);
 	const [ reputation, setReputation ] = React.useState('');
 	const [ user, setUser ] = React.useState('');
 	const [ openSignin, setOpenSignin ] = React.useState(false);
 	const [ openJobprofile, setOpenjobprofile ] = React.useState(false);
+	const [ OpenCommunitypopup, setOpenCommunitypopup ] = React.useState(false);
+
 	/*----------------------------conditional rendering of user name-----------------------------------*/
 	const removecookie = () => {
 		setReputation('');
@@ -156,7 +159,14 @@ const Navbar = () => {
 										<Link to='/discounts'>Market</Link>
 									</li>
 									<li>
-										<Link to='/community'>Community</Link>
+										<Link
+											to='/community'
+											onClick={() => {
+												setOpenCommunitypopup(true);
+											}}
+										>
+											Community
+										</Link>
 									</li>
 									<li>
 										<Link to='/funding'>Funding</Link>
@@ -222,7 +232,14 @@ const Navbar = () => {
 						<Link to='/discounts'>Bazaar</Link>
 					</li>
 					<li>
-						<Link to='/community'>Community</Link>
+						<Link
+							onClick={() => {
+								setOpenCommunitypopup(true);
+							}}
+							to='/community'
+						>
+							Community
+						</Link>
 					</li>
 					<li>
 						<Link to='/funding'>Funding</Link>
@@ -238,7 +255,12 @@ const Navbar = () => {
 				</ul>
 
 				{/* ---------------------------------------------------------------------------------- */}
-
+				<Popup noClose={true} openPopup={OpenCommunitypopup} setOpenPopup={setOpenCommunitypopup}>
+					<CommunityPopup
+						OpenCommunitypopup={OpenCommunitypopup}
+						setOpenCommunitypopup={setOpenCommunitypopup}
+					/>
+				</Popup>
 				<Popup title='Signin' openPopup={openSignin} setOpenPopup={setOpenSignin}>
 					<SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
 				</Popup>

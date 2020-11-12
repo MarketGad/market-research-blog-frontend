@@ -66,7 +66,6 @@ const PeopleList = (props) => {
 	const handleReadMore = () => {
 		setExpandupto(Math.min(expandupto + 7, props.jobProfiles.length));
 	};
-	console.log(profiles);
 	const showPeople = profiles.length ? (
 		profiles.map((user, i) => {
 			if (!/^https?:\/\//.test(user.linkedIn)) {
