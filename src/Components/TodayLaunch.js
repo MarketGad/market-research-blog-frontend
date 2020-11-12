@@ -78,7 +78,7 @@ const TodayLaunch = (props) => {
             breakPoints={breakPoints}
             pagination={false}
             enableAutoPlay={true}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={3000}
             disableArrowsOnEnd={false}
             renderArrow={myArrow}
             onNextEnd={({ index }) => {
