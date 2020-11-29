@@ -48,6 +48,7 @@ const Profile = (props) => {
   const [readytocomment, setReadytoComment] = React.useState("");
   const [openSignin, setOpenSignin] = React.useState(false);
   const [comments, setComments] = React.useState([]);
+  const isMobile = window.innerWidth <= 500;
 
   let weblink = "";
   if (product) {
@@ -131,63 +132,66 @@ const Profile = (props) => {
                 {product.name}
               </div>
             </div>
-            <div className="link-container">
-              {product.websiteLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className="material-icons job-link-icons">
-                      <LinkIcon />
-                    </span>
+            <div className="desktop">
+              <div className="link-container">
+                {product.websiteLink.length > 0 && (
+                  <div>
                     <span>
-                      <a
-                        className="links"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={weblink}
-                      >
-                        {product.websiteLink}
-                      </a>
+                      <span className="material-icons job-link-icons">
+                        <LinkIcon />
+                      </span>
+                      <span>
+                        <a
+                          className="links"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={weblink}
+                        >
+                          {product.websiteLink}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
-              {product.playStoreLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className=" material-icons job-link-icons">
-                      <ShopIcon />
-                    </span>
+                  </div>
+                )}
+                {product.playStoreLink.length > 0 && (
+                  <div>
                     <span>
-                      <a className="links" href={product.playStoreLink}>
-                        {product.name}
-                      </a>
+                      <span className=" material-icons job-link-icons">
+                        <ShopIcon />
+                      </span>
+                      <span>
+                        <a className="links" href={product.playStoreLink}>
+                          {product.name}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
-              {product.appStoreLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className="material-icons job-link-icons">
-                      <AppleIcon />
-                    </span>
+                  </div>
+                )}
+                {product.appStoreLink.length > 0 && (
+                  <div>
                     <span>
-                      <a className="links" href={product.appStoreLink}>
-                        {product.name}
-                      </a>
+                      <span className="material-icons job-link-icons">
+                        <AppleIcon />
+                      </span>
+                      <span>
+                        <a className="links" href={product.appStoreLink}>
+                          {product.name}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
-            </div>
-            <div className="contact-container">
-              <p className="product-subhead">Contact</p>
-              <p className="product-content">
-                {product.pointOfContact} <br />
-                {product.emailId}
-              </p>
+                  </div>
+                )}
+              </div>
+              <div className="contact-container">
+                <p className="product-subhead">Contact</p>
+                <p className="product-content">
+                  {product.pointOfContact} <br />
+                  {product.emailId}
+                </p>
+              </div>
             </div>
           </Grid>
+
           <Grid
             item
             xs={12}
@@ -196,7 +200,6 @@ const Profile = (props) => {
             className="product-details-right-container"
           >
             <div>
-              <div className="product-head">About</div>
               <div style={{ padding: "10px 0" }} className="product-content">
                 {product.detailedDescription}
               </div>
@@ -259,6 +262,64 @@ const Profile = (props) => {
               </div>
             </div>
           </Grid>
+          <div className="mobile">
+            <div className="link-container">
+              {product.websiteLink.length > 0 && (
+                <div>
+                  <span>
+                    <span className="material-icons job-link-icons">
+                      <LinkIcon />
+                    </span>
+                    <span>
+                      <a
+                        className="links"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={weblink}
+                      >
+                        {product.websiteLink}
+                      </a>
+                    </span>
+                  </span>
+                </div>
+              )}
+              {product.playStoreLink.length > 0 && (
+                <div>
+                  <span>
+                    <span className=" material-icons job-link-icons">
+                      <ShopIcon />
+                    </span>
+                    <span>
+                      <a className="links" href={product.playStoreLink}>
+                        {product.name}
+                      </a>
+                    </span>
+                  </span>
+                </div>
+              )}
+              {product.appStoreLink.length > 0 && (
+                <div>
+                  <span>
+                    <span className="material-icons job-link-icons">
+                      <AppleIcon />
+                    </span>
+                    <span>
+                      <a className="links" href={product.appStoreLink}>
+                        {product.name}
+                      </a>
+                    </span>
+                  </span>
+                </div>
+              )}
+            </div>
+            <div className="contact-container">
+              <p className="product-subhead">Contact</p>
+              <p className="product-content">
+                {product.pointOfContact} <br />
+                {product.emailId}
+              </p>
+            </div>
+          </div>
         </Grid>
         <Popup
           title="Signin"
