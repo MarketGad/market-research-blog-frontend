@@ -214,24 +214,25 @@ const ProductCard = (props) => {
               )}
           </div>
         </div>
-
-        <Typography
-          variant="h5"
-          component="h2"
-          className="prodcard-desc right-align"
-          style={{
-            color: "white",
-            position: "relative",
-            top: "-2.5em",
-            height: "60px",
-            fontWeight: "600",
-            fontFamily: "Bahnschrift Light",
-            fontSize: "16px",
-            paddingLeft: "40%",
-          }}
-        >
-          {product.briefDescription}
-        </Typography>
+        <Link to={`products/${product._id}`}>
+          <Typography
+            variant="h5"
+            component="h2"
+            className="prodcard-desc right-align"
+            style={{
+              color: "white",
+              position: "relative",
+              top: "-2.5em",
+              height: "60px",
+              fontWeight: "600",
+              fontFamily: "Bahnschrift Light",
+              fontSize: "16px",
+              paddingLeft: "40%",
+            }}
+          >
+            {product.briefDescription}
+          </Typography>
+        </Link>
       </CardContent>
       {showbuttons === true && (
         <CardActions
