@@ -885,6 +885,7 @@ nav {
 @media only screen and (min-width: 768px) {
   .desktop {
     display: block;
+    padding-top: 17%;
   }
   .mobile {
     display: none;
@@ -893,6 +894,9 @@ nav {
 @media only screen and (max-width: 769px) {
   .mobile {
     display: block;
+  }
+  .product-content {
+    padding-top: 15% !important;
   }
   .desktop {
     display: none;
@@ -1806,7 +1810,9 @@ nav {
     font-size: 1.3em;
     padding: 15px 0;
   }
+
   /* ---jobs---- */
+
   .filter-field {
     width: 40%;
   }

@@ -262,8 +262,11 @@ const Profile = (props) => {
               </div>
             </div>
           </Grid>
-          <div className="mobile">
-            <div className="link-container">
+          <div className="mobile" style={{ float: "left", marginLeft: "0" }}>
+            <div
+              className="link-container"
+              style={{ float: "left", marginLeft: "0" }}
+            >
               {product.websiteLink.length > 0 && (
                 <div>
                   <span>
@@ -312,7 +315,7 @@ const Profile = (props) => {
                 </div>
               )}
             </div>
-            <div className="contact-container">
+            <div className="contact-container" style={{ marginLeft: "0" }}>
               <p className="product-subhead">Contact</p>
               <p className="product-content">
                 {product.pointOfContact} <br />
