@@ -99,6 +99,7 @@ class Home extends Component {
                         textTransform: "uppercase",
                         color: "#fff",
                       }}
+                      href="https://rzp.io/i/LBbFGqmrti"
                     >
                       Purchase Now
                     </a>
@@ -125,7 +126,7 @@ class Home extends Component {
                       <li class="active">1 Pitch deck based on your concept</li>
                       <li class="active">3 time iteration</li>
                       <li class="active">1,000 active investors data</li>
-                      <li class="active">1 advanced market research</li>
+                      <li class="active">1 premium market research</li>
                       <li class="active">India competitor analysis</li>
                     </ul>
                   </div>
@@ -140,6 +141,7 @@ class Home extends Component {
                         color: "#fff",
                       }}
                       class="main-button"
+                      href="https://rzp.io/i/gDhc3lvP"
                     >
                       Purchase Now
                     </a>
@@ -181,6 +183,7 @@ class Home extends Component {
                         color: "#fff",
                       }}
                       class="main-button"
+                      href="https://rzp.io/i/VhDoPjytF"
                     >
                       Purchase Now
                     </a>
