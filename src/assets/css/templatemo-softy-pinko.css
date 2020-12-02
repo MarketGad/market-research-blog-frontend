@@ -1,0 +1,116 @@
+/* 
+---------------------------------------------
+pricing
+--------------------------------------------- 
+*/
+.pricing-item {
+  background: #ffffff;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: 30px 0px 40px 0px;
+}
+
+.pricing-item.active .pricing-header {
+  position: relative;
+}
+
+.pricing-item.active .pricing-header .pricing-title {
+  color: #1e1e1e;
+}
+
+.pricing-item.active .pricing-body .price-wrapper {
+  background-color: #ff589e;
+}
+
+.pricing-item.active .pricing-body .price-wrapper .currency {
+  color: #fff;
+}
+
+.pricing-item.active .pricing-body .price-wrapper .price {
+  color: #fff;
+}
+
+.pricing-item.active .pricing-body .price-wrapper .period {
+  color: #fff;
+}
+
+.pricing-item .pricing-header {
+  text-align: center;
+  display: block;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.pricing-item .pricing-header .pricing-title {
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.25px;
+  color: #1e1e1e;
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.pricing-item .pricing-body {
+  margin-bottom: 40px;
+}
+
+.pricing-item .pricing-body .price-wrapper {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 13px;
+  background: #8261ee;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  border-radius: 20px;
+}
+
+.pricing-item .pricing-body .price-wrapper .currency {
+  height: 47px;
+  font-weight: 500;
+  font-size: 32px;
+  color: #fff;
+  position: relative;
+  top: -1px;
+}
+
+.pricing-item .pricing-body .price-wrapper .price {
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+}
+
+.pricing-item .pricing-body .price-wrapper .period {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  letter-spacing: 0.88px;
+}
+
+.pricing-item .pricing-body .list li {
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #7a7a7a;
+  letter-spacing: 0.25px;
+  text-decoration: line-through;
+}
+
+.pricing-item .pricing-body .list li.active {
+  color: #7a7a7a;
+  text-decoration: none;
+}
+
+.pricing-item .pricing-footer {
+  text-align: center;
+  margin-top: 50px;
+}
