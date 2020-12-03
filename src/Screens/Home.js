@@ -20,12 +20,21 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
+const imageUrl =
+  window.innerWidth >= 768
+    ? "https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1596651501/Untitled-1_lw4pwu.jpg"
+    : "https://res.cloudinary.com/marketgaddevcloud1/image/upload/v1596691317/Untitled-1_1_yobc0f.jpg";
 
 class Home extends Component {
   render() {
     return (
       <div>
         {/* <Slider /> */}
+        <div className="funding-cover">
+          <img src={imageUrl} width="100%"></img>
+        </div>
+
+        <BriefDetails />
         <section
           class="section colored"
           id="pricing-plans"
@@ -193,7 +202,6 @@ class Home extends Component {
             </Grid>
           </div>
         </section>
-        <BriefDetails />
         <Taglines />
         {/* <Review /> */}
         {/* <Offerings /> */}

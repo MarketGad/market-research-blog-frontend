@@ -132,6 +132,8 @@ const Profile = (props) => {
                 className="article-subhead"
                 style={{
                   fontWeight: 800,
+                  minHeight: "250px",
+                  maxHeight: "500px",
                 }}
               >
                 {product.name}
@@ -209,8 +211,9 @@ const Profile = (props) => {
           >
             <div>
               <div
-                style={{ padding: "10% 0 5% 0" }}
+                style={{}}
                 className="product-content"
+                style={{ marginTop: "2%" }}
               >
                 {product.detailedDescription}
               </div>
