@@ -889,7 +889,9 @@ nav {
 @media only screen and (min-width: 769px) {
   .mobile {
     display: block;
+    margin-left: 22% !important;
   }
+
   .product-content {
     margin-right: 25%;
     margin-left: 23%;
@@ -898,10 +900,36 @@ nav {
     margin-left: 33% !important;
     margin-right: 25% !important;
   }
+  .card {
+    margin-left: 25%;
+  }
+  .links1 {
+    color: #080808d9;
+    max-width: 65%;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    vertical-align: middle;
+  }
+  .article-subhead {
+    text-align: center;
+    margin: 0 -50%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .mobile {
     display: block;
+  }
+  .links1 {
+    max-width: 25%;
+    color: #080808d9;
+
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    vertical-align: middle;
   }
   .product-content {
     padding-top: 1% !important;

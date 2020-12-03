@@ -128,7 +128,12 @@ const Profile = (props) => {
                 weblink={weblink}
                 showbuttons={false}
               />
-              <div className="article-subhead" style={{ fontWeight: 800 }}>
+              <div
+                className="article-subhead"
+                style={{
+                  fontWeight: 800,
+                }}
+              >
                 {product.name}
               </div>
             </div>
@@ -273,12 +278,12 @@ const Profile = (props) => {
                 float: "left",
                 marginLeft: "0",
                 height: "auto",
-                marginTop: "-10%",
+                marginTop: "-3%",
               }}
             >
               <div
                 className="link-container"
-                style={{ marginLeft: "0", width: "20%", height: "auto" }}
+                style={{ marginLeft: "0", height: "auto" }}
               >
                 {product.websiteLink.length > 0 && (
                   <div style={{ height: "auto" }}>
@@ -288,7 +293,7 @@ const Profile = (props) => {
                       </span>
                       <span>
                         <a
-                          className="links"
+                          className="links1"
                           target="_blank"
                           rel="noopener noreferrer"
                           href={weblink}
