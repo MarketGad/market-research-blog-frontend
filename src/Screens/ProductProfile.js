@@ -116,7 +116,7 @@ const Profile = (props) => {
     return (
       <div className="productdetails-container">
         <Grid container component="main">
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={12} className="prodcard">
             <div
               className="center"
               style={{ maxHeight: "350px", width: "350px", margin: "0 10%" }}
@@ -132,7 +132,7 @@ const Profile = (props) => {
                 {product.name}
               </div>
             </div>
-            <div className="desktop">
+            {/*<div className="desktop">
               <div className="link-container">
                 {product.websiteLink.length > 0 && (
                   <div>
@@ -184,23 +184,29 @@ const Profile = (props) => {
               </div>
               <div className="contact-container">
                 <p className="product-subhead">Contact</p>
-                <p className="product-content">
+                <p
+                  className="product-content"
+                  style={{ wordSpacing: ".05rem" }}
+                >
                   {product.pointOfContact} <br />
                   {product.emailId}
                 </p>
               </div>
-            </div>
+                </div>*/}
           </Grid>
 
           <Grid
             item
             xs={12}
             sm={12}
-            md={9}
+            md={12}
             className="product-details-right-container"
           >
             <div>
-              <div style={{ padding: "10px 0" }} className="product-content">
+              <div
+                style={{ padding: "10% 0 5% 0" }}
+                className="product-content"
+              >
                 {product.detailedDescription}
               </div>
             </div>
@@ -261,68 +267,82 @@ const Profile = (props) => {
                 </div>
               </div>
             </div>
-          </Grid>
-          <div className="mobile" style={{ float: "left", marginLeft: "0" }}>
             <div
-              className="link-container"
-              style={{ float: "left", marginLeft: "0" }}
+              className="mobile"
+              style={{
+                float: "left",
+                marginLeft: "0",
+                height: "auto",
+                marginTop: "-10%",
+              }}
             >
-              {product.websiteLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className="material-icons job-link-icons">
-                      <LinkIcon />
-                    </span>
+              <div
+                className="link-container"
+                style={{ marginLeft: "0", width: "20%", height: "auto" }}
+              >
+                {product.websiteLink.length > 0 && (
+                  <div style={{ height: "auto" }}>
                     <span>
-                      <a
-                        className="links"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={weblink}
-                      >
-                        {product.websiteLink}
-                      </a>
+                      <span className="material-icons job-link-icons">
+                        <LinkIcon />
+                      </span>
+                      <span>
+                        <a
+                          className="links"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={weblink}
+                        >
+                          {product.websiteLink}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
-              {product.playStoreLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className=" material-icons job-link-icons">
-                      <ShopIcon />
-                    </span>
+                  </div>
+                )}
+                {/*{product.playStoreLink.length > 0 && (
+                  <div>
                     <span>
-                      <a className="links" href={product.playStoreLink}>
-                        {product.name}
-                      </a>
+                      <span className=" material-icons job-link-icons">
+                        <ShopIcon />
+                      </span>
+                      <span>
+                        <a className="links" href={product.playStoreLink}>
+                          {product.name}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
-              {product.appStoreLink.length > 0 && (
-                <div>
-                  <span>
-                    <span className="material-icons job-link-icons">
-                      <AppleIcon />
-                    </span>
+                  </div>
+                )}
+                {product.appStoreLink.length > 0 && (
+                  <div>
                     <span>
-                      <a className="links" href={product.appStoreLink}>
-                        {product.name}
-                      </a>
+                      <span className="material-icons job-link-icons">
+                        <AppleIcon />
+                      </span>
+                      <span>
+                        <a className="links" href={product.appStoreLink}>
+                          {product.name}
+                        </a>
+                      </span>
                     </span>
-                  </span>
-                </div>
-              )}
+                  </div>
+                )}*/}
+              </div>
+              <div
+                className="contact-container"
+                style={{ marginLeft: "0", marginTop: "0" }}
+              >
+                <p className="product-subhead">Contact</p>
+                <p
+                  className="product-content"
+                  style={{ wordSpacing: ".05rem", marginLeft: "0" }}
+                >
+                  {product.pointOfContact} <br />
+                  {product.emailId}
+                </p>
+              </div>
             </div>
-            <div className="contact-container" style={{ marginLeft: "0" }}>
-              <p className="product-subhead">Contact</p>
-              <p className="product-content">
-                {product.pointOfContact} <br />
-                {product.emailId}
-              </p>
-            </div>
-          </div>
+          </Grid>
         </Grid>
         <Popup
           title="Signin"
