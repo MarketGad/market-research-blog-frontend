@@ -867,7 +867,7 @@ nav {
   font-weight: 800;
   font-family: Arial, Helvetica, sans-serif;
 }
-.product-content {
+.product-content1 {
   font-size: 1.3em;
   letter-spacing: -0.5px;
   word-spacing: 0.35rem;
@@ -892,13 +892,13 @@ nav {
     margin-left: 22% !important;
   }
 
-  .product-content {
+  .product-content1 {
     margin-right: 25%;
     margin-left: 23%;
   }
-  .prodcard {
-    margin-left: 33% !important;
-    margin-right: 25% !important;
+  .prodcard1 {
+    margin-left: 30% !important;
+    /*margin-right: 25% !important;*/
   }
   .card {
     margin-left: 25%;
@@ -911,10 +911,6 @@ nav {
     text-overflow: ellipsis;
     overflow-x: hidden;
     vertical-align: middle;
-  }
-  .article-subhead {
-    text-align: center;
-    margin: 0 -50%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -931,7 +927,7 @@ nav {
     overflow-x: hidden;
     vertical-align: middle;
   }
-  .product-content {
+  .product-content1 {
     padding-top: 1% !important;
     text-align: left;
   }

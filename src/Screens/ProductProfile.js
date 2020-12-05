@@ -116,10 +116,14 @@ const Profile = (props) => {
     return (
       <div className="productdetails-container">
         <Grid container component="main">
-          <Grid item xs={12} md={12} className="prodcard">
+          <Grid item xs={12} md={12} className="prodcard1">
             <div
               className="center"
-              style={{ maxHeight: "350px", width: "350px", margin: "0 10%" }}
+              style={{
+                maxHeight: "350px",
+                width: "350px",
+                margin: "0 10%",
+              }}
             >
               <ProductCard
                 openSignin={openSignin}
@@ -134,6 +138,8 @@ const Profile = (props) => {
                   fontWeight: 800,
                   minHeight: "250px",
                   maxHeight: "500px",
+                  textAlign: "left",
+                  margin: "0 -50%",
                 }}
               >
                 {product.name}
@@ -212,7 +218,7 @@ const Profile = (props) => {
             <div>
               <div
                 style={{}}
-                className="product-content"
+                className="product-content1"
                 style={{ marginTop: "2%" }}
               >
                 {product.detailedDescription}
@@ -342,7 +348,7 @@ const Profile = (props) => {
               >
                 <p className="product-subhead">Contact</p>
                 <p
-                  className="product-content"
+                  className="product-content1"
                   style={{ wordSpacing: ".05rem", marginLeft: "0" }}
                 >
                   {product.pointOfContact} <br />
