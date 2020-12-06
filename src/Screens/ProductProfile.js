@@ -14,6 +14,7 @@ import ShowComment from "../Components/ShowComment";
 import SignIn from "../Screens/signin";
 import Popup from "../Components/Popup";
 import ProductCard from "../Components/ProductCard";
+import Linkify from "react-linkify";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -115,37 +116,38 @@ const Profile = (props) => {
   if (product.name) {
     return (
       <div className="productdetails-container">
-        <Grid container component="main">
-          <Grid item xs={12} md={12} className="prodcard1">
-            <div
-              className="center"
-              style={{
-                maxHeight: "350px",
-                width: "350px",
-                margin: "0 10%",
-              }}
-            >
-              <ProductCard
-                openSignin={openSignin}
-                setOpenSignin={setOpenSignin}
-                product={product === undefined ? [] : product}
-                weblink={weblink}
-                showbuttons={false}
-              />
+        <Linkify>
+          <Grid container component="main">
+            <Grid item xs={12} md={12} className="prodcard1">
               <div
-                className="article-subhead"
+                className="center"
                 style={{
-                  fontWeight: 800,
-                  minHeight: "250px",
-                  maxHeight: "500px",
-                  textAlign: "left",
-                  margin: "0 -50%",
+                  maxHeight: "350px",
+                  width: "350px",
+                  margin: "0 10%",
                 }}
               >
-                {product.name}
+                <ProductCard
+                  openSignin={openSignin}
+                  setOpenSignin={setOpenSignin}
+                  product={product === undefined ? [] : product}
+                  weblink={weblink}
+                  showbuttons={false}
+                />
+                <div
+                  className="article-subhead"
+                  style={{
+                    fontWeight: 800,
+                    minHeight: "250px",
+                    maxHeight: "500px",
+                    textAlign: "left",
+                    margin: "0 -50%",
+                  }}
+                >
+                  {product.name}
+                </div>
               </div>
-            </div>
-            {/*<div className="desktop">
+              {/*<div className="desktop">
               <div className="link-container">
                 {product.websiteLink.length > 0 && (
                   <div>
@@ -206,114 +208,114 @@ const Profile = (props) => {
                 </p>
               </div>
                 </div>*/}
-          </Grid>
+            </Grid>
 
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={12}
-            className="product-details-right-container"
-          >
-            <div>
-              <div
-                style={{}}
-                className="product-content1"
-                style={{ marginTop: "2%" }}
-              >
-                {product.detailedDescription}
-              </div>
-            </div>
-            <div id="comments">
-              <div className="row">
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              className="product-details-right-container"
+            >
+              <div>
                 <div
-                  className="col s12 l11"
-                  style={{ padding: "0", margin: "0" }}
+                  style={{}}
+                  className="product-content1"
+                  style={{ marginTop: "2%" }}
                 >
-                  <div className="card">
-                    <div className="card-content">
-                      <span className="card-title product-comment">
-                        Comments ({comments.length})
-                      </span>
-                      <form className={classes.form} onSubmit={submitHandler}>
-                        <Grid container spacing={2}>
-                          <Grid item xs={8}>
-                            {focusComment !== "" && (
-                              <TextField
-                                fullWidth
-                                id="outlined-textarea"
-                                label="Comment"
-                                placeholder="What’s cool about this?"
-                                multiline
-                                autoFocus
-                                variant="outlined"
-                                value={comment}
-                                onChange={(e) => setComment(e.target.value)}
-                              />
-                            )}
-                            {focusComment === "" && (
-                              <TextField
-                                fullWidth
-                                id="outlined-textarea"
-                                label="Comment"
-                                placeholder="What’s cool about this?"
-                                multiline
-                                variant="outlined"
-                                value={comment}
-                                onChange={(e) => setComment(e.target.value)}
-                              />
-                            )}
+                  {product.detailedDescription}
+                </div>
+              </div>
+              <div id="comments">
+                <div className="row">
+                  <div
+                    className="col s12 l11"
+                    style={{ padding: "0", margin: "0" }}
+                  >
+                    <div className="card">
+                      <div className="card-content">
+                        <span className="card-title product-comment">
+                          Comments ({comments.length})
+                        </span>
+                        <form className={classes.form} onSubmit={submitHandler}>
+                          <Grid container spacing={2}>
+                            <Grid item xs={8}>
+                              {focusComment !== "" && (
+                                <TextField
+                                  fullWidth
+                                  id="outlined-textarea"
+                                  label="Comment"
+                                  placeholder="What’s cool about this?"
+                                  multiline
+                                  autoFocus
+                                  variant="outlined"
+                                  value={comment}
+                                  onChange={(e) => setComment(e.target.value)}
+                                />
+                              )}
+                              {focusComment === "" && (
+                                <TextField
+                                  fullWidth
+                                  id="outlined-textarea"
+                                  label="Comment"
+                                  placeholder="What’s cool about this?"
+                                  multiline
+                                  variant="outlined"
+                                  value={comment}
+                                  onChange={(e) => setComment(e.target.value)}
+                                />
+                              )}
+                            </Grid>
+                            <Grid item xs={3}>
+                              <Button
+                                type="submit"
+                                variant="contained"
+                                className={classes.submit}
+                              >
+                                Add Comment
+                              </Button>
+                            </Grid>
                           </Grid>
-                          <Grid item xs={3}>
-                            <Button
-                              type="submit"
-                              variant="contained"
-                              className={classes.submit}
-                            >
-                              Add Comment
-                            </Button>
-                          </Grid>
-                        </Grid>
-                      </form>
-                      {showComments(comments)}
+                        </form>
+                        {showComments(comments)}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="mobile"
-              style={{
-                float: "left",
-                marginLeft: "0",
-                height: "auto",
-                marginTop: "-3%",
-              }}
-            >
               <div
-                className="link-container"
-                style={{ marginLeft: "0", height: "auto" }}
+                className="mobile"
+                style={{
+                  float: "left",
+                  marginLeft: "0",
+                  height: "auto",
+                  marginTop: "-3%",
+                }}
               >
-                {product.websiteLink.length > 0 && (
-                  <div style={{ height: "auto" }}>
-                    <span>
-                      <span className="material-icons job-link-icons">
-                        <LinkIcon />
-                      </span>
+                <div
+                  className="link-container"
+                  style={{ marginLeft: "0", height: "auto" }}
+                >
+                  {product.websiteLink.length > 0 && (
+                    <div style={{ height: "auto" }}>
                       <span>
-                        <a
-                          className="links1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={weblink}
-                        >
-                          {product.websiteLink}
-                        </a>
+                        <span className="material-icons job-link-icons">
+                          <LinkIcon />
+                        </span>
+                        <span>
+                          <a
+                            className="links1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={weblink}
+                          >
+                            {product.websiteLink}
+                          </a>
+                        </span>
                       </span>
-                    </span>
-                  </div>
-                )}
-                {/*{product.playStoreLink.length > 0 && (
+                    </div>
+                  )}
+                  {/*{product.playStoreLink.length > 0 && (
                   <div>
                     <span>
                       <span className=" material-icons job-link-icons">
@@ -341,31 +343,32 @@ const Profile = (props) => {
                     </span>
                   </div>
                 )}*/}
-              </div>
-              <div
-                className="contact-container"
-                style={{ marginLeft: "0", marginTop: "0" }}
-              >
-                <p className="product-subhead">Contact</p>
-                <p
-                  className="product-content1"
-                  style={{ wordSpacing: ".05rem", marginLeft: "0" }}
+                </div>
+                <div
+                  className="contact-container"
+                  style={{ marginLeft: "0", marginTop: "0" }}
                 >
-                  {product.pointOfContact} <br />
-                  {product.emailId}
-                </p>
+                  <p className="product-subhead">Contact </p>
+                  <p
+                    className="product-content1"
+                    style={{ wordSpacing: ".05rem", marginLeft: "0" }}
+                  >
+                    {product.pointOfContact} <br />
+                    {product.emailId}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Grid>
           </Grid>
-        </Grid>
-        <Popup
-          title="Signin"
-          openPopup={openSignin}
-          setOpenPopup={setOpenSignin}
-        >
-          <SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
-        </Popup>
-        {/* <Footer2 /> */}
+          <Popup
+            title="Signin"
+            openPopup={openSignin}
+            setOpenPopup={setOpenSignin}
+          >
+            <SignIn openSignin={openSignin} setOpenSignin={setOpenSignin} />
+          </Popup>
+          {/* <Footer2 /> */}
+        </Linkify>
       </div>
     );
   } else return <div className="center">Loading...</div>;
