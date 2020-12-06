@@ -891,6 +891,9 @@ nav {
     display: block;
     margin-left: 22% !important;
   }
+  .articlubhead {
+    margin-left: 25%;
+  }
 
   .product-content1 {
     margin-right: 25%;
@@ -917,6 +920,9 @@ nav {
   .mobile {
     display: block;
   }
+  .articlubhead {
+    margin-left: 5%;
+  }
   .links1 {
     max-width: 25%;
     color: #080808d9;
@@ -934,6 +940,7 @@ nav {
   .desktop {
     display: none;
   }
+
   .article-subhead {
     font-size: 1.5em !important;
   }

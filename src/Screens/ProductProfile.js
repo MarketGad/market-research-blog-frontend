@@ -118,6 +118,18 @@ const Profile = (props) => {
       <div className="productdetails-container">
         <Linkify>
           <Grid container component="main">
+            <div
+              className="articlubhead"
+              style={{
+                fontWeight: 800,
+                minHeight: "100px",
+                maxHeight: "500px",
+                textAlign: "left",
+                fontSize: "1.8em",
+              }}
+            >
+              {product.name}
+            </div>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
                 className="center"
@@ -133,19 +145,8 @@ const Profile = (props) => {
                   product={product === undefined ? [] : product}
                   weblink={weblink}
                   showbuttons={false}
+                  style={{ marginTop: "-5%" }}
                 />
-                <div
-                  className="article-subhead"
-                  style={{
-                    fontWeight: 800,
-                    minHeight: "250px",
-                    maxHeight: "500px",
-                    textAlign: "left",
-                    margin: "0 -50%",
-                  }}
-                >
-                  {product.name}
-                </div>
               </div>
               {/*<div className="desktop">
               <div className="link-container">
