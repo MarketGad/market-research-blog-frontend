@@ -132,7 +132,7 @@ const Profile = (props) => {
             </div>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
-                className="center"
+                className="center-prd"
                 style={{
                   maxHeight: "350px",
                   width: "350px",
@@ -233,7 +233,7 @@ const Profile = (props) => {
                     className="col s12 l11"
                     style={{ padding: "0", margin: "0" }}
                   >
-                    <div className="card">
+                    <div className="cardcom">
                       <div className="card-content">
                         <span className="card-title product-comment">
                           Comments ({comments.length})
@@ -285,7 +285,7 @@ const Profile = (props) => {
                 </div>
               </div>
               <div
-                className="mobile"
+                className="mobile1"
                 style={{
                   float: "left",
                   marginLeft: "0",
@@ -295,7 +295,11 @@ const Profile = (props) => {
               >
                 <div
                   className="link-container"
-                  style={{ marginLeft: "0", height: "auto" }}
+                  style={{
+                    marginLeft: "0",
+                    height: "auto",
+                    width: "min-content",
+                  }}
                 >
                   {product.websiteLink.length > 0 && (
                     <div style={{ height: "auto" }}>
@@ -361,6 +365,7 @@ const Profile = (props) => {
               </div>
             </Grid>
           </Grid>
+
           <Popup
             title="Signin"
             openPopup={openSignin}

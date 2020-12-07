@@ -887,9 +887,12 @@ nav {
   margin-bottom: 0 !important;
 }
 @media only screen and (min-width: 769px) {
-  .mobile {
+  .mobile1 {
     display: block;
     margin-left: 22% !important;
+  }
+  .card-height {
+    min-height: 660px;
   }
   .articlubhead {
     margin-left: 25%;
@@ -904,7 +907,7 @@ nav {
     margin-left: 30% !important;
     /*margin-right: 25% !important;*/
   }
-  .card {
+  .cardcom {
     margin-left: 25%;
   }
   .links1 {
@@ -920,9 +923,16 @@ nav {
 @media only screen and (max-width: 768px) {
   .mobile {
     display: block;
+    width: "100%";
   }
   .articlubhead {
-    margin-left: 5%;
+    margin-left: 7%;
+  }
+  .center-prd {
+    margin: auto !important;
+  }
+  .card-height {
+    height: fit-content !important;
   }
   .links1 {
     max-width: 25%;
