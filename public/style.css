@@ -887,7 +887,7 @@ nav {
   margin-bottom: 0 !important;
 }
 @media only screen and (min-width: 769px) {
-  .mobile1 {
+  .mobileprd {
     display: block;
     margin-left: 22% !important;
   }
@@ -910,6 +910,9 @@ nav {
   .cardcom {
     margin-left: 25%;
   }
+  .contact-container {
+    font-size: 0.7em;
+  }
   .links1 {
     color: #080808d9;
     max-width: 65%;
@@ -921,9 +924,13 @@ nav {
   }
 }
 @media only screen and (max-width: 768px) {
-  .mobile {
-    display: block;
-    width: "100%";
+  .mobileprd {
+    display: block !important;
+    max-width: 320px;
+  }
+  .contact-container {
+    max-width: 320px;
+    font-size: 0.7em;
   }
   .articlubhead {
     margin-left: 7%;

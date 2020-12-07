@@ -285,20 +285,17 @@ const Profile = (props) => {
                 </div>
               </div>
               <div
-                className="mobile1"
+                className="mobileprd"
                 style={{
                   float: "left",
                   marginLeft: "0",
-                  height: "auto",
-                  marginTop: "-3%",
+                  fontSize: "1.5em",
                 }}
               >
                 <div
-                  className="link-container"
                   style={{
                     marginLeft: "0",
                     height: "auto",
-                    width: "min-content",
                   }}
                 >
                   {product.websiteLink.length > 0 && (
