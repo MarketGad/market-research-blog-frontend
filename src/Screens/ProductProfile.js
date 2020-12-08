@@ -15,6 +15,11 @@ import SignIn from "../Screens/signin";
 import Popup from "../Components/Popup";
 import ProductCard from "../Components/ProductCard";
 import Linkify from "react-linkify";
+import ReactHtmlParser, {
+  processNodes,
+  convertNodeToElement,
+  htmlparser2,
+} from "react-html-parser";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -224,7 +229,7 @@ const Profile = (props) => {
                   className="product-content1"
                   style={{ marginTop: "2%" }}
                 >
-                  {product.detailedDescription}
+                  <div>{ReactHtmlParser(product.detailedDescription)}</div>
                 </div>
               </div>
               <div id="comments">
