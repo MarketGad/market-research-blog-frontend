@@ -53,10 +53,7 @@ const VentureHack = () => {
     articles.map((article) => {
       return (
         <div className="col l6 s12">
-          <div
-            className="card card-height"
-            style={{ height: "auto", minHeight: "700px" }}
-          >
+          <div className="card card-height" style={{ height: "auto" }}>
             <div className="card-content content-research">
               <div className="row" style={{ margin: "0" }}>
                 <div className="col s12" style={{ padding: 0 }}>

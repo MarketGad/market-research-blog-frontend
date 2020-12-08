@@ -915,10 +915,10 @@ nav {
   }
   .links1 {
     color: #080808d9;
-    max-width: 65%;
     display: inline-block;
     white-space: nowrap;
     text-overflow: ellipsis;
+    max-width: 500px;
     overflow-x: hidden;
     vertical-align: middle;
   }
