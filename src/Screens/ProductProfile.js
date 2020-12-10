@@ -13,6 +13,7 @@ import Cookies from "js-cookie";
 import ShowComment from "../Components/ShowComment";
 import SignIn from "../Screens/signin";
 import Popup from "../Components/Popup";
+import ProductCover from "../Components/ProductCover";
 import ProductCard from "../Components/ProductCard";
 import Linkify from "react-linkify";
 import ReactHtmlParser, {
@@ -127,7 +128,6 @@ const Profile = (props) => {
               className="articlubhead"
               style={{
                 fontWeight: 800,
-                minHeight: "100px",
                 maxHeight: "500px",
                 textAlign: "left",
                 fontSize: "1.8em",
@@ -135,16 +135,27 @@ const Profile = (props) => {
             >
               {product.name}
             </div>
+            <div className="prodcovermob">
+              <ProductCard
+                className="prodcovermob"
+                openSignin={openSignin}
+                setOpenSignin={setOpenSignin}
+                product={product === undefined ? [] : product}
+                weblink={weblink}
+                showbuttons={false}
+                style={{ marginTop: "-5%" }}
+              />
+            </div>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
                 className="center-prd"
                 style={{
-                  maxHeight: "350px",
-                  width: "350px",
-                  margin: "0 10%",
+                  maxHeight: "500px",
+                  maxWidth: "700px",
+                  margin: "2% 0 0 0",
                 }}
               >
-                <ProductCard
+                <ProductCover
                   openSignin={openSignin}
                   setOpenSignin={setOpenSignin}
                   product={product === undefined ? [] : product}
@@ -225,6 +236,60 @@ const Profile = (props) => {
             >
               <div>
                 <div
+                  className="sugg-reads"
+                  style={{
+                    float: "right",
+                    marginTop: "-35%",
+                    maxWidth: "300px",
+                    position: "-webkit-sticky",
+                    position: "sticky",
+                    top: "15%",
+                    /*backgroundColor: "#1d262d",*/
+                    padding: "1%",
+                    borderRadius: "7%",
+                    marginLeft: "5%",
+                  }}
+                >
+                  <h5
+                    style={{
+                      paddingBottom: "5%" /*color: "beige"*/,
+                      color: "#1d262d",
+                    }}
+                  >
+                    <b>Suggested reads:</b>
+                  </h5>
+                  <p>
+                    <a
+                      className="sugg-link"
+                      href="/products/5fc8c1581fbdc000042296d9"
+                    >
+                      Amazon in talks to buy podcast-publisher Wondery
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      className="sugg-link"
+                      href="/products/5fcdd3d3e0fa0b0004148bd9"
+                    >
+                      Apple users, beware!
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      className="sugg-link"
+                      href="/products/5fcdd293e0fa0b0004148bd8"
+                    >
+                      WhatsApp to update its terms of service
+                    </a>
+                  </p>
+                  <p>
+                    <a href="/products/5fc8c0d11fbdc000042296d8">
+                      Delay in PUBG launch, company executives want to meet the
+                      Government
+                    </a>
+                  </p>
+                </div>
+                <div
                   style={{}}
                   className="product-content1"
                   style={{ marginTop: "2%" }}
@@ -303,7 +368,7 @@ const Profile = (props) => {
                     height: "auto",
                   }}
                 >
-                  {product.websiteLink.length > 0 && (
+                  {/* {product.websiteLink.length > 0 && (
                     <div style={{ height: "auto" }}>
                       <span>
                         <span className="material-icons job-link-icons">
@@ -321,7 +386,7 @@ const Profile = (props) => {
                         </span>
                       </span>
                     </div>
-                  )}
+                 )} */}
                   {/*{product.playStoreLink.length > 0 && (
                   <div>
                     <span>
@@ -355,14 +420,49 @@ const Profile = (props) => {
                   className="contact-container"
                   style={{ marginLeft: "0", marginTop: "0" }}
                 >
-                  <p className="product-subhead">Contact </p>
+                  {/*<p className="product-subhead">Contact </p>
                   <p
                     className="product-content1"
                     style={{ wordSpacing: ".05rem", marginLeft: "0" }}
                   >
                     {product.pointOfContact} <br />
                     {product.emailId}
-                  </p>
+              </p>*/}
+                  <div className="sugg-reads" style={{}}>
+                    <h5>
+                      <b>Suggested reads:</b>
+                    </h5>
+                    <p>
+                      <a
+                        className="sugg-link"
+                        href="/products/5fc8c1581fbdc000042296d9"
+                      >
+                        Amazon in talks to buy podcast-publisher Wondery
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        className="sugg-link"
+                        href="/products/5fcdd3d3e0fa0b0004148bd9"
+                      >
+                        Apple users, beware!
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        className="sugg-link"
+                        href="/products/5fcdd293e0fa0b0004148bd8"
+                      >
+                        WhatsApp to update its terms of service
+                      </a>
+                    </p>
+                    <p>
+                      <a href="/products/5fc8c0d11fbdc000042296d8">
+                        Delay in PUBG launch, company executives want to meet
+                        the Government
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </Grid>

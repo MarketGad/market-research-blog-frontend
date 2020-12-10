@@ -867,12 +867,22 @@ nav {
   font-weight: 800;
   font-family: Arial, Helvetica, sans-serif;
 }
-.product-content1 {
+.product-content1,
+.sugg-reads {
   font-size: 1.3em;
   letter-spacing: -0.5px;
   word-spacing: 0.35rem;
-  line-height: 1.8em;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.sugg-reads a:hover {
+  color: rgb(134, 134, 206) !important;
+}
+.sugg-reads a{
+  color: rgb(2, 2, 75);
+  /*color: white;*/
+  font-weight: 550;
+}
 }
 
 .product-desc {
@@ -904,8 +914,11 @@ nav {
     margin-left: 23%;
   }
   .prodcard1 {
-    margin-left: 30% !important;
+    margin-left: 25% !important;
     /*margin-right: 25% !important;*/
+  }
+  .prodcovermob {
+    display: none !important;
   }
   .cardcom {
     margin-left: 25%;
@@ -934,6 +947,12 @@ nav {
   }
   .articlubhead {
     margin-left: 7%;
+  }
+  .sugg-reads {
+    display: none;
+  }
+  .prodcard1 {
+    display: none;
   }
   .center-prd {
     margin: auto !important;
