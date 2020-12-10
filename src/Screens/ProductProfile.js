@@ -428,7 +428,7 @@ const Profile = (props) => {
                     {product.pointOfContact} <br />
                     {product.emailId}
               </p>*/}
-                  <div className="sugg-reads" style={{}}>
+                  <div className="sugg-reads1" style={{}}>
                     <h5>
                       <b>Suggested reads:</b>
                     </h5>
