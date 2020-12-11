@@ -135,23 +135,24 @@ const Profile = (props) => {
             >
               {product.name}
             </div>
-            <div className="prodcovermob">
-              <ProductCard
-                className="prodcovermob"
-                openSignin={openSignin}
-                setOpenSignin={setOpenSignin}
-                product={product === undefined ? [] : product}
-                weblink={weblink}
-                showbuttons={false}
-                style={{ marginTop: "-5%" }}
-              />
-            </div>
+            <Grid item xs={12} md={12} style={{ margin: "0 4%" }}>
+              <div className="prodcovermob">
+                <ProductCard
+                  className="prodcovermob"
+                  openSignin={openSignin}
+                  setOpenSignin={setOpenSignin}
+                  product={product === undefined ? [] : product}
+                  weblink={weblink}
+                  showbuttons={false}
+                />
+              </div>
+            </Grid>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
                 className="center-prd"
                 style={{
                   maxHeight: "500px",
-                  maxWidth: "700px",
+                  width: "63%",
                   margin: "2% 0 0 0",
                 }}
               >
