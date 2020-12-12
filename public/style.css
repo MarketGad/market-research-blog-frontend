@@ -878,14 +878,14 @@ nav {
 
 .sugg-reads a:hover,
 .sugg-reads1 a:hover {
-  color: rgb(134, 134, 206) !important;
+  color: #6699cc !important;
 }
 
 .sugg-reads a,
 .sugg-reads1 a {
-  color: rgb(2, 2, 75);
+  color: #1e4a72 !important;
   /*color: white;*/
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .product-desc {
@@ -899,9 +899,15 @@ nav {
 .product-link-container {
   margin-bottom: 0 !important;
 }
+.sugg-list1 {
+  padding: 2% 0 6% 0;
+  border-bottom: 0.3px solid rgb(209, 204, 204);
+}
 .sugg-list {
-  display: list-item !important;
-  list-style-type: disc !important;
+  /*display: list-item !important;
+  list-style-type: circle !important;*/
+  padding: 1% 0 2% 0;
+  border-bottom: 0.3px solid rgb(209, 204, 204);
 }
 @media only screen and (min-width: 769px) {
   .mobileprd {

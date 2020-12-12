@@ -317,15 +317,10 @@ const Profile = (props) => {
                       color: "#1d262d",
                     }}
                   >
-                    <b>Suggested reads:</b>
+                    <b>Suggested Reads:</b>
                   </h5>
-                  <ul style={{ display: "list-item" }}>
-                    <li
-                      style={{
-                        display: "list-item",
-                        listStyleType: "disc",
-                      }}
-                    >
+                  <ul>
+                    <li className="sugg-list1">
                       <a
                         className="sugg-link"
                         href="/products/5fc8c1581fbdc000042296d9"
@@ -333,12 +328,7 @@ const Profile = (props) => {
                         Amazon in talks to buy podcast-publisher Wondery
                       </a>
                     </li>
-                    <li
-                      style={{
-                        display: "list-item",
-                        listStyleType: "disc",
-                      }}
-                    >
+                    <li className="sugg-list1">
                       <a
                         className="sugg-link"
                         href="/products/5fcdd3d3e0fa0b0004148bd9"
@@ -346,12 +336,7 @@ const Profile = (props) => {
                         Apple users, beware!
                       </a>
                     </li>
-                    <li
-                      style={{
-                        display: "list-item",
-                        listStyleType: "disc",
-                      }}
-                    >
+                    <li className="sugg-list1">
                       <a
                         className="sugg-link"
                         href="/products/5fcdd293e0fa0b0004148bd8"
@@ -359,12 +344,7 @@ const Profile = (props) => {
                         WhatsApp to update its terms of service
                       </a>
                     </li>
-                    <li
-                      style={{
-                        display: "list-item",
-                        listStyleType: "disc",
-                      }}
-                    >
+                    <li className="sugg-list1">
                       <a href="/products/5fc8c0d11fbdc000042296d8">
                         Delay in PUBG launch, company executives want to meet
                         the Government
@@ -513,7 +493,7 @@ const Profile = (props) => {
               </p>*/}
                   <div className="sugg-reads1" style={{}}>
                     <h5>
-                      <b>Suggested reads:</b>
+                      <b>Suggested Reads:</b>
                     </h5>
                     <ul>
                       <li className="sugg-list">
