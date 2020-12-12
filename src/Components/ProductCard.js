@@ -10,6 +10,8 @@ import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import SocialShare from "./SocialShare";
+import Popup from "./Popup";
 
 const useStyles = makeStyles({
   root: {
@@ -33,6 +35,8 @@ const useStyles = makeStyles({
 
 const ProductCard = (props) => {
   const classes = useStyles();
+  const [openShare, setOpenShare] = React.useState(false);
+
   const token = Cookies.get("session-id");
   const weblink = props.weblink;
   const showbuttons = props.showbuttons;
@@ -252,19 +256,50 @@ const ProductCard = (props) => {
               <TextsmsOutlinedIcon style={{ color: "black" }} />
             </Button>
           </Link>
-          <a target="_blank" rel="noopener noreferrer" href={weblink}>
-            <Button
-              style={{
-                backgroundColor: "white",
-                maxWidth: "50px",
-                maxHeight: "35px",
-                minWidth: "50px",
-                minHeight: "35px",
-              }}
-            >
-              <SendOutlinedIcon style={{ color: "black" }} />
-            </Button>
-          </a>
+          <Button
+            style={{
+              backgroundColor: "white",
+              maxWidth: "50px",
+              maxHeight: "35px",
+              minWidth: "50px",
+              minHeight: "35px",
+            }}
+            onClick={() => {
+              setOpenShare(true);
+            }}
+          >
+            <SendOutlinedIcon style={{ color: "black" }} />
+          </Button>
+          <Popup
+            title="Signin"
+            openPopup={openShare}
+            setOpenPopup={setOpenShare}
+          >
+            {" "}
+            <div style={{ padding: "3%" }}>
+              {" "}
+              <h5
+                style={{
+                  textAlign: "center",
+                  /*, fontWeight: "bold"*/
+                }}
+              >
+                Like our content?
+              </h5>
+              <h5
+                style={{
+                  textAlign: "center",
+                  fontWeight: "bold",
+                  color: "#5072A7",
+                }}
+              >
+                Share it with your friends!
+              </h5>
+              <SocialShare
+                weblink={`http://www.marketgad.com/products/${product._id}`}
+              />
+            </div>
+          </Popup>
         </CardActions>
       )}
     </Card>

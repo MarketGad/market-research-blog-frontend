@@ -21,6 +21,7 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2,
 } from "react-html-parser";
+import SocialShare from "../Components/SocialShare";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -135,6 +136,7 @@ const Profile = (props) => {
             >
               {product.name}
             </div>
+
             <Grid item xs={12} md={12} style={{ margin: "0 4%" }}>
               <div className="prodcovermob">
                 <ProductCard
@@ -147,6 +149,34 @@ const Profile = (props) => {
                 />
               </div>
             </Grid>
+            <div
+              style={{
+                float: "left",
+                marginBottom: "-47%",
+                position: "-webkit-sticky",
+                position: "sticky",
+                top: "15%",
+                maxWidth: "110px",
+                marginLeft: "5%",
+                /*backgroundColor: "#1d262d",*/
+              }}
+            >
+              <p style={{ textAlign: "center", fontSize: "1.4em" }}>
+                Like our content?
+              </p>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "1.4em",
+                  fontWeight: "bold",
+                  color: "#5072A7",
+                }}
+              >
+                Share it to your friends!
+              </p>
+
+              <SocialShare />
+            </div>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
                 className="center-prd"
