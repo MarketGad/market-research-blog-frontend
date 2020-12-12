@@ -15,7 +15,7 @@ export default function SocialShare(props) {
   return (
     <div
       style={{
-        padding: "0 10% 10% 10%",
+        padding: "0 7% 7% 7%",
         textAlign: "center",
       }}
     >
@@ -37,7 +37,10 @@ export default function SocialShare(props) {
         <b>Share it with your friends!</b>
       </h5>
       <br />*/}
-      <FacebookShareButton url={props.weblink} style={{ padding: "3%" }}>
+      <FacebookShareButton
+        url={props.weblink}
+        style={{ padding: "3%", margin: "1%" }}
+      >
         <FacebookIcon size={40} round={true} />
       </FacebookShareButton>
       <FacebookShareCount url={props.weblink}>
@@ -45,13 +48,22 @@ export default function SocialShare(props) {
           <span className="myShareCountWrapper">{shareCount}</span>
         )}
       </FacebookShareCount>
-      <WhatsappShareButton url={props.weblink} style={{ padding: "3%" }}>
+      <WhatsappShareButton
+        url={props.weblink}
+        style={{ padding: "3%", margin: "1%" }}
+      >
         <WhatsappIcon size={40} round={true} />
       </WhatsappShareButton>
-      <TwitterShareButton url={props.weblink} style={{ padding: "3%" }}>
+      <TwitterShareButton
+        url={props.weblink}
+        style={{ padding: "3%", margin: "1%" }}
+      >
         <TwitterIcon size={40} round={true} />
       </TwitterShareButton>
-      <LinkedinShareButton url={props.weblink} style={{ padding: "3%" }}>
+      <LinkedinShareButton
+        url={props.weblink}
+        style={{ padding: "3%", margin: "1%" }}
+      >
         <LinkedinIcon size={40} round={true} />
       </LinkedinShareButton>
     </div>
