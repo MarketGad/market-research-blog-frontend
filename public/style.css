@@ -899,6 +899,10 @@ nav {
 .product-link-container {
   margin-bottom: 0 !important;
 }
+.sugg-list {
+  display: list-item !important;
+  list-style-type: disc !important;
+}
 @media only screen and (min-width: 769px) {
   .mobileprd {
     display: block;
@@ -951,6 +955,9 @@ nav {
     max-width: 320px;
     font-size: 0.7em;
   }
+  .sugg-list {
+    margin-left: 5%;
+  }
   .deskshare {
     display: none;
   }
@@ -963,6 +970,7 @@ nav {
   .sugg-reads {
     display: none;
   }
+
   .prodcard1 {
     display: none;
   }

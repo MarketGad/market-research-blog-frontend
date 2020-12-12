@@ -186,7 +186,8 @@ const Profile = (props) => {
               style={{
                 textAlign: "center",
                 width: "300px",
-                marginLeft: "5%",
+                marginLeft: "12%",
+                marginRight: "12%",
 
                 /*backgroundColor: "#1d262d",*/
               }}
@@ -197,7 +198,6 @@ const Profile = (props) => {
                   fontSize: "1.5em",
                   color: "#5072A7",
                   textAlign: "center",
-                  marginLeft: "5%",
                 }}
               >
                 Like our Content? Share it with your friends!
@@ -319,36 +319,58 @@ const Profile = (props) => {
                   >
                     <b>Suggested reads:</b>
                   </h5>
-                  <p>
-                    <a
-                      className="sugg-link"
-                      href="/products/5fc8c1581fbdc000042296d9"
+                  <ul style={{ display: "list-item" }}>
+                    <li
+                      style={{
+                        display: "list-item",
+                        listStyleType: "disc",
+                      }}
                     >
-                      Amazon in talks to buy podcast-publisher Wondery
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      className="sugg-link"
-                      href="/products/5fcdd3d3e0fa0b0004148bd9"
+                      <a
+                        className="sugg-link"
+                        href="/products/5fc8c1581fbdc000042296d9"
+                      >
+                        Amazon in talks to buy podcast-publisher Wondery
+                      </a>
+                    </li>
+                    <li
+                      style={{
+                        display: "list-item",
+                        listStyleType: "disc",
+                      }}
                     >
-                      Apple users, beware!
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      className="sugg-link"
-                      href="/products/5fcdd293e0fa0b0004148bd8"
+                      <a
+                        className="sugg-link"
+                        href="/products/5fcdd3d3e0fa0b0004148bd9"
+                      >
+                        Apple users, beware!
+                      </a>
+                    </li>
+                    <li
+                      style={{
+                        display: "list-item",
+                        listStyleType: "disc",
+                      }}
                     >
-                      WhatsApp to update its terms of service
-                    </a>
-                  </p>
-                  <p>
-                    <a href="/products/5fc8c0d11fbdc000042296d8">
-                      Delay in PUBG launch, company executives want to meet the
-                      Government
-                    </a>
-                  </p>
+                      <a
+                        className="sugg-link"
+                        href="/products/5fcdd293e0fa0b0004148bd8"
+                      >
+                        WhatsApp to update its terms of service
+                      </a>
+                    </li>
+                    <li
+                      style={{
+                        display: "list-item",
+                        listStyleType: "disc",
+                      }}
+                    >
+                      <a href="/products/5fc8c0d11fbdc000042296d8">
+                        Delay in PUBG launch, company executives want to meet
+                        the Government
+                      </a>
+                    </li>
+                  </ul>
                 </div>
                 <div
                   style={{}}
@@ -493,36 +515,38 @@ const Profile = (props) => {
                     <h5>
                       <b>Suggested reads:</b>
                     </h5>
-                    <p>
-                      <a
-                        className="sugg-link"
-                        href="/products/5fc8c1581fbdc000042296d9"
-                      >
-                        Amazon in talks to buy podcast-publisher Wondery
-                      </a>
-                    </p>
-                    <p>
-                      <a
-                        className="sugg-link"
-                        href="/products/5fcdd3d3e0fa0b0004148bd9"
-                      >
-                        Apple users, beware!
-                      </a>
-                    </p>
-                    <p>
-                      <a
-                        className="sugg-link"
-                        href="/products/5fcdd293e0fa0b0004148bd8"
-                      >
-                        WhatsApp to update its terms of service
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/products/5fc8c0d11fbdc000042296d8">
-                        Delay in PUBG launch, company executives want to meet
-                        the Government
-                      </a>
-                    </p>
+                    <ul>
+                      <li className="sugg-list">
+                        <a
+                          className="sugg-link"
+                          href="/products/5fc8c1581fbdc000042296d9"
+                        >
+                          Amazon in talks to buy podcast-publisher Wondery
+                        </a>
+                      </li>
+                      <li className="sugg-list">
+                        <a
+                          className="sugg-link"
+                          href="/products/5fcdd3d3e0fa0b0004148bd9"
+                        >
+                          Apple users, beware!
+                        </a>
+                      </li>
+                      <li className="sugg-list">
+                        <a
+                          className="sugg-link"
+                          href="/products/5fcdd293e0fa0b0004148bd8"
+                        >
+                          WhatsApp to update its terms of service
+                        </a>
+                      </li>
+                      <li className="sugg-list">
+                        <a href="/products/5fc8c0d11fbdc000042296d8">
+                          Delay in PUBG launch, company executives want to meet
+                          the Government
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
