@@ -177,7 +177,9 @@ const Profile = (props) => {
                 Share it with your friends!
               </p>
 
-              <SocialShare />
+              <SocialShare
+                weblink={`http://www.marketgad.com/products/${product._id}`}
+              />
             </div>
             <div
               className="mobshare"
@@ -195,11 +197,14 @@ const Profile = (props) => {
                   fontSize: "1.5em",
                   color: "#5072A7",
                   textAlign: "center",
+                  marginLeft: "5%",
                 }}
               >
                 Like our Content? Share it with your friends!
               </p>
-              <SocialShare />
+              <SocialShare
+                weblink={`http://www.marketgad.com/products/${product._id}`}
+              />
             </div>
             <Grid item xs={12} md={12} className="prodcard1">
               <div
