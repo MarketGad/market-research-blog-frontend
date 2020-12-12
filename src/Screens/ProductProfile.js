@@ -174,9 +174,31 @@ const Profile = (props) => {
                   color: "#5072A7",
                 }}
               >
-                Share it to your friends!
+                Share it with your friends!
               </p>
 
+              <SocialShare />
+            </div>
+            <div
+              className="mobshare"
+              style={{
+                textAlign: "center",
+                width: "300px",
+                marginLeft: "5%",
+
+                /*backgroundColor: "#1d262d",*/
+              }}
+            >
+              {" "}
+              <p
+                style={{
+                  fontSize: "1.5em",
+                  color: "#5072A7",
+                  textAlign: "center",
+                }}
+              >
+                Like our Content? Share it with your friends!
+              </p>
               <SocialShare />
             </div>
             <Grid item xs={12} md={12} className="prodcard1">
@@ -197,6 +219,7 @@ const Profile = (props) => {
                   style={{ marginTop: "-5%" }}
                 />
               </div>
+
               {/*<div className="desktop">
               <div className="link-container">
                 {product.websiteLink.length > 0 && (

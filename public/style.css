@@ -904,6 +904,9 @@ nav {
     display: block;
     margin-left: 22% !important;
   }
+  .mobshare {
+    display: none;
+  }
   .card-height {
     min-height: 660px;
   }
@@ -950,6 +953,9 @@ nav {
   }
   .deskshare {
     display: none;
+  }
+  .mobshare {
+    display: block;
   }
   .articlubhead {
     margin-left: 7%;
