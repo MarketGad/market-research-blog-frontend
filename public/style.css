@@ -948,6 +948,9 @@ nav {
     max-width: 320px;
     font-size: 0.7em;
   }
+  .deskshare {
+    display: none;
+  }
   .articlubhead {
     margin-left: 7%;
   }

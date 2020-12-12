@@ -150,6 +150,7 @@ const Profile = (props) => {
               </div>
             </Grid>
             <div
+              className="deskshare"
               style={{
                 float: "left",
                 marginBottom: "-47%",
@@ -158,6 +159,7 @@ const Profile = (props) => {
                 top: "15%",
                 maxWidth: "110px",
                 marginLeft: "5%",
+
                 /*backgroundColor: "#1d262d",*/
               }}
             >
