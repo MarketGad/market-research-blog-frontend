@@ -22,6 +22,7 @@ import ReactHtmlParser, {
   htmlparser2,
 } from "react-html-parser";
 import SocialShare from "../Components/SocialShare";
+import TeamPage from "../Components/TeamPage";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -149,21 +150,35 @@ const Profile = (props) => {
                 />
               </div>
             </Grid>
+
             <div
               className="deskshare"
               style={{
                 float: "left",
                 marginBottom: "-47%",
-                position: "-webkit-sticky",
-                position: "sticky",
+                /*position: "-webkit-sticky",
+                position: "sticky",*/
                 top: "15%",
-                maxWidth: "110px",
-                marginLeft: "5%",
+                /*maxWidth: "110px",*/
+
+                position: "fixed",
+                left: "0",
+                top: "0",
+                height: "100vh",
+                width: "280px",
+                background: "#002244",
+                color: "#fff",
 
                 /*backgroundColor: "#1d262d",*/
               }}
             >
-              <p style={{ textAlign: "center", fontSize: "1.4em" }}>
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "1.4em",
+                  marginTop: "50%",
+                }}
+              >
                 Like our content?
               </p>
               <p
@@ -171,15 +186,23 @@ const Profile = (props) => {
                   textAlign: "center",
                   fontSize: "1.4em",
                   fontWeight: "bold",
-                  color: "#5072A7",
+                  color: "#fff",
+                  marginBottom: "20%",
                 }}
               >
                 Share it with your friends!
               </p>
-
-              <SocialShare
-                weblink={`http://www.marketgad.com/products/${product._id}`}
-              />
+              <div
+                style={{
+                  width: "110px",
+                  textAlign: "center",
+                  marginLeft: "30%",
+                }}
+              >
+                <SocialShare
+                  weblink={`http://www.marketgad.com/products/${product._id}`}
+                />
+              </div>
             </div>
             <div
               className="mobshare"
