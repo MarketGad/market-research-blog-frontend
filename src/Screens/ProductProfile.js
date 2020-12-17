@@ -22,7 +22,6 @@ import ReactHtmlParser, {
   htmlparser2,
 } from "react-html-parser";
 import SocialShare from "../Components/SocialShare";
-import TeamPage from "../Components/TeamPage";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -380,7 +379,9 @@ const Profile = (props) => {
                   className="product-content1"
                   style={{ marginTop: "2%" }}
                 >
-                  <div>{ReactHtmlParser(product.detailedDescription)}</div>
+                  <div className="prdcontfont">
+                    {ReactHtmlParser(product.detailedDescription)}
+                  </div>
                 </div>
               </div>
               <div id="comments">
